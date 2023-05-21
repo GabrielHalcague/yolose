@@ -1,0 +1,25 @@
+## Bloquea  el accesos a arcivos
+<FilesMatch "\.(htaccess|htpasswd|ini|phps|fla|psd|log|sh|zip|tar)$">
+  Order Deny,Allow
+  Deny from all
+</FilesMatch>
+
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    #esto tiene que redirigir al directorio  /yolose/   como home pero no anda
+    RewriteBase /
+
+    RewriteRule ^(public)($|/) - [L,NC]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    #
+    RewriteRule ^(.*)/(.*)/(.*)$ index.php?controladorPerfilUsuarioPublic=$PRIMERPARENTECIS&action=$SEGUNDOPARENTECis&$parentres [L,QSA]
+    RewriteRule ^(.*)/(.*)$ index.php?controladorPerfilUsuarioPublic=modulo=$1&action=$2 [L,QSA]
+
+   #aca tengo un problema, si lo pongo como controller no puedo ir a registro , por eso esta comentado
+    RewriteRule ^(.*)$ index.php?module=$1 [L,QSA]
+   # RewriteRule ^(.*)$ index.php?controller=$1 [L,QSA]
+
+</IfModule>
