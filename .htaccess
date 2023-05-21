@@ -19,6 +19,7 @@
     RewriteRule ^(.*)/(.*)$ index.php?controladorPerfilUsuarioPublic=modulo=$1&action=$2 [L,QSA]
 
    #aca tengo un problema, si lo pongo como controller no puedo ir a registro , por eso esta comentado
+
     RewriteRule ^(.*)$ index.php?module=$1 [L,QSA]
    # RewriteRule ^(.*)$ index.php?controller=$1 [L,QSA]
 
