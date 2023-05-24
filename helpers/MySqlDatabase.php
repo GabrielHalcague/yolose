@@ -21,7 +21,7 @@ class MySqlDatabase {
 
     public function query($sql) {
         $result = mysqli_query($this->connection, $sql);
-        return mysqli_fetch_all($result, MYSQLI_BOTH);
+        return mysqli_fetch_all($result, MYSQLI_ASSOC);
     }
     public function execute($sql) {
         mysqli_query($this->connection, $sql);

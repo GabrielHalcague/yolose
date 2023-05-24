@@ -19,17 +19,29 @@
         
         public function register()
         {
+            $errores = 0;
            list($name, $lastName, $email, $birthDate, $genderId, $password, $password2,$userName) =$this->getInformation();
-           if( $this->verificarDatos($name,$lastName,$email, $birthDate, $genderId, $password, $password2, $userName)){
-               $password= hash('md5',$password);
-               
-               $data["respuestas"] = $this->registerModel->register($name,$lastName,$email, $birthDate, $genderId, $password,$userName);
+           $emailObtenido = $this->registerModel->getUserEmail($email);
+           if(!empty($emailObtenido) && $emailObtenido[0]['correo'] == $email){
+                $data['emailDuplicado']="El email ya se encuentra en la bd";
+               $errores ++;
+           }
+
+           $username = $this->registerModel->getUsername($userName);
+           if(!empty($username) && $username[0]['nombreUsuario'] == $userName){
+               $data['usernameDuplicado']="El username ya se encuentra en uso";
+               $errores ++;
+           }
+
+           if( $errores == 0 && $this->verificarDatos($name,$lastName,$email, $birthDate, $genderId, $password, $password2, $userName)){
                var_dump("vamos bien");
                $this->renderer->render('home');
                exit();
            }else{
+               $data["respuestas"] = $this->registerModel->register($name,$lastName,$email, $birthDate, $genderId, $password,$userName);
                var_dump("algo fallo");
-               $this->renderer->render('registro');
+               $data['error'] = true;
+               $this->renderer->render('registro',$data);
            }
           
         }
@@ -48,8 +60,6 @@
                     $nombre_archivo = uniqid() . "." . $extension;
                     move_uploaded_file($_FILES["archivo"]["tmp_name"], $ruta . $nombre_archivo);
                     rename($ruta . $nombre_archivo, $ruta . $nombre . "." . $extension);
-                    
-                    
                     exit();
                 }
             }
@@ -61,7 +71,7 @@
         
         private function verifyPassword(mixed $password, mixed $password2)
         {
-            if ($password2 != '') {
+            if ($password2 != '' && $password != '') {
                 
                 return $password === $password2;
                 
