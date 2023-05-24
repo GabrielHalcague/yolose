@@ -9,12 +9,32 @@
             $this->database = $database;
         }
         
-        public function register($name, $lastName, $email, $birthDate, $genderId, $password, $userName)
-        {
+        public function register($name, $lastName, $email, $birthDate, $genderId, $password, $userName){
+            $password= hash('md5',$password);
             return $this->database->
-            execute("insert into usuario(nombre,apellido,correo,password,nombreUsuario, f_nacimiento, generoId )
+            execute("insert into usuario(nombre,apellido,correo,password,nombreUsuario,f_nacimiento,generoId )
                 values('$name','$lastName','$email','$password','$userName','$birthDate','$genderId')");
         }
+
+        public function getUsuario($nickname, $password)
+        {
+            $password = hash('md5', $password);
+            return $this->database->query("SELECT nombreUsuario FROM usuario
+                                       WHERE nombreUsuario='$nickname'
+                                       AND password='$password'");
+        }
+
+
+        public function getUsername($username){
+            return $this->database->query("SELECT nombreUsuario FROM usuario WHERE nombreUsuario ='$username'");
+        }
+
+        public function getUserEmail($email)
+        {
+            return $this->database->query("SELECT correo FROM usuario
+                                       WHERE correo ='$email'");
+        }
+
         
         
     }
