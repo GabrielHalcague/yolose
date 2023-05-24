@@ -36,11 +36,6 @@ class Configuration {
         return new reportarController($this->getRenderer(), new ReportarModel($this->getDatabase()));
     }
 
-
-
-
-
-
     private function getArrayConfig() {
         return parse_ini_file($this->configFile);
     }
