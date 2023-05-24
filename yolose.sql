@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-05-2023 a las 20:45:39
--- Versión del servidor: 10.4.28-MariaDB
--- Versión de PHP: 8.2.4
+-- Tiempo de generación: 24-05-2023 a las 04:01:56
+-- Versión del servidor: 10.4.27-MariaDB
+-- Versión de PHP: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `yolose`
 --
-CREATE DATABASE IF NOT EXISTS `yolose` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `yolose`;
 
 -- --------------------------------------------------------
 
@@ -29,12 +27,11 @@ USE `yolose`;
 -- Estructura de tabla para la tabla `categoria`
 --
 
-DROP TABLE IF EXISTS `categoria`;
 CREATE TABLE `categoria` (
-  `id` int(11) NOT NULL,
-  `descripcion` varchar(20) NOT NULL,
-  `color` varchar(20) NOT NULL,
-  `campaña` varchar(50) NOT NULL
+                             `id` int(11) NOT NULL,
+                             `descripcion` varchar(20) NOT NULL,
+                             `color` varchar(20) NOT NULL,
+                             `campaña` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -42,16 +39,36 @@ CREATE TABLE `categoria` (
 --
 
 INSERT INTO `categoria` (`id`, `descripcion`, `color`, `campaña`) VALUES
-(1, 'Geografía', 'brown', ''),
-(2, 'Geografía', 'brown', ''),
-(3, 'Ciencia', 'Purple', ''),
-(4, 'Historia', 'Light Blue', ''),
-(5, 'Deporte', 'Khaki', ''),
-(6, 'Arte', 'Blue Gray', ''),
-(7, 'Entretenimiento', 'Pale Green', ''),
-(8, 'Peliculas', 'Pale Yellow', ''),
-(9, 'Galicia', 'orange', 'Galicia'),
-(10, 'Unlam', 'green', 'Unlam');
+                                                                      (1, 'Geografía', 'brown', ''),
+                                                                      (2, 'Geografía', 'brown', ''),
+                                                                      (3, 'Ciencia', 'Purple', ''),
+                                                                      (4, 'Historia', 'Light Blue', ''),
+                                                                      (5, 'Deporte', 'Khaki', ''),
+                                                                      (6, 'Arte', 'Blue Gray', ''),
+                                                                      (7, 'Entretenimiento', 'Pale Green', ''),
+                                                                      (8, 'Peliculas', 'Pale Yellow', ''),
+                                                                      (9, 'Galicia', 'orange', 'Galicia'),
+                                                                      (10, 'Unlam', 'green', 'Unlam');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `genero`
+--
+
+CREATE TABLE `genero` (
+                          `generoId` int(11) NOT NULL,
+                          `descripcion` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `genero`
+--
+
+INSERT INTO `genero` (`generoId`, `descripcion`) VALUES
+                                                     (1, 'Masculino'),
+                                                     (2, 'Femenino'),
+                                                     (3, 'Prefiero no cargarlo');
 
 -- --------------------------------------------------------
 
@@ -59,12 +76,11 @@ INSERT INTO `categoria` (`id`, `descripcion`, `color`, `campaña`) VALUES
 -- Estructura de tabla para la tabla `opcion`
 --
 
-DROP TABLE IF EXISTS `opcion`;
 CREATE TABLE `opcion` (
-  `id` int(11) NOT NULL,
-  `descripcion` varchar(200) NOT NULL,
-  `verdadero` tinyint(1) NOT NULL,
-  `idPregunta` int(11) NOT NULL
+                          `id` int(11) NOT NULL,
+                          `descripcion` varchar(200) NOT NULL,
+                          `verdadero` tinyint(1) NOT NULL,
+                          `idPregunta` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -72,8 +88,8 @@ CREATE TABLE `opcion` (
 --
 
 INSERT INTO `opcion` (`id`, `descripcion`, `verdadero`, `idPregunta`) VALUES
-(11, 'rojo', 0, 1),
-(12, 'azul', 0, 1);
+                                                                          (11, 'rojo', 0, 1),
+                                                                          (12, 'azul', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -81,12 +97,11 @@ INSERT INTO `opcion` (`id`, `descripcion`, `verdadero`, `idPregunta`) VALUES
 -- Estructura de tabla para la tabla `pregunta`
 --
 
-DROP TABLE IF EXISTS `pregunta`;
 CREATE TABLE `pregunta` (
-  `id` int(11) NOT NULL,
-  `descripcion` varchar(500) NOT NULL,
-  `categoria` int(11) NOT NULL,
-  `cantidadDeReportes` int(11) NOT NULL
+                            `id` int(11) NOT NULL,
+                            `descripcion` varchar(500) NOT NULL,
+                            `categoria` int(11) NOT NULL,
+                            `cantidadDeReportes` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -94,7 +109,39 @@ CREATE TABLE `pregunta` (
 --
 
 INSERT INTO `pregunta` (`id`, `descripcion`, `categoria`, `cantidadDeReportes`) VALUES
-(1, 'el cielo de que color es?', 1, 0);
+    (1, 'el cielo de que color es?', 1, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `roll`
+--
+
+CREATE TABLE `roll` (
+                        `rollId` int(11) NOT NULL,
+                        `descripcion` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `roll`
+--
+
+INSERT INTO `roll` (`rollId`, `descripcion`) VALUES
+                                                 (1, 'administrador'),
+                                                 (2, 'editor'),
+                                                 (3, 'jugador');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `rollusuario`
+--
+
+CREATE TABLE `rollusuario` (
+                               `rollUsuarioId` int(11) NOT NULL,
+                               `usuarioId` int(11) DEFAULT NULL,
+                               `rollId` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -102,12 +149,11 @@ INSERT INTO `pregunta` (`id`, `descripcion`, `categoria`, `cantidadDeReportes`) 
 -- Estructura de tabla para la tabla `top10`
 --
 
-DROP TABLE IF EXISTS `top10`;
 CREATE TABLE `top10` (
-  `id` int(11) NOT NULL,
-  `usuario` varchar(50) NOT NULL,
-  `puntos` int(11) NOT NULL,
-  `tipodepartida` int(11) NOT NULL
+                         `id` int(11) NOT NULL,
+                         `usuario` varchar(50) NOT NULL,
+                         `puntos` int(11) NOT NULL,
+                         `tipodepartida` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -115,8 +161,8 @@ CREATE TABLE `top10` (
 --
 
 INSERT INTO `top10` (`id`, `usuario`, `puntos`, `tipodepartida`) VALUES
-(1, 'pepe', 110, 1),
-(2, 'manuel', 50, 1);
+                                                                     (1, 'pepe', 110, 1),
+                                                                     (2, 'manuel', 50, 1);
 
 -- --------------------------------------------------------
 
@@ -124,30 +170,40 @@ INSERT INTO `top10` (`id`, `usuario`, `puntos`, `tipodepartida`) VALUES
 -- Estructura de tabla para la tabla `usuario`
 --
 
-DROP TABLE IF EXISTS `usuario`;
 CREATE TABLE `usuario` (
-  `id` int(11) NOT NULL,
-  `nombre` varchar(50) NOT NULL,
-  `apellido` varchar(50) NOT NULL,
-  `correo` varchar(150) NOT NULL,
-  `password` varchar(50) NOT NULL,
-  `rol` smallint(6) NOT NULL,
-  `activo` tinyint(1) NOT NULL DEFAULT 0,
-  `puntos` int(11) NOT NULL,
-  `trampas` int(11) NOT NULL
+                           `id` int(11) NOT NULL,
+                           `nombre` varchar(50) NOT NULL,
+                           `apellido` varchar(50) NOT NULL,
+                           `correo` varchar(150) NOT NULL,
+                           `password` varchar(50) NOT NULL,
+                           `activo` tinyint(1) NOT NULL DEFAULT 0,
+                           `puntos` int(11) NOT NULL,
+                           `trampas` int(11) NOT NULL,
+                           `nombreUsuario` varchar(100) DEFAULT NULL,
+                           `f_nacimiento` date DEFAULT NULL,
+                           `generoId` int(11) DEFAULT NULL,
+                           `f_registro` date DEFAULT curdate(),
+                           `fotoPerfil` varchar(150) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`id`, `nombre`, `apellido`, `correo`, `password`, `rol`, `activo`, `puntos`, `trampas`) VALUES
-(1, 'pepe', 'gomez', 'asd@live.com', 'asd', 1, 0, 150, 10),
-(3, 'usuario', 'usuario', 'usuario@usuario.com', 'usuario', 1, 1, 100, 10),
-(4, 'usuario', 'usuario', 'usuario@usuario.com', 'usuario', 1, 1, 100, 10),
-(5, 'usuario2', 'usuario2', 'usuario2@usuario2.com', 'usuario2', 1, 0, 100, 10),
-(6, 'editor', 'editor', 'editor@editor.com', 'editor', 2, 1, 0, 0),
-(7, 'admin', 'admin', 'admin@admin.com', 'admin', 3, 1, 0, 0);
+INSERT INTO `usuario` (`id`, `nombre`, `apellido`, `correo`, `password`, `activo`, `puntos`, `trampas`, `nombreUsuario`, `f_nacimiento`, `generoId`, `f_registro`, `fotoPerfil`) VALUES
+                                                                                                                                                                                     (1, 'pepe', 'gomez', 'asd@live.com', 'asd', 0, 150, 10, NULL, NULL, NULL, '2023-05-23', NULL),
+                                                                                                                                                                                     (3, 'usuario', 'usuario', 'usuario@usuario.com', 'usuario', 1, 100, 10, NULL, NULL, NULL, '2023-05-23', NULL),
+                                                                                                                                                                                     (4, 'usuario', 'usuario', 'usuario@usuario.com', 'usuario', 1, 100, 10, NULL, NULL, NULL, '2023-05-23', NULL),
+                                                                                                                                                                                     (5, 'usuario2', 'usuario2', 'usuario2@usuario2.com', 'usuario2', 0, 100, 10, NULL, NULL, NULL, '2023-05-23', NULL),
+                                                                                                                                                                                     (6, 'editor', 'editor', 'editor@editor.com', 'editor', 1, 0, 0, NULL, NULL, NULL, '2023-05-23', NULL),
+                                                                                                                                                                                     (7, 'admin', 'admin', 'admin@admin.com', 'admin', 1, 0, 0, NULL, NULL, NULL, '2023-05-23', NULL),
+                                                                                                                                                                                     (8, 'Sebastian', 'Messi', 'pepe@ganic.com', '202cb962ac59075b964b07152d234b70', 0, 0, 0, 'pma', NULL, NULL, '2023-05-23', NULL),
+                                                                                                                                                                                     (9, 'Sebastian', 'Messi', 'pepe@ganic.com', '698d51a19d8a121ce581499d7b701668', 0, 0, 0, 'pma', NULL, NULL, '2023-05-23', NULL),
+                                                                                                                                                                                     (10, 'Nahuel', 'Pereyra', 'asuario@gmail.com', '202cb962ac59075b964b07152d234b70', 0, 0, 0, 'usuario1', NULL, NULL, '2023-05-23', NULL),
+                                                                                                                                                                                     (11, 'ivan', 'ferez', 'pepe@ganic.com', '4c56ff4ce4aaf9573aa5dff913df997a', 0, 0, 0, 'iferez', NULL, NULL, '2023-05-23', NULL),
+                                                                                                                                                                                     (12, 'Messi', 'messi', 'pepe@ganic.com', '202cb962ac59075b964b07152d234b70', 0, 0, 0, 'Leo', NULL, NULL, '2023-05-23', NULL),
+                                                                                                                                                                                     (13, 'Sebastian', 'Pereyra', 'pepe@ganic.com', '202cb962ac59075b964b07152d234b70', 0, 0, 0, 'usuario1', '1980-02-12', 3, '2023-05-23', NULL),
+                                                                                                                                                                                     (14, 'cristian', 'feldman', 'cris@gmail.com', '202cb962ac59075b964b07152d234b70', 0, 0, 0, 'cris', '1998-06-25', 2, '2023-05-23', NULL);
 
 --
 -- Índices para tablas volcadas
@@ -157,33 +213,54 @@ INSERT INTO `usuario` (`id`, `nombre`, `apellido`, `correo`, `password`, `rol`, 
 -- Indices de la tabla `categoria`
 --
 ALTER TABLE `categoria`
-  ADD PRIMARY KEY (`id`);
+    ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `genero`
+--
+ALTER TABLE `genero`
+    ADD PRIMARY KEY (`generoId`);
 
 --
 -- Indices de la tabla `opcion`
 --
 ALTER TABLE `opcion`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `idPregunta` (`idPregunta`);
+    ADD PRIMARY KEY (`id`),
+    ADD KEY `idPregunta` (`idPregunta`);
 
 --
 -- Indices de la tabla `pregunta`
 --
 ALTER TABLE `pregunta`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `categoria` (`categoria`);
+    ADD PRIMARY KEY (`id`),
+    ADD KEY `categoria` (`categoria`);
+
+--
+-- Indices de la tabla `roll`
+--
+ALTER TABLE `roll`
+    ADD PRIMARY KEY (`rollId`);
+
+--
+-- Indices de la tabla `rollusuario`
+--
+ALTER TABLE `rollusuario`
+    ADD PRIMARY KEY (`rollUsuarioId`),
+    ADD KEY `usuarioId` (`usuarioId`),
+    ADD KEY `rollUsuario` (`rollId`);
 
 --
 -- Indices de la tabla `top10`
 --
 ALTER TABLE `top10`
-  ADD PRIMARY KEY (`id`);
+    ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  ADD PRIMARY KEY (`id`);
+    ADD PRIMARY KEY (`id`),
+    ADD KEY `generoId` (`generoId`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -193,31 +270,49 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `categoria`
 --
 ALTER TABLE `categoria`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT de la tabla `genero`
+--
+ALTER TABLE `genero`
+    MODIFY `generoId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `opcion`
 --
 ALTER TABLE `opcion`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `pregunta`
 --
 ALTER TABLE `pregunta`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT de la tabla `roll`
+--
+ALTER TABLE `roll`
+    MODIFY `rollId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT de la tabla `rollusuario`
+--
+ALTER TABLE `rollusuario`
+    MODIFY `rollUsuarioId` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `top10`
 --
 ALTER TABLE `top10`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- Restricciones para tablas volcadas
@@ -227,13 +322,26 @@ ALTER TABLE `usuario`
 -- Filtros para la tabla `opcion`
 --
 ALTER TABLE `opcion`
-  ADD CONSTRAINT `idPregunta` FOREIGN KEY (`idPregunta`) REFERENCES `pregunta` (`id`);
+    ADD CONSTRAINT `idPregunta` FOREIGN KEY (`idPregunta`) REFERENCES `pregunta` (`id`);
 
 --
 -- Filtros para la tabla `pregunta`
 --
 ALTER TABLE `pregunta`
-  ADD CONSTRAINT `categoria` FOREIGN KEY (`categoria`) REFERENCES `categoria` (`id`);
+    ADD CONSTRAINT `categoria` FOREIGN KEY (`categoria`) REFERENCES `categoria` (`id`);
+
+--
+-- Filtros para la tabla `rollusuario`
+--
+ALTER TABLE `rollusuario`
+    ADD CONSTRAINT `rollUsuario` FOREIGN KEY (`rollId`) REFERENCES `roll` (`rollId`),
+    ADD CONSTRAINT `usuarioId` FOREIGN KEY (`usuarioId`) REFERENCES `usuario` (`id`);
+
+--
+-- Filtros para la tabla `usuario`
+--
+ALTER TABLE `usuario`
+    ADD CONSTRAINT `generoId` FOREIGN KEY (`generoId`) REFERENCES `genero` (`generoId`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
