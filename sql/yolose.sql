@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-05-2023 a las 04:01:56
+-- Tiempo de generación: 24-05-2023 a las 20:07:12
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.2.0
 
@@ -177,8 +177,6 @@ CREATE TABLE `usuario` (
                            `correo` varchar(150) NOT NULL,
                            `password` varchar(50) NOT NULL,
                            `activo` tinyint(1) NOT NULL DEFAULT 0,
-                           `puntos` int(11) NOT NULL,
-                           `trampas` int(11) NOT NULL,
                            `nombreUsuario` varchar(100) DEFAULT NULL,
                            `f_nacimiento` date DEFAULT NULL,
                            `generoId` int(11) DEFAULT NULL,
@@ -190,20 +188,12 @@ CREATE TABLE `usuario` (
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`id`, `nombre`, `apellido`, `correo`, `password`, `activo`, `puntos`, `trampas`, `nombreUsuario`, `f_nacimiento`, `generoId`, `f_registro`, `fotoPerfil`) VALUES
-                                                                                                                                                                                     (1, 'pepe', 'gomez', 'asd@live.com', 'asd', 0, 150, 10, NULL, NULL, NULL, '2023-05-23', NULL),
-                                                                                                                                                                                     (3, 'usuario', 'usuario', 'usuario@usuario.com', 'usuario', 1, 100, 10, NULL, NULL, NULL, '2023-05-23', NULL),
-                                                                                                                                                                                     (4, 'usuario', 'usuario', 'usuario@usuario.com', 'usuario', 1, 100, 10, NULL, NULL, NULL, '2023-05-23', NULL),
-                                                                                                                                                                                     (5, 'usuario2', 'usuario2', 'usuario2@usuario2.com', 'usuario2', 0, 100, 10, NULL, NULL, NULL, '2023-05-23', NULL),
-                                                                                                                                                                                     (6, 'editor', 'editor', 'editor@editor.com', 'editor', 1, 0, 0, NULL, NULL, NULL, '2023-05-23', NULL),
-                                                                                                                                                                                     (7, 'admin', 'admin', 'admin@admin.com', 'admin', 1, 0, 0, NULL, NULL, NULL, '2023-05-23', NULL),
-                                                                                                                                                                                     (8, 'Sebastian', 'Messi', 'pepe@ganic.com', '202cb962ac59075b964b07152d234b70', 0, 0, 0, 'pma', NULL, NULL, '2023-05-23', NULL),
-                                                                                                                                                                                     (9, 'Sebastian', 'Messi', 'pepe@ganic.com', '698d51a19d8a121ce581499d7b701668', 0, 0, 0, 'pma', NULL, NULL, '2023-05-23', NULL),
-                                                                                                                                                                                     (10, 'Nahuel', 'Pereyra', 'asuario@gmail.com', '202cb962ac59075b964b07152d234b70', 0, 0, 0, 'usuario1', NULL, NULL, '2023-05-23', NULL),
-                                                                                                                                                                                     (11, 'ivan', 'ferez', 'pepe@ganic.com', '4c56ff4ce4aaf9573aa5dff913df997a', 0, 0, 0, 'iferez', NULL, NULL, '2023-05-23', NULL),
-                                                                                                                                                                                     (12, 'Messi', 'messi', 'pepe@ganic.com', '202cb962ac59075b964b07152d234b70', 0, 0, 0, 'Leo', NULL, NULL, '2023-05-23', NULL),
-                                                                                                                                                                                     (13, 'Sebastian', 'Pereyra', 'pepe@ganic.com', '202cb962ac59075b964b07152d234b70', 0, 0, 0, 'usuario1', '1980-02-12', 3, '2023-05-23', NULL),
-                                                                                                                                                                                     (14, 'cristian', 'feldman', 'cris@gmail.com', '202cb962ac59075b964b07152d234b70', 0, 0, 0, 'cris', '1998-06-25', 2, '2023-05-23', NULL);
+INSERT INTO `usuario` (`id`, `nombre`, `apellido`, `correo`, `password`, `activo`, `nombreUsuario`, `f_nacimiento`, `generoId`, `f_registro`, `fotoPerfil`) VALUES
+                                                                                                                                                                (13, 'Sebastian', 'Pereyra', 'pepe@ganic.com', '202cb962ac59075b964b07152d234b70', 0, 'usuario1', '1980-02-12', 3, '2023-05-23', NULL),
+                                                                                                                                                                (14, 'cristian', 'feldman', 'cris@gmail.com', '202cb962ac59075b964b07152d234b70', 0, 'cris', '1998-06-25', 2, '2023-05-23', NULL),
+                                                                                                                                                                (16, 'Jaime', 'jaimeApellido', 'jaime@gmail.com', '202cb962ac59075b964b07152d234b70', 0, 'jaimeUser', '1985-02-11', 3, '2023-05-24', NULL),
+                                                                                                                                                                (17, 'usuario4', 'usuario4', 'usuario4@gmail.com', '202cb962ac59075b964b07152d234b70', 0, 'usuario4', '2000-02-21', 2, '2023-05-24', NULL),
+                                                                                                                                                                (18, 'usuario5', 'usuario5', 'usuario5@gmail.com', '202cb962ac59075b964b07152d234b70', 0, 'usuario5', '1995-02-02', 2, '2023-05-24', NULL);
 
 --
 -- Índices para tablas volcadas
@@ -226,14 +216,14 @@ ALTER TABLE `genero`
 --
 ALTER TABLE `opcion`
     ADD PRIMARY KEY (`id`),
-    ADD KEY `idPregunta` (`idPregunta`);
+  ADD KEY `idPregunta` (`idPregunta`);
 
 --
 -- Indices de la tabla `pregunta`
 --
 ALTER TABLE `pregunta`
     ADD PRIMARY KEY (`id`),
-    ADD KEY `categoria` (`categoria`);
+  ADD KEY `categoria` (`categoria`);
 
 --
 -- Indices de la tabla `roll`
@@ -246,8 +236,8 @@ ALTER TABLE `roll`
 --
 ALTER TABLE `rollusuario`
     ADD PRIMARY KEY (`rollUsuarioId`),
-    ADD KEY `usuarioId` (`usuarioId`),
-    ADD KEY `rollUsuario` (`rollId`);
+  ADD KEY `usuarioId` (`usuarioId`),
+  ADD KEY `rollUsuario` (`rollId`);
 
 --
 -- Indices de la tabla `top10`
@@ -260,7 +250,7 @@ ALTER TABLE `top10`
 --
 ALTER TABLE `usuario`
     ADD PRIMARY KEY (`id`),
-    ADD KEY `generoId` (`generoId`);
+  ADD KEY `generoId` (`generoId`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -312,7 +302,7 @@ ALTER TABLE `top10`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- Restricciones para tablas volcadas
@@ -335,7 +325,7 @@ ALTER TABLE `pregunta`
 --
 ALTER TABLE `rollusuario`
     ADD CONSTRAINT `rollUsuario` FOREIGN KEY (`rollId`) REFERENCES `roll` (`rollId`),
-    ADD CONSTRAINT `usuarioId` FOREIGN KEY (`usuarioId`) REFERENCES `usuario` (`id`);
+  ADD CONSTRAINT `usuarioId` FOREIGN KEY (`usuarioId`) REFERENCES `usuario` (`id`);
 
 --
 -- Filtros para la tabla `usuario`
