@@ -1,24 +1,14 @@
-## Bloquea  el accesos a arcivos
-<FilesMatch "\.(htaccess|htpasswd|ini|phps|fla|psd|log|sh|zip|tar)$">
-  Order Deny,Allow
-  Deny from all
+Options -Indexes
+<FilesMatch ".*\.(log|ini|htaccess)$">
+    deny from all
 </FilesMatch>
-
-
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    #esto tiene que redirigir al directorio  /yolose/   como home pero no anda
     RewriteBase /
-
     RewriteRule ^(public)($|/) - [L,NC]
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
-
-    #
-    RewriteRule ^(.*)/(.*)/(.*)$ index.php?module=$var1&action=$var2&$extras [L,QSA]
-
-    RewriteRule ^(.*)/(.*)$ index.php?module=$var1=$1&action=$2 [L,QSA]
-     RewriteRule ^(.*)$ index.php?module=$1 [L,QSA]
-   # RewriteRule ^(.*)$ index.php?controller=$1 [L,QSA]
-
+    RewriteRule ^(.*)/(.*)/(.*)$ index.php?module=$1&action=$2&$3 [L,QSA]
+    RewriteRule ^(.*)/(.*)$ index.php?module=$1&action=$2 [L,QSA]
+    RewriteRule ^(.*)$ index.php?module=$1&action=list [L,QSA]
 </IfModule>

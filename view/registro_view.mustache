@@ -1,15 +1,29 @@
 {{> header}}
 
+{{# emailDuplicado}}
+    <p>{{emailDuplicado}}</p>
+{{/emailDuplicado}}
+{{# usernameDuplicado}}
+    <p>{{usernameDuplicado}}</p>
+{{/usernameDuplicado}}
+
 <div class="w3-modal-content w3-card-4 w3-padding">
     <!-- <form action="../recibirImagen.php" method="POST" enctype="multipart/form-data"> -->
-    <form action="agregarPokemon.php" method="POST" enctype="multipart/form-data">
+    <form action="index.php?module=registro&action=register" method="POST" enctype="multipart/form-data">
         <div>
             <label for="nombre">Nombre: <input type="text" name="nombre" placeholder="nombre" class="w3-input w3-border w3-margin-bottom"></label>
         </div>
+        <div>
+            <label for="usuario">Usuario: <input type="text" name="usuario" placeholder="nombre" class="w3-input w3-border w3-margin-bottom"></label>
+        </div>
+
 
             <div>
                 <label for="apellido">Apellido: <input type="text" name="apellido" placeholder="apellido" class="w3-input w3-border w3-margin-bottom"></label>
             </div>
+        <div>
+            <label for="email">Email: <input type="email" name="email" placeholder="email" class="w3-input w3-border w3-margin-bottom"></label>
+        </div>
             <div>
                 <label for="nacimiento">Fecha de nacimiento: <input type="date" name="nacimiento" placeholder="fecha" class="w3-input w3-border w3-margin-bottom"></label>
             </div>
@@ -30,7 +44,7 @@
             <label for="password">Contraseña: <input type="password" name="password" placeholder="password" class="w3-input w3-border w3-margin-bottom"></label>
          </div>
        <div>
-         <label for="password2"> Repetir Contraseña: <input type="password" name="password" placeholder="password" class="w3-input w3-border w3-margin-bottom"></label>
+         <label for="password2"> Repetir Contraseña: <input type="password" name="password2" placeholder="repita su password" class="w3-input w3-border w3-margin-bottom"></label>
          </div>
 
         <div>
