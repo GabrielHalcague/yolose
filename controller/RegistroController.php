@@ -35,8 +35,9 @@
 
            if( $errores == 0 && $this->verificarDatos($name,$lastName,$email, $birthDate, $genderId, $password, $password2, $userName)){
                var_dump("vamos bien");
-               $data["respuestas"] = $this->registerModel->register($name,$lastName,$email, $birthDate, $genderId, $password,$userName);
-               $this->renderer->render('home',$data);
+               $this->registerModel->register($name,$lastName,$email, $birthDate, $genderId, $password,$userName);
+               $data['id'] = $this->registerModel->getUserByUsername($userName);
+               $this->renderer->render('validate',$data);
                exit();
            }else{
               
@@ -46,7 +47,7 @@
            }
           
         }
-        
+
         public function saveUserPhoto()
         {
             $ruta = "./public/";

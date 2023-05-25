@@ -7,6 +7,7 @@ include_once('third-party/mustache/src/Mustache/Autoloader.php');
 
 
 include_once('controller/HomeController.php');
+include_once('controller/ValidationController.php');
 include_once('model/HomeModel.php');
 include_once ('model/RegisterModel.php');
 
@@ -22,7 +23,9 @@ class Configuration {
     public function __construct() {
     }
 
-
+    public function getValidationController() {
+        return new ValidationController($this->getRenderer(), new RegisterModel($this->getDatabase()));
+    }
 
     public function getHomeController() {
         return new homeController($this->getRenderer(), new HomeModel($this->getDatabase()));
