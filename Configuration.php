@@ -39,6 +39,18 @@ class Configuration {
         return new reportarController($this->getRenderer(), new ReportarModel($this->getDatabase()));
     }
 
+
+
+    public function getCerrarSeccionController(){
+        session_start();
+        unset($_SESSION["usuario"]);
+        session_destroy();
+       // header("location:index.php");
+        //exit();
+        return new homeController($this->getRenderer(), new HomeModel($this->getDatabase()));
+    }
+
+
     private function getArrayConfig() {
         return parse_ini_file($this->configFile);
     }
@@ -63,4 +75,6 @@ class Configuration {
             "getHomeController",
             "list");
     }
+
+
 }
