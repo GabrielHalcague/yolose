@@ -15,12 +15,10 @@
     RewriteCond %{REQUEST_FILENAME} !-d
 
     #
-    RewriteRule ^(.*)/(.*)/(.*)$ index.php?controladorPerfilUsuarioPublic=$PRIMERPARENTECIS&action=$SEGUNDOPARENTECis&$parentres [L,QSA]
-    RewriteRule ^(.*)/(.*)$ index.php?controladorPerfilUsuarioPublic=modulo=$1&action=$2 [L,QSA]
+    RewriteRule ^(.*)/(.*)/(.*)$ index.php?module=$var1&action=$var2&$extras [L,QSA]
 
-   #aca tengo un problema, si lo pongo como controller no puedo ir a registro , por eso esta comentado
-
-    RewriteRule ^(.*)$ index.php?module=$1 [L,QSA]
+    RewriteRule ^(.*)/(.*)$ index.php?module=$var1=$1&action=$2 [L,QSA]
+     RewriteRule ^(.*)$ index.php?module=$1 [L,QSA]
    # RewriteRule ^(.*)$ index.php?controller=$1 [L,QSA]
 
 </IfModule>

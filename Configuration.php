@@ -35,7 +35,14 @@ class Configuration {
     }
 
 
-
+    public function getCerrarSeccionController(){
+        session_start();
+        unset($_SESSION["usuario"]);
+        session_destroy();
+       // header("location:index.php");
+        //exit();
+        return new homeController($this->getRenderer(), new HomeModel($this->getDatabase()));
+    }
 
 
 

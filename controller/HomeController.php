@@ -1,11 +1,13 @@
 <?php
 
 class HomeController
+
 {
     private $renderer;
     private $homeModel;
 
     public function __construct($renderer, $homeModel) {
+
         $this->homeModel = $homeModel;
         $this->renderer = $renderer;
     }
@@ -14,7 +16,14 @@ class HomeController
         $data["top10"] = $this->homeModel->getTop10();
         $data["pregunta"] = $this->homeModel->getPregunta();
         $data["respuestas"] = $this->homeModel->getRespuestasDePregunta($data["pregunta"][0]["id"]);
-        $this->renderer->render("home", $data);
+
+        session_start();
+        // este usuario tiene que ser roll
+        if (isset($_SESSION["usuario"])) {
+            $this->renderer->render("homeUsuario", $data);
+        } else {
+            $this->renderer->render("home", $data);
+        }
     }
 
 }
