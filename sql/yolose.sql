@@ -20,7 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `yolose`
 --
-
+CREATE DATABASE IF NOT EXISTS yolose;
+use yolose;
 -- --------------------------------------------------------
 
 --

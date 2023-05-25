@@ -35,6 +35,21 @@
                                        WHERE correo ='$email'");
         }
 
+        public function getUserByUsername($username){
+            return $this->database->query("SELECT id FROM usuario
+                                       WHERE nombreUsuario ='$username'");
+        }
+
+        public function getUserByID($id){
+            return $this->database->query("SELECT * FROM usuario
+                                       WHERE id ='$id'");
+        }
+
+        public function activarUsuario($id){
+            $sql = "UPDATE usuario SET activo = 1 WHERE id = $id";
+            $this->database->execute($sql);
+        }
+
         
         
     }
