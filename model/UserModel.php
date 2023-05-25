@@ -13,4 +13,12 @@ class UserModel{
         return $this->database->query($sql);
     }
 
+    public function getUsuario($nickname, $password)
+    {
+        $password = hash('md5', $password);
+        return $this->database->query("SELECT * FROM usuario
+                                       WHERE nombreUsuario='$nickname'
+                                       AND password='$password'");
+    }
+
 }
