@@ -18,7 +18,6 @@ include_once('controller/RegistroController.php');
 include_once ('controller/ReportarController.php');
 include_once ('model/ReportarModel.php');
 
-include_once('controller/ProcesarLoginController.php');
 include_once ('model/UserModel.php');
 
 

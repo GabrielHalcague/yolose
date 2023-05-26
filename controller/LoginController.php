@@ -23,6 +23,7 @@ class LoginController
 
     public function iniciarSesion()
     {
+     
         $username = $_POST['username'] ?? '';
         $password = $_POST['password'] ?? '';
         $errores = 0;

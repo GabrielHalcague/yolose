@@ -5,6 +5,7 @@
         private $renderer;
         private $registerModel;
         
+        
         public function __construct($renderer, $registerModel)
         {
             Session::initializeSession();
@@ -35,14 +36,8 @@
            }
 
            if( $errores == 0 && $this->verificarDatos($name,$lastName,$email, $birthDate, $genderId, $password, $password2, $userName)){
-
-
                $namePhoto=   $this->saveUserPhoto();
                $this->registerModel->register($name,$lastName,$email, $birthDate, $genderId, $password,$userName, $namePhoto);
-           
-
-
-              
                $data['id'] = $this->registerModel->getUserByUsername($userName);
                Session::set('momentoEnvio', (new DateTime)->getTimestamp());
                $this->renderer->render('validate',$data);
