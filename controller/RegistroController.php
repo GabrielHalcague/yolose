@@ -1,5 +1,5 @@
 <?php
-    
+    require_once "helpers/Session.php";
     class RegistroController
     {
         private $renderer;
@@ -7,6 +7,7 @@
         
         public function __construct($renderer, $registerModel)
         {
+            Session::initializeSession();
            $this->registerModel=$registerModel;
             $this->renderer = $renderer;
         }
@@ -35,14 +36,19 @@
 
            if( $errores == 0 && $this->verificarDatos($name,$lastName,$email, $birthDate, $genderId, $password, $password2, $userName)){
 
+
                $namePhoto=   $this->saveUserPhoto();
                $this->registerModel->register($name,$lastName,$email, $birthDate, $genderId, $password,$userName, $namePhoto);
-               $this->renderer->render('home');
+           
+
+
+              
+               $data['id'] = $this->registerModel->getUserByUsername($userName);
+               Session::set('momentoEnvio', (new DateTime)->getTimestamp());
+               $this->renderer->render('validate',$data);
 
                exit();
            }else{
-              
-               var_dump("algo fallo");
                $data['error'] = true;
                $this->renderer->render('registro',$data);
            }

@@ -16,6 +16,9 @@ include_once('controller/RegistroController.php');
 include_once ('controller/ReportarController.php');
 include_once ('model/ReportarModel.php');
 
+include_once('controller/ProcesarLoginController.php');
+include_once ('model/UserModel.php');
+
 
 class Configuration {
     private $configFile = 'config/config.ini';
@@ -38,18 +41,6 @@ class Configuration {
     public function getReportarController(){
         return new reportarController($this->getRenderer(), new ReportarModel($this->getDatabase()));
     }
-
-
-
-    public function getCerrarSeccionController(){
-        session_start();
-        unset($_SESSION["usuario"]);
-        session_destroy();
-       // header("location:index.php");
-        //exit();
-        return new homeController($this->getRenderer(), new HomeModel($this->getDatabase()));
-    }
-
 
     private function getArrayConfig() {
         return parse_ini_file($this->configFile);
@@ -75,6 +66,4 @@ class Configuration {
             "getHomeController",
             "list");
     }
-
-
 }
