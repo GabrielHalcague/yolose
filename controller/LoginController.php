@@ -41,14 +41,19 @@ class LoginController
         $usuarioBuscado = $this->userModel->getUsuario($username,$password);
 
         if($errores == 0 && $usuarioBuscado[0]['activo'] == 1 && $username == $usuarioBuscado[0]['nombreUsuario']){
+
             var_dump(Session::getDataSession());
             Session::set('logged',true);
-            Session::set('rol',1);
+            Session::set('rol',$usuarioBuscado[0]["generoId"]);
             Session::set('username',$username);
+            var_dump(Session::getDataSession());
+
             $data['logged']=true;
-            $data['rol']=1;
+            $data['rol']=$usuarioBuscado[0]["generoId"];
             $data['username']=$username;
+
             $this->rendered->render('home',$data);
+
             exit();
         }else{
             $data['error'] = true;

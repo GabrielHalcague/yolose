@@ -23,13 +23,30 @@
         <a href="/login" class="w3-btn w3-blue">Ingresar</a>
   </div>
 
+
 <div class="w3-bar w3-blue">
-  <a href="/" class="w3-bar-item w3-button">Home</a>
-  <a href="#" class="w3-bar-item w3-button">Solitario</a>
-  <a href="#" class="w3-bar-item w3-button">Placer vs IA</a>
-  <a href="#" class="w3-bar-item w3-button">Player vs Player</a>
+    <a href="/" class="w3-bar-item w3-button">Home</a>
+    <a href="#" class="w3-bar-item w3-button usuario"  style="display: none">usuario</a>
+    <a href="#" class="w3-bar-item w3-button editor" style="display: none">editor</a>
+    <a href="#" class="w3-bar-item w3-button admin" style="display: none">admin</a>
 </div>
 
 
-
 </header>
+<script>
+    if({{rol}} ==1){
+        document.getElementById("usuario").style.display = "block";
+
+    }
+    if({{rol}} ==2){
+        document.getElementsByClassName(".editor").style.display = "block";
+        document.getElementsByClassName("usuario").style.display = "block";
+    }
+    if({{rol}} ==3){
+        document.getElementsByClassName("usuario").style.display = "block";
+        document.getElementsByClassName("editor").style.display = "block";
+        document.getElementsByClassName("admin").style.display = "block";
+    }
+
+
+</script>
