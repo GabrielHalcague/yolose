@@ -12,7 +12,12 @@ class MustacheRender{
     }
 
     public function render($contentFile , $data = array() ){
+
         $contentAsString =  file_get_contents("view/". $contentFile . "_view.mustache");
+
         echo  $this->mustache->render($contentAsString, $data);
     }
+
+
+
 }
