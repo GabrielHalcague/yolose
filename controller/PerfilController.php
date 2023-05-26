@@ -1,5 +1,7 @@
 <?php
 
+use JetBrains\PhpStorm\NoReturn;
+
 class PerfilController
 {
     private $renderer ;
@@ -22,7 +24,7 @@ class PerfilController
         exit();
     }
 
-    public function usuario(){
+      public function usuario(){
         if (Session::getDataSession() == null) {
             $data = $this->menuSegunUsuario(0);
         }
@@ -33,13 +35,14 @@ class PerfilController
 
         $username = $_GET['usuario'] ?? '';
         $data["perfil"]= $this->perfilModel->getPerfilUsuarioPorNombreUsuario($username);
-       $this->renderer->render("perfil", $data);
+        $this->renderer->render("perfil", $data);
         exit();
-    }
+     }
     private function menuSegunUsuario($rol): array {
+        $menu ['menu'][] = array('nombreBoton' => 'home', 'ruta' => '/');
         switch ($rol) {
             case 1:
-                $menu ['menu'][] = array('nombreBoton' => 'Solitario', 'ruta' => 'Solitario'); ;
+                $menu ['menu'][] = array('nombreBoton' => 'Solitario', 'ruta' => 'Solitario');
                 $menu ['menu'][] = array('nombreBoton' => 'Vs Ia', 'ruta' => 'vsia');
                 $menu ['menu'][] = array('nombreBoton' => 'P v P', 'ruta' => 'pvp');
                 $menu ['menu'][] = array('nombreBoton' => 'Perfil', 'ruta' => 'perfil');
@@ -53,7 +56,6 @@ class PerfilController
                 $menu ['menu'][] =array('nombreBoton' => 'admin', 'ruta' => 'admin');
                 return $menu;
             default:
-                $menu ['menu'][] = array('nombreBoton' => 'home', 'ruta' => '/');
                 return  $menu;
         }
     }

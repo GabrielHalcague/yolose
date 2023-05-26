@@ -33,10 +33,11 @@ class HomeController
         return $data;
     }
     private function menuSegunUsuario($rol): array {
-
+        $menu ['menu'][] = array('nombreBoton' => 'home', 'ruta' => '/');
         switch ($rol) {
+
             case 1:
-                $menu ['menu'][] = array('nombreBoton' => 'Solitario', 'ruta' => 'Solitario'); ;
+                $menu ['menu'][] = array('nombreBoton' => 'Solitario', 'ruta' => 'Solitario');
                 $menu ['menu'][] = array('nombreBoton' => 'Vs Ia', 'ruta' => 'vsia');
                 $menu ['menu'][] = array('nombreBoton' => 'P v P', 'ruta' => 'pvp');
                 $menu ['menu'][] = array('nombreBoton' => 'Perfil', 'ruta' => 'perfil');
@@ -50,7 +51,6 @@ class HomeController
                 $menu ['menu'][] =array('nombreBoton' => 'admin', 'ruta' => 'admin');
                 return $menu;
             default:
-                 $menu ['menu'][] = array('nombreBoton' => 'home', 'ruta' => '/');
                 return  $menu;
         }
     }
