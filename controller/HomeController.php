@@ -1,5 +1,6 @@
 <?php
 
+
 class HomeController
 {
     private $renderer;
@@ -11,30 +12,42 @@ class HomeController
     }
 
     public function list() {
-        if (!isset($_SESSION["usuario"])) {
-            $data["top10"] = $this->homeModel->getTop10();
-            $data["pregunta"] = $this->homeModel->getPregunta();
-            $data["respuestas"] = $this->homeModel->getRespuestasDePregunta($data["pregunta"][0]["id"]);
+        $data[]=[];
+        if (Session::getDataSession() == null) {
+            $data = $this->datosComunesDelHome($data);
             $this->renderer->render("home", $data);
+            exit();
         }
-        // si esta seteado y es usuario va a usuario logeado
-        if (isset($_SESSION["usuario"])){
-            $data["top10"] = $this->homeModel->getTop10();
-            $data["pregunta"] = $this->homeModel->getPregunta();
-            $data["respuestas"] = $this->homeModel->getRespuestasDePregunta($data["pregunta"][0]["id"]);
+            $rol= Session::get('rol');
+            $data = $this->menuSegunUsuario($rol);
+            $data = $this->datosComunesDelHome($data);
             $this->renderer->render("home", $data);
-        }
-        /*
-        // si esta seteado como Editor va a editor
-        if (isset($_SESSION["usuario"]) && $_SESSION["usuario"]['rol'] == 2 ) {
-            $this->renderer->render("home", $data);
-        }
-        // si es administador va a administrador
-        if (isset($_SESSION["usuario"]) && $_SESSION["usuario"]['rol'] == 3 ) {
-            $this->renderer->render("home", $data);
-        }
-        */
-
+        exit();
     }
 
+    public function datosComunesDelHome(array $data): array {
+        $data["top10"] = $this->homeModel->getTop10();
+        $data["pregunta"] = $this->homeModel->getPregunta();
+        $data["respuestas"] = $this->homeModel->getRespuestasDePregunta($data["pregunta"][0]["id"]);
+        return $data;
+    }
+    private function menuSegunUsuario($rol): array {
+        $menu ['menu'][] = array('nombreBoton' => 'Solitario', 'ruta' => 'Solitario'); ;
+        $menu ['menu'][] = array('nombreBoton' => 'Vs Ia', 'ruta' => 'vsia');
+        $menu ['menu'][] = array('nombreBoton' => 'P v P', 'ruta' => 'pvp');
+        $menu ['menu'][] = array('nombreBoton' => 'Perfil', 'ruta' => 'perfil');
+
+        switch ($rol) {
+            case 2:
+                $menu ['menu'][] = array('nombreBoton' => 'editor', 'ruta' => 'editor');
+                return $menu;
+
+            case 3:
+                $menu ['menu'][] = array('nombreBoton' => 'editor', 'ruta' => 'editor');
+                $menu ['menu'][] =array('nombreBoton' => 'admin', 'ruta' => 'admin');
+                return $menu;
+            default:
+                return $menu;
+        }
+    }
 }

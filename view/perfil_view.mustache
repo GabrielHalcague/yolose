@@ -1,0 +1,33 @@
+{{> header}}
+
+
+
+<div class="w3-row w3-padding">
+    <div class="w3-half w3-container w3-green" >
+
+    {{#perfil}}
+        <img src="public/{{fotoPerfil}}" width="20%" height="20%">
+    {{/perfil}}
+    </div>
+
+    <div class="w3-half w3-container">
+
+         {{#perfil}}
+                <div>Id {{id}}</div>
+                <div>Nick: {{nombreUsuario}}</div>
+                <div>nombre:{{nombre}}</div>
+                <div>activo:{{activo}}</div>
+                <div>Edad: {{f_nacimiento}}</div>
+                <div>Genero: {{generoId}}</div>
+                <div>Usuario desde{{f_registro}}</div>
+
+         {{/perfil}}
+    </div>
+
+</div>
+
+
+
+
+
+{{> footer}}

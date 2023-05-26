@@ -1,5 +1,5 @@
 <?php
-    require_once "helpers/Session.php";
+
     class RegistroController
     {
         private $renderer;
@@ -8,7 +8,6 @@
         
         public function __construct($renderer, $registerModel)
         {
-            Session::initializeSession();
            $this->registerModel=$registerModel;
             $this->renderer = $renderer;
         }
@@ -16,7 +15,12 @@
         
         public function list()
         {
-            $this->renderer->render('registro');
+            if (Session::getDataSession() == null) {
+                $this->renderer->render('registro');
+                exit();
+            }else{
+                Header::redirect("/");
+            }
         }
         
         public function register()
@@ -65,7 +69,7 @@
                     rename($ruta . $nombre_archivo, $ruta . $nombre . "." . $extension);
                 }
             }
-            return $nombre;
+            return $nombre.'.'.$extension ;
             
         }
         

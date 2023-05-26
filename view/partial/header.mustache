@@ -16,37 +16,25 @@
         <h1 ><b>YoLoSe</b></h1>
     </div >
 
+    {{#menu.0}}
+        <div class="w3-third w3-col s4">
+            <div> foto perfil</div>
+            <a href="index.php?module=login&action=cerrarSesion" class="w3-btn w3-blue">cerrarSesion</a>
+        </div>
 
+    {{/menu.0}}
+    {{^menu.0}}
+        <div class="w3-third w3-col s4">
+            <a href="/login" class="w3-btn w3-blue">Ingresar</a>
+            <a href="/registro" class="w3-button w3-orange">Registrarte</a>
+        </div>
+    {{/menu.0}}
 
-    <div class="w3-third w3-col s4">
-
-        <a href="/login" class="w3-btn w3-blue">Ingresar</a>
-  </div>
-
-
-<div class="w3-bar w3-blue">
-    <a href="/" class="w3-bar-item w3-button">Home</a>
-    <a href="#" class="w3-bar-item w3-button usuario"  style="display: none">usuario</a>
-    <a href="#" class="w3-bar-item w3-button editor" style="display: none">editor</a>
-    <a href="#" class="w3-bar-item w3-button admin" style="display: none">admin</a>
-</div>
-
-
+   <div class="w3-bar w3-blue">
+      <a href="/" class="w3-bar-item w3-button">Home</a>
+       {{#menu}}
+         <a href="{{ruta}}" class="w3-bar-item w3-button" >{{nombreBoton}}</a>
+        {{/menu}}
+    </div>
+    <a href="/perfil/usuario=11" class="w3-button w3-orange">perfil</a>
 </header>
-<script>
-    if({{rol}} ==1){
-        document.getElementById("usuario").style.display = "block";
-
-    }
-    if({{rol}} ==2){
-        document.getElementsByClassName(".editor").style.display = "block";
-        document.getElementsByClassName("usuario").style.display = "block";
-    }
-    if({{rol}} ==3){
-        document.getElementsByClassName("usuario").style.display = "block";
-        document.getElementsByClassName("editor").style.display = "block";
-        document.getElementsByClassName("admin").style.display = "block";
-    }
-
-
-</script>

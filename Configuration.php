@@ -5,7 +5,6 @@ include_once('helpers/Router.php');
 include_once('third-party/mustache/src/Mustache/Autoloader.php');
 
 
-
 include_once('controller/HomeController.php');
 include_once('controller/LoginController.php');
 include_once('controller/ValidationController.php');
@@ -18,7 +17,8 @@ include_once('controller/RegistroController.php');
 include_once ('controller/ReportarController.php');
 include_once ('model/ReportarModel.php');
 
-include_once ('model/UserModel.php');
+include_once ('controller/PerfilController.php');
+include_once ('model/PerfilModel.php');
 
 
 class Configuration {
@@ -44,6 +44,10 @@ class Configuration {
 
     public function getReportarController(){
         return new reportarController($this->getRenderer(), new ReportarModel($this->getDatabase()));
+    }
+
+    public function getPerfilController(){
+        return new perfilController($this->getRenderer(), new PerfilModel($this->getDatabase()));
     }
 
     private function getArrayConfig() {
