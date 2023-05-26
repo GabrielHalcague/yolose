@@ -7,8 +7,10 @@ include_once('third-party/mustache/src/Mustache/Autoloader.php');
 
 
 include_once('controller/HomeController.php');
+include_once('controller/LoginController.php');
 include_once('controller/ValidationController.php');
 include_once('model/HomeModel.php');
+include_once('model/UserModel.php');
 include_once ('model/RegisterModel.php');
 
 include_once('controller/RegistroController.php');
@@ -36,7 +38,10 @@ class Configuration {
     public function getRegistroController() {
         return new registroController($this->getRenderer(),new RegisterModel($this->getDatabase()));
     }
-    
+
+    public function getLoginController(){
+        return new loginController($this->getRenderer(), new UserModel($this->getDatabase()));
+    }
 
     public function getReportarController(){
         return new reportarController($this->getRenderer(), new ReportarModel($this->getDatabase()));
