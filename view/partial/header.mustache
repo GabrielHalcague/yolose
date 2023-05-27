@@ -122,12 +122,15 @@
           <strong>YoLoSe</strong>
         </a>
         <div>
+          {{^logged}}  
           <a href="/login" class="ms-3 btn btn-yolose">Ingresar</a>
           <a href="/registro" class="ms-3 btn btn-outline-yolose">Registrarse</a>
+          {{/logged}}  
+          {{#logged}}
           <a href="/perfil" class="ms-3 btn btn-yolose">Perfil</a>
           <a href="/index.php?module=login&action=cerrarSesion" class="ms-3 btn btn-outline-yolose">Cerrar sesión</a>
+          {{/logged}}
         </div>
       </div>
     </header>
-    {{> nav}}
   <main>

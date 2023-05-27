@@ -26,6 +26,7 @@ class ValidationController{
         if($dif > 5){
             $data['id']=$id;
             $data['error']="el enlace de activación caduco";
+            $data['logged'] = Session::get('logged');
             $this->renderer->render("validate",$data);
             exit();
         }

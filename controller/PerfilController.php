@@ -20,6 +20,7 @@ class PerfilController
 
         $username= Session::get('username');
         $data["perfil"]= $this->perfilModel->getPerfilUsuarioPorNombreUsuario($username);
+        $data['logged'] = Session::get('logged');
         $this->renderer->render("perfil", $data);
         exit();
     }
@@ -35,6 +36,7 @@ class PerfilController
 
         $username = $_GET['usuario'] ?? '';
         $data["perfil"]= $this->perfilModel->getPerfilUsuarioPorNombreUsuario($username);
+        $data['logged'] = Session::get('logged');
         $this->renderer->render("perfil", $data);
         exit();
      }

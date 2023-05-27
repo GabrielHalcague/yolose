@@ -2,7 +2,8 @@
 <section class="container">
     <h2 class="mb-4 text-center">Formulario de ingreso</h2>
     <article class="p-5 bg-dark-subtle rounded">
-        <form class="d-flex justify-content-center form-yolose" action="index.php?module=login&action=iniciarSesion" method="post" enctype="multipart/form-data">
+        <form class="d-flex justify-content-center form-yolose" action="index.php?module=login&action=iniciarSesion"
+            method="post" enctype="multipart/form-data">
             <div class="w-50">
                 <label for="username" class="form-label">Usuario</label>
                 <input type="text" class="form-control" name="username" id="username" />
@@ -13,7 +14,11 @@
                 </div>
             </div>
         </form>
+        {{#error}}
+        <div class="text-danger text-center fw-bold mt-3"> 
+            {{message}}
+        </div>
+        {{/error}}
     </article>
 </section>
 {{> footer}}
-

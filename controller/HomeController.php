@@ -16,12 +16,14 @@ class HomeController
         if (Session::getDataSession() == null) {
             $data = $this->menuSegunUsuario(0);
             $data = $this->datosComunesDelHome($data);
+            $data['logged'] = Session::get('logged');
             $this->renderer->render("home", $data);
             exit();
         }
             $rol= Session::get('rol');
             $data = $this->menuSegunUsuario($rol);
             $data = $this->datosComunesDelHome($data);
+            $data['logged'] = Session::get('logged');
             $this->renderer->render("home", $data);
         exit();
     }

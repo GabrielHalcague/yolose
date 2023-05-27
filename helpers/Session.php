@@ -11,7 +11,7 @@ class Session {
     }
 
     public static function get($key){
-        return $_SESSION[$key];
+        return $_SESSION[$key] ?? '' ;
     }
 
     public static function getDataSession(){
