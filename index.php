@@ -9,5 +9,5 @@ $router = $configuration->getRouter();
 
 $module = $_GET['module'] ?? 'home';
 $method = $_GET['action'] ?? 'list';
-Header::debug($module);
+//Header::debug($module);
 $router->route($module, $method );

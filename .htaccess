@@ -19,7 +19,7 @@ Options -Indexes
     RewriteRule ^(.*)/(.*)$ index.php?module=$1&action=$2 [L,QSA]
     RewriteRule ^(.*)$ index.php?module=$1&action=list [L,QSA]
     # rewrite css files to their actual path
-    RewriteRule ^css/(.+\.css)$ public/css/$1 [L,NC]
+    RewriteRule ^css/(.+\.css)$ ../../public/css/$1 [L,NC]
 
     # rewrite js files to their actual path
     RewriteRule ^js/(.+\.js)$ ../../public/js/$1 [L,NC]
