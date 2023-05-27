@@ -15,4 +15,10 @@ class MustacheRender{
         $contentAsString =  file_get_contents("view/". $contentFile . "_view.mustache");
         echo  $this->mustache->render($contentAsString, $data);
     }
+
+    public function generateTemplatedStringForEmail($template, $data = array())
+    {
+        $contentAsString =  file_get_contents("public/template/". $template . "_view.mustache");
+        return  $this->mustache->render($contentAsString, $data);
+    }
 }

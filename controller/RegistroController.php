@@ -1,26 +1,36 @@
 <?php
-    
+
     class RegistroController
     {
         private $renderer;
         private $registerModel;
-        
-        public function __construct($renderer, $registerModel)
+        private $emailSender;
+        private $renderMail;
+
+
+        public function __construct($renderer, $renderMail, $registerModel,$emailSender)
         {
            $this->registerModel=$registerModel;
             $this->renderer = $renderer;
+            $this->emailSender = $emailSender;
+            $this->renderMail = $renderMail;
         }
         
         
         public function list()
         {
-            $this->renderer->render('registro');
+            if (Session::getDataSession() == null) {
+                $this->renderer->render('registro');
+                exit();
+            }else{
+                Header::redirect("/");
+            }
         }
         
         public function register()
         {
             $errores = 0;
-           list($name, $lastName, $email, $birthDate, $genderId, $password, $password2,$userName) =$this->getInformation();
+           list($name, $lastName, $email, $birthDate, $genderId, $password, $password2,$userName, $userPhoto) =$this->getDatos();
            $emailObtenido = $this->registerModel->getUserEmail($email);
            if(!empty($emailObtenido) && $emailObtenido[0]['correo'] == $email){
                 $data['emailDuplicado']="El email ya se encuentra en la bd";
@@ -32,18 +42,25 @@
                $data['usernameDuplicado']="El username ya se encuentra en uso";
                $errores ++;
            }
+            $verficar = $this->verificarDatos($name,$lastName,$email, $birthDate, $genderId, $password, $password2, $userName);
+            //Header::debug($errores . "<br>". $verficar . "<br>". $data);
 
-           if( $errores == 0 && $this->verificarDatos($name,$lastName,$email, $birthDate, $genderId, $password, $password2, $userName)){
-               var_dump("vamos bien");
-               $this->registerModel->register($name,$lastName,$email, $birthDate, $genderId, $password,$userName);
-               $data['id'] = $this->registerModel->getUserByUsername($userName);
+           if( $errores == 0 && $verficar){
+               $namePhoto=   $this->saveUserPhoto();
+               $this->registerModel->register($name,$lastName,$email, $birthDate, $genderId, $password,$userName, $namePhoto);
+               $registro = $this->registerModel->getUserByUsername($userName);
+               $data['id'] = $registro[0]['id'];
+               $data['username'] = $registro[0]['nombreUsuario'];
+               Session::set('email',$email);
+               Session::set('momentoEnvio', (new DateTime)->getTimestamp());
+               $html = $this->renderMail->generateTemplatedStringForEmail('templanteMail',$data);
+               $this->emailSender->sendEmail(Session::get('email'),'Confirmación de Registro',$html);
                $this->renderer->render('validate',$data);
                exit();
            }else{
-              
-               var_dump("algo fallo");
                $data['error'] = true;
                $this->renderer->render('registro',$data);
+               exit();
            }
           
         }
@@ -51,60 +68,59 @@
         public function saveUserPhoto()
         {
             $ruta = "./public/";
-            $nombre_archivo = '';
+
+            $nombre='';
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $archivo = $_FILES["archivo"]["name"];
-                $nombre = $_POST["nombre"];
-                
+                $nombre = $_POST["usuario"];
                 $extension = pathinfo($archivo, PATHINFO_EXTENSION);
-                
                 if (in_array($extension, array("jpg", "jpeg", "png", "gif"))) {
                     $nombre_archivo = uniqid() . "." . $extension;
                     move_uploaded_file($_FILES["archivo"]["tmp_name"], $ruta . $nombre_archivo);
                     rename($ruta . $nombre_archivo, $ruta . $nombre . "." . $extension);
-                    exit();
                 }
             }
+            return $nombre.'.'.$extension ;
             
-            $archivos = scandir($ruta);
-            
-            echo '<img src="' . $ruta . $nombre_archivo . '" alt="' . $archivo . '"/>';
         }
         
         private function verifyPassword(mixed $password, mixed $password2)
         {
             if ($password2 != '' && $password != '') {
-                
                 return $password === $password2;
-                
             }
             return false;
         }
         
-        /**
-         * @return array
-         */
-        public function getInformation(): array
-        {
-            $name = $_POST['nombre'] ?? "";
-            $lastName = $_POST['apellido'] ?? "";
-            $email = $_POST['email'] ?? "";
-            $birthDate = $_POST['nacimiento'] ?? "";
-            $genderId = $_POST['tipo'] ?? "";
-            $password = $_POST['password'] ?? "";
-            $password2 = $_POST['password2'] ?? "";
-            $userName= $_POST['usuario'] ?? "";
-            $userPhoto = $_FILES["archivo"];// esto queda pendiente para no joder tanto ahora
-            if($name&&$lastName&&$email&&$birthDate&&$genderId&&$password&&$password2&& $userName){
-                return array($name, $lastName, $email, $birthDate, $genderId, $password, $password2,$userName );
+        public function getDatos(){
+            if (
+                isset($_POST['nombre']) && !empty($_POST['nombre']) &&
+                isset($_POST['apellido']) && !empty($_POST['apellido']) &&
+                isset($_POST['email']) && !empty($_POST['email']) &&
+                isset($_POST['nacimiento']) && !empty($_POST['nacimiento']) &&
+                isset($_POST['tipo']) && !empty($_POST['tipo']) &&
+                isset($_POST['password']) && !empty($_POST['password']) &&
+                isset($_POST['password2']) && !empty($_POST['password2']) &&
+                isset($_POST['usuario']) && !empty($_POST['usuario']) &&
+                isset($_FILES['archivo']) && $_FILES['archivo']['error'] === 0
+              
+            ) {
+                $name = $_POST['nombre'] ;
+                $lastName = $_POST['apellido'] ;
+                $email = $_POST['email'] ?? "";
+                $birthDate = $_POST['nacimiento'];
+                $genderId = $_POST['tipo'] ;
+                $password = $_POST['password'] ;
+                $password2 = $_POST['password2'] ;
+                $userName= $_POST['usuario'] ;
+                $userPhoto = $_FILES["archivo"] ;
+                return array($name, $lastName, $email, $birthDate, $genderId, $password, $password2,$userName,$userPhoto );
                 
-            }else{
+            } else {
                 echo "debe cargar todos los datos";
                 $this->renderer->render('registro');
                 exit();
             }
-      
-          
         }
     
         private function verificarDatos(mixed $name, mixed $lastName, mixed $email, mixed $birthDate, mixed $genderId, mixed $password, mixed $password2, mixed $userName)
@@ -115,10 +131,5 @@
             }
             return $respuesta;
         }
-
-
-    
-        
-    
     
     }

@@ -1,0 +1,15 @@
+<section class="bg-yolose text-white text-center p-5 rounded">
+  <h4>LOS MEJORES PUESTOS</h4>
+  <table class="table text-white">
+    <tr>
+      <th>Usuario</th>
+      <th>Puntaje Maximo</th>
+    </tr>
+    {{#top10}}
+    <tr>
+      <td>{{usuario}}</td>
+      <td>{{puntos}}</td>
+    </tr>
+    {{/top10}}
+  </table>
+</section>

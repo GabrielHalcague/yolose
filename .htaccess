@@ -1,7 +1,14 @@
+<IfModule mod_security.c>
+ SecFilterEngine Off
+ SecFilterScanPOST Off
+</IfModule>
+
 Options -Indexes
-<FilesMatch ".*\.(log|ini|htaccess)$">
-    deny from all
-</FilesMatch>
+
+#<FilesMatch ".*\.(log|ini|htaccess)$">
+#    deny from all
+#</FilesMatch>
+
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /
@@ -11,4 +18,12 @@ Options -Indexes
     RewriteRule ^(.*)/(.*)/(.*)$ index.php?module=$1&action=$2&$3 [L,QSA]
     RewriteRule ^(.*)/(.*)$ index.php?module=$1&action=$2 [L,QSA]
     RewriteRule ^(.*)$ index.php?module=$1&action=list [L,QSA]
+    # rewrite css files to their actual path
+    RewriteRule ^css/(.+\.css)$ public/css/$1 [L,NC]
+
+    # rewrite js files to their actual path
+    RewriteRule ^js/(.+\.js)$ ../../public/js/$1 [L,NC]
+
+    # write root to public/
+    RewriteRule ^$ ./public/ [L]
 </IfModule>
