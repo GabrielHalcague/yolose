@@ -55,7 +55,7 @@
                Session::set('momentoEnvio', (new DateTime)->getTimestamp());
                $html = $this->renderMail->generateTemplatedStringForEmail('templanteMail',$data);
                $this->emailSender->sendEmail(Session::get('email'),'Confirmación de Registro',$html);
-               $this->renderer->render('validate',$data);
+               $this->renderer->render('activacion',$data);
                exit();
            }else{
                $data['error'] = true;
@@ -123,7 +123,7 @@
             }
         }
     
-        private function verificarDatos(mixed $name, mixed $lastName, mixed $email, mixed $birthDate, mixed $genderId, mixed $password, mixed $password2, mixed $userName)
+        private function verificarDatos(mixed $firstName, mixed $lastName, mixed $email, mixed $birthDate, mixed $genderId, mixed $password, mixed $password2, mixed $userName)
         {
             $respuesta= true;
             if(!$this->verifyPassword($password,$password2)&&filter_var($email, FILTER_VALIDATE_EMAIL)){

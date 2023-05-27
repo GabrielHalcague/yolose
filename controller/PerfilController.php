@@ -5,10 +5,10 @@ use JetBrains\PhpStorm\NoReturn;
 class PerfilController
 {
     private $renderer ;
-    private $perfilModel;
+    private $userModel;
 
-    public function __construct($renderer, $perfilModel) {
-        $this->perfilModel = $perfilModel;
+    public function __construct($renderer, $userModel) {
+        $this->userModel = $userModel;
         $this->renderer = $renderer;
     }
     public function list(){
@@ -17,9 +17,8 @@ class PerfilController
         }
         $rol= Session::get('rol');// para el menu
         $data = $this->menuSegunUsuario($rol);
-
-        $username= Session::get('username');
-        $data["perfil"]= $this->perfilModel->getPerfilUsuarioPorNombreUsuario($username);
+        $usernmae = Session::get('username');
+        $data["perfil"]= $this->userModel->getUsuarioByUsername($usernmae)[0];
         $data['logged'] = Session::get('logged');
         $this->renderer->render("perfil", $data);
         exit();
@@ -35,7 +34,7 @@ class PerfilController
         }
 
         $username = $_GET['usuario'] ?? '';
-        $data["perfil"]= $this->perfilModel->getPerfilUsuarioPorNombreUsuario($username);
+        $data["perfil"]= $this->userModel->getUsuarioByUsername($username)[0];
         $data['logged'] = Session::get('logged');
         $this->renderer->render("perfil", $data);
         exit();

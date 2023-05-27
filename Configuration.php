@@ -6,7 +6,7 @@ include_once('controller/ReportarController.php');
 include_once('controller/PerfilController.php');
 include_once('controller/HomeController.php');
 include_once('controller/LoginController.php');
-include_once('controller/ValidationController.php');
+include_once('controller/ActivationController.php');
 
 // Inclusión de Helpers
 include_once('helpers/MySqlDatabase.php');
@@ -33,9 +33,9 @@ class Configuration
     {
     }
 
-    public function getValidationController()
+    public function getActivationController()
     {
-        return new ValidationController($this->getRenderer(),
+        return new ActivationController($this->getRenderer(),
             new RegisterModel($this->getDatabase()));
     }
 
@@ -62,7 +62,7 @@ class Configuration
 
     public function getPerfilController()
     {
-        return new perfilController($this->getRenderer(), new PerfilModel($this->getDatabase()));
+        return new perfilController($this->getRenderer(), new UserModel($this->getDatabase()));
     }
 
     private function getArrayConfig()

@@ -1,7 +1,7 @@
 <?php
 require_once 'helpers/Session.php';
 require_once 'helpers/Header.php';
-class ValidationController{
+class ActivationController{
 
     private $renderer;
     private $registerModel;
@@ -15,10 +15,10 @@ class ValidationController{
     public function list()
     {
         $data['username'] = Session::get('username');
-        $this->renderer->render("validate",$data);
+        $this->renderer->render("activacion",$data);
     }
 
-    public function validar(){
+    public function activarCuenta(){
         $id = $_GET['id'];
         $user = $this->registerModel->getUserByID($id);
         $momentoEnvio = Session::get('momentoEnvio');
@@ -36,7 +36,7 @@ class ValidationController{
             $data["ok"]="Se ha validado correctamente";
         }else
             $data["error"]="No existe el usuario a validar";
-        $this->renderer->render('validate',$data); //aca debemos ir a home
+        $this->renderer->render('activacion',$data); //aca debemos ir a home
     }
 
 
