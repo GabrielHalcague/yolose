@@ -20,20 +20,30 @@ class ActivationController{
 
     public function activarCuenta(){
         $id = $_GET['id'];
-        $user = $this->registerModel->getUserByID($id);
-        $momentoEnvio = Session::get('momentoEnvio');
+        $user= $this->registerModel->getUserByID($id);
+        if(empty($user) || $user[0]['activo']==1){
+            Header::redirect("/");
+            exit();
+        }
+
+        $momentoEnvio = strtotime( $user[0]['f_registro']);
         $momentoActual = (new DateTime)->getTimestamp();
-        $dif = (int)(($momentoActual - $momentoEnvio)/60);
-        if($dif > 5){
+
+        $dif = (int)(($momentoActual - $momentoEnvio)/60)/60;
+        if($dif > 23){
             $data['id']=$id;
             $data['error']="el enlace de activación caduco";
-            $data['logged'] = Session::get('logged');
-            $this->renderer->render("validate",$data);
+           // $data['logged'] = Session::get('logged');
+            $this->renderer->render("activacion",$data);
             exit();
         }
         if(!empty($user) && $user[0]['activo'] == 0){
             $this->registerModel->activarUsuario($id);
             $data["ok"]="Se ha validado correctamente";
+            Session::set('logged', true);
+            Session::set('rol', $user[0]["generoId"]); // cambiar a rol, no esta en la BD
+            Session::set('username', $user[0]['nombreUsuario']);
+
         }else
             $data["error"]="No existe el usuario a validar";
         $this->renderer->render('activacion',$data); //aca debemos ir a home

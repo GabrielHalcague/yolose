@@ -2,7 +2,12 @@
 {{#ok}}
     <div class="alert alert-success" role="alert">
         <strong>{{ok}}</strong>
+        <script>function redireccionarPagina() {
+            window.location = "http://localhost/";
+        }
+        setTimeout("redireccionarPagina()", 5000);</script>
     </div>
+    <div> Seras Redirigido en 5</div>
 {{/ok}}
 {{#error}}
     <div class="alert alert-danger" role="alert">
@@ -12,7 +17,7 @@
 {{#id}}
 <main class="container">
 
-    <h1 class="text-center">Bienvenido a Yolose, {{username}}</h1>
+    <h1 class="text-center">Bienvenido a Yolose {{username}}</h1>
     <p>Se le enviara un email para que pueda verificar su cuenta</p>
     <!--<a name="validar" id="validar" class="btn btn-primary" href="/validation/validar&id={{id}}"
        role="button">Activar Cuenta</a>-->

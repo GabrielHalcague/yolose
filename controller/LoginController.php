@@ -55,7 +55,7 @@ class LoginController
             $this->rendered->render('home', $data);
             exit();
         }else{
-            header("location:validate.php");
+            header("location:validate.php");// no existe
             exit();
         }
      
