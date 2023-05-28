@@ -24,6 +24,7 @@ Options -Indexes
     # rewrite js files to their actual path
     RewriteRule ^js/(.+\.js)$ ../../public/js/$1 [L,NC]
 
+
     # write root to public/
     RewriteRule ^$ ./public/ [L]
 </IfModule>
