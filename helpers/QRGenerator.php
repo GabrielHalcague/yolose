@@ -19,7 +19,7 @@ class QRGenerator
         $absoluteFilePath = $this->path . $filename;
 
         if (file_exists($absoluteFilePath)) {
-            return null;
+            unlink($absoluteFilePath);
         }
 
         QRcode::png($content, $absoluteFilePath, QR_ECLEVEL_L, 10);
