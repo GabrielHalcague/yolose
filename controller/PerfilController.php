@@ -23,7 +23,7 @@ class PerfilController
         $usernmae = Session::get('username');
 
         $data["perfil"]= $this->userModel->getUsuarioByUsername($usernmae)[0];
-        //$data["rutaQR"]=$this->generateQR($data["perfil"]["id"]);
+        $data["rutaQR"]=$this->generateQR($data["perfil"]["id"]);
         $data['logged'] = Session::get('logged');
         $this->renderer->render("perfil", $data);
         exit();
