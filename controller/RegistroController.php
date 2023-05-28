@@ -51,10 +51,11 @@
                $registro = $this->registerModel->getUserByUsername($userName);
                $data['id'] = $registro[0]['id'];
                $data['username'] = $registro[0]['nombreUsuario'];
+               // aca clava, despues de crear la cuenta se setea una sesion 
                Session::set('email',$email);
                Session::set('momentoEnvio', (new DateTime)->getTimestamp());
                $html = $this->renderMail->generateTemplatedStringForEmail('templanteMail',$data);
-               $this->emailSender->sendEmail(Session::get('email'),'Confirmación de Registro',$html);
+               $this->emailSender->sendEmail(Session::get('email'),'Confirmacion de Registro',$html);
                $this->renderer->render('activacion',$data);
                exit();
            }else{
