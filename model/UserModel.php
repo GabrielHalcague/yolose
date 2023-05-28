@@ -28,7 +28,7 @@ class UserModel{
     }
 
     public function getUsuarioByUsername($username){
-        $sql = "SELECT nombre, apellido, correo, password, activo, nombreusuario, f_nacimiento, f_registro, fotoperfil, descripcion 
+        $sql = "SELECT nombre, apellido, correo, password, activo, nombreUsuario, f_nacimiento, f_registro, fotoperfil, descripcion 
                 FROM usuario u JOIN genero g ON u.generoId = g.generoId
                 WHERE u.nombreUsuario = '$username'";
         return $this->database->query($sql);
