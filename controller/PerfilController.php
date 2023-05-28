@@ -25,6 +25,7 @@ class PerfilController
         $data["perfil"]= $this->userModel->getUsuarioByUsername($usernmae)[0];
         $data["rutaQR"]=$this->generateQR($data["perfil"]["id"]);
         $data['logged'] = Session::get('logged');
+        $data['showQR'] = true;
         $this->renderer->render("perfil", $data);
         exit();
     }
@@ -33,14 +34,29 @@ class PerfilController
         if (Session::getDataSession() == null) {
             $data = $this->menuSegunUsuario(0);
         }
-        else{
-            $rol= Session::get('rol');
+        else {
+            $rol = Session::get('rol');
             $data = $this->menuSegunUsuario($rol);
+
+        }
+        Header::debugExit(Session::getDataSession());
+
+        if(empty($_GET['user'])){
+            Session::set('logged',true);
+            Header::redirect("/");
         }
 
-        $username = $_GET['usuario'] ?? '';
-        $data["perfil"]= $this->userModel->getUsuarioByUsername($username)[0];
+        $username = $_GET['user'];
+        $usuarioObtenido = $this->userModel->getUsuarioByUsername($username);
+
+        if(empty($usuarioObtenido) == 1){
+            Session::set('logged',true);
+            Header::redirect("/");
+        }
+
+        $data["perfil"]= $usuarioObtenido[0];
         $data['logged'] = Session::get('logged');
+        $data['showQR'] = false;
         $this->renderer->render("perfil", $data);
         exit();
      }
@@ -67,7 +83,7 @@ class PerfilController
     }
 
     private function generateQR($id){
-        $enlace = "http:/localhost:80/perfil/usuario/{$id}";
+        $enlace = "http:/localhost:80/perfil/usuario?id={$id}";
         $ruta = $this->qrGenerator->getQrPng($enlace);
         if(!$ruta){
             exit();

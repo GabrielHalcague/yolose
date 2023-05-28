@@ -14,9 +14,11 @@
                         <p><strong>Genero:</strong> {{descripcion}}</p>
                         <p><strong>Fecha de ingreso:</strong> {{f_registro}}</p>
                         <p><strong>Activo:</strong> {{activo}}</p>
+                    {{# showQR}}
                      <img src="{{rutaQR}}"
                           class="img-fluid responsive"
                           alt="">
+                    {{/showQR}}
                  {{/perfil}}
             </div>
     </article>
