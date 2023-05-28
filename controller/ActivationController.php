@@ -21,9 +21,8 @@ class ActivationController{
     public function activarCuenta(){
         $id = $_GET['id'];
         $user= $this->registerModel->getUserByID($id);
-        if(empty($user) || $user[0]['activo']==1){
+        if(empty($user) || $user[0]['activo']==1) {
             Header::redirect("/");
-            exit();
         }
 
         $momentoEnvio = strtotime( $user[0]['f_registro']);

@@ -22,7 +22,7 @@ class Mailer extends PHPMailer
         $this->Host = 'smtp.gmail.com';
         $this->Port = 465;
         $this->Username = 'sandwich.ganic@gmail.com'; //Reutilizemos el mail de GANIC xD
-        $this->Password = 'xvosdojilrlxegco';
+        $this->Password = 'udefccdybehhhdht';
         $this->isHTML();
     }
 
