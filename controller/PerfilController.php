@@ -1,15 +1,18 @@
 <?php
-
+require_once "helpers/Session.php";
+require_once "helpers/QRGenerator.php";
 use JetBrains\PhpStorm\NoReturn;
 
 class PerfilController
 {
     private $renderer ;
     private $userModel;
+    private $qrGenerator;
 
-    public function __construct($renderer, $userModel) {
+    public function __construct($renderer, $userModel, $qrGenerator) {
         $this->userModel = $userModel;
         $this->renderer = $renderer;
+        $this->qrGenerator = $qrGenerator;
     }
     public function list(){
         if (Session::getDataSession() == null) {
@@ -18,7 +21,9 @@ class PerfilController
         $rol= Session::get('rol');// para el menu
         $data = $this->menuSegunUsuario($rol);
         $usernmae = Session::get('username');
+
         $data["perfil"]= $this->userModel->getUsuarioByUsername($usernmae)[0];
+        //$data["rutaQR"]=$this->generateQR($data["perfil"]["id"]);
         $data['logged'] = Session::get('logged');
         $this->renderer->render("perfil", $data);
         exit();
@@ -59,5 +64,14 @@ class PerfilController
             default:
                 return  $menu;
         }
+    }
+
+    private function generateQR($id){
+        $enlace = "http:/localhost:80/perfil/usuario/{$id}";
+        $ruta = $this->qrGenerator->getQrPng($enlace);
+        if(!$ruta){
+            exit();
+        }
+        return $ruta;
     }
 }
