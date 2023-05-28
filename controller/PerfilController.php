@@ -23,7 +23,7 @@ class PerfilController
         $usernmae = Session::get('username');
 
         $data["perfil"]= $this->userModel->getUsuarioByUsername($usernmae)[0];
-        $data["rutaQR"]=$this->generateQR($data["perfil"]["id"]);
+        $data["rutaQR"]=$this->generateQR($data["perfil"]["nombreUsuario"]);
         $data['logged'] = Session::get('logged');
         $data['showQR'] = true;
         $this->renderer->render("perfil", $data);
@@ -82,8 +82,8 @@ class PerfilController
         }
     }
 
-    private function generateQR($id){
-        $enlace = "http:/localhost:80/perfil/usuario?id={$id}";
+    private function generateQR($username){
+        $enlace = "http:/localhost:80/perfil/usuario?user={$username}";
         $ruta = $this->qrGenerator->getQrPng($enlace);
         if(!$ruta){
             exit();
