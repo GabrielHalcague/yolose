@@ -11,8 +11,8 @@ class reportarController
 
     }
     public function list() {
-        $data["pregunta"] = $this->reportarModel->getPregunta();
-        $data["respuestas"] = $this->reportarModel->getRespuestasDePregunta($data["pregunta"][0]["id"]);
+        $data["pregunta"] = $this->reportarModel->getPregunta()[0];
+        //$data["respuestas"] = $this->reportarModel->getRespuestasDePregunta($data["pregunta"]["id"]);
         $data['logged'] = Session::get('logged');
         $this->renderer->render("reportar", $data);
     }

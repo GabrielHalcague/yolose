@@ -1,8 +1,7 @@
-{{> header}}
 <section class="container">
     <h2 class="mb-4 text-center">Formulario de ingreso</h2>
     <article class="p-5 bg-dark-subtle rounded">
-        <form class="d-flex justify-content-center form-yolose" action="index.php?module=login&action=iniciarSesion"
+        <form class="d-flex justify-content-center form-yolose" action="/login/iniciarSesion"
             method="post" enctype="multipart/form-data">
             <div class="w-50">
                 <label for="username" class="form-label">Usuario</label>
@@ -21,4 +20,3 @@
         {{/error}}
     </article>
 </section>
-{{> footer}}

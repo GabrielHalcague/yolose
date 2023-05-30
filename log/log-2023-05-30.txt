@@ -1,0 +1,3 @@
+[2023-05-30][INFO]Ejecutando query: SELECT id ,nombre, apellido, correo, password, activo, nombreUsuario, f_nacimiento, f_registro, fotoPerfil, descripcion 
+                FROM usuario u JOIN genero g ON u.generoId = g.generoId
+                WHERE u.nombreUsuario = 'h3rz'
