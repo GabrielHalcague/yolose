@@ -29,6 +29,7 @@ class ActivationController{
         $momentoActual = (new DateTime)->getTimestamp();
 
         $dif = (int)(($momentoActual - $momentoEnvio)/60)/60;
+
         if($dif > 23){
             $data['id']=$id;
             $data['error']="el enlace de activación caduco";
