@@ -9,5 +9,19 @@ $router = $configuration->getRouter();
 
 $module = $_GET['module'] ?? 'home';
 $method = $_GET['action'] ?? 'list';
-//Header::debug($module);
-$router->route($module, $method );
+
+$controladoresValidos = [
+    'home',
+    'login',
+    'registro',
+    'activation',
+    'perfil',
+    'reportar'
+];
+
+if (!Session::isLogged() && !in_array($module, $controladoresValidos)){
+        $module = 'home';
+}
+
+$router->route($module, $method);
+?>

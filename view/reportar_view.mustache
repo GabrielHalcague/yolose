@@ -1,4 +1,25 @@
-{{> header}}
-     {{> ronda}}
-    <h1>formulario de reportar</h1>
-{{> footer}}
+<h1 class="text-center">formulario de reportar</h1>
+<section class="container">
+<article class="table-responsive">
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Pregunta</th>
+            <th>Motivo</th>
+            <th>Acción</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#pregunta}}
+            <tr>
+                <td>{{pregunta.descripcion}}</td>
+                <td>Hola</td>
+                <td><a class="btn btn-primary" href="/pregunta/habilitar&id={{pregunta.id}}" role="button">Habilitar</a> |
+                    <a class="btn btn-danger" href="/pregunta/eliminar&id={{pregunta.id}}" role="button">Eliminar</a>
+                </td>
+            </tr>
+        {{/pregunta}}
+        </tbody>
+    </table>
+</article>
+</section>
