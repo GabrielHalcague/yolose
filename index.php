@@ -16,7 +16,8 @@ $controladoresValidos = [
     'registro',
     'activation',
     'perfil',
-    'reportar'
+    'reportar',
+    'pregunta'
 ];
 
 if (!Session::isLogged() && !in_array($module, $controladoresValidos)){

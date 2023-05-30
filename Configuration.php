@@ -7,6 +7,7 @@ include_once('controller/PerfilController.php');
 include_once('controller/HomeController.php');
 include_once('controller/LoginController.php');
 include_once('controller/ActivationController.php');
+include_once('controller/PreguntaController.php');
 
 // Inclusión de Helpers
 include_once('helpers/MySqlDatabase.php');
@@ -21,7 +22,9 @@ include_once('model/UserModel.php');
 include_once('model/RegisterModel.php');
 include_once('model/ReportarModel.php');
 include_once('model/PerfilModel.php');
-
+include_once('model/CategoriaModel.php');
+include_once('model/PreguntaModel.php');
+include_once('model/RespuestaModel.php');
 
 // Inclusión de Bibliotecas de Terceros
 include_once('third-party/mustache/src/Mustache/Autoloader.php');
@@ -32,6 +35,15 @@ class Configuration
 
     public function __construct()
     {
+    }
+
+    public function getPreguntaController()
+    {
+        return new PreguntaController($this->getRenderer(), [
+            'pregunta' => new PreguntaModel($this->getDatabase()),
+            'respuesta' => new RespuestaModel($this->getDatabase()),
+            'categoria' => new CategoriaModel($this->getDatabase())
+        ]);
     }
 
     public function getActivationController()
@@ -47,7 +59,7 @@ class Configuration
 
     public function getRegistroController()
     {
-        return new registroController($this->getRenderer(),$this->getMailRenderer(), new RegisterModel($this->getDatabase()),
+        return new registroController($this->getRenderer(), $this->getMailRenderer(), new RegisterModel($this->getDatabase()),
             $this->getMailer());
     }
 
@@ -63,7 +75,7 @@ class Configuration
 
     public function getPerfilController()
     {
-        return new perfilController($this->getRenderer(), new UserModel($this->getDatabase()),$this->getQRGenerator());
+        return new perfilController($this->getRenderer(), new UserModel($this->getDatabase()), $this->getQRGenerator());
     }
 
     private function getArrayConfig()

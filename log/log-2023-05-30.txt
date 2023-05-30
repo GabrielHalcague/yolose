@@ -1,3 +1,73 @@
 [2023-05-30][INFO]Ejecutando query: SELECT id ,nombre, apellido, correo, password, activo, nombreUsuario, f_nacimiento, f_registro, fotoPerfil, descripcion 
                 FROM usuario u JOIN genero g ON u.generoId = g.generoId
                 WHERE u.nombreUsuario = 'h3rz'
+[2023-05-30][INFO]Ejecutando query: SELECT * FROM usuario
+                                       WHERE nombreUsuario='h3rz'
+                                       AND password='202cb962ac59075b964b07152d234b70'
+[2023-05-30][INFO]Ejecutando query: SELECT id, descripcion FROM categoria
+[2023-05-30][INFO]Ejecutando query: SELECT id, descripcion FROM categoria
+[2023-05-30][INFO]Ejecutando query: SELECT id, descripcion FROM categoria
+[2023-05-30][INFO]Array
+[2023-05-30][INFO]Ejecutando query: SELECT id, descripcion FROM categoria
+[2023-05-30][INFO]Ejecutando query: SELECT id, descripcion FROM categoria
+[2023-05-30][INFO]Ejecutando query: SELECT id, descripcion FROM categoria
+[2023-05-30][INFO]Ejecutando query: SELECT id, descripcion FROM categoria
+[2023-05-30][INFO]Ejecutando query: INSERT INTO pregunta (descripcion, categoria, cantidadDeReportes) 
+                VALUES ('¿Qué se celebra el 25 de Mayo en Argentina?','4')
+[2023-05-30][INFO]Ejecutando query: SELECT id, descripcion FROM categoria
+[2023-05-30][INFO]Ejecutando query: SELECT id, descripcion FROM categoria
+[2023-05-30][INFO]Ejecutando query: INSERT INTO pregunta (descripcion, categoria, cantidadDeReportes) 
+                VALUES ('¿Qué se celebra el 25 de Mayo en Argentina?','3')
+[2023-05-30][INFO]Ejecutando query: SELECT id, descripcion FROM categoria
+[2023-05-30][INFO]Ejecutando query: SELECT id, descripcion FROM categoria
+[2023-05-30][INFO]Ejecutando query: SELECT id, descripcion FROM categoria
+[2023-05-30][INFO]Ejecutando query: INSERT INTO pregunta (descripcion, categoria, cantidadDeReportes) 
+                VALUES ('¿Qué se celebra el 25 de Mayo en Argentina?','3',0)
+[2023-05-30][INFO]Ejecutando query: SELECT id FROM pregunta WHERE descripcion LIKE '¿Qué se celebra el 25 de Mayo en Argentina?'
+[2023-05-30][INFO]Ejecutando query: INSERT INTO pregunt (descripcion, verdadero, idPregunta) 
+                VALUES ('Revolución de Mayo','0','Array)'
+[2023-05-30][INFO]Ejecutando query: SELECT id, descripcion FROM categoria
+[2023-05-30][INFO]Ejecutando query: INSERT INTO pregunta (descripcion, categoria, cantidadDeReportes) 
+                VALUES ('¿Qué se celebra el 25 de Mayo en Argentina?','3',0)
+[2023-05-30][INFO]Ejecutando query: SELECT id FROM pregunta WHERE descripcion LIKE '¿Qué se celebra el 25 de Mayo en Argentina?'
+[2023-05-30][INFO]Ejecutando query: SELECT id, descripcion FROM categoria
+[2023-05-30][INFO]Ejecutando query: SELECT id, descripcion FROM categoria
+[2023-05-30][INFO]Ejecutando query: SELECT id, descripcion FROM categoria
+[2023-05-30][INFO]Ejecutando query: INSERT INTO pregunta (descripcion, categoria, cantidadDeReportes) 
+                VALUES ('¿Qué se celebra el 25 de Mayo en Argentina?','3',0)
+[2023-05-30][INFO]Ejecutando query: SELECT id FROM pregunta WHERE descripcion LIKE '¿Qué se celebra el 25 de Mayo en Argentina?'
+[2023-05-30][INFO]Ejecutando query: SELECT id, descripcion FROM categoria
+[2023-05-30][INFO]Ejecutando query: INSERT INTO pregunta (descripcion, categoria, cantidadDeReportes) 
+                VALUES ('¿Qué se celebra el 25 de Mayo en Argentina?','3',0)
+[2023-05-30][INFO]Ejecutando query: SELECT id FROM pregunta WHERE descripcion LIKE '¿Qué se celebra el 25 de Mayo en Argentina?'
+[2023-05-30][INFO]Ejecutando query: INSERT INTO opcion (descripcion, verdadero, idPregunta)
+                VALUES ('Revolución de Mayo','0','Array)'
+[2023-05-30][INFO]Ejecutando query: SELECT id, descripcion FROM categoria
+[2023-05-30][INFO]Ejecutando query: INSERT INTO pregunta (descripcion, categoria, cantidadDeReportes) 
+                VALUES ('¿Qué se celebra el 25 de Mayo en Argentina?','3',0)
+[2023-05-30][INFO]Ejecutando query: SELECT id FROM pregunta WHERE descripcion LIKE '¿Qué se celebra el 25 de Mayo en Argentina?'
+[2023-05-30][INFO]Ejecutando query: INSERT INTO opcion (descripcion, verdadero, idPregunta) VALUES (Revolución de Mayo,0,'Array)'
+[2023-05-30][INFO]Ejecutando query: SELECT * FROM usuario
+                                       WHERE nombreUsuario='h3rz'
+                                       AND password='202cb962ac59075b964b07152d234b70'
+[2023-05-30][INFO]Ejecutando query: SELECT * FROM usuario
+                                       WHERE nombreUsuario='cris'
+                                       AND password='202cb962ac59075b964b07152d234b70'
+[2023-05-30][INFO]Ejecutando query: SELECT * FROM usuario
+                                       WHERE nombreUsuario='cris'
+                                       AND password='202cb962ac59075b964b07152d234b70'
+[2023-05-30][INFO]Ejecutando query: SELECT id ,nombre, apellido, correo, password, activo, nombreUsuario, f_nacimiento, f_registro, fotoPerfil, descripcion 
+                FROM usuario u JOIN genero g ON u.generoId = g.generoId
+                WHERE u.nombreUsuario = 'cris'
+[2023-05-30][INFO]Ejecutando query: SELECT * FROM usuario
+                                       WHERE nombreUsuario='cris'
+                                       AND password='202cb962ac59075b964b07152d234b70'
+[2023-05-30][INFO]Ejecutando query: SELECT * FROM usuario
+                                       WHERE nombreUsuario='gab'
+                                       AND password='639bee393eecbc62256936a8e64d17b1'
+[2023-05-30][INFO]Ejecutando query: SELECT id, descripcion FROM categoria
+[2023-05-30][INFO]Ejecutando query: SELECT id, descripcion FROM categoria
+[2023-05-30][INFO]Ejecutando query: INSERT INTO pregunta (descripcion, categoria, cantidadDeReportes) 
+                VALUES ('¿Qué se celebra el 25 de Mayo en Argentina?','3',0)
+[2023-05-30][INFO]Ejecutando query: SELECT id FROM pregunta WHERE descripcion LIKE '¿Qué se celebra el 25 de Mayo en Argentina?'
+[2023-05-30][INFO]Ejecutando query: INSERT INTO opcion (descripcion, verdadero, idPregunta) VALUES (Revolución de Mayo,0,'Array)'

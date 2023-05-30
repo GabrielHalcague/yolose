@@ -1,0 +1,58 @@
+[2023-05-31][INFO]Ejecutando query: SELECT id, descripcion FROM categoria
+[2023-05-31][INFO]Ejecutando query: INSERT INTO pregunta (descripcion, categoria, cantidadDeReportes) 
+                VALUES ('¿Qué se celebra el 25 de Mayo en Argentina?','3',0)
+[2023-05-31][INFO]Ejecutando query: SELECT id FROM pregunta WHERE descripcion LIKE '¿Qué se celebra el 25 de Mayo en Argentina?'
+[2023-05-31][INFO]Ejecutando query: INSERT INTO opcion (descripcion, verdadero, idPregunta) VALUES (Revolución de Mayo,0,Array)
+[2023-05-31][INFO]Ejecutando query: SELECT id, descripcion FROM categoria
+[2023-05-31][INFO]Ejecutando query: SELECT id, descripcion FROM categoria
+[2023-05-31][INFO]Ejecutando query: INSERT INTO pregunta (descripcion, categoria, cantidadDeReportes) 
+                VALUES ('¿Qué se celebra el 25 de Mayo en Argentina?','3',0)
+[2023-05-31][INFO]Ejecutando query: SELECT id FROM pregunta WHERE descripcion LIKE '¿Qué se celebra el 25 de Mayo en Argentina?'
+[2023-05-31][INFO]Ejecutando query: INSERT INTO opcion (descripcion, verdadero, idPregunta) VALUES (Revolución de Mayo,0,Array)
+[2023-05-31][INFO]Ejecutando query: SELECT id, descripcion FROM categoria
+[2023-05-31][INFO]Ejecutando query: SELECT id, descripcion FROM categoria
+[2023-05-31][INFO]Ejecutando query: INSERT INTO pregunta (descripcion, categoria, cantidadDeReportes) 
+                VALUES ('¿Qué se celebra el 25 de Mayo en Argentina?','3',0)
+[2023-05-31][INFO]Ejecutando query: SELECT id FROM pregunta WHERE descripcion LIKE '¿Qué se celebra el 25 de Mayo en Argentina?'
+[2023-05-31][INFO]Ejecutando query: SELECT id, descripcion FROM categoria
+[2023-05-31][INFO]Ejecutando query: SELECT id, descripcion FROM categoria
+[2023-05-31][INFO]Ejecutando query: INSERT INTO pregunta (descripcion, categoria, cantidadDeReportes) 
+                VALUES ('¿Qué se celebra el 25 de Mayo en Argentina?','3',0)
+[2023-05-31][INFO]Ejecutando query: SELECT id FROM pregunta WHERE descripcion LIKE '¿Qué se celebra el 25 de Mayo en Argentina?'
+[2023-05-31][INFO]Ejecutando query: INSERT INTO opcion (descripcion, verdadero, idPregunta) VALUES (Revolución de Mayo,0,Array)
+[2023-05-31][INFO]Ejecutando query: SELECT id, descripcion FROM categoria
+[2023-05-31][INFO]Ejecutando query: SELECT id, descripcion FROM categoria
+[2023-05-31][INFO]Ejecutando query: INSERT INTO pregunta (descripcion, categoria, cantidadDeReportes) 
+                VALUES ('¿Qué se celebra el 25 de Mayo en Argentina?','3',0)
+[2023-05-31][INFO]Ejecutando query: SELECT id FROM pregunta WHERE descripcion LIKE '¿Qué se celebra el 25 de Mayo en Argentina?'
+[2023-05-31][INFO]Ejecutando query: INSERT INTO opcion (descripcion, verdadero, idPregunta) VALUES (Revolución de Mayo,0,)
+[2023-05-31][INFO]Ejecutando query: SELECT id, descripcion FROM categoria
+[2023-05-31][INFO]Ejecutando query: INSERT INTO pregunta (descripcion, categoria, cantidadDeReportes) 
+                VALUES ('¿Qué se celebra el 25 de Mayo en Argentina?','3',0)
+[2023-05-31][INFO]Ejecutando query: SELECT id FROM pregunta WHERE descripcion LIKE '¿Qué se celebra el 25 de Mayo en Argentina?'
+[2023-05-31][INFO]Ejecutando query: SELECT id, descripcion FROM categoria
+[2023-05-31][INFO]Ejecutando query: INSERT INTO pregunta (descripcion, categoria, cantidadDeReportes) 
+                VALUES ('¿Qué se celebra el 25 de Mayo en Argentina?','3',0)
+[2023-05-31][INFO]Ejecutando query: SELECT id FROM pregunta WHERE descripcion LIKE '¿Qué se celebra el 25 de Mayo en Argentina?'
+[2023-05-31][INFO]Ejecutando query: SELECT id, descripcion FROM categoria
+[2023-05-31][INFO]Ejecutando query: SELECT id, descripcion FROM categoria
+[2023-05-31][INFO]Ejecutando query: INSERT INTO pregunta (descripcion, categoria, cantidadDeReportes) 
+                VALUES ('xxxxxxxx','3',0)
+[2023-05-31][INFO]Ejecutando query: SELECT id FROM pregunta WHERE descripcion LIKE 'xxxxxxxx'
+[2023-05-31][INFO]Ejecutando query: INSERT INTO opcion (descripcion, verdadero, idPregunta) VALUES (xxxxxx,0,15)
+[2023-05-31][INFO]Ejecutando query: SELECT id, descripcion FROM categoria
+[2023-05-31][INFO]Ejecutando query: SELECT id, descripcion FROM categoria
+[2023-05-31][INFO]Ejecutando query: INSERT INTO pregunta (descripcion, categoria, cantidadDeReportes) 
+                VALUES ('xxxxxxxx','2',0)
+[2023-05-31][INFO]Ejecutando query: SELECT id FROM pregunta WHERE descripcion LIKE 'xxxxxxxx'
+[2023-05-31][INFO]Ejecutando query: INSERT INTO opcion (descripcion, verdadero, idPregunta) VALUES ('sass',0,'15')
+[2023-05-31][INFO]Ejecutando query: SELECT id, descripcion FROM categoria
+[2023-05-31][INFO]Ejecutando query: SELECT id, descripcion FROM categoria
+[2023-05-31][INFO]Ejecutando query: INSERT INTO pregunta (descripcion, categoria, cantidadDeReportes) 
+                VALUES ('¿Qué se celebra el 25 de Mayo en Argentina?','3',0)
+[2023-05-31][INFO]Ejecutando query: SELECT id FROM pregunta WHERE descripcion LIKE '¿Qué se celebra el 25 de Mayo en Argentina?'
+[2023-05-31][INFO]Ejecutando query: INSERT INTO opcion (descripcion, verdadero, idPregunta) VALUES ('Revolución de Mayo',0,'12')
+[2023-05-31][INFO]Ejecutando query: INSERT INTO opcion (descripcion, verdadero, idPregunta) VALUES ('Revolución de las Empanadas',0,'12')
+[2023-05-31][INFO]Ejecutando query: INSERT INTO opcion (descripcion, verdadero, idPregunta) VALUES ('asfafc',0,'12')
+[2023-05-31][INFO]Ejecutando query: INSERT INTO opcion (descripcion, verdadero, idPregunta) VALUES ('xxxxxxxxx',0,'12')
+[2023-05-31][INFO]Ejecutando query: SELECT p.id, p.descripcion, c.descripcion as "cat" FROM pregunta p JOIN categoria c ON p.categoria = c.id
