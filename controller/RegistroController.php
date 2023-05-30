@@ -47,7 +47,8 @@
 
            if( $errores == 0 && $verficar){
                $namePhoto=   $this->saveUserPhoto();
-               $this->registerModel->register($name,$lastName,$email, $birthDate, $genderId, $password,$userName, $namePhoto);
+               $f_registro = date("Y-m-d-h-i-s");
+               $this->registerModel->register($name,$lastName,$email, $birthDate, $genderId, $password,$userName, $namePhoto,$f_registro);
                $registro = $this->registerModel->getUserByUsername($userName);
                $data['id'] = $registro[0]['id'];
                $data['username'] = $registro[0]['nombreUsuario'];
