@@ -8,6 +8,7 @@ include_once('controller/HomeController.php');
 include_once('controller/LoginController.php');
 include_once('controller/ActivationController.php');
 include_once('controller/PreguntaController.php');
+include_once('controller/PartidaController.php');
 
 // Inclusión de Helpers
 include_once('helpers/MySqlDatabase.php');
@@ -24,7 +25,8 @@ include_once('model/ReportarModel.php');
 include_once('model/PerfilModel.php');
 include_once('model/CategoriaModel.php');
 include_once('model/PreguntaModel.php');
-include_once('model/RespuestaModel.php');
+include_once('model/OpcionModel.php');
+include_once('model/PartidaModel.php');
 
 // Inclusión de Bibliotecas de Terceros
 include_once('third-party/mustache/src/Mustache/Autoloader.php');
@@ -41,9 +43,20 @@ class Configuration
     {
         return new PreguntaController($this->getRenderer(), [
             'pregunta' => new PreguntaModel($this->getDatabase()),
-            'respuesta' => new RespuestaModel($this->getDatabase()),
+            'respuesta' => new OpcionModel($this->getDatabase()),
             'categoria' => new CategoriaModel($this->getDatabase())
         ]);
+    }
+
+    public function getPartidaController()
+    {
+        return new PartidaController($this->getRenderer(),
+            [
+                'pregunta' => new PreguntaModel($this->getDatabase()),
+                'opcion' => new OpcionModel($this->getDatabase()),
+                'categoria' => new CategoriaModel($this->getDatabase()),
+                'usuario' => new UserModel($this->getDatabase())
+            ]);
     }
 
     public function getActivationController()

@@ -19,4 +19,10 @@ class PreguntaModel
         $sql = "SELECT id FROM pregunta WHERE descripcion LIKE '$preg'";
         return $this->database->query($sql);
     }
+
+    public function obtenerTodasLasPreguntas(){
+        $sql = "SELECT p.id, p.descripcion 'pregunta', c.descripcion as 'categoria', c.color  FROM pregunta p JOIN categoria c ON p.categoria = c.id";
+       /* $sql = "SELECT *  FROM pregunta";*/
+        return $this->database->query($sql);
+    }
 }

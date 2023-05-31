@@ -1,6 +1,6 @@
 <?php
 
-class RespuestaModel
+class OpcionModel
 {
 
 
@@ -19,5 +19,9 @@ class RespuestaModel
         }
     }
 
+    public function obtenerOpcionesDePregunta($idPreg){
+        $sql = "SELECT * FROM opcion WHERE idPregunta = $idPreg";
+        return $this->database->query($sql);
+    }
 
 }

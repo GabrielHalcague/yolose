@@ -56,3 +56,54 @@
 [2023-05-31][INFO]Ejecutando query: INSERT INTO opcion (descripcion, verdadero, idPregunta) VALUES ('asfafc',0,'12')
 [2023-05-31][INFO]Ejecutando query: INSERT INTO opcion (descripcion, verdadero, idPregunta) VALUES ('xxxxxxxxx',0,'12')
 [2023-05-31][INFO]Ejecutando query: SELECT p.id, p.descripcion, c.descripcion as "cat" FROM pregunta p JOIN categoria c ON p.categoria = c.id
+[2023-05-31][INFO]Ejecutando query: SELECT * FROM usuario
+                                       WHERE nombreUsuario='cris'
+                                       AND password='202cb962ac59075b964b07152d234b70'
+[2023-05-31][INFO]Ejecutando query: SELECT * FROM usuario
+                                       WHERE nombreUsuario='gba'
+                                       AND password='7f43973f35b3a7ea2620ba52e8d0e6ec'
+[2023-05-31][INFO]Ejecutando query: SELECT * FROM usuario
+                                       WHERE nombreUsuario='usuario'
+                                       AND password='f8032d5cae3de20fcec887f395ec9a6a'
+[2023-05-31][INFO]Ejecutando query: SELECT id ,nombre, apellido, correo, password, activo, nombreUsuario, f_nacimiento, f_registro, fotoPerfil, descripcion 
+                FROM usuario u JOIN genero g ON u.generoId = g.generoId
+                WHERE u.nombreUsuario = 'usuario'
+[2023-05-31][INFO]Ejecutando query: SELECT id ,nombre, apellido, correo, password, activo, nombreUsuario, f_nacimiento, f_registro, fotoPerfil, descripcion 
+                FROM usuario u JOIN genero g ON u.generoId = g.generoId
+                WHERE u.nombreUsuario = 'usuario'
+[2023-05-31][INFO]Ejecutando query: SELECT * FROM pregunta p JOIN categoria c ON p.categoria = c.id
+[2023-05-31][INFO]Ejecutando query: SELECT * FROM opcion WHERE idPregunta = 3
+[2023-05-31][INFO]Ejecutando query: SELECT * FROM pregunta p JOIN categoria c ON p.categoria = c.id
+[2023-05-31][INFO]Ejecutando query: SELECT * FROM opcion WHERE idPregunta = 3
+[2023-05-31][INFO]Ejecutando query: SELECT * FROM pregunta p JOIN categoria c ON p.categoria = c.id
+[2023-05-31][INFO]Ejecutando query: SELECT * FROM pregunta
+[2023-05-31][INFO]Ejecutando query: SELECT * FROM pregunta
+[2023-05-31][INFO]Ejecutando query: SELECT * FROM opcion WHERE idPregunta = 1
+[2023-05-31][INFO]Ejecutando query: SELECT * FROM pregunta
+[2023-05-31][INFO]Ejecutando query: SELECT * FROM opcion WHERE idPregunta = 13
+[2023-05-31][INFO]Ejecutando query: SELECT * FROM pregunta
+[2023-05-31][INFO]Ejecutando query: SELECT * FROM opcion WHERE idPregunta = 16
+[2023-05-31][INFO]Ejecutando query: SELECT p.id, p.descripcion, c.descripcion, c.color  FROM pregunta p JOIN categoria c ON p.categoria = c.id
+[2023-05-31][INFO]Ejecutando query: SELECT * FROM opcion WHERE idPregunta = 14
+[2023-05-31][INFO]Ejecutando query: SELECT p.id, p.descripcion, c.descripcion, c.color  FROM pregunta p JOIN categoria c ON p.categoria = c.id
+[2023-05-31][INFO]Ejecutando query: SELECT * FROM opcion WHERE idPregunta = 14
+[2023-05-31][INFO]Ejecutando query: SELECT p.id, p.descripcion 'pregunta', c.descripcion as 'categoria', c.color  FROM pregunta p JOIN categoria c ON p.categoria = c.id
+[2023-05-31][INFO]Ejecutando query: SELECT * FROM opcion WHERE idPregunta = 17
+[2023-05-31][INFO]Ejecutando query: SELECT p.id, p.descripcion 'pregunta', c.descripcion as 'categoria', c.color  FROM pregunta p JOIN categoria c ON p.categoria = c.id
+[2023-05-31][INFO]Ejecutando query: SELECT * FROM opcion WHERE idPregunta = 
+[2023-05-31][INFO]Ejecutando query: SELECT p.id, p.descripcion 'pregunta', c.descripcion as 'categoria', c.color  FROM pregunta p JOIN categoria c ON p.categoria = c.id
+[2023-05-31][INFO]Ejecutando query: SELECT p.id, p.descripcion 'pregunta', c.descripcion as 'categoria', c.color  FROM pregunta p JOIN categoria c ON p.categoria = c.id
+[2023-05-31][INFO]Ejecutando query: SELECT * FROM opcion WHERE idPregunta = 17
+[2023-05-31][INFO]Ejecutando query: SELECT *  FROM pregunta
+[2023-05-31][INFO]Ejecutando query: SELECT * FROM opcion WHERE idPregunta = 17
+[2023-05-31][INFO]Ejecutando query: SELECT *  FROM pregunta
+[2023-05-31][INFO]Ejecutando query: SELECT * FROM opcion WHERE idPregunta = 13
+[2023-05-31][INFO]Ejecutando query: SELECT *  FROM pregunta
+[2023-05-31][INFO]Ejecutando query: SELECT *  FROM pregunta
+[2023-05-31][INFO]Ejecutando query: SELECT * FROM opcion WHERE idPregunta = 14
+[2023-05-31][INFO]Ejecutando query: SELECT p.id, p.descripcion  FROM pregunta p
+[2023-05-31][INFO]Ejecutando query: SELECT * FROM opcion WHERE idPregunta = 16
+[2023-05-31][INFO]Ejecutando query: SELECT p.id, p.descripcion  FROM pregunta p
+[2023-05-31][INFO]Ejecutando query: SELECT * FROM opcion WHERE idPregunta = 5
+[2023-05-31][INFO]Ejecutando query: SELECT p.id, p.descripcion 'pregunta', c.descripcion as 'categoria', c.color  FROM pregunta p JOIN categoria c ON p.categoria = c.id
+[2023-05-31][INFO]Ejecutando query: SELECT * FROM opcion WHERE idPregunta = 4
