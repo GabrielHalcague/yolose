@@ -50,13 +50,13 @@ class Configuration
 
     public function getPartidaController()
     {
-        return new PartidaController($this->getRenderer(),
-            [
-                'pregunta' => new PreguntaModel($this->getDatabase()),
-                'opcion' => new OpcionModel($this->getDatabase()),
-                'categoria' => new CategoriaModel($this->getDatabase()),
-                'usuario' => new UserModel($this->getDatabase())
-            ]);
+        return new PartidaController($this->getRenderer(),new PartidaModel($this->getDatabase(),
+                [
+                    'pregunta' => new PreguntaModel($this->getDatabase()),
+                    'opcion' => new OpcionModel($this->getDatabase()),
+                    'usuario' => new UserModel($this->getDatabase())
+                ])
+            );
     }
 
     public function getActivationController()

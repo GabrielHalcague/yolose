@@ -1,0 +1,20 @@
+<section class="container">
+    {{#username}}
+        <p>Jugador: {{username}}</p>
+    {{/username}}
+    {{#preg}}
+        <h1 class="text-center">{{pregunta}}</h1>
+        <h2 class="text-center" style="color: {{color}}">HOLAAAA</h2>
+    <h3 class="text-center">{{respuestaCorrecta}}</h3>
+
+    {{/preg}}
+
+    <article class="container-fluid">
+        {{#opc}}
+            <button type="button" name="{{id}}" id="{{id}}"
+                    class="btn btn-primary btn-lg btn-block" value="{{respuesta}}" > {{respuesta}}
+            </button>
+        {{/opc}}
+    </article>
+
+</section>

@@ -9,10 +9,10 @@ class ReportarModel
     }
 
     public function getPregunta(){
-        return $this->database->query('SELECT p.id, p.descripcion, c.descripcion as "cat" FROM pregunta p JOIN categoria c ON p.categoria = c.id');
+        return $this->database->query('SELECT p.id, p.pregunta, c.categoria as "cat" FROM pregunta p JOIN categoria c ON p.idCat = c.id');
     }
     public function getRespuestasDePregunta($idPRegunta){
-        return $this->database->query("SELECT * FROM opcion where $idPRegunta = $idPRegunta");
+        return $this->database->query("SELECT * FROM respuesta where idPreg = $idPRegunta");
     }
 
 }

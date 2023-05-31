@@ -4,42 +4,49 @@ class PartidaController{
 
 
     private $render;
-    private $preguntaModel;
-    private $opcionModel;
-    private $categorialModel;
-    private $userModel;
+    private $partidaModel;
 
-    public function __construct($render, $models)
+
+    public function __construct($render, $partidaModel)
     {
         $this->render = $render;
-        $this->preguntaModel = $models['pregunta'];
-        $this->opcionModel = $models['opcion'];
-        $this->categorialModel = $models['categoria'];
-        $this->userModel = $models['usuario'];
+        $this->partidaModel = $partidaModel;
     }
 
     public function list(){
         if(!Session::getDataSession()){
             Header::redirect("/");
         }
-        $data['logged'] = Session::get('logged');
-        $data['username'] = Session::get('username');
         $preguntas=[];
-
         if(empty(Session::get('preguntas'))){
-            $preguntas = $this->preguntaModel->obtenerTodasLasPreguntas();
+            $preguntas = $this->partidaModel->obtenerPreguntas(Session::get('username'));
         }else{
             $preguntas = Session::get('preguntas');
         }
-
+        if(empty($preguntas)){
+            $this->partidaModel->limpiarHistorialUsuario(Session::get('username'));
+            $preguntas = $this->partidaModel->obtenerPreguntas(Session::get('username'));
+        }
         $indicePregunta = array_rand($preguntas);
         $preguntaActual = $preguntas[$indicePregunta];
 
-        $data['pregunta'] = $preguntaActual;
+        $data['js']=true;
+        $data['preg'] = $preguntaActual;
+        $data['logged'] = Session::get('logged');
+        $data['username'] = Session::get('username');
+        $data['opc'] = $this->partidaModel->obtenerRespuestaDePregunta($preguntaActual['id']);
 
-        $data['opciones'] = $this->opcionModel->obtenerOpcionesDePregunta($preguntaActual['id']);
-        Header::debug($data);
+
+        Session::set('preguntaSeleccionada',$preguntas[$indicePregunta]);
+        /*unset($preguntas[$indicePregunta]);*/
+        Session::set('preguntas',$preguntas);
+        /*Header::debugExit($data);*/
         $this->render->render("jugar",$data);
+    }
+
+    public function verficar($id){
+        $preguntaSeleccionada = Session::get('preguntaSeleccionada');
+
     }
 
 }

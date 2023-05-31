@@ -9,7 +9,7 @@ class Header{
 
     public static function debugExit($var)
     {
-        print_r($var);
+        var_dump($var);
         echo "<br>";
         exit();
     }

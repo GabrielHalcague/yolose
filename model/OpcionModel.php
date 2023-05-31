@@ -14,13 +14,13 @@ class OpcionModel
     public function agregarRespuestas($data, $idPreg){
         $id = $idPreg['id'];
         foreach ( $data as $item) {
-            $sql = "INSERT INTO opcion (descripcion, verdadero, idPregunta) VALUES ('$item',0,'$id')";
+            $sql = "INSERT INTO respuesta (respuesta, idPreg) VALUES ('$item','$id')";
             $this->database->execute($sql);
         }
     }
 
-    public function obtenerOpcionesDePregunta($idPreg){
-        $sql = "SELECT * FROM opcion WHERE idPregunta = $idPreg";
+    public function obtenerOpcionesDePregunta($id){
+        $sql = "SELECT r.id, r.respuesta FROM respuesta r WHERE r.idPreg = '$id'";
         return $this->database->query($sql);
     }
 

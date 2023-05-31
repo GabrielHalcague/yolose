@@ -9,7 +9,7 @@ class UserModel{
     }
 
     public function getGenderByID($genderId){
-        $sql = "SELECT * FROM genero WHERE generoId = $genderId";
+        $sql = "SELECT * FROM genero WHERE id = $genderId";
         return $this->database->query($sql);
     }
     public function getUsuarioByEmail($mail, $password)
@@ -28,15 +28,25 @@ class UserModel{
     }
 
     public function getUsuarioByUsername($username){
-        $sql = "SELECT id ,nombre, apellido, correo, password, activo, nombreUsuario, f_nacimiento, f_registro, fotoPerfil, descripcion 
-                FROM usuario u JOIN genero g ON u.generoId = g.generoId
+        $sql = "SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
                 WHERE u.nombreUsuario = '$username'";
         return $this->database->query($sql);
     }
 
     public function getUsuarioByID($id){
-        $sql = "SELECT id ,nombre, apellido, correo, password, activo, nombreUsuario, f_nacimiento, f_registro, fotoPerfil, descripcion 
-                FROM usuario u JOIN genero g ON u.generoId = g.generoId
+        $sql = "SELECT u.id ,u.nombre, u.apellido, u.correo, u.password, u.activo, u.nombreUsuario, u.f_nacimiento, f_registro, fotoPerfil, descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
                 WHERE u.id = '$id'";
         return $this->database->query($sql);
     }
