@@ -18,34 +18,40 @@ class PartidaController{
             Header::redirect("/");
         }
         $preguntas=[];
+
         if(empty(Session::get('preguntas'))){
-            $preguntas = $this->partidaModel->obtenerPreguntas(Session::get('username'));
+            $preguntas = $this->partidaModel->obtenerPreguntas(Session::get('username')); //no tengo stock de preguntas
         }else{
-            $preguntas = Session::get('preguntas');
+            $preguntas = Session::get('preguntas'); // tengo stock
         }
-        if(empty($preguntas)){
-            $this->partidaModel->limpiarHistorialUsuario(Session::get('username'));
-            $preguntas = $this->partidaModel->obtenerPreguntas(Session::get('username'));
+
+        if(empty($preguntas)){ // si ya respondio todas las preguntas
+            $this->partidaModel->limpiarHistorialUsuario(Session::get('username')); //limpio el historial
+            $preguntas = $this->partidaModel->obtenerPreguntas(Session::get('username')); // traer preguntas
         }
         $indicePregunta = array_rand($preguntas);
         $preguntaActual = $preguntas[$indicePregunta];
 
         $data['js']=true;
-        $data['preg'] = $preguntaActual;
+        $data['preg'] = [
+            'pregunta' => $preguntaActual['pregunta'],
+            'color' => $preguntaActual['color']
+        ];
         $data['logged'] = Session::get('logged');
         $data['username'] = Session::get('username');
-        $data['opc'] = $this->partidaModel->obtenerRespuestaDePregunta($preguntaActual['id']);
-
+        $data['opc'] = $this->partidaModel->obtenerRespuestaDePregunta($preguntaActual['preguntaID']);
 
         Session::set('preguntaSeleccionada',$preguntas[$indicePregunta]);
         /*unset($preguntas[$indicePregunta]);*/
         Session::set('preguntas',$preguntas);
-        /*Header::debugExit($data);*/
         $this->render->render("jugar",$data);
     }
 
-    public function verficar($id){
+    public function verficar(){
+        $id = $_POST['id'];
         $preguntaSeleccionada = Session::get('preguntaSeleccionada');
+        //ingresarh historial
+        //actualizar pregunta repC
 
     }
 

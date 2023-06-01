@@ -18,4 +18,6 @@ class reportarController
         $this->renderer->render("reportar", $data);
     }
 
+
+
 }

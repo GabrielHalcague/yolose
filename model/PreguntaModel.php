@@ -10,13 +10,13 @@ class PreguntaModel
     }
 
     public function agregarPregunta($data){
-        $sql = "INSERT INTO pregunta (pregunta, idCat, idEst,resCor,pregTot) 
+        $sql = "INSERT INTO pregunta (preg, idCat, idEst,resCor,pregTot) 
                 VALUES ('$data[0]','$data[1]',1,1,2)";
         $this->database->execute($sql);
     }
 
     public function obtenerIdPregunta($preg){
-        $sql = "SELECT id FROM pregunta WHERE pregunta LIKE '$preg'";
+        $sql = "SELECT id FROM pregunta WHERE preg LIKE '$preg'";
         return $this->database->query($sql);
     }
 

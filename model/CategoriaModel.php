@@ -10,6 +10,6 @@ class CategoriaModel{
     }
 
     public function getAllCategories(){
-        return $this->database->query("SELECT id, categoria FROM categoria");
+        return $this->database->query("SELECT id, categ FROM categoria");
     }
 }

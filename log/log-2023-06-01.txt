@@ -1,0 +1,376 @@
+[2023-06-01][INFO]Ejecutando query: SELECT * FROM usuario
+                                       WHERE nombreUsuario='gab'
+                                       AND password='639bee393eecbc62256936a8e64d17b1'
+[2023-06-01][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-01][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-01][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-01][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-01][INFO]Ejecutando query: SELECT * FROM dificultadMedia
+[2023-06-01][INFO]Ejecutando query: SELECT r.id, r.respuesta FROM respuesta r WHERE r.idPreg = '2'
+[2023-06-01][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-01][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-01][INFO]Ejecutando query: SELECT * FROM dificultadMedia
+[2023-06-01][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '2'
+[2023-06-01][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '1'
+[2023-06-01][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '2'
+[2023-06-01][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '2'
+[2023-06-01][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '2'
+[2023-06-01][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '2'
+[2023-06-01][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '2'
+[2023-06-01][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '1'
+[2023-06-01][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '2'
+[2023-06-01][INFO]Ejecutando query: SELECT * FROM usuario
+                                       WHERE nombreUsuario='gab'
+                                       AND password='639bee393eecbc62256936a8e64d17b1'
+[2023-06-01][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-01][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-01][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-01][INFO]Ejecutando query: SELECT * FROM dificultadMedia
+[2023-06-01][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '' ORDER BY RAND()
+[2023-06-01][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '' ORDER BY RAND()
+[2023-06-01][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '2' ORDER BY RAND()
+[2023-06-01][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '2' ORDER BY RAND()
+[2023-06-01][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '2' ORDER BY RAND()
+[2023-06-01][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '1' ORDER BY RAND()
+[2023-06-01][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '1' ORDER BY RAND()
+[2023-06-01][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '1' ORDER BY RAND()
+[2023-06-01][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '1' ORDER BY RAND()
+[2023-06-01][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '1' ORDER BY RAND()
+[2023-06-01][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '2' ORDER BY RAND()
+[2023-06-01][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '1' ORDER BY RAND()
+[2023-06-01][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '2' ORDER BY RAND()
+[2023-06-01][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '1' ORDER BY RAND()
+[2023-06-01][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-01][INFO]Ejecutando query: SELECT * FROM usuario
+                                       WHERE nombreUsuario='gab'
+                                       AND password='639bee393eecbc62256936a8e64d17b1'
+[2023-06-01][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-01][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-01][INFO]Ejecutando query: SELECT * FROM dificultadMedia
+[2023-06-01][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '2' ORDER BY RAND()
+[2023-06-01][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '1' ORDER BY RAND()
+[2023-06-01][INFO]Ejecutando query: SELECT * FROM usuario
+                                       WHERE nombreUsuario='admin'
+                                       AND password='21232f297a57a5a743894a0e4a801fc3'
+[2023-06-01][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'admin'
+[2023-06-01][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 3
+[2023-06-01][INFO]Ejecutando query: SELECT * FROM dificultadDificil dm
+                WHERE dm.id NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 3)
+			    LIMIT 4
+[2023-06-01][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'admin'
+[2023-06-01][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 3
+[2023-06-01][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'admin'
+[2023-06-01][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 3
+[2023-06-01][INFO]Ejecutando query: SELECT * FROM usuario
+                                       WHERE nombreUsuario='gab'
+                                       AND password='639bee393eecbc62256936a8e64d17b1'
+[2023-06-01][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-01][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-01][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-01][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-01][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-01][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-01][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-01][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-01][INFO]Ejecutando query: SELECT * FROM usuario
+                                       WHERE nombreUsuario='admin'
+                                       AND password='21232f297a57a5a743894a0e4a801fc3'
+[2023-06-01][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'admin'
+[2023-06-01][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 3
+[2023-06-01][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 3
+[2023-06-01][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'admin'
+[2023-06-01][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 3
+[2023-06-01][INFO]Ejecutando query: SELECT * FROM dificultadMedia dm
+                WHERE dm.id NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 3)
+			    LIMIT 4
+[2023-06-01][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'admin'
+[2023-06-01][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 3
+[2023-06-01][INFO]Ejecutando query: SELECT * FROM dificultadMedia dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 3)
+			    LIMIT 4
+[2023-06-01][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'admin'
+[2023-06-01][INFO]Ejecutando query: DELETE FROM historialUsuario WHERE idUs = '3'
+[2023-06-01][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'admin'
+[2023-06-01][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 3
+[2023-06-01][INFO]Ejecutando query: SELECT * FROM dificultadMedia dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 3)
+			    LIMIT 4
+[2023-06-01][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '2' ORDER BY RAND()
+[2023-06-01][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '1' ORDER BY RAND()
+[2023-06-01][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '1' ORDER BY RAND()
+[2023-06-01][INFO]Ejecutando query: SELECT * FROM usuario
+                                       WHERE nombreUsuario='gab'
+                                       AND password='639bee393eecbc62256936a8e64d17b1'
+[2023-06-01][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-01][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-01][INFO]Ejecutando query: SELECT * FROM dificultadMedia
+[2023-06-01][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '1' ORDER BY RAND()
+[2023-06-01][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '2' ORDER BY RAND()
+[2023-06-01][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '1' ORDER BY RAND()
+[2023-06-01][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '1' ORDER BY RAND()
+[2023-06-01][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '2' ORDER BY RAND()
+[2023-06-01][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '1' ORDER BY RAND()
+[2023-06-01][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '1' ORDER BY RAND()
+[2023-06-01][INFO]Ejecutando query: SELECT * FROM usuario
+                                       WHERE nombreUsuario='gab'
+                                       AND password='639bee393eecbc62256936a8e64d17b1'
+[2023-06-01][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-01][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-01][INFO]Ejecutando query: SELECT * FROM dificultadMedia
+[2023-06-01][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '2' ORDER BY RAND()
+[2023-06-01][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '2' ORDER BY RAND()
+[2023-06-01][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '1' ORDER BY RAND()
+[2023-06-01][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '1' ORDER BY RAND()
+[2023-06-01][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '1' ORDER BY RAND()

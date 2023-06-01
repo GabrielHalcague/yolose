@@ -5,10 +5,10 @@ require_once 'model/UserModel.php';
 
 class PartidaModel{
 
-    private $database;
-    private $usuarioModel;
-    private $preguntaModel;
-    private $opcionModel;
+    private mixed $database;
+    private mixed $usuarioModel;
+    private mixed$preguntaModel;
+    private mixed $opcionModel;
 
     public function __construct($database, $models)
     {
@@ -20,12 +20,12 @@ class PartidaModel{
 
     public function obtenerPreguntas($username){
         $usuario = $this->usuarioModel->getUsuarioByUsername($username)[0];
-        $dificultadUsuario = $this->obtenerDificultadUsuario($usuario['id'])[0];
+        $dificultadUsuario = $this->obtenerDificultadUsuario($usuario['id']);
         $arrayPreguntas = [];
         if(empty($dificultadUsuario)){
             $arrayPreguntas = $this->preguntaModel->obtenerPreguntasDificultadMedia();
         }else {
-            $dif = $dificultadUsuario['dificultad'];
+            $dif = $dificultadUsuario[0]['dificultad'];
             if ($dif >= 0 && $dif <= 0.3) {
                 $arrayPreguntas = $this->obtenerPreguntasDificultadDificil($usuario['id']);
             } else if ($dif > 0.3 && $dif <= 0.7) {
@@ -48,9 +48,9 @@ class PartidaModel{
 
     private function obtenerPreguntasDificultadMedia($id){
         $sql = "SELECT * FROM dificultadMedia dm
-                WHERE dm.id NOT IN (
+                WHERE dm.preguntaID NOT IN (
                                     SELECT h.idPreg
-					                FROM historial h 
+					                FROM historialUsuario h 
 					                WHERE h.idUs = $id)
 			    LIMIT 4";
 
@@ -59,9 +59,9 @@ class PartidaModel{
 
     private function obtenerPreguntasDificultadDificil($id){
         $sql = "SELECT * FROM dificultadDificil dm
-                WHERE dm.id NOT IN (
+                WHERE dm.preguntaID NOT IN (
                                     SELECT h.idPreg
-					                FROM historial h 
+					                FROM historialUsuario h 
 					                WHERE h.idUs = $id)
 			    LIMIT 4";
 
@@ -70,9 +70,9 @@ class PartidaModel{
 
     private function obtenerPreguntasDificultadFacil($id){
         $sql = "SELECT * FROM dificultadFacil dm
-                WHERE dm.id NOT IN (
+                WHERE dm.preguntaID NOT IN (
                                     SELECT h.idPreg
-					                FROM historial h 
+					                FROM historialUsuario h 
 					                WHERE h.idUs = $id)
 				LIMIT 4";
         return $this->database->query($sql);
@@ -81,7 +81,7 @@ class PartidaModel{
     public function limpiarHistorialUsuario($username){
         $usuario = $this->usuarioModel->getUsuarioByUsername($username)[0];
         $id = $usuario['id'];
-        $sql = "DELETE FROM historial WHERE idUs = '$id'";
+        $sql = "DELETE FROM historialUsuario WHERE idUs = '$id'";
         return $this->database->execute($sql);
     }
 
