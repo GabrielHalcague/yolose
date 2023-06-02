@@ -1,4 +1,4 @@
-$(function (){
+/*$(function (){
 
     $('.btn').onclick((e)=>{
         $.ajax({
@@ -14,4 +14,4 @@ $(function (){
         });
     })
 
-});
+});*/
