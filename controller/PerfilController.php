@@ -33,7 +33,7 @@ class PerfilController
         $this->renderer->render("perfil", $data);
         exit();
     }
-
+    public function usuario(){
         //  http://localhost/perfil/usuario/user=gab
 
         $username = $_GET['user'];

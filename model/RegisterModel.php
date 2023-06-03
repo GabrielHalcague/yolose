@@ -9,19 +9,13 @@
             $this->database = $database;
         }
         
-<<<<<<< Updated upstream
-        public function register($name, $lastName, $email, $birthDate, $genderId, $password, $userName,$namePhoto, $f_registro){
-            $password= hash('md5',$password);
-            return $this->database->
-            execute("insert into usuario(nombre,apellido,correo,password,nombreUsuario,f_nacimiento,generoId,fotoPerfil, f_registro )
-                values('$name','$lastName','$email','$password','$userName','$birthDate','$genderId','$namePhoto','$f_registro')");
-=======
+
         public function register($name, $lastName, $email, $birthDate, $genderId, $password, $userName,$Coordenadas,$namePhoto){
             $password= hash('md5',$password);
             return $this->database->
             execute("insert into usuario(nombre,apellido,correo,password,nombreUsuario,f_nacimiento,generoId,coordenadas,fotoPerfil )
                 values('$name','$lastName','$email','$password','$userName','$birthDate','$genderId','$Coordenadas','$namePhoto')");
->>>>>>> Stashed changes
+
         }
 
         public function getUsuario($nickname, $password)

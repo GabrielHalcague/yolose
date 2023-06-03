@@ -47,12 +47,8 @@
 
            if( $errores == 0 && $verficar){
                $namePhoto=   $this->saveUserPhoto();
-<<<<<<< Updated upstream
-               $f_registro = date("Y-m-d-h-i-s");
-               $this->registerModel->register($name,$lastName,$email, $birthDate, $genderId, $password,$userName, $namePhoto,$f_registro);
-=======
+
                $this->registerModel->register($name,$lastName,$email, $birthDate, $genderId, $password,$userName, $Coordenadas,$namePhoto);
->>>>>>> Stashed changes
                $registro = $this->registerModel->getUserByUsername($userName);
                $data['id'] = $registro[0]['id'];
                $data['username'] = $registro[0]['nombreUsuario'];

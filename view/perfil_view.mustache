@@ -2,8 +2,9 @@
 <section class="container">
     <article class="row text-center">
         <div class="col-6">
-            {{#perfil}}
 
+            {{#perfil}}
+                {{fotoPerfil}}
                 <img src="public/{{fotoPerfil}}" class="img-fluid" style="max-height: 500px;">
 
             {{/perfil}}
@@ -18,11 +19,7 @@
                         <p><strong>Genero:</strong> {{descripcion}}</p>
                         <p><strong>Fecha de ingreso:</strong> {{f_registro}}</p>
                         <p><strong>Activo:</strong> {{activo}}</p>
-                    {{# showQR}}
-                     <img src="{{rutaQR}}"
-                          class="img-fluid responsive"
-                          alt="">
-                    {{/showQR}}
+
                  {{/perfil}}
             </div>
     </article>
@@ -34,7 +31,6 @@
     <article class="row text-center">
         <div class="col-6">
 
-
             <div id="map" style="max-height: 500px; max-width: 500px; "></div>
             <script>
                 var map = L.map('map').setView([{{coordenadas}} ], 13);
@@ -44,7 +40,9 @@
                 L.circle([{{coordenadas}} ], {radius: 200}).addTo(map);
             </script>
         </div>
+
         <div class="col-6">
+            {{rutaQR}}"
                     <img src="{{rutaQR}}"
                          class="img-fluid responsive"
                          alt="">
