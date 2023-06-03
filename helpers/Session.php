@@ -26,7 +26,7 @@ class Session {
         $data['editor'] = Session::get('editor')?? false;
         $data['administrador'] = Session::get('administrador')?? false;
         $data['nombre']= Session::get('nombre');
-        $data['ranking']="123";
+        $data['ranking']="123";// esto tendria que modificarse cuando se ingrese creo
         return $data;
     }
 
