@@ -15,6 +15,9 @@ class LoginController
 
     public function list()
     {
+        if (Session::get('logged')) {
+            Header::redirect("/");
+        }
         $this->rendered->render('login');
     }
 
@@ -48,12 +51,27 @@ class LoginController
         }
 
         if ($usuarioBuscado[0]['activo'] == 1) {
+            $roll =$usuarioBuscado[0]["generoId"];// cambiar a rol, no esta en la BD------------
             Session::set('logged', true);
-            Session::set('rol', $usuarioBuscado[0]["generoId"]); // cambiar a rol, no esta en la BD
+            Session::set('rol', $roll);
+            Session::set('nombre', $usuarioBuscado[0]['nombre']);
+            Session::set('trampas', $usuarioBuscado[0]['trampas']);
             Session::set('username', $username);
+<<<<<<< Updated upstream
             //$data['logged'] = Session::get('logged');
             //$this->rendered->render('home', $data);
             Header::redirect("/");
+=======
+
+            if($roll==2){
+                Session::set('editor', true);
+            }
+            if($roll==1){
+                Session::set('administrador', true);
+            }
+
+            header("location:index.php");
+>>>>>>> Stashed changes
             exit();
         }else{
             header("location:validate.php");// no existe

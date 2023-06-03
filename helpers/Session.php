@@ -21,6 +21,13 @@ class Session {
      session_unset();
      session_destroy();
     }
-
+    public static function menuSegunElRol(array $data): array  {
+        $data['logged'] = Session::get('logged')?? false;
+        $data['editor'] = Session::get('editor')?? false;
+        $data['administrador'] = Session::get('administrador')?? false;
+        $data['nombre']= Session::get('nombre');
+        $data['ranking']="123";
+        return $data;
+    }
 
 }

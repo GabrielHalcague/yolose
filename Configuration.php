@@ -19,7 +19,6 @@ include_once('model/HomeModel.php');
 include_once('model/UserModel.php');
 include_once('model/RegisterModel.php');
 include_once('model/ReportarModel.php');
-include_once('model/PerfilModel.php');
 
 
 // Inclusión de Bibliotecas de Terceros
