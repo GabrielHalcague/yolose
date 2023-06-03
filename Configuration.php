@@ -13,6 +13,7 @@ include_once('helpers/MySqlDatabase.php');
 include_once("helpers/MustacheRender.php");
 include_once('helpers/Router.php');
 include_once "helpers/Mailer.php";
+include_once "helpers/QRGenerator.php";
 
 // Inclusión de Models
 include_once('model/HomeModel.php');
@@ -61,7 +62,7 @@ class Configuration
 
     public function getPerfilController()
     {
-        return new perfilController($this->getRenderer(), new UserModel($this->getDatabase()));
+        return new perfilController($this->getRenderer(), new UserModel($this->getDatabase()),$this->getQRGenerator());
     }
 
     private function getArrayConfig()
@@ -101,5 +102,10 @@ class Configuration
     private function getMailRenderer()
     {
         return new MustacheRender('public/template');
+    }
+
+    public function getQRGenerator()
+    {
+        return new QRGenerator('public/qr');
     }
 }

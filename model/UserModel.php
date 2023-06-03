@@ -28,20 +28,20 @@ class UserModel{
     }
 
     public function getUsuarioByUsername($username){
-        $sql = "SELECT nombre, apellido, correo, password, activo, nombreUsuario, f_nacimiento, f_registro, fotoPerfil, descripcion 
+        $sql = "SELECT id ,nombre, apellido, correo, password, activo, nombreUsuario, f_nacimiento, f_registro, fotoPerfil, descripcion 
                 FROM usuario u JOIN genero g ON u.generoId = g.generoId
                 WHERE u.nombreUsuario = '$username'";
         return $this->database->query($sql);
     }
 
-<<<<<<< Updated upstream
-=======
+
     public function getUsuarioByID($id){
         $sql = "SELECT id ,nombre, apellido, correo, password, activo, nombreUsuario, f_nacimiento, f_registro, fotoPerfil, descripcion 
                 FROM usuario u JOIN genero g ON u.generoId = g.generoId
                 WHERE u.id = '$id'";
         return $this->database->query($sql);
     }
+
 //para el perfil
     public function getPerfilUsuarioPorNombreUsuario($nombreUsuario){
         $sql= "SELECT `id`, `nombre`,`activo`, `nombreUsuario`, `f_nacimiento`, `generoId`, `f_registro`, `fotoPerfil`,`coordenadas` 
@@ -49,6 +49,4 @@ class UserModel{
         return $this->database->query($sql);
     }
 
-
->>>>>>> Stashed changes
 }
