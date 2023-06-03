@@ -33,11 +33,11 @@ class PartidaController{
 
         $data['js']=true;
         $data['preg'] = [
-            'pregunta' => $preguntaActual['preg']
+            'pregunta' => $preguntaActual['pregunta']
         ];
         $data['logged'] = Session::get('logged');
         $data['username'] = Session::get('username');
-        $data['opc'] = $this->partidaModel->obtenerRespuestaDePregunta($preguntaActual['id']);
+        $data['opc'] = $this->partidaModel->obtenerRespuestaDePregunta($preguntaActual['preguntaID']);
 
         Session::set('preguntaSeleccionada',$preguntas[$indicePregunta]);
         /*unset($preguntas[$indicePregunta]);*/
@@ -64,16 +64,25 @@ class PartidaController{
 
         $preguntaSeleccionada = Session::get('preguntaSeleccionada');
 
-        if($id == $preguntaSeleccionada['resCor']){
-            $data['respValida'] = $preguntaSeleccionada['resCor'];
-            //pregunta
+        if($id == $preguntaSeleccionada['respuestaCorrecta']){
+            $data['respValida'] = $preguntaSeleccionada['respuestaCorrecta'];
+            //guarda en historialPartida
+            $estadoPregunta = 1;
+            $this->partidaModel->guardarHistorialPartida($estadoPregunta,Session::get('username'),$preguntaSeleccionada["id"]);
         }
         else{
-            $data['respValida'] = $preguntaSeleccionada['resCor'];
+            $data['respValida'] = $preguntaSeleccionada['respuestaCorrecta'];
             $data['respActual'] = $id;
-            //pregunta
+            //guarda en historialPartida
+            $estadoPregunta = 0;
+            $this->partidaModel->guardarHistorialPartida($estadoPregunta,Session::get('username'),$preguntaSeleccionada["id"]);
         }
-        //ir a historiaPartida, historialUsuario
+
+        //Guarda en historialUsuario
+        $this->partidaModel->guardarHistorialUsuario(Session::get('username'),$preguntaSeleccionada["id"]);
+
+        //Guarda en tabla pregunta
+        $this->partidaModel->actualizarPreguntaTotal($preguntaSeleccionada["id"]);
 
         $response = array(
             'success' => true,

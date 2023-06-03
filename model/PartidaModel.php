@@ -85,4 +85,23 @@ class PartidaModel{
         return $this->database->execute($sql);
     }
 
+
+    public function guardarHistorialUsuario($username,$idPregunta){
+        $usuario = $this->usuarioModel->getUsuarioByUsername($username)[0];
+        $idUsuario = $usuario['id'];
+        $sql = "INSERT INTO historialUsuario (idUs, idPreg) VALUES ($idUsuario,$idPregunta)";
+        return $this->database->execute($sql);
+    }
+
+    public function guardarHistorialPartida($estadoPregunta,$username,$idPregunta){
+        $usuario = $this->usuarioModel->getUsuarioByUsername($username)[0];
+        $idUsuario = $usuario['id'];
+        $sql = "INSERT INTO historialpartidas (estado,idUs, idPreg) VALUES ($estadoPregunta,$idUsuario,$idPregunta)";
+        return $this->database->execute($sql);
+    }
+
+    public function actualizarPreguntaTotal($idPregunta){
+        $sql = "UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = $idPregunta";
+        return $this->database->execute($sql);
+    }
 }

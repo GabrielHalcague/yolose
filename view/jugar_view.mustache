@@ -17,11 +17,11 @@
     </article>
 
     <div>
-        <button id="fin" style="display: none">
+        <button class="fin" id="fin" style="display: none">
             Fin
         </button>
 
-        <button id="continuar" style="display: none">
+        <button content="continuar" class="continuar" style="display: none">
             Continuar
         </button>
     </div>
@@ -46,7 +46,7 @@
                 method: 'POST',
                 data:{id: id},
                 success: function(response) {
-
+                    console.log(response);
                     var data = JSON.parse(response);
 
                     // Access and use the data
@@ -67,6 +67,8 @@
             });
         });
     });
+
+
 
     //valida la respues y pinta de color los botones en base a respuesta
     //ademas muestra boton fin si se equivoco y lleva a inicio
@@ -105,4 +107,43 @@
             buttons[i].disabled = true;
         }
     }
+
+    $(document).ready(function() {
+        // Attach click event handler to the button
+        $('.continuar').click(function() {
+            // Execute AJAX function
+
+            $.ajax({
+                url: 'partida/list',
+                method: 'POST',
+                success: function(response) {
+
+                },
+                error: function(xhr, status, error) {
+                    // Handle error, if any
+                    console.log(error);
+                }
+            });
+        });
+    });
+
+
+    $(document).ready(function() {
+        // Attach click event handler to the button
+        $('.fin').click(function() {
+            // Execute AJAX function
+
+            $.ajax({
+                url: 'Home/list',
+                method: 'POST',
+                success: function(response) {
+
+                },
+                error: function(xhr, status, error) {
+                    // Handle error, if any
+                    console.log(error);
+                }
+            });
+        });
+    });
 </script>
