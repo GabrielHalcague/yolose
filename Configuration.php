@@ -2,11 +2,13 @@
 
 // Inclusión de Controladores
 include_once('controller/RegistroController.php');
-include_once('controller/ReportarController.php');
+
 include_once('controller/PerfilController.php');
 include_once('controller/HomeController.php');
 include_once('controller/LoginController.php');
 include_once('controller/ActivationController.php');
+include_once ('controller/ReportarController.php');
+
 
 // Inclusión de Helpers
 include_once('helpers/MySqlDatabase.php');

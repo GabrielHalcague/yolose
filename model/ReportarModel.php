@@ -8,11 +8,19 @@ class ReportarModel
         $this->database= $database;
     }
 
-    public function getPregunta(){
-        return $this->database->query('SELECT p.id, p.descripcion, p.categoria, c.descripcion as "categoria", c.color, c.campaña as "campana" FROM pregunta p JOIN categoria c ON p.categoria = c.id LIMIT 1');
+    public function getPregunta($idPregunta){
+        $sql= "SELECT p.id, p.preg, c.categ, c.color, FROM pregunta p JOIN categoria c ON p.idCat = c.id where c.id = '$idPregunta'";
+        return $this->database->query($sql);
     }
     public function getRespuestasDePregunta($idPRegunta){
-        return $this->database->query("SELECT * FROM opcion where $idPRegunta = $idPRegunta");
+        $sql="SELECT * FROM respuesta where idPreg = '$idPRegunta'";
+        return $this->database->query($sql);
     }
+    public function getRespuestaCorrectaDePregunta($idPRegunta){
+        $sql= "SELECT idResp FROM pregunta_respuesta_correcta where idPreg = '$idPRegunta'";
+        return $this->database->query($sql);
+    }
+
+
 
 }

@@ -14,4 +14,5 @@ $method = $_GET['action'] ?? 'list';
 
 
 //Header::debug($module);
+// Header::debug($method);
 $router->route($module, $method );
