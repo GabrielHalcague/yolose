@@ -1,0 +1,24 @@
+<section class="container">
+    <article class="row text-center">
+        <div class="col-4">
+            {{#perfil}}
+                <img src="../public/{{fotoPerfil}}" class="img-fluid" style="max-height: 500px;">
+            {{/perfil}}
+            </div>
+            <div class="col-8">
+                 {{#perfil}}
+                        <p><strong>Usuario:</strong> {{nombreUsuario}}</p>
+                        <p><strong>Nombre:</strong> {{nombre}}</p>
+                        <p><strong>Fecha Nacimiento:</strong> {{f_nacimiento}}</p>
+                        <p><strong>Genero:</strong> {{descripcion}}</p>
+                        <p><strong>Fecha de ingreso:</strong> {{f_registro}}</p>
+                        <p><strong>Activo:</strong> {{activo}}</p>
+                    {{# showQR}}
+                     <img src="{{rutaQR}}"
+                          class="img-fluid responsive"
+                          alt="">
+                    {{/showQR}}
+                 {{/perfil}}
+            </div>
+    </article>
+</section>

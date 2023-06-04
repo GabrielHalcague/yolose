@@ -1,0 +1,53 @@
+<section class="container">
+    <h1 class="text-center">Agregar nueva Pregunta</h1>
+    <form action="/pregunta/agregarPregunta" method="post" enctype="multipart/form-data">
+        <div class="input-group has-validation mt-4">
+            <label for="preg">Pregunta</label>
+            <input type="text" class="form-control" name="preg" id="preg">
+            {{#errorPregunta}}
+                <small id="helpId" class="form-text text-muted invalid-feedback">{{errorPregunta}}</small>
+            {{/errorPregunta}}
+        </div>
+        <div class="input-group has-validation mt-4">
+            <label for="cate">Categoria</label>
+            <select class="custom-select" name="cate" id="cate">
+                <option value="">Seleccione categoria</option>
+                {{#categoria}}
+                    <option value="{{id}}">{{descripcion}}</option>
+                {{/categoria}}
+            </select>
+            {{#errorCategoria}}
+                <small id="helpId" class="form-text text-muted invalid-feedback">{{errorCategoria}}</small>
+            {{/errorCategoria}}
+        </div>
+            <div class="input-group has-validation mt-4">
+                <label for="resp1">Respuesta 1</label>
+                <input type="text" class="form-control" name="resp1" id="resp1">
+                {{#errorResp1}}
+                    <small id="helpId" class="form-text text-muted invalid-feedback">{{errorResp1}}</small>
+                {{/errorResp1}}
+            </div>
+            <div class="input-group has-validation mt-4">
+                <label for="resp2">Respuesta 2</label>
+                <input type="text" class="form-control" name="resp2" id="resp2">
+                {{#errorResp2}}
+                    <small id="helpId" class="form-text text-muted invalid-feedback">{{errorResp2}}</small>
+                {{/errorResp2}}
+            </div>
+            <div class="input-group has-validation mt-4">
+                <label for="resp3">Respuesta 3</label>
+                <input type="text" class="form-control" name="resp3" id="resp3">
+                {{#errorResp3}}
+                    <small id="helpId" class="form-text text-muted invalid-feedback">{{errorResp3}}</small>
+                {{/errorResp3}}
+            </div>
+            <div class="input-group has-validation mt-4">
+                <label for="resp4">Respuesta 4</label>
+                <input type="text" class="form-control" name="resp4" id="4">
+                {{#errorResp4}}
+                    <small id="helpId" class="form-text text-muted invalid-feedback">{{errorResp4}}</small>
+                {{/errorResp4}}
+            </div>
+        <button type="submit" class="btn btn-success">Agregar</button>
+    </form>
+</section>
