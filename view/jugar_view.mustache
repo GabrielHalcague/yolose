@@ -17,13 +17,11 @@
     </article>
 
     <div>
-        <button class="fin" id="fin" style="display: none">
-            <a href="/">Fin</a>
-        </button>
 
-        <button id="continuar" class="continuar" style="display: none">
-            Continuar
-        </button>
+            <a role="button" id="fin" class="btn btn-danger" href="/" style="display: none;">Fin</a>
+
+            <a role="button" id="continuar" class="btn btn-success" href="/partida" style="display: none;">Continuar</a>
+
     </div>
 </section>
 
@@ -74,7 +72,7 @@
     //ademas muestra boton fin si se equivoco y lleva a inicio
     //o continuar si responde bien y recarga consulta
     function validarRespuesta(data){
-      
+
         var respuestaCorrecta;
         var respuestaIncorrecta;
         var botonFin;
