@@ -40,10 +40,10 @@ class PerfilController
             Header::redirect("/");
         }
           $data["perfil"]= $usuarioObtenido[0];
-        $data["mejorPartida"]= "10";
+          $data["mejorPartida"]= "10";
           $data["rank"]= "100";
 
-          $data = Session::menuSegunElRol($data);
+          //$data = Session::menuSegunElRol($data);
           $data["rutaQR"]=$this->generateQR($data["perfil"]["nombreUsuario"]);
           $data['showQR'] = true;
           $this->renderer->render("perfil", $data);

@@ -1,0 +1,65 @@
+[2023-06-05][INFO]Ejecutando query: SELECT * FROM usuario
+                                       WHERE nombreUsuario='usuario'
+                                       AND password='f8032d5cae3de20fcec887f395ec9a6a'
+[2023-06-05][INFO]Ejecutando query: SELECT `id`, `nombre`,`activo`, `nombreUsuario`, `f_nacimiento`, `generoId`, `f_registro`, `fotoPerfil`,`coordenadas` 
+         FROM usuario  WHERE nombreUsuario='gab' 
+[2023-06-05][INFO]Ejecutando query: SELECT `id`, `nombre`,`activo`, `nombreUsuario`, `f_nacimiento`, `generoId`, `f_registro`, `fotoPerfil`,`coordenadas` 
+         FROM usuario  WHERE nombreUsuario='usuario' 
+[2023-06-05][INFO]Ejecutando query: SELECT `id`, `nombre`,`activo`, `nombreUsuario`, `f_nacimiento`, `generoId`, `f_registro`, `fotoPerfil`,`coordenadas` 
+         FROM usuario  WHERE nombreUsuario='usuario' 
+[2023-06-05][INFO]Ejecutando query: SELECT `id`, `nombre`,`activo`, `nombreUsuario`, `f_nacimiento`, `generoId`, `f_registro`, `fotoPerfil`,`coordenadas` 
+         FROM usuario  WHERE nombreUsuario='usuario' 
+[2023-06-05][INFO]Ejecutando query: SELECT `id`, `nombre`,`activo`, `nombreUsuario`, `f_nacimiento`, `generoId`, `f_registro`, `fotoPerfil`,`coordenadas` 
+         FROM usuario  WHERE nombreUsuario='gab' 
+[2023-06-05][INFO]Ejecutando query: SELECT `id`, `nombre`,`activo`, `nombreUsuario`, `f_nacimiento`, `generoId`, `f_registro`, `fotoPerfil`,`coordenadas` 
+         FROM usuario  WHERE nombreUsuario='gab' 
+[2023-06-05][INFO]Ejecutando query: SELECT `id`, `nombre`,`activo`, `nombreUsuario`, `f_nacimiento`, `generoId`, `f_registro`, `fotoPerfil`,`coordenadas` 
+         FROM usuario  WHERE nombreUsuario='usuario' 
+[2023-06-05][INFO]Ejecutando query: SELECT `id`, `nombre`,`activo`, `nombreUsuario`, `f_nacimiento`, `generoId`, `f_registro`, `fotoPerfil`,`coordenadas` 
+         FROM usuario  WHERE nombreUsuario='usuario' 
+[2023-06-05][INFO]Ejecutando query: SELECT `id`, `nombre`,`activo`, `nombreUsuario`, `f_nacimiento`, `generoId`, `f_registro`, `fotoPerfil`,`coordenadas` 
+         FROM usuario  WHERE nombreUsuario='usuario' 
+[2023-06-05][INFO]Ejecutando query: SELECT `id`, `nombre`,`activo`, `nombreUsuario`, `f_nacimiento`, `generoId`, `f_registro`, `fotoPerfil`,`coordenadas` 
+         FROM usuario  WHERE nombreUsuario='gab' 
+[2023-06-05][INFO]Ejecutando query: SELECT `id`, `nombre`,`activo`, `nombreUsuario`, `f_nacimiento`, `generoId`, `f_registro`, `fotoPerfil`,`coordenadas` 
+         FROM usuario  WHERE nombreUsuario='gab' 
+[2023-06-05][INFO]Ejecutando query: SELECT `id`, `nombre`,`activo`, `nombreUsuario`, `f_nacimiento`, `generoId`, `f_registro`, `fotoPerfil`,`coordenadas` 
+         FROM usuario  WHERE nombreUsuario='usuario' 
+[2023-06-05][INFO]Ejecutando query: SELECT `id`, `nombre`,`activo`, `nombreUsuario`, `f_nacimiento`, `generoId`, `f_registro`, `fotoPerfil`,`coordenadas` 
+         FROM usuario  WHERE nombreUsuario='usuario' 
+[2023-06-05][INFO]Ejecutando query: SELECT `id`, `nombre`,`activo`, `nombreUsuario`, `f_nacimiento`, `generoId`, `f_registro`, `fotoPerfil`,`coordenadas` 
+         FROM usuario  WHERE nombreUsuario='usuario' 
+[2023-06-05][INFO]Ejecutando query: SELECT `id`, `nombre`,`activo`, `nombreUsuario`, `f_nacimiento`, `generoId`, `f_registro`, `fotoPerfil`,`coordenadas` 
+         FROM usuario  WHERE nombreUsuario='gab' 
+[2023-06-05][INFO]Ejecutando query: SELECT `id`, `nombre`,`activo`, `nombreUsuario`, `f_nacimiento`, `generoId`, `f_registro`, `fotoPerfil`,`coordenadas` 
+         FROM usuario  WHERE nombreUsuario='usuario' 
+[2023-06-05][INFO]Ejecutando query: SELECT `id`, `nombre`,`activo`, `nombreUsuario`, `f_nacimiento`, `generoId`, `f_registro`, `fotoPerfil`,`coordenadas` 
+         FROM usuario  WHERE nombreUsuario='usuario' 
+[2023-06-05][INFO]Ejecutando query: SELECT `id`, `nombre`,`activo`, `nombreUsuario`, `f_nacimiento`, `generoId`, `f_registro`, `fotoPerfil`,`coordenadas` 
+         FROM usuario  WHERE nombreUsuario='gab' 
+[2023-06-05][INFO]Ejecutando query: SELECT `id`, `nombre`,`activo`, `nombreUsuario`, `f_nacimiento`, `generoId`, `f_registro`, `fotoPerfil`,`coordenadas` 
+         FROM usuario  WHERE nombreUsuario='usuario' 
+[2023-06-05][INFO]Ejecutando query: SELECT `id`, `nombre`,`activo`, `nombreUsuario`, `f_nacimiento`, `generoId`, `f_registro`, `fotoPerfil`,`coordenadas` 
+         FROM usuario  WHERE nombreUsuario='gab' 
+[2023-06-05][INFO]Ejecutando query: SELECT `id`, `nombre`,`activo`, `nombreUsuario`, `f_nacimiento`, `generoId`, `f_registro`, `fotoPerfil`,`coordenadas` 
+         FROM usuario  WHERE nombreUsuario='usuario' 
+[2023-06-05][INFO]Ejecutando query: SELECT `id`, `nombre`,`activo`, `nombreUsuario`, `f_nacimiento`, `generoId`, `f_registro`, `fotoPerfil`,`coordenadas` 
+         FROM usuario  WHERE nombreUsuario='gab' 
+[2023-06-05][INFO]Ejecutando query: SELECT `id`, `nombre`,`activo`, `nombreUsuario`, `f_nacimiento`, `generoId`, `f_registro`, `fotoPerfil`,`coordenadas` 
+         FROM usuario  WHERE nombreUsuario='usuario' 
+[2023-06-05][INFO]Ejecutando query: SELECT `id`, `nombre`,`activo`, `nombreUsuario`, `f_nacimiento`, `generoId`, `f_registro`, `fotoPerfil`,`coordenadas` 
+         FROM usuario  WHERE nombreUsuario='gab' 
+[2023-06-05][INFO]Ejecutando query: SELECT `id`, `nombre`,`activo`, `nombreUsuario`, `f_nacimiento`, `generoId`, `f_registro`, `fotoPerfil`,`coordenadas` 
+         FROM usuario  WHERE nombreUsuario='usuario' 
+[2023-06-05][INFO]Ejecutando query: SELECT `id`, `nombre`,`activo`, `nombreUsuario`, `f_nacimiento`, `generoId`, `f_registro`, `fotoPerfil`,`coordenadas` 
+         FROM usuario  WHERE nombreUsuario='gab' 
+[2023-06-05][INFO]Ejecutando query: SELECT `id`, `nombre`,`activo`, `nombreUsuario`, `f_nacimiento`, `generoId`, `f_registro`, `fotoPerfil`,`coordenadas` 
+         FROM usuario  WHERE nombreUsuario='usuario' 
+[2023-06-05][INFO]Ejecutando query: SELECT `id`, `nombre`,`activo`, `nombreUsuario`, `f_nacimiento`, `generoId`, `f_registro`, `fotoPerfil`,`coordenadas` 
+         FROM usuario  WHERE nombreUsuario='usuario' 
+[2023-06-05][INFO]Ejecutando query: SELECT * FROM usuario
+                                       WHERE nombreUsuario='usuario'
+                                       AND password='f8032d5cae3de20fcec887f395ec9a6a'
+[2023-06-05][INFO]Ejecutando query: SELECT p.id, p.pregunta, c.categoria as "cat" FROM pregunta p JOIN categoria c ON p.idCat = c.id
+[2023-06-05][INFO]Ejecutando query: SELECT p.id, p.pregunta, c.categoria as "cat" FROM pregunta p JOIN categoria c ON p.idCat = c.id
+[2023-06-05][INFO]Ejecutando query: SELECT p.id, p.pregunta, c.categoria as "cat" FROM pregunta p JOIN categoria c ON p.idCat = c.id

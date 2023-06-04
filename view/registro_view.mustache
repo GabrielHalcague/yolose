@@ -40,10 +40,10 @@
                 <label for="archivo" class="form-label">Foto de Perfil</label>
                 <input type="file" name="archivo" class="form-control" >
                 
-                <p>Seleccione su ubicacion</p>
+                <label for="coordenadas">Seleccione su ubicacion</label>
                 <input type="text" name="coordenadas" id="coordenadas" placeholder="coordenadas" class="form-control">
 
-                <div id="map" style="width: 100%; height: 40%; "></div>
+                <div id="map" style="width: 100%; height: 500px; "></div>
                 <script>
                     var map = L.map('map').setView([-34.667890, -58.565806 ], 13);
                     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {

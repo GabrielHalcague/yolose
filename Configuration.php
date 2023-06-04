@@ -24,7 +24,6 @@ include_once('model/HomeModel.php');
 include_once('model/UserModel.php');
 include_once('model/RegisterModel.php');
 include_once('model/ReportarModel.php');
-include_once('model/PerfilModel.php');
 include_once('model/CategoriaModel.php');
 include_once('model/PreguntaModel.php');
 include_once('model/OpcionModel.php');
