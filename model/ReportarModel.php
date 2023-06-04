@@ -9,7 +9,7 @@ class ReportarModel
     }
 
     public function getPregunta($idPregunta){
-        $sql= "SELECT p.id, p.preg, c.categ, c.color, FROM pregunta p JOIN categoria c ON p.idCat = c.id where c.id = '$idPregunta'";
+        $sql= "SELECT p.id, p.preg, c.categ, c.color FROM pregunta p JOIN categoria c ON p.idCat = c.id where p.id = '$idPregunta'";
         return $this->database->query($sql);
     }
     public function getRespuestasDePregunta($idPRegunta){

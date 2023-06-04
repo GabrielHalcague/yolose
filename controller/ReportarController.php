@@ -17,15 +17,14 @@ class reportarController
 
     }
     public function reportarPregunta(){
-      //  if (!Session::get("logged")) {
-      //      Header::redirect("/");
-      //      exit();
-     //   }
-        $id= $_GET('id');
-        var_dump($id);
+      if (!Session::get("logged")) {
+           Header::redirect("/");
+         exit();
+         }
+        $id= $_POST('idPregunta');
         $data["pregunta"] = $this->reportarModel->getPregunta($id);
         $data["respuestas"] = $this->reportarModel->getRespuestasDePregunta($id);
-        $data["respuestaCorrecta"]=$this->reportarModel->getRespuestaCorrecta($id);
+        $data["respuestaCorrecta"]=$this->reportarModel->getRespuestaCorrectaDePregunta($id);
         $this->renderer->render("reportar", $data);
     }
 

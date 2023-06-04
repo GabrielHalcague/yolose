@@ -2,7 +2,6 @@
 
 // Inclusión de Controladores
 include_once('controller/RegistroController.php');
-
 include_once('controller/PerfilController.php');
 include_once('controller/HomeController.php');
 include_once('controller/LoginController.php');
