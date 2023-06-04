@@ -9,11 +9,13 @@
             $this->database = $database;
         }
         
-        public function register($name, $lastName, $email, $birthDate, $genderId, $password, $userName,$namePhoto, $f_registro){
+
+        public function register($name, $lastName, $email, $birthDate, $genderId, $password, $userName,$Coordenadas,$namePhoto){
             $password= hash('md5',$password);
             return $this->database->
-            execute("insert into usuario(nombre,apellido,correo,password,nombreUsuario,f_nacimiento,generoId,fotoPerfil, f_registro )
-                values('$name','$lastName','$email','$password','$userName','$birthDate','$genderId','$namePhoto','$f_registro')");
+            execute("insert into usuario(nombre,apellido,correo,password,nombreUsuario,f_nacimiento,generoId,coordenadas,fotoPerfil )
+                values('$name','$lastName','$email','$password','$userName','$birthDate','$genderId','$Coordenadas','$namePhoto')");
+
         }
 
         public function getUsuario($nickname, $password)

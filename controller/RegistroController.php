@@ -19,7 +19,7 @@
         
         public function list()
         {
-            if (Session::getDataSession() == null) {
+            if (!Session::get("logged")) {
                 $this->renderer->render('registro');
                 exit();
             }else{
@@ -30,7 +30,7 @@
         public function register()
         {
             $errores = 0;
-           list($name, $lastName, $email, $birthDate, $genderId, $password, $password2,$userName, $userPhoto) =$this->getDatos();
+           list($name, $lastName, $email, $birthDate, $genderId, $password, $password2,$userName, $Coordenadas ,$userPhoto) =$this->getDatos();
            $emailObtenido = $this->registerModel->getUserEmail($email);
            if(!empty($emailObtenido) && $emailObtenido[0]['correo'] == $email){
                 $data['emailDuplicado']="El email ya se encuentra en la bd";
@@ -42,13 +42,13 @@
                $data['usernameDuplicado']="El username ya se encuentra en uso";
                $errores ++;
            }
-            $verficar = $this->verificarDatos($name,$lastName,$email, $birthDate, $genderId, $password, $password2, $userName);
+            $verficar = $this->verificarDatos($name,$lastName,$email, $birthDate, $genderId, $password, $password2, $userName, $Coordenadas);
             //Header::debug($errores . "<br>". $verficar . "<br>". $data);
 
            if( $errores == 0 && $verficar){
                $namePhoto=   $this->saveUserPhoto();
-               $f_registro = date("Y-m-d-h-i-s");
-               $this->registerModel->register($name,$lastName,$email, $birthDate, $genderId, $password,$userName, $namePhoto,$f_registro);
+
+               $this->registerModel->register($name,$lastName,$email, $birthDate, $genderId, $password,$userName, $Coordenadas,$namePhoto);
                $registro = $this->registerModel->getUserByUsername($userName);
                $data['id'] = $registro[0]['id'];
                $data['username'] = $registro[0]['nombreUsuario'];
@@ -102,7 +102,9 @@
                 isset($_POST['password']) && !empty($_POST['password']) &&
                 isset($_POST['password2']) && !empty($_POST['password2']) &&
                 isset($_POST['usuario']) && !empty($_POST['usuario']) &&
+                isset($_POST['coordenadas']) && !empty($_POST['coordenadas']) &&
                 isset($_FILES['archivo']) && $_FILES['archivo']['error'] === 0
+
               
             ) {
                 $name = $_POST['nombre'] ;
@@ -113,8 +115,9 @@
                 $password = $_POST['password'] ;
                 $password2 = $_POST['password2'] ;
                 $userName= $_POST['usuario'] ;
+                $Coordenadas= $_POST['coordenadas'] ;
                 $userPhoto = $_FILES["archivo"] ;
-                return array($name, $lastName, $email, $birthDate, $genderId, $password, $password2,$userName,$userPhoto );
+                return array($name, $lastName, $email, $birthDate, $genderId, $password, $password2,$userName,$Coordenadas,$userPhoto );
                 
             } else {
                 echo "debe cargar todos los datos";
@@ -123,7 +126,7 @@
             }
         }
     
-        private function verificarDatos(mixed $firstName, mixed $lastName, mixed $email, mixed $birthDate, mixed $genderId, mixed $password, mixed $password2, mixed $userName)
+        private function verificarDatos(mixed $firstName, mixed $lastName, mixed $email, mixed $birthDate, mixed $genderId, mixed $password, mixed $password2, mixed $userName,mixed $Coordenadas)
         {
             $respuesta= true;
             if(!$this->verifyPassword($password,$password2)&&filter_var($email, FILTER_VALIDATE_EMAIL)){

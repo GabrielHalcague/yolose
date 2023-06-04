@@ -10,6 +10,8 @@ include_once('controller/ActivationController.php');
 include_once('controller/PreguntaController.php');
 include_once('controller/PartidaController.php');
 
+
+
 // Inclusión de Helpers
 include_once('helpers/MySqlDatabase.php');
 include_once("helpers/MustacheRender.php");
@@ -72,7 +74,7 @@ class Configuration
 
     public function getRegistroController()
     {
-        return new registroController($this->getRenderer(), $this->getMailRenderer(), new RegisterModel($this->getDatabase()),
+        return new registroController($this->getRenderer(),$this->getMailRenderer(), new RegisterModel($this->getDatabase()),
             $this->getMailer());
     }
 
@@ -88,7 +90,7 @@ class Configuration
 
     public function getPerfilController()
     {
-        return new perfilController($this->getRenderer(), new UserModel($this->getDatabase()), $this->getQRGenerator());
+        return new perfilController($this->getRenderer(), new UserModel($this->getDatabase()),$this->getQRGenerator());
     }
 
     private function getArrayConfig()

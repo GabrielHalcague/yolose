@@ -44,10 +44,18 @@ class UserModel{
         return $this->database->query($sql);
     }
 
+
     public function getUsuarioByID($id){
         $sql = "SELECT u.id ,u.nombre, u.apellido, u.correo, u.password, u.activo, u.nombreUsuario, u.f_nacimiento, f_registro, fotoPerfil, descr 
                 FROM usuario u JOIN genero g ON u.generoId = g.id
                 WHERE u.id = '$id'";
+        return $this->database->query($sql);
+    }
+
+//para el perfil
+    public function getPerfilUsuarioPorNombreUsuario($nombreUsuario){
+        $sql= "SELECT `id`, `nombre`,`activo`, `nombreUsuario`, `f_nacimiento`, `generoId`, `f_registro`, `fotoPerfil`,`coordenadas` 
+         FROM usuario  WHERE nombreUsuario='$nombreUsuario' ";
         return $this->database->query($sql);
     }
 
