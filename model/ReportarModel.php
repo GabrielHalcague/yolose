@@ -17,7 +17,7 @@ class ReportarModel
         return $this->database->query($sql);
     }
     public function getRespuestaCorrectaDePregunta($idPRegunta){
-        $sql= "SELECT idResp FROM pregunta_respuesta_correcta where idPreg = '$idPRegunta'";
+        $sql="SELECT r.resp FROM respuesta r join pregunta_respuesta_correcta c  on r.id = c.idResp where c.idPreg = '$idPRegunta'";
         return $this->database->query($sql);
     }
 

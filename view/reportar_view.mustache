@@ -1,20 +1,57 @@
+{{> header}}
 
-    <h1>formulario de reportar</h1>
+
+
+<section class="container">
+    {{# emailDuplicado}}
+        <p class="invalid-feedback">{{emailDuplicado}}</p>
+    {{/emailDuplicado}}
+    {{# usernameDuplicado}}
+        <p class="invalid-feedback">{{usernameDuplicado}}</p>
+    {{/usernameDuplicado}}
+
+ <h2 class="mb-4 text-center">Hubo problemas con la siguiente pregunta?</h2>
 
     {{#pregunta}}
-
-        <h2> {{preg}}
+    <h3> {{preg}}</h3>
     {{/pregunta}}
+
     {{#respuestas}}
-            <table class="w3-table ">
-                <tr>
-                    <td> <button class="w3-button  w3-center w3-border  w3-black w3-max" style="width:100%">{{resp}}</button> </td>
-                </tr>
-            </table>
+        <table class="w3-table ">
+            <tr>
+                <td> {{resp}}</td>
+            </tr>
+        </table>
     {{/respuestas}}
 
     {{#respuestaCorrecta}}
-        <h2> {{idResp}}</h2>
-    {{/respuestaCorrecta}}</h2>
+        <h2> la opcion correcta es: {{resp}}</h2>
+    {{/respuestaCorrecta}}
 
 
+    <article class="p-5 bg-dark-subtle rounded">
+        <div class="d-flex justify-content-center">
+            <form class="row w-50 form-yolose" action="index.php?module=reportar&action=enviarReporte" method="POST" enctype="multipart/form-data">
+
+                <div class="col-12 pe-0">
+                    <label for="problema" class="form-label">Tipo de Problema</label>
+                    <select name="tipo" id="tipo" class="form-select">
+                        <option value="1">Respuesta Incorrecta</option>
+                        <option value="2">Pregunta Confusa</option>
+                        <option value="3">Pregunta Ofensiva</option>
+                    </select>
+                </div>
+
+                <label for="comentario" class="form-label">Dejanos un comentario</label>
+                <textarea  type="text" name="comentario" class="form-control" rows="4"></textarea>
+                <div class="mt-3 text-end">
+                    <button type="submit" name="Enviar" class="btn btn-yolose px-5">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </article>
+</section>
+
+
+
+{{> foooter}}
