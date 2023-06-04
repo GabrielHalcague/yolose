@@ -68,21 +68,22 @@ class PartidaController{
             $data['respValida'] = $preguntaSeleccionada['respuestaCorrecta'];
             //guarda en historialPartida
             $estadoPregunta = 1;
-            $this->partidaModel->guardarHistorialPartida($estadoPregunta,Session::get('username'),$preguntaSeleccionada["id"]);
+            $this->partidaModel->guardarHistorialPartida($estadoPregunta,Session::get('username'),$preguntaSeleccionada["preguntaID"]);
+            $this->partidaModel->actualizarPreguntaCorrecta($preguntaSeleccionada["preguntaID"]);
         }
         else{
             $data['respValida'] = $preguntaSeleccionada['respuestaCorrecta'];
             $data['respActual'] = $id;
             //guarda en historialPartida
             $estadoPregunta = 0;
-            $this->partidaModel->guardarHistorialPartida($estadoPregunta,Session::get('username'),$preguntaSeleccionada["id"]);
+            $this->partidaModel->guardarHistorialPartida($estadoPregunta,Session::get('username'),$preguntaSeleccionada["preguntaID"]);
         }
 
         //Guarda en historialUsuario
-        $this->partidaModel->guardarHistorialUsuario(Session::get('username'),$preguntaSeleccionada["id"]);
+        $this->partidaModel->guardarHistorialUsuario(Session::get('username'),$preguntaSeleccionada["preguntaID"]);
 
         //Guarda en tabla pregunta
-        $this->partidaModel->actualizarPreguntaTotal($preguntaSeleccionada["id"]);
+        $this->partidaModel->actualizarPreguntaTotal($preguntaSeleccionada["preguntaID"]);
 
         $response = array(
             'success' => true,

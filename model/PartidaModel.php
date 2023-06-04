@@ -89,19 +89,24 @@ class PartidaModel{
     public function guardarHistorialUsuario($username,$idPregunta){
         $usuario = $this->usuarioModel->getUsuarioByUsername($username)[0];
         $idUsuario = $usuario['id'];
-        $sql = "INSERT INTO historialUsuario (idUs, idPreg) VALUES ($idUsuario,$idPregunta)";
+        $sql = "INSERT INTO historialUsuario (idUs, idPreg) VALUES ('$idUsuario','$idPregunta')";
         return $this->database->execute($sql);
     }
 
     public function guardarHistorialPartida($estadoPregunta,$username,$idPregunta){
         $usuario = $this->usuarioModel->getUsuarioByUsername($username)[0];
         $idUsuario = $usuario['id'];
-        $sql = "INSERT INTO historialpartidas (estado,idUs, idPreg) VALUES ($estadoPregunta,$idUsuario,$idPregunta)";
+        $sql = "INSERT INTO historialpartidas (estado,idUs, idPreg) VALUES ('$estadoPregunta','$idUsuario','$idPregunta')";
         return $this->database->execute($sql);
     }
 
     public function actualizarPreguntaTotal($idPregunta){
-        $sql = "UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = $idPregunta";
+        $sql = "UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '$idPregunta'";
+        return $this->database->execute($sql);
+    }
+
+    public function actualizarPreguntaCorrecta($idPregunta){
+        $sql = "UPDATE pregunta SET resCor = resCor + 1 WHERE id = '$idPregunta'";
         return $this->database->execute($sql);
     }
 }

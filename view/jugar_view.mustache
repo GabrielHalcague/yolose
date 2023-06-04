@@ -18,10 +18,10 @@
 
     <div>
         <button class="fin" id="fin" style="display: none">
-            Fin
+            <a href="/">Fin</a>
         </button>
 
-        <button content="continuar" class="continuar" style="display: none">
+        <button id="continuar" class="continuar" style="display: none">
             Continuar
         </button>
     </div>
@@ -74,8 +74,7 @@
     //ademas muestra boton fin si se equivoco y lleva a inicio
     //o continuar si responde bien y recarga consulta
     function validarRespuesta(data){
-        console.log("En funcion validar");
-        console.log(data);
+      
         var respuestaCorrecta;
         var respuestaIncorrecta;
         var botonFin;
@@ -93,7 +92,7 @@
         }
         else{
             respuestaCorrecta = document.getElementById(data["respValida"]);
-            botonContinuar = document.getElementById('continuar');
+            botonContinuar = document.getElementById("continuar");
             respuestaCorrecta.style.backgroundColor = 'green';
             botonContinuar.style.display = 'block';
             disableButtons();
@@ -107,46 +106,4 @@
             buttons[i].disabled = true;
         }
     }
-
-
-    //TODO VERIFICAR CARGA DE NUEVA PREGUNTA
-
-    $(document).ready(function() {
-        // Attach click event handler to the button
-        $('.continuar').click(function() {
-            // Execute AJAX function
-
-            $.ajax({
-                url: 'partida/list',
-                method: 'POST',
-                success: function(response) {
-
-                },
-                error: function(xhr, status, error) {
-                    // Handle error, if any
-                    console.log(error);
-                }
-            });
-        });
-    });
-
-
-    $(document).ready(function() {
-        // Attach click event handler to the button
-        $('.fin').click(function() {
-            // Execute AJAX function
-
-            $.ajax({
-                url: 'Home/list',
-                method: 'POST',
-                success: function(response) {
-
-                },
-                error: function(xhr, status, error) {
-                    // Handle error, if any
-                    console.log(error);
-                }
-            });
-        });
-    });
 </script>
