@@ -1,5 +1,3 @@
-{{> header}}
-
 
 
 <section class="container">
@@ -25,13 +23,13 @@
     {{/respuestas}}
 
     {{#respuestaCorrecta}}
-        <h2> la opcion correcta es: {{resp}}</h2>
+        <h2> la opcion correcta es: {{respuestaCorrecta.idResp}}</h2>
     {{/respuestaCorrecta}}
 
 
     <article class="p-5 bg-dark-subtle rounded">
         <div class="d-flex justify-content-center">
-            <form class="row w-50 form-yolose" action="index.php?module=reportar&action=enviarReporte" method="POST" enctype="multipart/form-data">
+            <form class="row w-50 form-yolose" action="/reportar/enviarReporte" method="POST" enctype="multipart/form-data">
 
                 <div class="col-12 pe-0">
                     <label for="problema" class="form-label">Tipo de Problema</label>
@@ -52,6 +50,3 @@
     </article>
 </section>
 
-
-
-{{> foooter}}

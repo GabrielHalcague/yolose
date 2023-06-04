@@ -33,7 +33,8 @@ class PartidaController{
 
         $data['js']=true;
         $data['preg'] = [
-            'pregunta' => $preguntaActual['pregunta']
+            'pregunta' => $preguntaActual['pregunta'],
+            'idPregunta'=> $preguntaActual['preguntaID']
         ];
         $data['logged'] = Session::get('logged');
         $data['username'] = Session::get('username');

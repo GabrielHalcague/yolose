@@ -6,6 +6,7 @@
     {{/username}}
     {{#preg}}
         <h1 class="text-center" style="color: {{color}}">{{pregunta}}</h1>
+        <h1>{{idPregunta}}</h1>
     {{/preg}}
 
     <article class="container-fluid">
@@ -21,6 +22,10 @@
             <a role="button" id="fin" class="btn btn-danger" href="/" style="display: none;">Fin</a>
 
             <a role="button" id="continuar" class="btn btn-success" href="/partida" style="display: none;">Continuar</a>
+        {{#preg}}
+            <a role="button" id="continuar" class="btn btn-success" href="/reportar/reportarPregunta&idReport={{idPregunta}}" >Reportar</a>
+
+        {{/preg}}
 
     </div>
 </section>

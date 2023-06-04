@@ -34,7 +34,7 @@ class reportarController
         }
 
         $data["respuestas"] = $this->reportarModel->getRespuestasDePregunta($IdPregunta);
-        $data["respuestaCorrecta"]=$this->reportarModel->getRespuestaCorrectaDePregunta($IdPregunta);
+        $data["respuestaCorrecta"]=$this->reportarModel->getRespuestaCorrectaDePregunta($IdPregunta)[0];
 
         $data=Session::menuSegunElRol($data);
         $this->renderer->render("reportar", $data);
