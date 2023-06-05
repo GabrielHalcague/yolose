@@ -1,49 +1,45 @@
-
 <section class="container">
-
     {{#username}}
-        <p>Jugador: {{username}}</p>
+    <h1 class="text-center">Jugador: <strong class="text-primary">{{username}}</strong></h1>
     {{/username}}
+
     {{#preg}}
-        <h1 class="text-center" style="color: {{color}}">{{pregunta}}</h1>
+    <h2 class="text-center {{color}}">{{pregunta}}</h2>
     {{/preg}}
 
-    <article class="container-fluid">
+    <article class="row flex-column">
         {{#opc}}
-            <button type="button" name="{{id}}" id="{{id}}"
-                    class="btn btn-primary btn-lg btn-block" value="{{id}}" > {{resp}}
+        <div class="col-12 text-center my-3">
+            <button type="button" name="{{id}}" id="{{id}}" style="min-height: 5rem; min-width: 20rem;" class="btn btn-primary" value="{{id}}"> {{resp}}
             </button>
+        </div>
         {{/opc}}
     </article>
 
-    <div>
-
-            <a role="button" id="fin" class="btn btn-danger" href="/" style="display: none;">Fin</a>
-
-            <a role="button" id="continuar" class="btn btn-success" href="/partida" style="display: none;">Continuar</a>
-
-    </div>
+        <a role="button" id="fin" class="btn btn-danger py-3" href="/" style="display: none;">Fin</a>
+        <a role="button" id="continuar" class="btn btn-success py-3" href="/partida" style="display: none;">Continuar</a>
 </section>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script>
-
+  var puntaje = 0;
     //TODO SACAR JS DE VISTA Y CREAR FUNCION PARA CAMBIAR EL COLOR Y EL DISPLAY
 
     //si toca un boton va a verificar y le pasa el id del boton que toco
     //verificar devulve id del boton y de respuesta correcta en caso de que sea haya equivocado
-    $(document).ready(function() {
+    $(document).ready(function () {
         // Attach click event handler to the button
-        $('.btn').click(function() {
+        $('.btn').click(function () {
             // Execute AJAX function
             var id = $(this).val();
+          
 
             $.ajax({
                 url: 'partida/verificar',
                 method: 'POST',
-                data:{id: id},
-                success: function(response) {
+                data: { id: id },
+                success: function (response) {
                     console.log(response);
                     var data = JSON.parse(response);
 
@@ -58,7 +54,7 @@
 
                     }
                 },
-                error: function(xhr, status, error) {
+                error: function (xhr, status, error) {
                     // Handle error, if any
                     console.log(error);
                 }
@@ -71,14 +67,14 @@
     //valida la respues y pinta de color los botones en base a respuesta
     //ademas muestra boton fin si se equivoco y lleva a inicio
     //o continuar si responde bien y recarga consulta
-    function validarRespuesta(data){
+    function validarRespuesta(data) {
 
         var respuestaCorrecta;
         var respuestaIncorrecta;
         var botonFin;
         var botonContinuar;
 
-        if(data["respActual"] != undefined && data["respValida"] != undefined){
+        if (data["respActual"] != undefined && data["respValida"] != undefined) {
 
             respuestaCorrecta = document.getElementById(data["respValida"]);
             respuestaIncorrecta = document.getElementById(data["respActual"]);
@@ -88,7 +84,8 @@
             botonFin.style.display = 'block';
             disableButtons();
         }
-        else{
+        else {
+            puntaje++;
             respuestaCorrecta = document.getElementById(data["respValida"]);
             botonContinuar = document.getElementById("continuar");
             respuestaCorrecta.style.backgroundColor = 'green';
@@ -98,7 +95,7 @@
 
     }
 
-    function disableButtons(){
+    function disableButtons() {
         var buttons = document.getElementsByClassName("btn");
         for (var i = 0; i < buttons.length; i++) {
             buttons[i].disabled = true;

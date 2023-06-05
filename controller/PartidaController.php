@@ -40,7 +40,7 @@ class PartidaController{
         $data['opc'] = $this->partidaModel->obtenerRespuestaDePregunta($preguntaActual['preguntaID']);
 
         Session::set('preguntaSeleccionada',$preguntas[$indicePregunta]);
-        /*unset($preguntas[$indicePregunta]);*/
+        unset($preguntas[$indicePregunta]);
         Session::set('preguntas',$preguntas);
 
 
