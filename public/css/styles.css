@@ -99,5 +99,40 @@ footer i:hover{
     padding: 0px;
 }
 
+.blue {
+    color: #fff;
+    padding: 1rem;
+    background-color: blue;
+}
+.brown {
+    color: #fff;
+    padding: 1rem;
+    background-color: brown;
+}
+.purple {
+    color: #fff;
+    padding: 1rem;
+    background-color: purple;
+}
+.green {
+    color: #fff;
+    padding: 1rem;
+    background-color: green;
+}
+.blueviolet {
+    color: #fff;
+    padding: 1rem;
+    background-color: blueviolet;
+}
+.orange {
+    color: #fff;
+    padding: 1rem;
+    background-color: orange;
+}
+.turquoise {
+    color: #fff;
+    padding: 1rem;
+    background-color: turquoise;
+}
 @media (min-width: 768px) {
 }

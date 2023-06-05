@@ -16,6 +16,7 @@ include_once("helpers/MustacheRender.php");
 include_once('helpers/Router.php');
 include_once "helpers/Mailer.php";
 include_once "helpers/QRGenerator.php";
+require_once "helpers/Logger.php";
 
 // Inclusión de Models
 include_once('model/HomeModel.php');
@@ -28,15 +29,26 @@ include_once('model/PreguntaModel.php');
 include_once('model/OpcionModel.php');
 include_once('model/PartidaModel.php');
 
+//Inclusión de Servicios
+require_once 'Services/PreguntaServices.php';
+
 // Inclusión de Bibliotecas de Terceros
 include_once('third-party/mustache/src/Mustache/Autoloader.php');
 
 class Configuration
 {
     private $configFile = 'config/config.ini';
+    private static $instance;
 
-    public function __construct()
-    {
+    private function __construct(){
+        Logger::error("LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION");
+    }
+
+    public static function getInstance(){
+        if (self::$instance === null){
+            self::$instance = new self();
+        }
+        return self::$instance;
     }
 
     public function getPreguntaController()
@@ -52,8 +64,7 @@ class Configuration
     {
         return new PartidaController($this->getRenderer(),new PartidaModel($this->getDatabase(),
                 [
-                    'pregunta' => new PreguntaModel($this->getDatabase()),
-                    'opcion' => new OpcionModel($this->getDatabase()),
+                    'pregunta' => new Services\PreguntaServices($this->getDatabase()),
                     'usuario' => new UserModel($this->getDatabase()),
                     'mailer' => $this->getMailer()
                 ])

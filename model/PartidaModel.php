@@ -1,22 +1,20 @@
 <?php
 require_once 'model/UserModel.php';
-require_once 'model/PreguntaModel.php';
-require_once 'model/OpcionModel.php';
+require_once 'Services/PreguntaServices.php';
+
 require_once 'helpers/Logger.php';
 
 class PartidaModel
 {
-
     private mixed $database;
     private mixed $usuarioModel;
-    private mixed $preguntaModel;
-    private mixed $opcionModel;
+    private mixed $preguntaServices;
+
 
     public function __construct($database, $models)
     {
         $this->database = $database;
-        $this->preguntaModel = $models['pregunta'];
-        $this->opcionModel = $models['opcion'];
+        $this->preguntaServices = $models['pregunta'];
         $this->usuarioModel = $models['usuario'];
     }
 
@@ -26,7 +24,7 @@ class PartidaModel
         $dificultadUsuario = $this->obtenerDificultadUsuario($usuario['id']);
         $arrayPreguntas = [];
         if (empty($dificultadUsuario)) {
-            $arrayPreguntas = $this->preguntaModel->obtenerPreguntasDificultadMedia();
+            $arrayPreguntas = $this->preguntaServices->obtenerPreguntasDificultadMedia();
         } else {
             $dif = $dificultadUsuario[0]['dificultad'];
             do {
@@ -48,7 +46,7 @@ class PartidaModel
                         $this->limpiarHistorialUsuario($usuario['id']); //limpio el historial
                     }
                 }
-            }while(empty($arrayPreguntas));
+            } while (empty($arrayPreguntas));
 
         }
         return $arrayPreguntas;
@@ -56,41 +54,49 @@ class PartidaModel
 
     public function validarRespuesta($data): array
     {
-        $id = $data['seleccionUsuario'];
+        $id = $data['seleccionUsuario']; // LA OPCIÓN SELECCIONADA POR EL USUARIO
         $preguntaSeleccionada = $data['preguntaActual'];
-        $muestroPregunta = $data['muestroPregunta'];
-        $respondioPregunta = $data['respondioPregunta'];
+        $muestroPregunta = $data['muestroPregunta']; //CUANDO SE MOSTRO POR PANTALLA LA PREGUNTA
+        $respondioPregunta = $data['respondioPregunta']; //CUANDO SE RESPONDIO
         $array = [
             'correcto' => false,
             'fueraTiempo' => false,
         ];
         $dif = (int)(($respondioPregunta - $muestroPregunta) / 60) / 60;
-        if ($dif <= 10) {
-            Logger::info("CONTESTO LA PREGUNTA EN EL TIEMPO LIMITE DE LOS 10 SEG");
-            $array['respActual'] = $id;
-            if ($id == $preguntaSeleccionada['respuestaCorrecta']) {
+        if ($dif <= 120) {
+            Logger::info("[CONTESTO LA PREGUNTA EN EL TIEMPO LIMITE DE LOS 2MIN]");
+            if ($id != 'trampa') {
+                $array['respActual'] = $id;
+                if ($id == $preguntaSeleccionada['respuestaCorrecta']) {
+                    Logger::info("[RESPUESTA CORRECTA]");
+                    $array['correcto'] = true;
+                } else {
+                    Logger::info("[RESPUESTA INCORRECTA]");
+                    $array['respValida'] = $preguntaSeleccionada['respuestaCorrecta'];
+                }
+            }else{
+                Logger::info("[SE UTILIZO TRAMPA]");
                 $array['correcto'] = true;
-            } else {
                 $array['respValida'] = $preguntaSeleccionada['respuestaCorrecta'];
             }
         } else {
-            Logger::info("NO CONTESTO LA PREGUNTA EN EL TIEMPO LIMITE DE LOS 10 SEG");
+            Logger::info("[NO CONTESTO LA PREGUNTA EN EL TIEMPO LIMITE DE LOS 2MIN]");
             $array['fueraTiempo'] = true;
             $array['respValida'] = $preguntaSeleccionada['respuestaCorrecta'];
         }
 
 
-        $this->actualizaPregunta($preguntaSeleccionada['preguntaID'], $data['correcto']);
+        $this->actualizaPregunta($preguntaSeleccionada['preguntaID'], $array['correcto']);
 
         $this->agregarHistorialUsuario([
-            'username' => $data['username'],
+            'idUsuario' => $data['idUsuario'],
             'idPreg' => $preguntaSeleccionada['preguntaID'],
         ]);
 
         $this->agregarHistorialPartida([
             'n_partida' => $data['tokenPartida'],
-            'estado' => $data['correcto'],
-            'username' => $data['username'],
+            'estado' => $array['correcto'],
+            'idUsuario' => $data['idUsuario'],
             'idPreg' => $preguntaSeleccionada['preguntaID']
         ]);
         return $array;
@@ -106,7 +112,7 @@ class PartidaModel
     public
     function obtenerRespuestaDePregunta($id)
     {
-        return $this->opcionModel->obtenerOpcionesDePregunta($id);
+        return $this->preguntaServices->obtenerOpcionesDePregunta($id);
     }
 
     private
@@ -189,7 +195,7 @@ class PartidaModel
 
     public function agregarHistorialUsuario($data): void
     {
-        $idUsuario = $this->usuarioModel->getUsuarioByUsername($data['username'])[0]['id'];
+        $idUsuario = $data['idUsuario'];
         $idPreg = $data['idPreg'];
         $sql = "INSERT INTO historialUsuario (idUs, idPreg) VALUES ('$idUsuario','$idPreg')";
         $this->database->execute($sql);
@@ -197,12 +203,26 @@ class PartidaModel
 
     public function agregarHistorialPartida($data): void
     {
-        $idUsuario = $this->usuarioModel->getUsuarioByUsername($data['username'])[0]['id'];
+        $idUsuario = $data['idUsuario'];
         $idPreg = $data['idPreg'];
         $token = $data['n_partida'];
         $estado = $data['estado'];
-        $sql = "INSERT INTO historialPartidas (estado, idUs, idPreg, n_partida) VALUES ('$estado','$idUsuario','$idPreg','$token')";
+
+        if(!$estado){
+            $sql = "INSERT INTO historialPartidas (idUs, idPreg, n_partida) VALUES ('$idUsuario','$idPreg','$token')";
+        }else{
+            $sql = "INSERT INTO historialPartidas (estado, idUs, idPreg, n_partida) VALUES ('$estado','$idUsuario','$idPreg','$token')";
+        }
         $this->database->execute($sql);
     }
 
+    public function obtenerTrampasDelUsuario($id){
+        $sql="SELECT u.trampas FROM usuario u WHERE u.id = $id";
+        return $this->database->query($sql);
+    }
+
+    public function actualizaTrampasUsuario($cantTrampasTotales,$idUsuario){
+        $sql = "UPDATE usuario u SET u.trampas = $cantTrampasTotales WHERE id = $idUsuario";
+        $this->database->execute($sql);
+    }
 }

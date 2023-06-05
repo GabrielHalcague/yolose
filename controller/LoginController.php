@@ -48,7 +48,7 @@ class LoginController
         }
 
         if ($usuarioBuscado[0]['activo'] == 1) {
-
+            Session::set('idUsuario', $usuarioBuscado[0]["id"] );
             Session::set('logged', true);
             Session::set('rol', $usuarioBuscado[0]["rol"]);
             Session::set('username', $username);

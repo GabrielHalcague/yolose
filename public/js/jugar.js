@@ -1,13 +1,15 @@
-//si toca un boton va a verificar y le pasa el id del boton que toco
-//verificar devulve id del boton y de respuesta correcta en caso de que sea haya equivocado
 $(document).ready(function () {
     $('#fin').hide();
     $('#continuar').hide();
+    var cantTrampasActuales = $('#trampa').val();
+    if(cantTrampasActuales === 0){
+        $('#trampa').prop('disabled', true);
+    }
     // Attach click event handler to the button
     $('.opcion').click(function () {
         // Execute AJAX function
         const id = $(this).val();
-
+        console.log(id);
         $.ajax({
             url: '/partida/verificar',
             method: 'POST',
@@ -32,9 +34,6 @@ $(document).ready(function () {
     });
 });
 
-//valida la respues y pinta de color los botones en base a respuesta
-//ademas muestra boton fin si se equivoco y lleva a inicio
-//o continuar si responde bien y recarga consulta
 function validarRespuesta(data) {
     console.log("En funcion validar");
     console.log(data);

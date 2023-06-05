@@ -22,7 +22,7 @@ class UserModel{
     public function getUsuario($nickname, $password)
     {
         $password = hash('md5', $password);
-        return $this->database->query("SELECT u.nombreUsuario, u.activo, r.descr 'rol' FROM usuario u
+        return $this->database->query("SELECT u.id,u.nombreUsuario, u.activo, r.descr 'rol' FROM usuario u
                                        JOIN rol_usuario ru on u.id = ru.idUs
                                        JOIN rol r on r.id = ru.idRol
                                        WHERE nombreUsuario='$nickname'

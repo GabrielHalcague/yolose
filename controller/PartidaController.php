@@ -2,8 +2,8 @@
 
 class PartidaController
 {
-    private $render;
-    private $partidaModel;
+    private mixed $render;
+    private mixed $partidaModel;
 
     public function __construct($render, $partidaModel)
     {
@@ -11,7 +11,7 @@ class PartidaController
         $this->partidaModel = $partidaModel;
     }
 
-    public function list()
+    public function list(): void
     {
         $tipoPartida = $_GET['tipoPartida'] ?? '';
         if ($tipoPartida == '') {
@@ -33,9 +33,14 @@ class PartidaController
     public function verificar(): void
     {
         Logger::info("COMIENZA LA VERIFICACIÓN DE LA RESPUESTA");
+        $id = $_POST['id'];
+        if ($id == 'trampa') {
+            $nTrampa = intval(Session::get('trampas')) - 1;
+            Session::set('trampas', $nTrampa);
+        }
         $data = $this->partidaModel->validarRespuesta([
             'seleccionUsuario' => $_POST['id'],
-            'username' => Session::get('username'),
+            'idUsuario' => Session::get('idUsuario'),
             'preguntaActual' => Session::get('preguntaSeleccionada'),
             'muestroPregunta' => Session::get('mostrarPregunta'),
             'respondioPregunta' => (new DateTime)->getTimestamp(),
@@ -47,11 +52,11 @@ class PartidaController
             'message' => 'Operación exitosa',
             'data' => $data // Puedes incluir datos adicionales si es necesario
         );
-
         echo json_encode($response);
     }
 
-    public function partidaTerminada(): void
+    public
+    function partidaTerminada(): void
     {
         $tokenPartida = Session::get('tokenPartida');
         $tipoPartida = Session::get('tipoPartida');
@@ -91,16 +96,21 @@ class PartidaController
         echo json_encode($response);
     }
 
-    public function salir()
+    public
+    function salir(): void
     {
         Session::deleteValue('tokenPartida');
         Session::deleteValue('tipoPartida');
         Session::deleteValue('preguntas');
         Session::deleteValue('preguntaSeleccionada');
+        $trampasActuales = Session::get('trampas');
+        Session::deleteValue('trampas');
+        $this->partidaModel->actualizaTrampasUsuario($trampasActuales,Session::get('idUsuario'));
         Header::redirect("/");
     }
 
-    public function comenzarJuego(): array
+    public
+    function comenzarJuego(): array
     {
         $preguntas = [];
         if (empty(Session::get('preguntas'))) {
@@ -111,27 +121,24 @@ class PartidaController
 
         $indicePregunta = array_rand($preguntas);
         Session::set('preguntaSeleccionada', $preguntas[$indicePregunta]);
+        if(empty(Session::get('trampas'))){
+            Session::set('trampas',$this->partidaModel->obtenerTrampasDelUsuario(Session::get('idUsuario'))[0]['trampas']);
+        }
         $data = [
             'js' => true,
             'pregunta' => $preguntas[$indicePregunta]['pregunta'],
             'color' => $preguntas[$indicePregunta]['color'],
             'logged' => Session::get('logged'),
             'username' => Session::get('username'),
-            'opc' => $this->obtenerRespuestaDePregunta($preguntas[$indicePregunta]['preguntaID']),
-            'trampas' => 5,
-            'tipoPartida' => Session::get('tipoPartida')
+            'opc' => $this->partidaModel->obtenerRespuestaDePregunta($preguntas[$indicePregunta]['preguntaID']),
+            'trampas' => Session::get('trampas') ?? 5,
+            'tipoPartida' => Session::get('tipoPartida'),
+            'puntaje' => $this->partidaModel->obtenerScoreDelUsuario(Session::get('tokenPartida'))[0]['puntos'] ?? 0
         ];
         unset($preguntas[$indicePregunta]);
         Session::set('preguntas', $preguntas);
         return $data;
     }
-
-    private function obtenerRespuestaDePregunta(mixed $preguntaID)
-    {
-        return $this->partidaModel->obtenerRespuestaDePregunta($preguntaID);
-    }
-
-
 }
 
 ?>
