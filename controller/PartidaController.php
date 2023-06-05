@@ -13,6 +13,7 @@ class PartidaController{
     }
 
     public function list(){
+
         if(!Session::getDataSession()){
             Header::redirect("/");
         }
@@ -20,8 +21,11 @@ class PartidaController{
 
         if(empty(Session::get('preguntas'))){
             $preguntas = $this->partidaModel->obtenerPreguntas(Session::get('username')); //no tengo stock de preguntas
+            $_SESSION['score'] = 0;
+
         }else{
-            $preguntas = Session::get('preguntas'); // tengo stock
+            $preguntas = Session::get('preguntas'); // tengo stoc
+            $_SESSION['score'] += 1;
         }
 
         if(empty($preguntas)){ // si ya respondio todas las preguntas
@@ -31,6 +35,7 @@ class PartidaController{
         $indicePregunta = array_rand($preguntas);
         $preguntaActual = $preguntas[$indicePregunta];
 
+
         $data['js']=true;
         $data['preg'] = [
             'pregunta' => $preguntaActual['pregunta']
@@ -38,6 +43,8 @@ class PartidaController{
         $data['logged'] = Session::get('logged');
         $data['username'] = Session::get('username');
         $data['opc'] = $this->partidaModel->obtenerRespuestaDePregunta($preguntaActual['preguntaID']);
+
+        $data['score'] = $_SESSION['score'];
 
         Session::set('preguntaSeleccionada',$preguntas[$indicePregunta]);
         unset($preguntas[$indicePregunta]);
@@ -70,6 +77,7 @@ class PartidaController{
             $estadoPregunta = 1;
             $this->partidaModel->guardarHistorialPartida($estadoPregunta,Session::get('username'),$preguntaSeleccionada["preguntaID"]);
             $this->partidaModel->actualizarPreguntaCorrecta($preguntaSeleccionada["preguntaID"]);
+
         }
         else{
             $data['respValida'] = $preguntaSeleccionada['respuestaCorrecta'];

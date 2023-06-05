@@ -3,6 +3,8 @@
     <h1 class="text-center">Jugador: <strong class="text-primary">{{username}}</strong></h1>
     {{/username}}
 
+    <h3>Puntaje actual: {{score}}</h3>
+
     {{#preg}}
     <h2 class="text-center {{color}}">{{pregunta}}</h2>
     {{/preg}}
@@ -23,7 +25,7 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script>
-  var puntaje = 0;
+
     //TODO SACAR JS DE VISTA Y CREAR FUNCION PARA CAMBIAR EL COLOR Y EL DISPLAY
 
     //si toca un boton va a verificar y le pasa el id del boton que toco
@@ -85,7 +87,6 @@
             disableButtons();
         }
         else {
-            puntaje++;
             respuestaCorrecta = document.getElementById(data["respValida"]);
             botonContinuar = document.getElementById("continuar");
             respuestaCorrecta.style.backgroundColor = 'green';

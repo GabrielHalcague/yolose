@@ -13,6 +13,7 @@ class HomeController
 
     public function list() {
         $data[]=[];
+        $_SESSION['score'] = 0;
         if (Session::getDataSession() == null) {
             $data = $this->menuSegunUsuario(0);
             //$data = $this->datosComunesDelHome($data);
