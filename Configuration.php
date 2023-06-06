@@ -40,12 +40,14 @@ class Configuration
     private $configFile = 'config/config.ini';
     private static $instance;
 
-    private function __construct(){
+    private function __construct()
+    {
         Logger::error("LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION");
     }
 
-    public static function getInstance(){
-        if (self::$instance === null){
+    public static function getInstance()
+    {
+        if (self::$instance === null) {
             self::$instance = new self();
         }
         return self::$instance;
@@ -62,13 +64,10 @@ class Configuration
 
     public function getPartidaController()
     {
-        return new PartidaController($this->getRenderer(),new PartidaModel($this->getDatabase(),
-                [
-                    'pregunta' => new Services\PreguntaServices($this->getDatabase()),
-                    'usuario' => new UserModel($this->getDatabase()),
-                    'mailer' => $this->getMailer()
-                ])
-            );
+        return new PartidaController($this->getRenderer(),
+            new PartidaModel($this->getDatabase(),
+                new Services\PreguntaServices($this->getDatabase()))
+        );
     }
 
     public function getActivationController()

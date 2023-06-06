@@ -54,9 +54,9 @@ function cuentaRegresiva() {
                 var datos = data.data;
 
                 // Hacer algo con los datos en caso de éxito
-                console.log("En funcion validar");
+                console.log("SE FUE DE TIEMPO");
                 console.log(data);
-                $("." + data["respValida"]).prop('backgroundColor', 'green');
+                $("#" + data["respValida"]).css('backgroundColor', 'green');
                 terminarPartida();
                 finButton.show();
                 disableButtons();
@@ -72,21 +72,21 @@ function cuentaRegresiva() {
 function validarRespuesta(data) {
     console.log("En funcion validar");
     console.log(data);
-    const respuestaActual = $("." + data["respActual"]);
-    const respuestaValida = $("." + data["respValida"]);
+    const respuestaActual = $("#" + data["respActual"]);
+    const respuestaValida = $("#" + data["respValida"]);
     if (data["fueraTiempo"] === false) {
         if (data['correcto'] === false) {
-            respuestaValida.prop('backgroundColor', 'green');
-            respuestaActual.prop('backgroundColor', 'red');
+            respuestaValida.css('backgroundColor', 'green');
+            respuestaActual.css('backgroundColor', 'red');
             terminarPartida();
             finButton.show();
         }
         if (data['correcto'] === true) {
-            respuestaActual.prop('backgroundColor', 'green');
+            respuestaActual.css('backgroundColor', 'green');
             continuarButton.show();
         }
     } else {
-        respuestaValida.prop('backgroundColor', 'green');
+        respuestaValida.css('backgroundColor', 'green');
         finButton.show();
     }
     disableButtons();

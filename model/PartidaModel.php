@@ -1,27 +1,22 @@
 <?php
-require_once 'model/UserModel.php';
 require_once 'Services/PreguntaServices.php';
-
 require_once 'helpers/Logger.php';
 
 class PartidaModel
 {
     private mixed $database;
-    private mixed $usuarioModel;
     private mixed $preguntaServices;
 
 
-    public function __construct($database, $models)
+    public function __construct($database, $preguntaServices)
     {
         $this->database = $database;
-        $this->preguntaServices = $models['pregunta'];
-        $this->usuarioModel = $models['usuario'];
+        $this->preguntaServices = $preguntaServices;
     }
 
-    public function obtenerPreguntasParaUsuario($username): array
+    public function obtenerPreguntasParaUsuario($id): array
     {
-        $usuario = $this->usuarioModel->getUsuarioByUsername($username);
-        $dificultadUsuario = $this->obtenerDificultadUsuario($usuario['id']);
+        $dificultadUsuario = $this->obtenerDificultadUsuario($id);
         $arrayPreguntas = [];
         if (empty($dificultadUsuario)) {
             $arrayPreguntas = $this->preguntaServices->obtenerPreguntasDificultadMedia();
@@ -29,21 +24,21 @@ class PartidaModel
             $dif = $dificultadUsuario['dificultad'];
             do {
                 if ($dif >= 0 && $dif <= 0.3) {
-                    $arrayPreguntas = $this->obtenerPreguntasDificultadDificil($usuario['id']);
+                    $arrayPreguntas = $this->obtenerPreguntasDificultadDificil($id);
                     if (empty($arrayPreguntas)) { // si ya respondio todas las preguntas
-                        $this->limpiarHistorialUsuario($usuario['id']); //limpio el historial
+                        $this->limpiarHistorialUsuario($id); //limpio el historial
                     }
                 }
                 if ($dif > 0.3 && $dif <= 0.7) {
-                    $arrayPreguntas = $this->obtenerPreguntasDificultadMedia($usuario['id']);
+                    $arrayPreguntas = $this->obtenerPreguntasDificultadMedia($id);
                     if (empty($arrayPreguntas)) { // si ya respondio todas las preguntas
-                        $this->limpiarHistorialUsuario($usuario['id']); //limpio el historial
+                        $this->limpiarHistorialUsuario($id); //limpio el historial
                     }
                 }
                 if ($dif > 0.7 && $dif <= 1) {
-                    $arrayPreguntas = $this->obtenerPreguntasDificultadFacil($usuario['id']);
+                    $arrayPreguntas = $this->obtenerPreguntasDificultadFacil($id);
                     if (empty($arrayPreguntas)) { // si ya respondio todas las preguntas
-                        $this->limpiarHistorialUsuario($usuario['id']); //limpio el historial
+                        $this->limpiarHistorialUsuario($id); //limpio el historial
                     }
                 }
             } while (empty($arrayPreguntas));

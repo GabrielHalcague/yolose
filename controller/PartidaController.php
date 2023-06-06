@@ -68,7 +68,7 @@ class PartidaController
         ];
 
         if ($tipoPartida == 'vsbot') {
-            $maxPregBot = $this->partidaModel->obtenerPreguntasParaUsuario('boot');
+            $maxPregBot = $this->partidaModel->obtenerPreguntasParaUsuario(-1);
             $scoreBot = rand(1, count($maxPregBot));
             if ($scoreUsuario > $scoreBot) {
                 $resultado = "HAS GANADO AL BOT";
@@ -118,7 +118,7 @@ class PartidaController
     {
         $preguntas = [];
         if (empty(Session::get('preguntas'))) {
-            $preguntas = $this->partidaModel->obtenerPreguntasParaUsuario(Session::get('username')); //no tengo stock de preguntas y pido al modelo un stock
+            $preguntas = $this->partidaModel->obtenerPreguntasParaUsuario(Session::get('idUsuario')); //no tengo stock de preguntas y pido al modelo un stock
         } else {
             $preguntas = Session::get('preguntas'); // tengo stock
         }
