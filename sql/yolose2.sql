@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-06-2023 a las 15:54:14
+-- Tiempo de generación: 06-06-2023 a las 16:14:42
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.2.0
 
@@ -193,7 +193,6 @@ CREATE TABLE IF NOT EXISTS `historialcompras` (
 -- Estructura de tabla para la tabla `historialpartidas`
 --
 -- Creación: 03-06-2023 a las 19:24:09
--- Última actualización: 06-06-2023 a las 13:46:06
 --
 
 DROP TABLE IF EXISTS `historialpartidas`;
@@ -207,70 +206,7 @@ CREATE TABLE IF NOT EXISTS `historialpartidas` (
   PRIMARY KEY (`id`),
   KEY `FK_HistorialPartida_Usuario` (`idUs`),
   KEY `FK_HistorialPartida_Pregunta` (`idPreg`)
-) ENGINE=InnoDB AUTO_INCREMENT=102 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Volcado de datos para la tabla `historialpartidas`
---
-
-INSERT INTO `historialpartidas` (`id`, `f_partida`, `estado`, `n_partida`, `idUs`, `idPreg`) VALUES
-(1, '2023-06-05', 1, '647e62775b8a8', 5, 13),
-(2, '2023-06-05', 1, '647e62775b8a8', 5, 13),
-(3, '2023-06-05', 0, '647e62775b8a8', 5, 13),
-(4, '2023-06-05', 0, '647e62775b8a8', 5, 19),
-(5, '2023-06-05', 0, '647e62775b8a8', 5, 19),
-(6, '2023-06-05', 1, '647e62ba121be', 5, 11),
-(7, '2023-06-05', 0, '647e62ba121be', 5, 11),
-(8, '2023-06-05', 1, '647e62ba121be', 5, 15),
-(9, '2023-06-05', 0, '647e62ba121be', 5, 15),
-(10, '2023-06-05', 1, '647e62ba121be', 5, 12),
-(11, '2023-06-05', 0, '647e62ba121be', 5, 12),
-(12, '2023-06-05', 1, '647e62ba121be', 5, 14),
-(13, '2023-06-05', 0, '647e62ba121be', 5, 14),
-(14, '2023-06-05', 0, '647e62ba121be', 5, 16),
-(15, '2023-06-05', 0, '647e62ba121be', 5, 16),
-(16, '2023-06-05', 1, '647e6cd9717cd', 5, 17),
-(17, '2023-06-05', 1, '647e6cd9717cd', 5, 17),
-(18, '2023-06-05', 0, '647e6cd9717cd', 5, 17),
-(19, '2023-06-05', 1, '647e6cd9717cd', 5, 20),
-(20, '2023-06-05', 0, '647e6cd9717cd', 5, 20),
-(21, '2023-06-05', 0, '647e6cd9717cd', 5, 18),
-(22, '2023-06-05', 0, '647e6cd9717cd', 5, 18),
-(23, '2023-06-05', 1, '647e6f49e48af', 5, 11),
-(24, '2023-06-05', 1, '647e6f49e48af', 5, 11),
-(25, '2023-06-05', 0, '647e6f49e48af', 5, 11),
-(26, '2023-06-05', 1, '647e6f49e48af', 5, 12),
-(27, '2023-06-05', 0, '647e6f49e48af', 5, 12),
-(28, '2023-06-05', 1, '647e6f49e48af', 5, 14),
-(29, '2023-06-05', 0, '647e6f49e48af', 5, 14),
-(30, '2023-06-05', 1, '647e6f49e48af', 5, 13),
-(31, '2023-06-05', 0, '647e6f49e48af', 5, 13),
-(32, '2023-06-05', 1, '647e6f49e48af', 5, 17),
-(33, '2023-06-05', 0, '647e6f49e48af', 5, 17),
-(34, '2023-06-05', 0, '647e6f49e48af', 5, 20),
-(79, '2023-06-06', 1, '647f33a811e28', 5, 4),
-(80, '2023-06-06', 0, '647f33a811e28', 5, 4),
-(81, '2023-06-06', 1, '647f33a811e28', 5, 1),
-(82, '2023-06-06', 0, '647f33a811e28', 5, 1),
-(83, '2023-06-06', 1, '647f33a811e28', 5, 15),
-(84, '2023-06-06', 0, '647f33a811e28', 5, 15),
-(85, '2023-06-06', 1, '647f33a811e28', 5, 4),
-(86, '2023-06-06', 0, '647f33a811e28', 5, 4),
-(87, '2023-06-06', 1, '647f33a811e28', 5, 11),
-(88, '2023-06-06', 0, '647f33a811e28', 5, 11),
-(89, '2023-06-06', 0, '647f33a811e28', 5, 1),
-(90, '2023-06-06', 0, '647f33a811e28', 5, 1),
-(91, '2023-06-06', 1, '647f387b32752', 5, 12),
-(92, '2023-06-06', 1, '647f387b32752', 5, 12),
-(93, '2023-06-06', 0, '647f387b32752', 5, 12),
-(94, '2023-06-06', 1, '647f387b32752', 5, 13),
-(95, '2023-06-06', 0, '647f387b32752', 5, 13),
-(96, '2023-06-06', 1, '647f387b32752', 5, 14),
-(97, '2023-06-06', 0, '647f387b32752', 5, 14),
-(98, '2023-06-06', 1, '647f387b32752', 5, 15),
-(99, '2023-06-06', 0, '647f387b32752', 5, 15),
-(100, '2023-06-06', 0, '647f387b32752', 5, 17),
-(101, '2023-06-06', 0, '647f387b32752', 5, 17);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -278,7 +214,6 @@ INSERT INTO `historialpartidas` (`id`, `f_partida`, `estado`, `n_partida`, `idUs
 -- Estructura de tabla para la tabla `historialusuario`
 --
 -- Creación: 03-06-2023 a las 19:23:44
--- Última actualización: 06-06-2023 a las 13:46:06
 --
 
 DROP TABLE IF EXISTS `historialusuario`;
@@ -289,30 +224,7 @@ CREATE TABLE IF NOT EXISTS `historialusuario` (
   PRIMARY KEY (`id`),
   KEY `FK_Historial_Usuario` (`idUs`),
   KEY `FK_Historial_Pregunta` (`idPreg`)
-) ENGINE=InnoDB AUTO_INCREMENT=58 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Volcado de datos para la tabla `historialusuario`
---
-
-INSERT INTO `historialusuario` (`id`, `idUs`, `idPreg`) VALUES
-(41, 5, 4),
-(42, 5, 4),
-(43, 5, 11),
-(44, 5, 11),
-(45, 5, 1),
-(46, 5, 1),
-(47, 5, 12),
-(48, 5, 12),
-(49, 5, 12),
-(50, 5, 13),
-(51, 5, 13),
-(52, 5, 14),
-(53, 5, 14),
-(54, 5, 15),
-(55, 5, 15),
-(56, 5, 17),
-(57, 5, 17);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -334,7 +246,7 @@ CREATE TABLE IF NOT EXISTS `obtenerpreguntas` (
 -- Estructura de tabla para la tabla `pregunta`
 --
 -- Creación: 03-06-2023 a las 19:23:30
--- Última actualización: 06-06-2023 a las 13:46:06
+-- Última actualización: 06-06-2023 a las 14:13:47
 --
 
 DROP TABLE IF EXISTS `pregunta`;
@@ -355,26 +267,26 @@ CREATE TABLE IF NOT EXISTS `pregunta` (
 --
 
 INSERT INTO `pregunta` (`id`, `preg`, `idCat`, `idEst`, `resCor`, `pregTot`) VALUES
-(1, '¿Que se celebra el 25 de Mayo?', 3, 4, 2, 5),
+(1, '¿Que se celebra el 25 de Mayo?', 3, 4, 1, 1),
 (2, '¿Quien gano el ultimo mundial de futbol', 4, 4, 1, 1),
 (3, 'Si en un script PHP encuentra una llamada a un método de clase de la siguiente manera: Usuario::traerUsuario(); Se trata de:', 5, 4, 1, 1),
-(4, 'Cuando utilizo una Clase en forma estática siempre se ejecuta el método __construct()', 5, 4, 3, 5),
+(4, 'Cuando utilizo una Clase en forma estática siempre se ejecuta el método __construct()', 5, 4, 1, 1),
 (5, 'La S del acrónimo SOLID es por el concepto Single Responsability, que indica:', 5, 4, 1, 1),
 (6, 'El concepto de acoplamiento refiere a:', 5, 4, 1, 1),
 (7, 'Como concepto general podemos decir que a menos acoplamiento mejor software', 5, 4, 1, 1),
 (8, 'En software se entiende por patrón de diseño a:', 5, 4, 1, 1),
 (9, 'El patrón MVC se utiliza mucho en aplicaciones web porque:', 5, 4, 1, 1),
 (10, 'En un modelo MVC el que recibe normalmente la petición del cliente es:', 5, 4, 1, 1),
-(11, 'El modelo en un esquema MVC es el encargado de almacenar y ejecutar la lógica del negocio', 5, 4, 5, 9),
-(12, 'Uno de los objetivos del modelo MVC es separar en la aplicación el modelo de negocios de las interfaces de usuario', 5, 4, 5, 9),
-(13, 'El enrutador en un modelo MVC es el encargado de ejecutar las operaciones de acceso a la base de datos', 5, 4, 5, 9),
-(14, 'El folding en una aplicación web se refiere a:', 5, 4, 4, 8),
-(15, 'Si estoy desarrollando usando TDD estoy', 5, 4, 4, 8),
-(16, 'El patrón MVC esta compuesto por:', 5, 4, 1, 4),
-(17, 'En un patrón MVC la Vista es la encargada de ', 5, 4, 4, 9),
-(18, 'La principal diferencia entre los enfoques Responsive y Mobile First es', 5, 4, 1, 4),
-(19, 'Observando la siguiente imagen, cuál de las dos opciones (A o B) le parece más adecuada para describir el enfoque Mobile first.', 5, 4, 1, 4),
-(20, 'La principal diferencia entre una Aplicación Web y una Aplicación monolítica (por ejemplo una Win32) es:', 5, 4, 2, 5),
+(11, 'El modelo en un esquema MVC es el encargado de almacenar y ejecutar la lógica del negocio', 5, 4, 1, 2),
+(12, 'Uno de los objetivos del modelo MVC es separar en la aplicación el modelo de negocios de las interfaces de usuario', 5, 4, 1, 1),
+(13, 'El enrutador en un modelo MVC es el encargado de ejecutar las operaciones de acceso a la base de datos', 5, 4, 1, 1),
+(14, 'El folding en una aplicación web se refiere a:', 5, 4, 1, 1),
+(15, 'Si estoy desarrollando usando TDD estoy', 5, 4, 1, 1),
+(16, 'El patrón MVC esta compuesto por:', 5, 4, 1, 1),
+(17, 'En un patrón MVC la Vista es la encargada de ', 5, 4, 1, 1),
+(18, 'La principal diferencia entre los enfoques Responsive y Mobile First es', 5, 4, 1, 1),
+(19, 'Observando la siguiente imagen, cuál de las dos opciones (A o B) le parece más adecuada para describir el enfoque Mobile first.', 5, 4, 1, 1),
+(20, 'La principal diferencia entre una Aplicación Web y una Aplicación monolítica (por ejemplo una Win32) es:', 5, 4, 1, 1),
 (21, 'El protocolo a través del cuál se realiza todo el intercambio de datos entre un servidor web y un cliente es:', 5, 4, 1, 8),
 (22, 'El protocolo HTTP tiene entre sus caracteristicas ser:', 5, 4, 1, 8),
 (23, 'El protocolo DNS es:', 5, 4, 1, 8),
@@ -768,7 +680,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 DROP TABLE IF EXISTS `ranking`;
 
 DROP VIEW IF EXISTS `ranking`;
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `ranking`  AS SELECT `u`.`nombreUsuario` AS `nombreUsuario`, sum(`hp`.`estado` = 1) AS `puntaje` FROM (`historialpartidas` `hp` join `usuario` `u` on(`hp`.`idUs` = `u`.`id`)) GROUP BY `hp`.`idUs``idUs`  ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `ranking`  AS SELECT `u`.`nombreUsuario` AS `nombreUsuario`, sum(`hp`.`estado` = 1) AS `puntaje` FROM (`historialpartidas` `hp` join `usuario` `u` on(`hp`.`idUs` = `u`.`id`)) GROUP BY `hp`.`idUs` ORDER BY sum(`hp`.`estado` = 1) AS `DESCdesc` ASC  ;
 
 --
 -- Restricciones para tablas volcadas
