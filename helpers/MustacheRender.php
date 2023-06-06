@@ -27,6 +27,12 @@ class MustacheRender{
         $contentAsString = file_get_contents('view/partial/header.mustache');
         $contentAsString .= file_get_contents('view/' . $contentFile . '_view.mustache');
         $contentAsString .= file_get_contents('view/partial/footer.mustache');
+        if(!empty(Session::get('logged'))) {
+            $data['logged'] = Session::get('logged');
+        }
+        if(!empty(Session::get('rol'))){
+            $data['rol'] = Session::get('rol');
+        }
         return $this->mustache->render($contentAsString, $data);
     }
 }

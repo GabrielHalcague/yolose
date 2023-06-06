@@ -17,7 +17,7 @@ class PreguntaModel
 
     public function obtenerIdPregunta($preg){
         $sql = "SELECT id FROM pregunta WHERE preg LIKE '$preg'";
-        return $this->database->query($sql);
+        return $this->database->query_row($sql);
     }
 
     public function obtenerTodasLasPreguntas(){

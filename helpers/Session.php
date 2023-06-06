@@ -17,20 +17,16 @@ class Session {
     public static function getDataSession(){
         return $_SESSION;
     }
+
     public static function finalizarSesion(){
      session_unset();
      session_destroy();
     }
-    public static function isLogged()    {
+
+    public static function isLogged()
+    {
         return isset($_SESSION['logged']);
     }
-    public static function menuSegunElRol(array $data): array  {
-        $data['logged'] = Session::get('logged')?? false;
-        $data['editor'] = Session::get('editor')?? false;
-        $data['administrador'] = Session::get('administrador')?? false;
-        $data['nombre']= Session::get('nombre');
-        $data['ranking']="123";// esto tendria que modificarse cuando se ingrese creo
-        return $data;
-    }
+
 
 }

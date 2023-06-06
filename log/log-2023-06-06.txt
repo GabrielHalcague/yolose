@@ -1,0 +1,3278 @@
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM usuario
+                                       WHERE nombreUsuario='gab'
+                                       AND password='639bee393eecbc62256936a8e64d17b1'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM dificultadMedia
+[2023-06-06][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '13' ORDER BY RAND()
+[2023-06-06][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '647e62775b8a8'
+                GROUP BY u.id
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('1','5','13','647e62775b8a8')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET resCor = resCor + 1 WHERE id = '13'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','13')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '13'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('1','5','13','647e62775b8a8')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET resCor = resCor + 1 WHERE id = '13'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','13')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '13'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','5','13','647e62775b8a8')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','13')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '13'
+[2023-06-06][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '19' ORDER BY RAND()
+[2023-06-06][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '647e62775b8a8'
+                GROUP BY u.id
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','5','19','647e62775b8a8')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','19')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '19'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','5','19','647e62775b8a8')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','19')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '19'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM dificultadMedia dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 5)
+			    LIMIT 4
+[2023-06-06][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '11' ORDER BY RAND()
+[2023-06-06][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '647e62ba121be'
+                GROUP BY u.id
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('1','5','11','647e62ba121be')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET resCor = resCor + 1 WHERE id = '11'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','11')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '11'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','5','11','647e62ba121be')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','11')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '11'
+[2023-06-06][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '15' ORDER BY RAND()
+[2023-06-06][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '647e62ba121be'
+                GROUP BY u.id
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('1','5','15','647e62ba121be')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET resCor = resCor + 1 WHERE id = '15'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','15')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '15'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','5','15','647e62ba121be')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','15')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '15'
+[2023-06-06][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '14' ORDER BY RAND()
+[2023-06-06][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '647e62ba121be'
+                GROUP BY u.id
+[2023-06-06][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '12' ORDER BY RAND()
+[2023-06-06][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '647e62ba121be'
+                GROUP BY u.id
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('1','5','12','647e62ba121be')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET resCor = resCor + 1 WHERE id = '12'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','12')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '12'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','5','12','647e62ba121be')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','12')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '12'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM dificultadMedia dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 5)
+			    LIMIT 4
+[2023-06-06][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '14' ORDER BY RAND()
+[2023-06-06][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '647e62ba121be'
+                GROUP BY u.id
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('1','5','14','647e62ba121be')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET resCor = resCor + 1 WHERE id = '14'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','14')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '14'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','5','14','647e62ba121be')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','14')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '14'
+[2023-06-06][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '16' ORDER BY RAND()
+[2023-06-06][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '647e62ba121be'
+                GROUP BY u.id
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','5','16','647e62ba121be')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','16')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '16'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','5','16','647e62ba121be')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','16')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '16'
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM usuario
+                                       WHERE nombreUsuario='gab'
+                                       AND password='639bee393eecbc62256936a8e64d17b1'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM dificultadMedia dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 5)
+			    LIMIT 4
+[2023-06-06][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '17' ORDER BY RAND()
+[2023-06-06][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '647e6cd9717cd'
+                GROUP BY u.id
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('1','5','17','647e6cd9717cd')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET resCor = resCor + 1 WHERE id = '17'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','17')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '17'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('1','5','17','647e6cd9717cd')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET resCor = resCor + 1 WHERE id = '17'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','17')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '17'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','5','17','647e6cd9717cd')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','17')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '17'
+[2023-06-06][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '20' ORDER BY RAND()
+[2023-06-06][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '647e6cd9717cd'
+                GROUP BY u.id
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('1','5','20','647e6cd9717cd')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET resCor = resCor + 1 WHERE id = '20'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','20')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '20'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','5','20','647e6cd9717cd')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','20')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '20'
+[2023-06-06][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '18' ORDER BY RAND()
+[2023-06-06][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '647e6cd9717cd'
+                GROUP BY u.id
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','5','18','647e6cd9717cd')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','18')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '18'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','5','18','647e6cd9717cd')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','18')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '18'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM usuario
+                                       WHERE nombreUsuario='gab'
+                                       AND password='639bee393eecbc62256936a8e64d17b1'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM dificultadMedia dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 5)
+			    LIMIT 4
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: DELETE FROM historialUsuario WHERE idUs = '5'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM dificultadMedia dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 5)
+			    LIMIT 4
+[2023-06-06][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '11' ORDER BY RAND()
+[2023-06-06][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '647e6f49e48af'
+                GROUP BY u.id
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('1','5','11','647e6f49e48af')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET resCor = resCor + 1 WHERE id = '11'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','11')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '11'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('1','5','11','647e6f49e48af')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET resCor = resCor + 1 WHERE id = '11'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','11')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '11'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','5','11','647e6f49e48af')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','11')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '11'
+[2023-06-06][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '12' ORDER BY RAND()
+[2023-06-06][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '647e6f49e48af'
+                GROUP BY u.id
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('1','5','12','647e6f49e48af')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET resCor = resCor + 1 WHERE id = '12'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','12')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '12'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','5','12','647e6f49e48af')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','12')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '12'
+[2023-06-06][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '14' ORDER BY RAND()
+[2023-06-06][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '647e6f49e48af'
+                GROUP BY u.id
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('1','5','14','647e6f49e48af')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET resCor = resCor + 1 WHERE id = '14'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','14')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '14'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','5','14','647e6f49e48af')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','14')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '14'
+[2023-06-06][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '13' ORDER BY RAND()
+[2023-06-06][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '647e6f49e48af'
+                GROUP BY u.id
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('1','5','13','647e6f49e48af')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET resCor = resCor + 1 WHERE id = '13'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','13')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '13'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','5','13','647e6f49e48af')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','13')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '13'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM dificultadMedia dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 5)
+			    LIMIT 4
+[2023-06-06][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '17' ORDER BY RAND()
+[2023-06-06][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '647e6f49e48af'
+                GROUP BY u.id
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('1','5','17','647e6f49e48af')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET resCor = resCor + 1 WHERE id = '17'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','17')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '17'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','5','17','647e6f49e48af')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','17')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '17'
+[2023-06-06][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '20' ORDER BY RAND()
+[2023-06-06][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '647e6f49e48af'
+                GROUP BY u.id
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','5','20','647e6f49e48af')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       g.descr 
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','20')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '20'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario,u.password,u.activo,r.descr 'rol'
+                                       FROM usuario u JOIN rol_usuario ru on u.id = ru.idUs
+                                                      JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='gab' AND password='639bee393eecbc62256936a8e64d17b1'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario,u.password,u.activo,r.descr 'rol'
+                                       FROM usuario u JOIN rol_usuario ru on u.id = ru.idUs
+                                                      JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='gab' AND password='639bee393eecbc62256936a8e64d17b1'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario,u.password,u.activo,r.descr 'rol'
+                                       FROM usuario u JOIN rol_usuario ru on u.id = ru.idUs
+                                                      JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='gab' AND password='639bee393eecbc62256936a8e64d17b1'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario,u.password,u.activo,r.descr 'rol'
+                                       FROM usuario u JOIN rol_usuario ru on u.id = ru.idUs
+                                                      JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='gab' AND password='639bee393eecbc62256936a8e64d17b1'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario,u.password,u.activo,r.descr 'rol'
+                                       FROM usuario u JOIN rol_usuario ru on u.id = ru.idUs
+                                                      JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='gab' AND password='639bee393eecbc62256936a8e64d17b1'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario,u.password,u.activo,r.descr 'rol'
+                                       FROM usuario u JOIN rol_usuario ru on u.id = ru.idUs
+                                                      JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='gab' AND password='639bee393eecbc62256936a8e64d17b1'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario,u.password,u.activo,r.descr 'rol'
+                                       FROM usuario u JOIN rol_usuario ru on u.id = ru.idUs
+                                                      JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='gab' AND password='639bee393eecbc62256936a8e64d17b1'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario,u.password,u.activo,r.descr 'rol'
+                                       FROM usuario u JOIN rol_usuario ru on u.id = ru.idUs
+                                                      JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='gab' AND password='639bee393eecbc62256936a8e64d17b1'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario,u.password,u.activo,r.descr 'rol'
+                                       FROM usuario u JOIN rol_usuario ru on u.id = ru.idUs
+                                                      JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='gab' AND password='639bee393eecbc62256936a8e64d17b1'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM dificultadDificil dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 5)
+			    LIMIT 4
+[2023-06-06][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '3' ORDER BY RAND()
+[2023-06-06][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '647f33a811e28'
+                GROUP BY u.id
+[2023-06-06][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '2' ORDER BY RAND()
+[2023-06-06][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '647f33a811e28'
+                GROUP BY u.id
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('1','','2','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('1','','2','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('1','','2','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('1','','2','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('1','','2','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('1','','2','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('1','','2','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('1','','2','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('1','','2','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('1','','2','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('1','','2','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('1','','2','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('1','','2','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('1','','2','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('1','','2','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('1','','2','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('1','','2','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('1','','2','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('1','','2','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('1','','2','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('1','','2','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','','2','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','','2','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','','2','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','','2','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','','2','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','','2','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','','2','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','','2','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','','2','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','','2','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','','2','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','','2','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','','2','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','','2','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','','2','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','','2','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','','2','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','','2','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','','2','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','','2','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','','2','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','','2','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','','2','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '4' ORDER BY RAND()
+[2023-06-06][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '647f33a811e28'
+                GROUP BY u.id
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('1','5','4','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET resCor = resCor + 1 WHERE id = '4'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','4')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '4'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','5','4','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','4')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '4'
+[2023-06-06][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '1' ORDER BY RAND()
+[2023-06-06][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '647f33a811e28'
+                GROUP BY u.id
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('1','5','1','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET resCor = resCor + 1 WHERE id = '1'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','1')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '1'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','5','1','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','1')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '1'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM dificultadMedia dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 5)
+			    LIMIT 4
+[2023-06-06][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '15' ORDER BY RAND()
+[2023-06-06][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '647f33a811e28'
+                GROUP BY u.id
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('1','5','15','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET resCor = resCor + 1 WHERE id = '15'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','15')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '15'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','5','15','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','15')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '15'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM dificultadMedia dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 5)
+			    LIMIT 4
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: DELETE FROM historialUsuario WHERE idUs = '5'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM dificultadMedia dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 5)
+			    LIMIT 4
+[2023-06-06][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '4' ORDER BY RAND()
+[2023-06-06][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '647f33a811e28'
+                GROUP BY u.id
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('1','5','4','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET resCor = resCor + 1 WHERE id = '4'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','4')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '4'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','5','4','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','4')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '4'
+[2023-06-06][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '11' ORDER BY RAND()
+[2023-06-06][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '647f33a811e28'
+                GROUP BY u.id
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('1','5','11','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET resCor = resCor + 1 WHERE id = '11'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','11')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '11'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','5','11','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','11')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '11'
+[2023-06-06][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '1' ORDER BY RAND()
+[2023-06-06][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '647f33a811e28'
+                GROUP BY u.id
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','5','1','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','1')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '1'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','5','1','647f33a811e28')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','1')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '1'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario,u.password,u.activo,r.descr 'rol'
+                                       FROM usuario u JOIN rol_usuario ru on u.id = ru.idUs
+                                                      JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='gab' AND password='639bee393eecbc62256936a8e64d17b1'
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario,u.password,u.activo,r.descr 'rol'
+                                       FROM usuario u JOIN rol_usuario ru on u.id = ru.idUs
+                                                      JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='gab' AND password='639bee393eecbc62256936a8e64d17b1'
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM dificultadMedia dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 5)
+			    LIMIT 4
+[2023-06-06][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '12' ORDER BY RAND()
+[2023-06-06][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '647f387b32752'
+                GROUP BY u.id
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('1','5','12','647f387b32752')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET resCor = resCor + 1 WHERE id = '12'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','12')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '12'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('1','5','12','647f387b32752')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET resCor = resCor + 1 WHERE id = '12'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','12')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '12'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','5','12','647f387b32752')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','12')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '12'
+[2023-06-06][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '13' ORDER BY RAND()
+[2023-06-06][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '647f387b32752'
+                GROUP BY u.id
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('1','5','13','647f387b32752')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET resCor = resCor + 1 WHERE id = '13'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','13')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '13'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','5','13','647f387b32752')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','13')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '13'
+[2023-06-06][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '14' ORDER BY RAND()
+[2023-06-06][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '647f387b32752'
+                GROUP BY u.id
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('1','5','14','647f387b32752')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET resCor = resCor + 1 WHERE id = '14'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','14')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '14'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','5','14','647f387b32752')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','14')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '14'
+[2023-06-06][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '15' ORDER BY RAND()
+[2023-06-06][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '647f387b32752'
+                GROUP BY u.id
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('1','5','15','647f387b32752')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET resCor = resCor + 1 WHERE id = '15'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','15')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '15'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','5','15','647f387b32752')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','15')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '15'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM dificultadMedia dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 5)
+			    LIMIT 4
+[2023-06-06][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '17' ORDER BY RAND()
+[2023-06-06][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '647f387b32752'
+                GROUP BY u.id
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','5','17','647f387b32752')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','17')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '17'
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('0','5','17','647f387b32752')
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'gab'
+[2023-06-06][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','17')
+[2023-06-06][INFO]Ejecutando query: UPDATE pregunta SET pregTot = pregTot + 1 WHERE id = '17'
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-06][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario,u.password,u.activo,r.descr 'rol'
+                                       FROM usuario u JOIN rol_usuario ru on u.id = ru.idUs
+                                                      JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='gab' AND password='639bee393eecbc62256936a8e64d17b1'
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-06][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3

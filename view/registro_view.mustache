@@ -1,5 +1,3 @@
-
-
 <section class="container">
     {{# emailDuplicado}}
         <p class="invalid-feedback">{{emailDuplicado}}</p>
@@ -11,7 +9,7 @@
     <h2 class="mb-4 text-center">Formulario de registro</h2>
     <article class="p-5 bg-dark-subtle rounded">
         <div class="d-flex justify-content-center">
-            <form class="row w-50 form-yolose" action="index.php?module=registro&action=register" method="POST" enctype="multipart/form-data">
+            <form class="row w-50 form-yolose" action="/registro/register" method="POST" enctype="multipart/form-data">
                 <div class="col-6 ps-0">
                     <label for="nombre" class="form-label">Nombre</label>
                     <input type="text" name="nombre" class="form-control" />
@@ -40,34 +38,10 @@
                 <label for="archivo" class="form-label">Foto de Perfil</label>
                 <input type="file" name="archivo" class="form-control" >
                 
-                <label for="coordenadas">Seleccione su ubicacion</label>
-                <input type="text" name="coordenadas" id="coordenadas" placeholder="coordenadas" class="form-control">
+                <p>Aca va el mapa con los paises</p>
+                <input type="text" name="descripcion" placeholder="descripcion" class="form-control">
 
-                <div id="map" style="width: 100%; height: 500px; "></div>
-                <script>
-                    var map = L.map('map').setView([-34.667890, -58.565806 ], 13);
-                    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                        maxZoom: 19,
-                        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-                    }).addTo(map);
-
-                    var popup = L.popup();
-                    function onMapClick(e) {
-                        popup
-                                .setLatLng(e.latlng)
-                                .setContent("You clicked the map at " + e.latlng.toString())
-                                .openOn(map);
-
-                        var coordenadaString = e.latlng.toString();
-                        var numerosCoordenada = coordenadaString.match(/-?[\d\.]+/g);
-
-                        var inputNombre = document.getElementById("coordenadas");
-                        inputNombre.value = numerosCoordenada;
-                    }
-                    map.on('click', onMapClick);
-
-                </script>
-
+                <hr>
 
                 <label for="usuario" class="form-label">Usuario</label>
                 <input type="text" name="usuario" class="form-control" />

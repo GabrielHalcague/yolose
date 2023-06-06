@@ -19,13 +19,13 @@ class PartidaModel{
     }
 
     public function obtenerPreguntas($username){
-        $usuario = $this->usuarioModel->getUsuarioByUsername($username)[0];
+        $usuario = $this->usuarioModel->getUsuarioByUsername($username);
         $dificultadUsuario = $this->obtenerDificultadUsuario($usuario['id']);
         $arrayPreguntas = [];
         if(empty($dificultadUsuario)){
             $arrayPreguntas = $this->preguntaModel->obtenerPreguntasDificultadMedia();
         }else {
-            $dif = $dificultadUsuario[0]['dificultad'];
+            $dif = $dificultadUsuario['dificultad'];
             if ($dif >= 0 && $dif <= 0.3) {
                 $arrayPreguntas = $this->obtenerPreguntasDificultadDificil($usuario['id']);
             } else if ($dif > 0.3 && $dif <= 0.7) {
@@ -39,7 +39,7 @@ class PartidaModel{
 
     private function obtenerDificultadUsuario($id){
         $sql = "SELECT * FROM dificultadUsuario WHERE idUs = $id";
-        return $this->database->query($sql);
+        return $this->database->query_row($sql);
     }
 
     public function obtenerRespuestaDePregunta($id){
@@ -79,7 +79,7 @@ class PartidaModel{
     }
 
     public function limpiarHistorialUsuario($username){
-        $usuario = $this->usuarioModel->getUsuarioByUsername($username)[0];
+        $usuario = $this->usuarioModel->getUsuarioByUsername($username);
         $id = $usuario['id'];
         $sql = "DELETE FROM historialUsuario WHERE idUs = '$id'";
         return $this->database->execute($sql);
@@ -87,16 +87,16 @@ class PartidaModel{
 
 
     public function guardarHistorialUsuario($username,$idPregunta){
-        $usuario = $this->usuarioModel->getUsuarioByUsername($username)[0];
+        $usuario = $this->usuarioModel->getUsuarioByUsername($username);
         $idUsuario = $usuario['id'];
         $sql = "INSERT INTO historialUsuario (idUs, idPreg) VALUES ('$idUsuario','$idPregunta')";
         return $this->database->execute($sql);
     }
 
-    public function guardarHistorialPartida($estadoPregunta,$username,$idPregunta){
-        $usuario = $this->usuarioModel->getUsuarioByUsername($username)[0];
+    public function guardarHistorialPartida($tokenPartida,$estadoPregunta,$username,$idPregunta){
+        $usuario = $this->usuarioModel->getUsuarioByUsername($username);
         $idUsuario = $usuario['id'];
-        $sql = "INSERT INTO historialpartidas (estado,idUs, idPreg) VALUES ('$estadoPregunta','$idUsuario','$idPregunta')";
+        $sql = "INSERT INTO historialPartidas (estado,idUs, idPreg,n_partida) VALUES ('$estadoPregunta','$idUsuario','$idPregunta','$tokenPartida')";
         return $this->database->execute($sql);
     }
 
@@ -108,5 +108,14 @@ class PartidaModel{
     public function actualizarPreguntaCorrecta($idPregunta){
         $sql = "UPDATE pregunta SET resCor = resCor + 1 WHERE id = '$idPregunta'";
         return $this->database->execute($sql);
+    }
+
+    public function obtenerScoreDelUsuario($tokenPartida)
+    {
+        $sql = "SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '$tokenPartida'
+                GROUP BY u.id";
+        return $this->database->query_row($sql);
     }
 }

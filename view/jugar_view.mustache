@@ -1,112 +1,46 @@
-
 <section class="container">
 
-    {{#username}}
-        <p>Jugador: {{username}}</p>
-    {{/username}}
-    {{#preg}}
-        <h1 class="text-center" style="color: {{color}}">{{pregunta}}</h1>
-        <h1>{{idPregunta}}</h1>
-    {{/preg}}
+    <div class="row">
+        <div class="col-6">
+            <h1 class="text-center">Jugador: <strong class="text-primary">{{username}}</strong></h1>
+        </div>
+        <div class="col-6">
+            <h1 class="text-center">Puntaje: <strong class="text-primary">{{score}}</strong></h1>
+        </div>
+    </div>
+    <h2 class="text-center {{color}}">{{pregunta}}</h2>
 
-    <article class="container-fluid">
+    <article class="row flex-column">
         {{#opc}}
-            <button type="button" name="{{id}}" id="{{id}}"
-                    class="btn btn-primary btn-lg btn-block" value="{{id}}" > {{resp}}
-            </button>
+            <div class="col-12 text-center my-3">
+                <button type="button" name="{{id}}" id="{{id}}" style="min-height: 5rem; min-width: 20rem;"
+                        class="btn btn-primary" value="{{id}}"> {{resp}}
+                </button>
+            </div>
         {{/opc}}
     </article>
 
-    <div>
-
-            <a role="button" id="fin" class="btn btn-danger" href="/" style="display: none;">Fin</a>
-
-            <a role="button" id="continuar" class="btn btn-success" href="/partida" style="display: none;">Continuar</a>
-        {{#preg}}
-            <a role="button" id="continuar" class="btn btn-success" href="/reportar/reportarPregunta&idReport={{idPregunta}}" >Reportar</a>
-
-        {{/preg}}
-
-    </div>
+    <a role="button" id="fin" class="btn btn-danger py-3" href="/partida/finalizarPartida" style="display: none;">Fin</a>
+    <a role="button" id="continuar" class="btn btn-success py-3" href="/partida" style="display: none;">Continuar</a>
 </section>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-<script>
-
-    //TODO SACAR JS DE VISTA Y CREAR FUNCION PARA CAMBIAR EL COLOR Y EL DISPLAY
-
-    //si toca un boton va a verificar y le pasa el id del boton que toco
-    //verificar devulve id del boton y de respuesta correcta en caso de que sea haya equivocado
-    $(document).ready(function() {
-        // Attach click event handler to the button
-        $('.btn').click(function() {
-            // Execute AJAX function
-            var id = $(this).val();
-
-            $.ajax({
-                url: 'partida/verificar',
-                method: 'POST',
-                data:{id: id},
-                success: function(response) {
-                    console.log(response);
-                    var data = JSON.parse(response);
-
-                    // Access and use the data
-                    if (data.success) {
-                        // Operación exitosa
-                        var message = data.message;
-                        var datos = data.data;
-
-                        // Hacer algo con los datos en caso de éxito
-                        validarRespuesta(datos);
-
-                    }
-                },
-                error: function(xhr, status, error) {
-                    // Handle error, if any
-                    console.log(error);
-                }
-            });
-        });
-    });
-
-
-
-    //valida la respues y pinta de color los botones en base a respuesta
-    //ademas muestra boton fin si se equivoco y lleva a inicio
-    //o continuar si responde bien y recarga consulta
-    function validarRespuesta(data){
-
-        var respuestaCorrecta;
-        var respuestaIncorrecta;
-        var botonFin;
-        var botonContinuar;
-
-        if(data["respActual"] != undefined && data["respValida"] != undefined){
-
-            respuestaCorrecta = document.getElementById(data["respValida"]);
-            respuestaIncorrecta = document.getElementById(data["respActual"]);
-            botonFin = document.getElementById("fin");
-            respuestaCorrecta.style.backgroundColor = 'green';
-            respuestaIncorrecta.style.backgroundColor = 'red';
-            botonFin.style.display = 'block';
-            disableButtons();
-        }
-        else{
-            respuestaCorrecta = document.getElementById(data["respValida"]);
-            botonContinuar = document.getElementById("continuar");
-            respuestaCorrecta.style.backgroundColor = 'green';
-            botonContinuar.style.display = 'block';
-            disableButtons();
-        }
-
-    }
-
-    function disableButtons(){
-        var buttons = document.getElementsByClassName("btn");
-        for (var i = 0; i < buttons.length; i++) {
-            buttons[i].disabled = true;
-        }
-    }
-</script>
+<!-- Modal -->
+<div class="modal fade" id="ventana" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="modelTitleId">Juego Finalizado</h4>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <h4 class="text-center">Has Finalizado Tu Partida</h4>
+                    <p>Jugador: <strong class="text-primary">{{username}}</strong></p>
+                    <p>Puntaje: <strong class="text-primary">{{score}}</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

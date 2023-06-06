@@ -2,7 +2,6 @@
 
 class PartidaController{
 
-
     private $render;
     private $partidaModel;
 
@@ -13,15 +12,20 @@ class PartidaController{
     }
 
     public function list(){
+
         if(!Session::getDataSession()){
             Header::redirect("/");
         }
         $preguntas=[];
 
+        if (empty(Session::get('tokenPartida'))) {
+            Session::set('tokenPartida', uniqid());
+        }
+
         if(empty(Session::get('preguntas'))){
             $preguntas = $this->partidaModel->obtenerPreguntas(Session::get('username')); //no tengo stock de preguntas
         }else{
-            $preguntas = Session::get('preguntas'); // tengo stock
+            $preguntas = Session::get('preguntas'); // tengo stoc
         }
 
         if(empty($preguntas)){ // si ya respondio todas las preguntas
@@ -31,34 +35,27 @@ class PartidaController{
         $indicePregunta = array_rand($preguntas);
         $preguntaActual = $preguntas[$indicePregunta];
 
-        $data['js']=true;
-        $data['preg'] = [
+        $data =[
+            'js'=> true,
             'pregunta' => $preguntaActual['pregunta'],
-            'idPregunta'=> $preguntaActual['preguntaID']
+            'username' => Session::get('username'),
+            'opc' => $this->partidaModel->obtenerRespuestaDePregunta($preguntaActual['preguntaID']),
+            'score' => $this->partidaModel->obtenerScoreDelUsuario(Session::get('tokenPartida'))['puntos'] ?? 0
         ];
-        $data['logged'] = Session::get('logged');
-        $data['username'] = Session::get('username');
-        $data['opc'] = $this->partidaModel->obtenerRespuestaDePregunta($preguntaActual['preguntaID']);
 
         Session::set('preguntaSeleccionada',$preguntas[$indicePregunta]);
-        /*unset($preguntas[$indicePregunta]);*/
+        unset($preguntas[$indicePregunta]);
         Session::set('preguntas',$preguntas);
-
-
-        /*$index = array_search($preguntas[$indicePregunta], $preguntaActual);
-
-        if ($index !== false) {
-            array_splice($preguntas, $index, 1);
-        }
-
-        Session::set('preguntas',$preguntas);*/
-
         $this->render->render("jugar",$data);
     }
 
+    public function finalizarPartida(){
+        unset($_SESSION['tokenPartida']);
+        unset($_SESSION['preguntas']);
+        unset($_SESSION['preguntaSeleccionada']);
+        Header::redirect("/");
+    }
 
-    //verifica comparando id enviado con id de respuesta correcta
-    //depende si acierta o no devuelve uno o dos valores
     public function verificar(){
 
         $id = $_POST['id'];
@@ -69,15 +66,18 @@ class PartidaController{
             $data['respValida'] = $preguntaSeleccionada['respuestaCorrecta'];
             //guarda en historialPartida
             $estadoPregunta = 1;
-            $this->partidaModel->guardarHistorialPartida($estadoPregunta,Session::get('username'),$preguntaSeleccionada["preguntaID"]);
+            $nScore = intval($_SESSION['score']);
+            $_SESSION['score'] = $nScore + 1;
+            $this->partidaModel->guardarHistorialPartida(Session::get('tokenPartida'),$estadoPregunta,Session::get('username'),$preguntaSeleccionada["preguntaID"]);
             $this->partidaModel->actualizarPreguntaCorrecta($preguntaSeleccionada["preguntaID"]);
+
         }
         else{
             $data['respValida'] = $preguntaSeleccionada['respuestaCorrecta'];
             $data['respActual'] = $id;
             //guarda en historialPartida
             $estadoPregunta = 0;
-            $this->partidaModel->guardarHistorialPartida($estadoPregunta,Session::get('username'),$preguntaSeleccionada["preguntaID"]);
+            $this->partidaModel->guardarHistorialPartida(Session::get('tokenPartida'),$estadoPregunta,Session::get('username'),$preguntaSeleccionada["preguntaID"]);
         }
 
         //Guarda en historialUsuario

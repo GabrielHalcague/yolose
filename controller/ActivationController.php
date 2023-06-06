@@ -14,9 +14,6 @@ class ActivationController{
 
     public function list()
     {
-        if (Session::get('logged')) {
-            Header::redirect("/");
-        }
         $data['username'] = Session::get('username');
         $this->renderer->render("activacion",$data);
     }

@@ -1,7 +1,6 @@
 <?php
 require_once "helpers/Session.php";
 require_once "helpers/QRGenerator.php";
-use JetBrains\PhpStorm\NoReturn;
 
 class PerfilController
 {
@@ -15,43 +14,73 @@ class PerfilController
         $this->qrGenerator = $qrGenerator;
     }
     public function list(){
-        if (!Session::get('logged')) {
+        if (Session::getDataSession() == null) {
             Header::redirect("/");
         }
 
-        $nombreUsuario = Session::get('username');
-        $data["perfil"]= $this->userModel->getPerfilUsuarioPorNombreUsuario($nombreUsuario)[0];
-        $data["mejorPartida"]= "10"; // cambiar cuando est la bd
-        $data["rank"]= "100";
+        //$rol= Session::get('rol');// para el menu
+        //$data = $this->menuSegunUsuario($rol);
 
-        $data = Session::menuSegunElRol($data);
+        $usernmae = Session::get('username');
 
+        $data["perfil"]= $this->userModel->getUsuarioByUsername($usernmae);
         $data["rutaQR"]=$this->generateQR($data["perfil"]["nombreUsuario"]);
-        $data['showQR'] = true;
 
         $this->renderer->render("perfil", $data);
         exit();
     }
-    public function usuario(){
-        //  http://localhost/perfil/usuario/user=gab
-        $username = $_GET['user'];
-        $usuarioObtenido = $this->userModel->getPerfilUsuarioPorNombreUsuario($username);
-        if(empty($usuarioObtenido) == 1){
+
+      public function usuario(){
+        if (Session::getDataSession() == null) {
+            //$data = $this->menuSegunUsuario(0);
+        }
+        else {
+            $rol = Session::get('rol');
+            //$data = $this->menuSegunUsuario($rol);
+
+        }
+
+        if(empty($_GET['user'])){
             Header::redirect("/");
         }
-          $data["perfil"]= $usuarioObtenido[0];
-          $data["mejorPartida"]= "10";
-          $data["rank"]= "100";
 
-          //$data = Session::menuSegunElRol($data);
-          $data["rutaQR"]=$this->generateQR($data["perfil"]["nombreUsuario"]);
-          $data['showQR'] = true;
-          $this->renderer->render("perfil", $data);
+        $username = $_GET['user'];
+        $usuarioObtenido = $this->userModel->getUsuarioByUsername($username);
+
+        if(empty($usuarioObtenido)){
+            //Session::set('logged',true);
+            Header::redirect("/");
+        }
+
+        $data["perfil"]= $usuarioObtenido;
+        //$data['logged'] = Session::get('logged');
+        $this->renderer->render("perfil", $data);
         exit();
      }
+    private function menuSegunUsuario($rol): array {
+        $menu ['menu'][] = array('nombreBoton' => 'home', 'ruta' => '/');
+        switch ($rol) {
+            case 1:
+                $menu ['menu'][] = array('nombreBoton' => 'Solitario', 'ruta' => 'Solitario');
+                $menu ['menu'][] = array('nombreBoton' => 'Vs Ia', 'ruta' => 'vsia');
+                $menu ['menu'][] = array('nombreBoton' => 'P v P', 'ruta' => 'pvp');
+                $menu ['menu'][] = array('nombreBoton' => 'Perfil', 'ruta' => 'perfil');
+                return $menu;
+            case 2:
+                $menu ['menu'][] = array('nombreBoton' => 'editor', 'ruta' => 'editor');
+                return $menu;
+
+            case 3:
+                $menu ['menu'][] = array('nombreBoton' => 'editor', 'ruta' => 'editor');
+                $menu ['menu'][] =array('nombreBoton' => 'admin', 'ruta' => 'admin');
+                return $menu;
+            default:
+                return  $menu;
+        }
+    }
 
     private function generateQR($username){
-        $enlace = "http:/localhost:80/perfil/usuario?user={$username}";
+        $enlace = "http:/localhost:80/perfil/usuario&user={$username}";
         $ruta = $this->qrGenerator->getQrPng($enlace);
 
         if(!$ruta){
@@ -59,5 +88,4 @@ class PerfilController
         }
         return $ruta;
     }
-
 }
