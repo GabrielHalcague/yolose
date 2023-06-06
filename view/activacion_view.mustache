@@ -1,27 +1,24 @@
 {{#ok}}
-    <article class="container text-center">
-        <div class="alert alert-success" role="alert">
-            <strong>{{ok}}</strong>
-            <script>function redireccionarPagina() {
-                window.location = "http://localhost/";
-            }
-            setTimeout("redireccionarPagina()", 5000);</script>
-        </div>
-        <div> Seras Redirigido en 5</div>
-    </article>
+    <div class="alert alert-success" role="alert">
+        <strong>{{ok}}</strong>
+        <script>function redireccionarPagina() {
+            window.location = "http://localhost/";
+        }
+        setTimeout("redireccionarPagina()", 5000);</script>
+    </div>
+    <div> Seras Redirigido en 5</div>
 {{/ok}}
 {{#error}}
-<article class="container text-center">
     <div class="alert alert-danger" role="alert">
         <strong>{{error}}</strong>
     </div>
-</article>
 {{/error}}
 {{#id}}
-<div class="container text-center">
-    <h1>Bienvenido a Yolose {{username}}</h1>
+<main class="container">
+
+    <h1 class="text-center">Bienvenido a Yolose {{username}}</h1>
     <p>Se le enviara un email para que pueda verificar su cuenta</p>
     <!--<a name="validar" id="validar" class="btn btn-primary" href="/validation/validar&id={{id}}"
        role="button">Activar Cuenta</a>-->
-</div>
+</main>
 {{/id}}

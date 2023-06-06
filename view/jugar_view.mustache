@@ -1,45 +1,58 @@
 <section class="container">
 
     <div class="row">
-        <div class="col-6">
+        <div class="col-3">
             <h1 class="text-center">Jugador: <strong class="text-primary">{{username}}</strong></h1>
         </div>
-        <div class="col-6">
-            <h1 class="text-center">Puntaje: <strong class="text-primary">{{score}}</strong></h1>
+        <div class="col-3">
+            <h1 class="text-center">Puntaje: <strong class="text-primary">{{puntaje}}</strong></h1>
+        </div>
+        <div class="col-3">
+            <h1 class="text-center">Tiempo: <strong id="tiempoRestante" class="text-primary"></strong></h1>
         </div>
     </div>
+
+
     <h2 class="text-center {{color}}">{{pregunta}}</h2>
 
-    <article class="row flex-column">
+    <article class="row">
         {{#opc}}
-            <div class="col-12 text-center my-3">
-                <button type="button" name="{{id}}" id="{{id}}" style="min-height: 5rem; min-width: 20rem;"
-                        class="btn btn-primary" value="{{id}}"> {{resp}}
+            <div class="col-md-6 col-sm-12 my-3">
+                <button type="button" name="{{id}}" id="{{id}}" style="min-height: 5rem; min-width: 20rem; width: 100%"
+                        class="btn btn-primary opcion" value="{{id}}"> {{resp}}
                 </button>
             </div>
         {{/opc}}
     </article>
 
-    <a role="button" id="fin" class="btn btn-danger py-3" href="/partida/finalizarPartida" style="display: none;">Fin</a>
-    <a role="button" id="continuar" class="btn btn-success py-3" href="/partida" style="display: none;">Continuar</a>
-</section>
 
+    <article>
+        <button type="button" name="trampa" id="trampa"
+                class="btn btn-primary btn-lg btn-block btn-next opcion text-center" value="trampa"> Trampas
+            restantes: {{trampas}}
+        </button>
+        <a id="fin" class="btn btn-next btn-danger" href="http://localhost:80/partida/salir"
+           role="button">Fin</a>
+        <a id="continuar" class="btn btn-next btn-yolose-amarillo"
+           href="http://localhost:80/partida/partida&tipoPartida={{tipoPartida}}" role="button">Continuar</a>
+    </article>
+</section>
 <!-- Modal -->
 <div class="modal fade" id="ventana" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="modelTitleId">Juego Finalizado</h4>
+                <h4 class="modal-title" id="modelTitleId">Partida Finalizada</h4>
                 <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                <div class="container-fluid">
-                    <h4 class="text-center">Has Finalizado Tu Partida</h4>
-                    <p>Jugador: <strong class="text-primary">{{username}}</strong></p>
-                    <p>Puntaje: <strong class="text-primary">{{score}}</strong></p>
-                </div>
+                <h1 class="text-center">Gracias Por Jugar en Yolose</h1>
+                <h2 class="text-center" id="tPartida"></h2>
+                <p>Jugador: <strong class="text-primary">{{username}}</strong></p>
+                <p>Puntaje: <strong class="text-primary">{{puntaje}}</strong></p>
+                <p>Resultado: <strong id="result" class="text-primary"></strong></p>
             </div>
         </div>
     </div>

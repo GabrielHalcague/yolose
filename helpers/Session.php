@@ -18,6 +18,12 @@ class Session {
         return $_SESSION;
     }
 
+    public static function deleteValue($value){
+        if(isset($_SESSION[$value])){
+            unset($_SESSION[$value]);
+        }
+    }
+
     public static function finalizarSesion(){
      session_unset();
      session_destroy();

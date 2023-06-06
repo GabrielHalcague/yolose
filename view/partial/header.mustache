@@ -16,23 +16,13 @@
             <img src="/public/yolose_logo.png" alt="Logo YoLoSe"/>
             <strong>YoLoSe</strong>
         </a>
-
-        {{#Editor}}
-            <h1>Editor</h1>
-        {{/Editor}}
-        {{^Editor}}
-            {{#Administrador}}
-                <p>NAV ADMINISTRADOR</p>
-            {{/Administrador}}
-        {{/Editor}}
-
         <div>
             {{^logged}}
                 <a href="/login" class="ms-3 btn btn-yolose">Ingresar</a>
                 <a href="/registro" class="ms-3 btn btn-outline-yolose">Registrarse</a>
             {{/logged}}
             {{#logged}}
-                <a href="/perfil" class="ms-3 btn btn-yolose">Perfil</a>
+                <a href="/perfil/usuario&user={{username}}" class="ms-3 btn btn-yolose">Perfil</a>
                 <a href="/login/cerrarSesion" class="ms-3 btn btn-outline-yolose">Cerrar
                     sesión</a>
             {{/logged}}

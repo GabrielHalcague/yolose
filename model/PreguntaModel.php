@@ -39,4 +39,18 @@ class PreguntaModel
         $sql = "SELECT * FROM dificultadDificil";
         return $this->database->query($sql);
     }
+
+    public function obtenerPreguntasReportadas(){
+        $sql = "SELECT p.preg, e.descr
+                FROM pregunta p JOIN estado e on e.id = p.idEst
+                WHERE e.descr LIKE 'REPORTADO' OR e.descr LIKE 'PENDIENTE ACTIVACION'";
+        return $this->database->query($sql);
+     }
+
+    public function obtenerPreguntasActivas(){
+        $sql = "SELECT p.preg, e.descr
+                FROM pregunta p JOIN estado e on e.id = p.idEst
+                WHERE e.descr LIKE 'ACTIVO'";
+        return $this->database->query($sql);
+    }
 }

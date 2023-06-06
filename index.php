@@ -1,8 +1,10 @@
 <?php
 include_once('Configuration.php');
 include_once('helpers/Session.php');
+
 Session::initializeSession();
 
+/*$configuration = new Configuration();*/
 $router = Configuration::getInstance()->getRouter();
 
 $module = $_GET['module'] ?? 'home';

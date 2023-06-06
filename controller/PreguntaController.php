@@ -60,7 +60,7 @@ class PreguntaController{
 
         if($cError == 0){
             $this->preguntaModel->agregarPregunta([$pregunta,$categoria]);
-            $id = $this->preguntaModel->obtenerIdPregunta($pregunta)[0];
+            $id = $this->preguntaModel->obtenerIdPregunta($pregunta);
             $this->respuestaModel->agregarRespuestas([$resp1,$resp2,$resp3,$resp4],$id);
             Header::redirect("/");
         }else{

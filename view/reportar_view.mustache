@@ -1,18 +1,18 @@
-<h1 class="text-center">formulario de reportar</h1>
+<h1 class="text-center">Preguntas Reportadas</h1>
 <section class="container">
 <article class="table-responsive">
     <table class="table">
         <thead>
         <tr>
             <th>Pregunta</th>
-            <th>Motivo</th>
+            <th>Estado</th>
             <th>Acción</th>
         </tr>
         </thead>
         <tbody>
         {{#pregunta}}
             <tr>
-                <td>{{pregunta.descripcion}}</td>
+                <td>{{pregunta.preg}}</td>
                 <td>Hola</td>
                 <td><a class="btn btn-primary" href="/pregunta/habilitar&id={{pregunta.id}}" role="button">Habilitar</a> |
                     <a class="btn btn-danger" href="/pregunta/eliminar&id={{pregunta.id}}" role="button">Eliminar</a>

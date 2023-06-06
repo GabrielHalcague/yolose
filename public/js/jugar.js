@@ -1,73 +1,125 @@
-//si toca un boton va a verificar y le pasa el id del boton que toco
-//verificar devulve id del boton y de respuesta correcta en caso de que sea haya equivocado
+var finButton = $('#fin');
+var continuarButton = $('#continuar');
+var trampaButton = $('#trampa');
+var segundos = 10;
+var cronometro;
 $(document).ready(function () {
+    finButton.hide();
+    continuarButton.hide();
+    var cantTrampasActuales = trampaButton.val();
+    if (cantTrampasActuales === 0) {
+        trampaButton.prop('disabled', true);
+    }
+    cuentaRegresiva();
+
     // Attach click event handler to the button
-    $('.btn').click(function () {
+    $('.opcion').click(function () {
         // Execute AJAX function
-        var id = $(this).val();
-
-
+        const id = $(this).val();
+        clearTimeout(cronometro);
         $.ajax({
-            url: 'partida/verificar',
+            url: '/partida/verificar',
             method: 'POST',
-            data: {id: id},
-            success: function (response) {
-                console.log(response);
-                var data = JSON.parse(response);
+            data: {id: id}
+        }).done(function (response) {
+            var data = JSON.parse(response);
+            // Access and use the data
+            if (data.success) {
+                // Operación exitosa
+                var message = data.message;
+                var datos = data.data;
 
-                // Access and use the data
-                if (data.success) {
-                    // Operación exitosa
-                    var message = data.message;
-                    var datos = data.data;
+                // Hacer algo con los datos en caso de éxito
+                validarRespuesta(datos);
 
-                    // Hacer algo con los datos en caso de éxito
-                    validarRespuesta(datos);
-
-                }
-            },
-            error: function (xhr, status, error) {
-                // Handle error, if any
-                console.log(error);
             }
         });
     });
 });
 
 
-//valida la respues y pinta de color los botones en base a respuesta
-//ademas muestra boton fin si se equivoco y lleva a inicio
-//o continuar si responde bien y recarga consulta
-function validarRespuesta(data) {
+function cuentaRegresiva() {
+    document.getElementById('tiempoRestante').innerHTML = segundos;
+    if (segundos === 0) {
+        clearTimeout(cronometro);
+        $.ajax({
+            url: '/partida/verificar',
+            method: 'POST',
+            data: {id: 'FUERA_TIEMPO'}
+        }).done(function (response) {
+            var data = JSON.parse(response);
+            // Access and use the data
 
-    var respuestaCorrecta;
-    var respuestaIncorrecta;
-    var botonFin;
-    var botonContinuar;
+            if (data.success) {
+                var datos = data.data;
 
-    if (data["respActual"] != undefined && data["respValida"] != undefined) {
-
-        respuestaCorrecta = document.getElementById(data["respValida"]);
-        respuestaIncorrecta = document.getElementById(data["respActual"]);
-        botonFin = document.getElementById("fin");
-        respuestaCorrecta.style.backgroundColor = 'green';
-        respuestaIncorrecta.style.backgroundColor = 'red';
-        botonFin.style.display = 'block';
-        $('#ventana').modal('show');
-        disableButtons();
+                // Hacer algo con los datos en caso de éxito
+                console.log("En funcion validar");
+                console.log(data);
+                $("." + data["respValida"]).prop('backgroundColor', 'green');
+                terminarPartida();
+                finButton.show();
+                disableButtons();
+            }
+        });
     } else {
-        respuestaCorrecta = document.getElementById(data["respValida"]);
-        botonContinuar = document.getElementById("continuar");
-        respuestaCorrecta.style.backgroundColor = 'green';
-        botonContinuar.style.display = 'block';
-        disableButtons();
+        segundos = segundos - 1;
+        cronometro = setTimeout(cuentaRegresiva, 1E3)
     }
+}
 
+
+function validarRespuesta(data) {
+    console.log("En funcion validar");
+    console.log(data);
+    const respuestaActual = $("." + data["respActual"]);
+    const respuestaValida = $("." + data["respValida"]);
+    if (data["fueraTiempo"] === false) {
+        if (data['correcto'] === false) {
+            respuestaValida.prop('backgroundColor', 'green');
+            respuestaActual.prop('backgroundColor', 'red');
+            terminarPartida();
+            finButton.show();
+        }
+        if (data['correcto'] === true) {
+            respuestaActual.prop('backgroundColor', 'green');
+            continuarButton.show();
+        }
+    } else {
+        respuestaValida.prop('backgroundColor', 'green');
+        finButton.show();
+    }
+    disableButtons();
 }
 
 function disableButtons() {
-    var buttons = document.getElementsByClassName("btn");
-    for (var i = 0; i < buttons.length; i++) {
-        buttons[i].disabled = true;
-    }
+    $('.opcion').each(function () {
+        $(this).prop('disabled', true);
+    });
+}
+
+const terminarPartida = () => {
+    $.ajax({
+        url: '/partida/partidaTerminada',
+        method: 'POST',
+        data: {id: ''},
+        processData: false,
+    }).done(function (response) {
+
+        var data = JSON.parse(response);
+
+        // Access and use the data
+        if (data.success) {
+            // Operación exitosa
+            var datos = data.data;
+            console.log(datos);
+            $('#result').data('resultado', datos['resultado']);
+            $('#tPartida').data('tipoPartida', datos['tipo']);
+            $('#ventana').modal('show');
+
+        }
+    }).fail(function (xhr, status, error) {
+        // Handle error, if any
+        console.log(error);
+    });
 }
