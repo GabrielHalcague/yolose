@@ -10,18 +10,25 @@ $router = $configuration->getRouter();
 $module = $_GET['module'] ?? 'home';
 $method = $_GET['action'] ?? 'list';
 
-$controladoresValidos = [
+$controladoresValidosSINLogeo = [
     'home',
     'login',
     'registro',
     'activation',
     'perfil',
-    'reportar',
-    'pregunta'
+
+];
+$controladoresINVALIDOSLogeado = [
+    //'login', // bloquea el cerrar session
+    'registro',
+    'activation',
 ];
 
-if (!Session::isLogged() && !in_array($module, $controladoresValidos)){
+if (!Session::isLogged() && !in_array($module, $controladoresValidosSINLogeo)){
         $module = 'home';
+}
+if (Session::isLogged() && in_array($module, $controladoresINVALIDOSLogeado)){
+      $module = 'home';
 }
 
 $router->route($module, $method);

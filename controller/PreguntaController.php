@@ -20,7 +20,7 @@ class PreguntaController{
         if(empty(Session::getDataSession())){
             Header::redirect("/");
         }
-        $data['logged'] = Session::get('logged');
+        //$data['logged'] = Session::get('logged');
         $data['categoria'] = $this->categoriaModel->getAllCategories();
         $this->renderer->render("ingreso",$data);
     }

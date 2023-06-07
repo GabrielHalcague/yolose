@@ -18,8 +18,6 @@ class HomeController
             $this->renderer->render("home", $data);
             exit();
         }
-            // el rank y el nombre estan en Session. cuadno se gane se tendria que actualizar
-            $data=Session::menuSegunElRol($data);
             $this->renderer->render("home", $data);
         exit();
     }
