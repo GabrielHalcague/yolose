@@ -83,7 +83,10 @@ function validarRespuesta(data) {
         }
         if (data['correcto'] === true) {
             respuestaActual.css('backgroundColor', 'green');
-            continuarButton.show();
+            setTimeout(function (){
+                $(location).attr('href',"http://localhost:80/partida&tipoPartida="+data['tipoPartida']);
+            },5000);
+            //continuarButton.show();
         }
     } else {
         respuestaValida.css('backgroundColor', 'green');

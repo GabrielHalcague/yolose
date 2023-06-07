@@ -47,6 +47,8 @@ class PartidaController
             'tokenPartida' => Session::get('tokenPartida')
         ]);
 
+        $data['tipoPartida']=Session::get('tipoPartida');
+
         $response = array(
             'success' => true,
             'message' => 'Operación exitosa',
