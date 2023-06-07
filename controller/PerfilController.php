@@ -19,7 +19,7 @@ class PerfilController
             Header::redirect("/");
         }
         $nombreUsuario = Session::get('username');
-        $data["perfil"]= $this->userModel->getPerfilUsuarioPorNombreUsuario($nombreUsuario)[0];
+        $data["perfil"]= $this->userModel->getUsuarioByUsername($nombreUsuario)[0];
         $data["mejorPartida"]= "10"; // cambiar cuando est la bd
         $data["rank"]= "100";
         $data["rutaQR"]=$this->generateQR($data["perfil"]["nombreUsuario"]);
@@ -30,11 +30,11 @@ class PerfilController
     public function usuario(){
         //  http://localhost/perfil/usuario/user=gab
         $username = $_GET['user'];
-        $usuarioObtenido = $this->userModel->getPerfilUsuarioPorNombreUsuario($username);
+        $usuarioObtenido = $this->userModel->getUsuarioByUsername($username);
         if(empty($usuarioObtenido) == 1){
             Header::redirect("/");
         }
-          $data["perfil"]= $usuarioObtenido[0];
+          $data["perfil"]= $usuarioObtenido;
           $data["mejorPartida"]= "10";
           $data["rank"]= "100";
           $data["rutaQR"]=$this->generateQR($data["perfil"]["nombreUsuario"]);
