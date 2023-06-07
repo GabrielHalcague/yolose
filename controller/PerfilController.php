@@ -1,60 +1,56 @@
 <?php
 require_once "helpers/Session.php";
 require_once "helpers/QRGenerator.php";
-
 use JetBrains\PhpStorm\NoReturn;
 
 class PerfilController
 {
-    private $renderer;
+    private $renderer ;
     private $userModel;
     private $qrGenerator;
 
-    public function __construct($renderer, $userModel, $qrGenerator)
-    {
+    public function __construct($renderer, $userModel, $qrGenerator) {
         $this->userModel = $userModel;
         $this->renderer = $renderer;
         $this->qrGenerator = $qrGenerator;
     }
-
-    public function list()
-    {
-        Header::redirect("/");
-    }
-
-    public function usuario()
-    {
-        if (is_null(Session::getDataSession())) {
+    public function list(){
+        if (!Session::get('logged')) {
             Header::redirect("/");
         }
-
-        if (empty($_GET['user'])) {
-            Header::redirect("/");
-        }
-
-        $username = $_GET['user'];
-        $usuarioObtenido = $this->userModel->getUsuarioByUsername($username);
-
-        if (empty($usuarioObtenido)) {
-            Header::redirect("/");
-        }
-
-        $data = [
-            "perfil" => $usuarioObtenido,
-            "rutaQR" => $this->generateQR($usuarioObtenido["nombreUsuario"])
-        ];
+        $nombreUsuario = Session::get('username');
+        $data["perfil"]= $this->userModel->getPerfilUsuarioPorNombreUsuario($nombreUsuario)[0];
+        $data["mejorPartida"]= "10"; // cambiar cuando est la bd
+        $data["rank"]= "100";
+        $data["rutaQR"]=$this->generateQR($data["perfil"]["nombreUsuario"]);
+        $data['showQR'] = true;
         $this->renderer->render("perfil", $data);
         exit();
     }
+    public function usuario(){
+        //  http://localhost/perfil/usuario/user=gab
+        $username = $_GET['user'];
+        $usuarioObtenido = $this->userModel->getPerfilUsuarioPorNombreUsuario($username);
+        if(empty($usuarioObtenido) == 1){
+            Header::redirect("/");
+        }
+          $data["perfil"]= $usuarioObtenido[0];
+          $data["mejorPartida"]= "10";
+          $data["rank"]= "100";
+          $data["rutaQR"]=$this->generateQR($data["perfil"]["nombreUsuario"]);
+          $data['showQR'] = true;
+          $this->renderer->render("perfil", $data);
+        exit();
+     }
 
-    private function generateQR($username)
-    {
-        $enlace = "http:/localhost:80/perfil/usuario&user={$username}";
+    private function generateQR($username){
+        $enlace = "http:/localhost:80/perfil/usuario?user={$username}";
         $ruta = $this->qrGenerator->getQrPng($enlace);
 
-        if (!$ruta) {
+        if(!$ruta){
             exit();
         }
         return $ruta;
     }
+
 }

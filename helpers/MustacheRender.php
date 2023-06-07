@@ -30,9 +30,21 @@ class MustacheRender{
     }
 
     public function generateHtml($contentFile, $data = array()) {
+        $data=$this->menuSegunElRol($data);
         $contentAsString = file_get_contents('view/partial/header.mustache');
         $contentAsString .= file_get_contents('view/' . $contentFile . '_view.mustache');
         $contentAsString .= file_get_contents('view/partial/footer.mustache');
+
         return $this->mustache->render($contentAsString, $data);
+    }
+    public function menuSegunElRol($data): array  {
+        if(isset($_SESSION['logged'])){
+            $data['logged'] = Session::get('logged');
+            $data['editor'] = Session::get('editor')?? false;
+            $data['administrador'] = Session::get('administrador')?? false;
+            $data['nombre']= Session::get('nombre') ?? '';
+            $data['ranking']="123";
+        }
+        return $data;
     }
 }

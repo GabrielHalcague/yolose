@@ -27,6 +27,7 @@ class Session {
     public static function finalizarSesion(){
      session_unset();
      session_destroy();
+
     }
 
     public static function isLogged()
