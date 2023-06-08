@@ -32,9 +32,23 @@ $(document).ready(function () {
                 // Hacer algo con los datos en caso de éxito
                 validarRespuesta(datos);
 
+
             }
         });
     });
+
+    $('.reporte').click(function (){
+        var preguntaId= $(this).val()
+        $.ajax({
+            url: '/partida/reportarPregunta',
+            method: 'POST',
+            data: {preguntaId: preguntaId}
+        }).done(function (){
+            $('.reporte').prop('disabled',true)
+        })
+
+    })
+
 });
 
 

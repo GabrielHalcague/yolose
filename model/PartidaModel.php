@@ -231,4 +231,8 @@ class PartidaModel
         $sql = "UPDATE usuario u SET u.trampas = $cantTrampasTotales WHERE id = $idUsuario";
         $this->database->execute($sql);
     }
+    public function reportarPregunta($idPregunta,$idUsuario){
+        $sql= "INSERT INTO reportePregunta(idPregunta,idUsuario) values('$idPregunta','$idUsuario')";
+       $this->database->execute($sql);
+    }
 }

@@ -134,6 +134,7 @@ class PartidaController
         $data = [
             'js' => true,
             'pregunta' => $preguntas[$indicePregunta]['pregunta'],
+            'preguntaID' => $preguntas[$indicePregunta]['preguntaID'],
             'color' => $preguntas[$indicePregunta]['color'],
             'logged' => Session::get('logged'),
             'username' => Session::get('username'),
@@ -145,6 +146,11 @@ class PartidaController
         unset($preguntas[$indicePregunta]);
         Session::set('preguntas', $preguntas);
         return $data;
+    }
+    public function reportarPregunta(){
+        $idPregunta= $_POST['preguntaId'];
+        $idUsuario= Session::get('idUsuario');
+        $this->partidaModel->reportarPregunta($idPregunta,$idUsuario);
     }
 }
 
