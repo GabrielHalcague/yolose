@@ -19,7 +19,7 @@ class PerfilController
             Header::redirect("/");
         }
         $nombreUsuario = Session::get('username');
-        $data["perfil"]= $this->userModel->getUsuarioByUsername($nombreUsuario)[0];
+        $data["perfil"]= $this->userModel->getUsuarioByUsername($nombreUsuario);
         $data["mejorPartida"]= "10"; // cambiar cuando est la bd
         $data["rank"]= "100";
         $data["rutaQR"]=$this->generateQR($data["perfil"]["nombreUsuario"]);
@@ -34,14 +34,14 @@ class PerfilController
         if(empty($usuarioObtenido) == 1){
             Header::redirect("/");
         }
-          $data["perfil"]= $usuarioObtenido;
-          $data["mejorPartida"]= "10";
-          $data["rank"]= "100";
-          $data["rutaQR"]=$this->generateQR($data["perfil"]["nombreUsuario"]);
-          $data['showQR'] = true;
-          $this->renderer->render("perfil", $data);
+        $data["perfil"]= $usuarioObtenido;
+        $data["mejorPartida"]= "10";
+        $data["rank"]= "100";
+        $data["rutaQR"]=$this->generateQR($data["perfil"]["nombreUsuario"]);
+        $data['showQR'] = true;
+        $this->renderer->render("perfil", $data);
         exit();
-     }
+    }
 
     private function generateQR($username){
         $enlace = "http:/localhost:80/perfil/usuario?user={$username}";
