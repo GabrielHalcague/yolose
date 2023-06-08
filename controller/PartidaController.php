@@ -44,7 +44,8 @@ class PartidaController
             'preguntaActual' => Session::get('preguntaSeleccionada'),
             'muestroPregunta' => Session::get('mostrarPregunta'),
             'respondioPregunta' => (new DateTime)->getTimestamp(),
-            'tokenPartida' => Session::get('tokenPartida')
+            'tokenPartida' => Session::get('tokenPartida'),
+            'tipoPartida' => Session::get('tipoPartida')
         ]);
 
         $data['tipoPartida']=Session::get('tipoPartida');
@@ -69,7 +70,7 @@ class PartidaController
             'tipo' => $tipoPartida
         ];
 
-        if ($tipoPartida == 'vsbot') {
+        if ($tipoPartida == 2) {
             $maxPregBot = $this->partidaModel->obtenerPreguntasParaUsuario(-1);
             $scoreBot = rand(1, count($maxPregBot));
             if ($scoreUsuario > $scoreBot) {
@@ -82,7 +83,7 @@ class PartidaController
             $data['resultado'] = $resultado;
         }
 
-        /*if ($tipoPartida == 'vsplayer') {
+        /*if ($tipoPartida == 3) {
             $arrayScores = $this->partidaModel->obtenerScoresDeUnVsPlayer($tokenPartida);
             if (count($arrayScores) == 1) {
                 $usuarioGanador = array_keys(max($arrayScores));
@@ -90,7 +91,7 @@ class PartidaController
             }
         }*/
 
-        if ($tipoPartida == 'solitario') {
+        if ($tipoPartida == 1) {
             $data['resultado'] = "HAS MEJORADO";
         }
 

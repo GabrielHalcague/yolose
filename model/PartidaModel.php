@@ -99,7 +99,8 @@ class PartidaModel
             'n_partida' => $data['tokenPartida'],
             'estado' => $array['correcto'],
             'idUsuario' => $data['idUsuario'],
-            'idPreg' => $preguntaSeleccionada['preguntaID']
+            'idPreg' => $preguntaSeleccionada['preguntaID'],
+            'tipoPartida' => $data['tipoPartida']
         ]);
         return $array;
     }
@@ -209,11 +210,12 @@ class PartidaModel
         $idPreg = $data['idPreg'];
         $token = $data['n_partida'];
         $estado = $data['estado'];
+        $tipoPartida = $data['tipoPartida'];
 
         if (!$estado) {
-            $sql = "INSERT INTO historialPartidas (idUs, idPreg, n_partida) VALUES ('$idUsuario','$idPreg','$token')";
+            $sql = "INSERT INTO historialPartidas (idUs, idPreg, n_partida,tipoPartida) VALUES ('$idUsuario','$idPreg','$token','$tipoPartida')";
         } else {
-            $sql = "INSERT INTO historialPartidas (estado, idUs, idPreg, n_partida) VALUES ('$estado','$idUsuario','$idPreg','$token')";
+            $sql = "INSERT INTO historialPartidas (estado, idUs, idPreg, n_partida,tipoPartida) VALUES ('$estado','$idUsuario','$idPreg','$token','$tipoPartida')";
         }
         $this->database->execute($sql);
     }
