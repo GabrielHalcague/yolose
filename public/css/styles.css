@@ -1,102 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Puddles&family=Slackey&display=swap');
+
 html,
 body {
     width: auto !important;
     overflow-x: hidden !important;
+    box-sizing: border-box;
     color: #030303;
+    margin: 0;
+    padding: 0;
 }
 
 main {
-    margin: 2rem 0;
-    min-height: -webkit-calc(100vh - 250px);
-    min-height: -moz-calc(100vh - 250px);
-    min-height: calc(100vh - 250px);
+    min-height: 100vh;
+    background-image: url(../../public/fondo.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-header img{
+header img {
     height: 60px;
 }
 
-footer i{
+footer i {
     font-size: 2rem;
     margin-left: 1.2rem;
     transition: 0.4s ease;
     cursor: pointer;
 }
 
-footer i:hover{
-    color: #EE155E;
+footer i:hover {
+    color: #ee155e;
     transition: 0.4s ease;
 }
 
-.text-logo{
+/* YO LOSE */
+
+.titulo-yo,
+.titulo-lose {
+    font-family: 'Rubik Puddles', cursive;
+    background: #ee155e;
+    background: linear-gradient(to top, #ee155e 40%, #fff719 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+    underline: none;
+    margin: 0;
+
+}
+
+.titulo-yo {
+    font-size: 16vw;
+}
+
+.titulo-lose {
+    font-size: 12vw;
+    margin-top: -12%;
+ 
+}
+
+
+.btn-yolose {
+    margin: 1rem 0;
+    text-align: center;
+    align-items: center;
+    background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #eb0052);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    font-family: Phantomsans, sans-serif;
+    font-size: 20px;
+    justify-content: center;
+    line-height: 1em;
+    width: 100%;
+    padding: 3px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn-yolose:active,
+.btn-yolose:hover {
+    outline: 0;
+    transform: scale(1.02);
+    transition: 0.2s ease;
+}
+
+.btn-yolose span {
+    background-color: rgb(5, 6, 45);
+    padding: 16px 24px;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+}
+
+.btn-yolose:hover span {
+    background: none;
+}
+
+
+.border-yolose{
+    border: 2px solid #ee155e;
+    color: #fff;
+}
+  
+  
+
+
+
+
+
+.text-logo {
     font-size: 2rem;
-    background: #EE155E;
-    background: linear-gradient(to top, #EE155E 40%, #FFF719 100%);
+    background: #ee155e;
+    background: linear-gradient(to top, #ee155e 40%, #fff719 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-decoration: none;
     underline: none;
 }
 
-.bg-yolose{
-    background: #EE155E;
-}
-
-.btn-yolose{
-    --bs-btn-color: #fff;
-    --bs-btn-bg: #ee155e;
-    --bs-btn-border-color: #ee155e;
-    --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: #cf1d59;
-    --bs-btn-hover-border-color: #cf1d59;
-    --bs-btn-focus-shadow-rgb: 49,132,253;
-    --bs-btn-active-color: #fff;
-    --bs-btn-active-bg: #cf1d59;
-    --bs-btn-active-border-color: #cf1d59;
-    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-    --bs-btn-disabled-color: #fff;
-}
-
-.btn-outline-yolose {
-    --bs-btn-color: #ee155e;
-    --bs-btn-border-color: #ee155e;
-    --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: #ee155e;
-    --bs-btn-hover-border-color: #ee155e;
-    --bs-btn-focus-shadow-rgb: 13, 110, 253;
-    --bs-btn-active-color: #fff;
-    --bs-btn-active-bg: #ee155e;
-    --bs-btn-active-border-color: #ee155e;
-    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-    --bs-gradient: none;
-}
-
-.btn-yolose-amarillo{
-    --bs-btn-color: #fff;
-    --bs-btn-bg: #ffac37;
-    --bs-btn-border-color: #ffac37;
-    --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: #eb7f13;
-    --bs-btn-hover-border-color: #eb7f13;
-    --bs-btn-focus-shadow-rgb: 49,132,253;
-    --bs-btn-active-color: #fff;
-    --bs-btn-active-bg: #eb7f13;
-    --bs-btn-active-border-color: #eb7f13;
-    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-    --bs-btn-disabled-color: #fff;
-}
-
-.form-yolose input{
+.form-yolose input {
     margin-bottom: 1.2rem;
 }
 
-.form-yolose select{
+.form-yolose select {
     margin-bottom: 1.2rem;
 }
 
-.form-label{
+.form-label {
     font-weight: 600;
     padding: 0px;
+    text-shadow: -3px 3px 5px rgba(0,0,0,0.6);
 }
 
 .blue {
@@ -104,35 +147,60 @@ footer i:hover{
     padding: 1rem;
     background-color: blue;
 }
+
 .brown {
     color: #fff;
     padding: 1rem;
     background-color: brown;
 }
+
 .purple {
     color: #fff;
     padding: 1rem;
     background-color: purple;
 }
+
 .green {
     color: #fff;
     padding: 1rem;
     background-color: green;
 }
+
 .blueviolet {
     color: #fff;
     padding: 1rem;
     background-color: blueviolet;
 }
+
 .orange {
     color: #fff;
     padding: 1rem;
     background-color: orange;
 }
+
 .turquoise {
     color: #fff;
     padding: 1rem;
     background-color: turquoise;
 }
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 98% !important;
+        margin: auto !important;
+    }
+}
+
 @media (min-width: 768px) {
+    .container {
+        max-width: 70% !important;
+        margin: auto !important;
+    }
+}
+
+@media (min-width: 996px) {
+    .container {
+        max-width: 50% !important;
+        margin: auto !important;
+    }
 }

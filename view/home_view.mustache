@@ -1,39 +1,16 @@
-{{#usuario}}
-<p>{{nombre}}</p>
-{{/usuario}}
-
-<section class="container">
-  <article class="row text-center">
-    <div class="col-6">
-      <h3>¡<strong class="text-logo">YoLoSe</strong> es un juego de preguntas gratis que puede jugar Multiplataforma!</h3>
-      <h5>
-        Es un excelente juego de ingenio. Podrá darle a su cerebro un impulso inmaculado mediante el
-        pensamiento adictivo y el estímulo del coeficiente intelectual.
-      </h5>
-    </div>
-    <div class="col-6">
-      <img src="../public/yolose_banner.png" alt="Banner YoLoSe" class="img-fluid rounded" style="max-height: 200px;">
-    </div>
-    <p class="mt-3">Los cuestionarios están configurados en diferentes categorías tales
-      como las clásicas preguntas con 4 respuestas, las preguntas de verdadero o falso.</p>
+<section class="container d-flex flex-column justify-content-around align-items-center h-100">
+  {{#usuario}}
+  <p class="text-center text-white">{{nombre}}</p>
+  {{/usuario}}
+  <article>
+    <h1 class="titulo-yo">Yo</h1>
+    <h1 class="titulo-lose">LoSee</h1>
   </article>
-</section>
 
-<section class="bg-dark text-center text-white p-5">
-  <h2 class="mb-3">¡Comenzar a Jugar!</h2>
-  <h5>MODOS DE JUEGO</h5>
-  <a href="/partida&tipoPartida=solitario" class="btn btn-yolose-amarillo fw-bold px-5">SOLITARIO</a>
-  <a href="/partida&tipoPartida=vsbot" class="btn btn-yolose-amarillo fw-bold px-5">VS IA</a>
-  <a href="/partida&tipoPartida=vsplayer" class="btn btn-yolose-amarillo fw-bold px-5">VS JUGADOR</a>
-</section>
-
-<section class="container mt-4">
-  <article class="row align-items-stretch">
-    <div class="col-6 d-flex justify-content-center">
-      {{> reglas}}
-    </div>
-    <div class="col-6 d-flex justify-content-center">
-      {{> ranking}}
-    </div>
+  <article class="row">
+    <div class="col-md-6"><a href="/login" class="btn-yolose"><span>EMPEZAR</span></a></div>
+    <div class="col-md-6"><a href="/ranking" class="btn-yolose"><span>RANKING</span></a></div>
+    <div class="col-md-6"><a href="/creditos" class="btn-yolose"><span>CREDITOS</span></a></div>
+    <div class="col-md-6"><a href="/tutorial" class="btn-yolose"><span>TUTORIAL</span></a></div>
   </article>
 </section>
