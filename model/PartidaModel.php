@@ -230,13 +230,4 @@ class PartidaModel
         $sql = "UPDATE usuario u SET u.trampas = $cantTrampasTotales WHERE id = $idUsuario";
         $this->database->execute($sql);
     }
-
-    public function obtenerHistorialPartidasUsuario($idUsuario){
-        $sql = "SELECT h.n_Partida, u.nombreUsuario,h.tipoPartida, SUM(estado) AS sumaPreguntasContestadas
-                FROM historialpartidas AS h
-                JOIN usuario AS u 
-                WHERE h.idUs = '$idUsuario'
-                GROUP BY h.n_partida, h.idUs";
-        return $this->database->query($sql);
-    }
 }

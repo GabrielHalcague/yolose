@@ -56,8 +56,8 @@ class PerfilController
 
     public function obtenerHistorialPartidas($nombreUsuario)
     {
-        $usuarioObtenido = $this->userModel->getUsuarioByUsername($nombreUsuario);
-        return $this->partidaModel->obtenerHistorialPartidasUsuario($usuarioObtenido["id"]);
+        $usuario = $this->userModel->getUsuarioByUsername($nombreUsuario);
+        return $this->userModel->obtenerHistorialPartidasUsuario($usuario["id"]);
     }
 
 }
