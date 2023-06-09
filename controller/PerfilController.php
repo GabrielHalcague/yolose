@@ -23,6 +23,7 @@ class PerfilController
         $data["mejorPartida"]= "10"; // cambiar cuando est la bd
         $data["rank"]= "100";
         $data["rutaQR"]=$this->generateQR($data["perfil"]["nombreUsuario"]);
+        $data["historialPartida"] = $this->obtenerHistorialPartidas($nombreUsuario);
         $data['showQR'] = true;
         $this->renderer->render("perfil", $data);
         exit();
@@ -51,6 +52,12 @@ class PerfilController
             exit();
         }
         return $ruta;
+    }
+
+    public function obtenerHistorialPartidas($nombreUsuario)
+    {
+        $usuarioObtenido = $this->userModel->getUsuarioByUsername($nombreUsuario);
+        return $this->partidaModel->obtenerHistorialPartidasUsuario($usuarioObtenido["id"]);
     }
 
 }
