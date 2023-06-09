@@ -557,3 +557,36 @@
 [2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
 [2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
 [2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta (preg, idCat, idEst,resCor,pregTot) 
+                VALUES ('¿Que equipo es el Rey de Copas?','4',1,1,2)
+[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Que equipo es el Rey de Copas?'
+[2023-06-09][INFO]Ejecutando query: INSERT INTO respuesta (resp, idPreg)
+                VALUES ('Independiente ','53'),('Real Madrid','53'),('Inter','53'),('Milan','53')
+[2023-06-09][INFO]Ejecutando query: SELECT id from respuesta r where r.resp= 'Independiente '
+[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta_respuesta_correcta(idPreg,idResp) values ('53','232')
+[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta (preg, idCat, idEst,resCor,pregTot) 
+                VALUES ('¿Que equipo es el Rey de Copas?','4',1,1,2)
+[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Que equipo es el Rey de Copas?'
+[2023-06-09][INFO]Ejecutando query: INSERT INTO respuesta (resp, idPreg)
+                VALUES ('Independiente ','53'),('Real Madrid','53'),('Inter','53'),('Milan','53')
+[2023-06-09][INFO]Ejecutando query: SELECT id from respuesta r where r.resp= 'Independiente '
+[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta_respuesta_correcta(idPreg,idResp) values ('53','232')
+[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta (preg, idCat, idEst,resCor,pregTot) 
+                VALUES ('¿Que equipo es el Rey de Copas?','4',1,1,2)
+[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Que equipo es el Rey de Copas?'
+[2023-06-09][INFO]Ejecutando query: INSERT INTO respuesta (resp, idPreg)
+                VALUES ('Independiente ','53'),('Real Madrid','53'),('Inter','53'),('Milan','53')
+[2023-06-09][INFO]Ejecutando query: SELECT id from respuesta r where r.resp= 'Independiente '
+[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta_respuesta_correcta(idPreg,idResp) values ('53','232')
+[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3

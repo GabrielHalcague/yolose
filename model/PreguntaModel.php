@@ -67,8 +67,6 @@ class PreguntaModel
     
     
     public function agregarRespuestas($data, $idPreg){
-        var_dump("      ");
-        var_dump($data);
         $id = $idPreg;
         $opcA=$data['opcionA'];
         $opcB=$data['opcionB'];
@@ -82,13 +80,10 @@ class PreguntaModel
     public function obtenerIdRespuestaCorrecta($resp){
         $sql = "SELECT id from respuesta r where r.resp= '$resp'";
         $result= $this->database->query_row($sql);
-        
         return $result['id'];
     }
     public function insertarPreguntaRespuestaCorrecta($idPregunta,$idRespCorrecta){
-        var_dump("  idPRegunta    ". $idPregunta . " idRes   ". $idRespCorrecta);
         $sql= "INSERT INTO pregunta_respuesta_correcta(idPreg,idResp) values ('$idPregunta','$idRespCorrecta')";
         $this->database->execute($sql);
-        
     }
 }
