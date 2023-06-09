@@ -10,27 +10,31 @@ class PreguntaModel
     }
     
     public function insertarPregunta($datosDePregunta,$idUsuario){
-        $this->agregarPregunta([$datosDePregunta['pregunta'], $datosDePregunta['categoria']]);
-       $idPregunta= $this->obtenerIdPregunta($datosDePregunta['pregunta']);
-       $this->agregarRespuestas($datosDePregunta, $idPregunta['id']);
-        $idRespCorrecta= $this->obtenerIdRespuestaCorrecta($datosDePregunta['opcionA']);
-        $this->insertarPreguntaRespuestaCorrecta($idPregunta['id'],$idRespCorrecta);
+        $idPregunta= $this->obtenerIdPregunta($datosDePregunta['pregunta']);
+        if($idPregunta==0){
+            $this->agregarPregunta([$datosDePregunta['pregunta'], $datosDePregunta['categoria']],$idUsuario);
+            $idPregunta= $this->obtenerIdPregunta($datosDePregunta['pregunta']);
+            $this->agregarRespuestas($datosDePregunta, $idPregunta);
+            $idRespCorrecta= $this->obtenerIdRespuestaCorrecta($datosDePregunta['opcionA'],$idPregunta);
+            $this->insertarPreguntaRespuestaCorrecta($idPregunta,$idRespCorrecta);
+        }
     }
 
-    public function agregarPregunta($data){
-        
-        $sql = "INSERT INTO pregunta (preg, idCat, idEst,resCor,pregTot) 
-                VALUES ('$data[0]','$data[1]',1,1,2)";
-        
+    public function agregarPregunta($data,$idUsuario){
+        $sql = "INSERT INTO pregunta (preg, idCat, idEst,resCor,pregTot, idUsuario)
+                VALUES ('$data[0]','$data[1]',1,1,2,'$idUsuario')";
         $this->database->execute($sql);
     }
 
     public function obtenerIdPregunta($preg){
         $sql = "SELECT id FROM pregunta WHERE preg LIKE '$preg'";
-        return $this->database->query_row($sql);
+       $result= $this->database->query_row($sql);
+       if($result!=null){
+           return $result['id'];
+       }
+       return 0;
     }
     
-
     public function obtenerTodasLasPreguntas(){
         $sql = "SELECT * FROM obtenerPreguntas";
         return $this->database->query($sql);
@@ -77,8 +81,8 @@ class PreguntaModel
             $this->database->execute($sql);
     }
     
-    public function obtenerIdRespuestaCorrecta($resp){
-        $sql = "SELECT id from respuesta r where r.resp= '$resp'";
+    public function obtenerIdRespuestaCorrecta($resp, $idPregunta){
+        $sql = "SELECT id from respuesta r where r.resp= '$resp' and r.idPreg= '$idPregunta'";
         $result= $this->database->query_row($sql);
         return $result['id'];
     }

@@ -590,3 +590,190 @@
 [2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
 [2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
 [2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario, u.activo, r.descr 'rol' FROM usuario u
+                                       JOIN rol_usuario ru on u.id = ru.idUs
+                                       JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='gab'
+                                       AND password='639bee393eecbc62256936a8e64d17b1'
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta (preg, idCat, idEst,resCor,pregTot, idUsuario)
+                VALUES ('¿En que continente se encuentra Argentina?','1',1,1,2,'5')
+[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿En que continente se encuentra Argentina?'
+[2023-06-09][INFO]Ejecutando query: INSERT INTO respuesta (resp, idPreg)
+                VALUES ('America ','57'),('Europa','57'),('Asia','57'),('Africa','57')
+[2023-06-09][INFO]Ejecutando query: SELECT id from respuesta r where r.resp= 'America ' and r.idPreg= '57'
+[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta_respuesta_correcta(idPreg,idResp) values ('57','248')
+[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra new year?'
+[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra new year?'
+[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE 'peralkjsakjdks'
+[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE 'peralkjsakjdks'
+[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE 'werwerewrewr'
+[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE 'werwerewrewr'
+[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE 'ujhhuh|'
+[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE 'ujhhuh|'
+[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE 'eeee'
+[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE 'eeee'
+[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra Navidad?'
+[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra Navidad?'
+[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra Navidad?'
+[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra Navidad?'
+[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra Navidad?'
+[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra Navidad?'
+[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra Navidad?'
+[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra Navidad?'
+[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra Navidad?'
+[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra Navidad?'
+[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra Navidad?'
+[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra Navidad?'
+[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE 'aaa'
+[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE 'aaa'
+[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra new year?'
+[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuál de los siguientes elementos es esencial para la fotosíntesis en las plantas?'
+[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta (preg, idCat, idEst,resCor,pregTot, idUsuario)
+                VALUES ('¿Cuál de los siguientes elementos es esencial para la fotosíntesis en las plantas?','2',1,1,2,'5')
+[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuál de los siguientes elementos es esencial para la fotosíntesis en las plantas?'
+[2023-06-09][INFO]Ejecutando query: INSERT INTO respuesta (resp, idPreg)
+                VALUES ('Clorofila','58'),('Hemoglobina','58'),(' Melanina','58'),('Clorofila','58')
+[2023-06-09][INFO]Ejecutando query: SELECT id from respuesta r where r.resp= 'Clorofila' and r.idPreg= '58'
+[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta_respuesta_correcta(idPreg,idResp) values ('58','252')
+[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
