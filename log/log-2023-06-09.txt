@@ -1,231 +1,736 @@
 [2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
 [2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: select idUs,  count(*) AS repeticiones from historialpartidas where tipoPartida =1 group by n_partida ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: select idUs,  count(*) AS repeticiones from historialpartidas where tipoPartida =2 group by n_partida ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: select idUs,  count(*) AS repeticiones from historialpartidas where tipoPartida =3 group by n_partida ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: select idUs,  count(*) AS repeticiones from historialpartidas where tipoPartida =1 group by n_partida ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: select idUs,  count(*) AS repeticiones from historialpartidas where tipoPartida =2 group by n_partida ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: select idUs,  count(*) AS repeticiones from historialpartidas where tipoPartida =3 group by n_partida ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: select idUs,  count(*) AS repeticiones from historialpartidas where tipoPartida =1 group by n_partida ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: select idUs,  count(*) AS repeticiones from historialpartidas where tipoPartida =2 group by n_partida ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: select idUs,  count(*) AS repeticiones from historialpartidas where tipoPartida =3 group by n_partida ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: select idUs,  count(*) AS repeticiones from historialpartidas where tipoPartida =1 group by n_partida ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: select idUs,  count(*) AS repeticiones from historialpartidas where tipoPartida =2 group by n_partida ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: select idUs,  count(*) AS repeticiones from historialpartidas where tipoPartida =3 group by n_partida ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: select idUs,  count(*) AS repeticiones from historialpartidas where tipoPartida =1 group by n_partida ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: select idUs,  count(*) AS repeticiones from historialpartidas where tipoPartida =2 group by n_partida ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: select idUs,  count(*) AS repeticiones from historialpartidas where tipoPartida =3 group by n_partida ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: select idUs,  count(*) AS repeticiones from historialpartidas where tipoPartida =1 group by n_partida ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: select idUs,  count(*) AS repeticiones from historialpartidas where tipoPartida =2 group by n_partida ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: select idUs,  count(*) AS repeticiones from historialpartidas where tipoPartida =3 group by n_partida ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: select idUs,  count(*) AS repeticiones from historialpartidas where tipoPartida =1 group by n_partida ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: select idUs,  count(*) AS repeticiones from historialpartidas where tipoPartida =2 group by n_partida ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: select idUs,  count(*) AS repeticiones from historialpartidas where tipoPartida =3 group by n_partida ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'editor'
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: select idUs,  count(*) AS repeticiones from historialpartidas where tipoPartida =1 group by n_partida ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: select idUs,  count(*) AS repeticiones from historialpartidas where tipoPartida =2 group by n_partida ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: select idUs,  count(*) AS repeticiones from historialpartidas where tipoPartida =3 group by n_partida ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: select idUs,  count(*) AS repeticiones from historialpartidas where tipoPartida =1 group by n_partida ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: select idUs,  count(*) AS repeticiones from historialpartidas where tipoPartida =2 group by n_partida ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: select idUs,  count(*) AS repeticiones from historialpartidas where tipoPartida =3 group by n_partida ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: select idUs,  count(*) AS repeticiones from historialpartidas where tipoPartida =1 group by n_partida ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: select idUs,  count(*) AS repeticiones from historialpartidas where tipoPartida =2 group by n_partida ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: select idUs,  count(*) AS repeticiones from historialpartidas where tipoPartida =3 group by n_partida ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: select idUs,  count(*) AS repeticiones from historialpartidas where tipoPartida =1 group by n_partida ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: select idUs,  count(*) AS repeticiones from historialpartidas where tipoPartida =2 group by n_partida ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: select idUs,  count(*) AS repeticiones from historialpartidas where tipoPartida =3 group by n_partida ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: select idUs,  count(*) AS repeticiones from historialpartidas where tipoPartida =1 group by n_partida ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: select idUs,  count(*) AS repeticiones from historialpartidas where tipoPartida =2 group by n_partida ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: select idUs,  count(*) AS repeticiones from historialpartidas where tipoPartida =3 group by n_partida ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: select idUs,  count(*) AS repeticiones from historialpartidas where tipoPartida =1 group by n_partida ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: select idUs,  count(*) AS repeticiones from historialpartidas where tipoPartida =2 group by n_partida ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: select idUs,  count(*) AS repeticiones from historialpartidas where tipoPartida =3 group by n_partida ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, MAX(repeticiones) AS maximo FROM ( select idUs, n_partida, count(*) AS repeticiones 
+                                                from historialpartidas where tipoPartida =1 GROUP BY idUs, n_partida) 
+                            AS subconsulta GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10;
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, MAX(repeticiones) AS maximo FROM ( select idUs, n_partida, count(*) AS repeticiones 
+                                                from historialpartidas where tipoPartida =2 GROUP BY idUs, n_partida) 
+                            AS subconsulta GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10;
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, MAX(repeticiones) AS maximo FROM ( select idUs, n_partida, count(*) AS repeticiones 
+                                                from historialpartidas where tipoPartida =3 GROUP BY idUs, n_partida) 
+                            AS subconsulta GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10;
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, MAX(repeticiones) AS maximo FROM ( select idUs, n_partida, count(*) AS repeticiones 
+                                                from historialpartidas where tipoPartida =1 GROUP BY idUs, n_partida) 
+                            AS subconsulta GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10;
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, MAX(repeticiones) AS maximo FROM ( select idUs, n_partida, count(*) AS repeticiones 
+                                                from historialpartidas where tipoPartida =2 GROUP BY idUs, n_partida) 
+                            AS subconsulta GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10;
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, MAX(repeticiones) AS maximo FROM ( select idUs, n_partida, count(*) AS repeticiones 
+                                                from historialpartidas where tipoPartida =3 GROUP BY idUs, n_partida) 
+                            AS subconsulta GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10;
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, MAX(repeticiones) AS maximo FROM ( select idUs, n_partida, count(*) AS repeticiones 
+                                                from historialpartidas where tipoPartida =1 GROUP BY idUs, n_partida) 
+                            AS subconsulta GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10;
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, MAX(repeticiones) AS maximo FROM ( select idUs, n_partida, count(*) AS repeticiones 
+                                                from historialpartidas where tipoPartida =2 GROUP BY idUs, n_partida) 
+                            AS subconsulta GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10;
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, MAX(repeticiones) AS maximo FROM ( select idUs, n_partida, count(*) AS repeticiones 
+                                                from historialpartidas where tipoPartida =3 GROUP BY idUs, n_partida) 
+                            AS subconsulta GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10;
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, MAX(repeticiones) AS maximo FROM ( select idUs, n_partida, count(*) AS repeticiones 
+                                                from historialpartidas where tipoPartida =1 GROUP BY idUs, n_partida) 
+                            AS subconsulta GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, MAX(repeticiones) AS maximo FROM ( select idUs, n_partida, count(*) AS repeticiones 
+                                                from historialpartidas where tipoPartida =2 GROUP BY idUs, n_partida) 
+                            AS subconsulta GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, MAX(repeticiones) AS maximo FROM ( select idUs, n_partida, count(*) AS repeticiones 
+                                                from historialpartidas where tipoPartida =3 GROUP BY idUs, n_partida) 
+                            AS subconsulta GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'editor'
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, MAX(repeticiones) AS maximo FROM ( select idUs, n_partida, count(*) AS repeticiones 
+                                                from historialpartidas where tipoPartida =1 GROUP BY idUs, n_partida) 
+                            AS subconsulta GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, MAX(repeticiones) AS maximo FROM ( select idUs, n_partida, count(*) AS repeticiones 
+                                                from historialpartidas where tipoPartida =2 GROUP BY idUs, n_partida) 
+                            AS subconsulta GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, MAX(repeticiones) AS maximo FROM ( select idUs, n_partida, count(*) AS repeticiones 
+                                                from historialpartidas where tipoPartida =3 GROUP BY idUs, n_partida) 
+                            AS subconsulta GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+                FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida ='1'
+            GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.idGROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+                FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+            GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.idGROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+                FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+            GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.idGROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+                FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+            GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.idGROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+                FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+            GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.idGROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+                FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+            GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.idGROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+                FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+            GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.idGROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+                FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+            GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.idGROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+                FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+            GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.idGROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+                FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+            GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.idGROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+                FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+            GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.idGROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+                FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+            GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.idGROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+                FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+            GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.idGROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+                FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+            GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.idGROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+                FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+            GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.idGROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+                FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+            GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.idGROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+                FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+            GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.idGROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+                FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+            GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.idGROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+                FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+            GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.idGROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM (
+ select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+    GROUP BY idUs, n_partida
+) AS subconsulta join usuario u on subconsulta.idUs = u.id
+GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM (
+ select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+    GROUP BY idUs, n_partida
+) AS subconsulta join usuario u on subconsulta.idUs = u.id
+GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM (
+ select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+    GROUP BY idUs, n_partida
+) AS subconsulta join usuario u on subconsulta.idUs = u.id
+GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM (
+ select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+    GROUP BY idUs, n_partida
+) AS subconsulta join usuario u on subconsulta.idUs = u.id
+GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM (
+ select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+    GROUP BY idUs, n_partida
+) AS subconsulta join usuario u on subconsulta.idUs = u.id
+GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM (
+ select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+    GROUP BY idUs, n_partida
+) AS subconsulta join usuario u on subconsulta.idUs = u.id
+GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM (
+ select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+    GROUP BY idUs, n_partida
+) AS subconsulta join usuario u on subconsulta.idUs = u.id
+GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM (
+ select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =2
+    GROUP BY idUs, n_partida
+) AS subconsulta join usuario u on subconsulta.idUs = u.id
+GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM (
+ select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =3
+    GROUP BY idUs, n_partida
+) AS subconsulta join usuario u on subconsulta.idUs = u.id
+GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM (
+ select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+    GROUP BY idUs, n_partida
+) AS subconsulta join usuario u on subconsulta.idUs = u.id
+GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM (
+ select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =2
+    GROUP BY idUs, n_partida
+) AS subconsulta join usuario u on subconsulta.idUs = u.id
+GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM (
+ select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =3
+    GROUP BY idUs, n_partida
+) AS subconsulta join usuario u on subconsulta.idUs = u.id
+GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM (
+ select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+    GROUP BY idUs, n_partida
+) AS subconsulta join usuario u on subconsulta.idUs = u.id
+GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM (
+ select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =2
+    GROUP BY idUs, n_partida
+) AS subconsulta join usuario u on subconsulta.idUs = u.id
+GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM (
+ select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =3
+    GROUP BY idUs, n_partida
+) AS subconsulta join usuario u on subconsulta.idUs = u.id
+GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM (
+ select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+    GROUP BY idUs, n_partida
+) AS subconsulta join usuario u on subconsulta.idUs = u.id
+GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM (
+ select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =2
+    GROUP BY idUs, n_partida
+) AS subconsulta join usuario u on subconsulta.idUs = u.id
+GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM (
+ select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =3
+    GROUP BY idUs, n_partida
+) AS subconsulta join usuario u on subconsulta.idUs = u.id
+GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM (
+ select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+    GROUP BY idUs, n_partida
+) AS subconsulta join usuario u on subconsulta.idUs = u.id
+GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM (
+ select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =2
+    GROUP BY idUs, n_partida
+) AS subconsulta join usuario u on subconsulta.idUs = u.id
+GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM (
+ select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =3
+    GROUP BY idUs, n_partida
+) AS subconsulta join usuario u on subconsulta.idUs = u.id
+GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM (
+ select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+    GROUP BY idUs, n_partida
+) AS subconsulta join usuario u on subconsulta.idUs = u.id
+GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM (
+ select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =2
+    GROUP BY idUs, n_partida
+) AS subconsulta join usuario u on subconsulta.idUs = u.id
+GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM (
+ select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =3
+    GROUP BY idUs, n_partida
+) AS subconsulta join usuario u on subconsulta.idUs = u.id
+GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM (
+ select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+    GROUP BY idUs, n_partida
+) AS subconsulta join usuario u on subconsulta.idUs = u.id
+GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM (
+ select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =2
+    GROUP BY idUs, n_partida
+) AS subconsulta join usuario u on subconsulta.idUs = u.id
+GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM (
+ select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =3
+    GROUP BY idUs, n_partida
+) AS subconsulta join usuario u on subconsulta.idUs = u.id
+GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =2
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =3
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =2
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =3
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =2
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =3
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'editor'
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =2
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =3
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =2
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =3
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =2
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =3
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =2
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =3
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =2
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =3
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =2
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =3
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =2
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =3
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =2
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =3
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =2
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =3
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =2
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =3
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =2
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =3
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =2
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =3
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =2
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =3
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =2
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =3
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =2
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =3
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =2
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =3
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =2
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =3
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
 [2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
 [2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
 [2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
 [2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
 [2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
 [2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta (preg, idCat, idEst,resCor,pregTot) 
-                VALUES ('¿Cuando se celebra Navidad?','1',1,1,2)
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra Navidad?'
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta (preg, idCat, idEst,resCor,pregTot) 
-                VALUES ('¿Cuando se celebra Navidad?','1',1,1,2)
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra Navidad?'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO respuesta (resp, idPreg)
-                VALUES ('','33'),('','33'),('','33'),('','33')
-[2023-06-09][INFO]Ejecutando query: SELECT id from respuesta r where r.resp= ''
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta (preg, idCat, idEst,resCor,pregTot) 
-                VALUES ('¿Cuando se celebra Navidad?','1',1,1,2)
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra Navidad?'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO respuesta (resp, idPreg)
-                VALUES ('','33'),('','33'),('','33'),('','33')
-[2023-06-09][INFO]Ejecutando query: SELECT id from respuesta r where r.resp= ''
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta (preg, idCat, idEst,resCor,pregTot) 
-                VALUES ('¿Cuando se celebra Navidad?','1',1,1,2)
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra Navidad?'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO respuesta (resp, idPreg)
-                VALUES ('','33'),('','33'),('','33'),('','33')
-[2023-06-09][INFO]Ejecutando query: SELECT id from respuesta r where r.resp= ''
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta (preg, idCat, idEst,resCor,pregTot) 
-                VALUES ('¿Cuando se celebra Navidad?','1',1,1,2)
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra Navidad?'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO respuesta (resp, idPreg)
-                VALUES ('','33'),('','33'),('','33'),('','33')
-[2023-06-09][INFO]Ejecutando query: SELECT id from respuesta r where r.resp= ''
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
 [2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
 [2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
 [2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
@@ -251,529 +756,858 @@
 [2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
 [2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
 [2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-09][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =2
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =3
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =1
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =2
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
+[2023-06-09][INFO]Ejecutando query: SELECT idUs, u.nombreUsuario, u.fotoPerfil, MAX(repeticiones) AS maximo
+FROM ( select idUs, n_partida, count(*) AS repeticiones from historialpartidas where tipoPartida =3
+    GROUP BY idUs, n_partida) AS subconsulta join usuario u on subconsulta.idUs = u.id GROUP BY idUs ORDER BY repeticiones DESC LIMIT 10
 [2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
 [2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
 [2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta (preg, idCat, idEst,resCor,pregTot) 
-                VALUES ('¿Cuando se celebra Navidad?','3',1,1,2)
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra Navidad?'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO respuesta (resp, idPreg)
-                VALUES ('','33'),('','33'),('','33'),('','33')
-[2023-06-09][INFO]Ejecutando query: SELECT id from respuesta r where r.resp= ''
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta (preg, idCat, idEst,resCor,pregTot) 
-                VALUES ('¿Cuando se celebra Navidad?','6',1,1,2)
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra Navidad?'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO respuesta (resp, idPreg)
-                VALUES ('25 de Diciembre','33'),('2 de Mayo','33'),('25 de Mayo','33'),('3 de Junio ','33')
-[2023-06-09][INFO]Ejecutando query: SELECT id from respuesta r where r.resp= ''
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta (preg, idCat, idEst,resCor,pregTot) 
-                VALUES ('¿Cuando se celebra Navidad?','6',1,1,2)
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra Navidad?'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO respuesta (resp, idPreg)
-                VALUES ('25 de Diciembre','33'),('2 de Mayo','33'),('25 de Mayo','33'),('3 de Junio ','33')
-[2023-06-09][INFO]Ejecutando query: SELECT id from respuesta r where r.resp= ''
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta (preg, idCat, idEst,resCor,pregTot) 
-                VALUES ('¿Cuando se celebra Navidad?','6',1,1,2)
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra Navidad?'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO respuesta (resp, idPreg)
-                VALUES ('25 de Diciembre','33'),('2 de Mayo','33'),('25 de Mayo','33'),('3 de Junio ','33')
-[2023-06-09][INFO]Ejecutando query: SELECT id from respuesta r where r.resp= ''
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta (preg, idCat, idEst,resCor,pregTot) 
-                VALUES ('¿Cuando se celebra Navidad?','6',1,1,2)
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra Navidad?'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO respuesta (resp, idPreg)
-                VALUES ('25 de Diciembre','33'),('2 de Mayo','33'),('25 de Mayo','33'),('3 de Junio ','33')
-[2023-06-09][INFO]Ejecutando query: SELECT id from respuesta r where r.resp= ''
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta (preg, idCat, idEst,resCor,pregTot) 
-                VALUES ('¿Cuando se celebra Navidad?','6',1,1,2)
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra Navidad?'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO respuesta (resp, idPreg)
-                VALUES ('25 de Diciembre','33'),('2 de Mayo','33'),('25 de Mayo','33'),('3 de Junio ','33')
-[2023-06-09][INFO]Ejecutando query: SELECT id from respuesta r where r.resp= ''
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta (preg, idCat, idEst,resCor,pregTot) 
-                VALUES ('¿Cuando se celebra Navidad?','6',1,1,2)
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra Navidad?'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO respuesta (resp, idPreg)
-                VALUES ('25 de Diciembre','33'),('2 de Mayo','33'),('25 de Mayo','33'),('3 de Junio ','33')
-[2023-06-09][INFO]Ejecutando query: SELECT id from respuesta r where r.resp= ''
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta_respuesta_correcta(idPreg,idResp) values ('Array','116')
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta (preg, idCat, idEst,resCor,pregTot) 
-                VALUES ('¿Cuando se celebra Navidad?','6',1,1,2)
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra Navidad?'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO respuesta (resp, idPreg)
-                VALUES ('25 de Diciembre','33'),('2 de Mayo','33'),('25 de Mayo','33'),('3 de Junio ','33')
-[2023-06-09][INFO]Ejecutando query: SELECT id from respuesta r where r.resp= ''
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta_respuesta_correcta(idPreg,idResp) values ('Array','116')
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta (preg, idCat, idEst,resCor,pregTot) 
-                VALUES ('¿Cuando se celebra Navidad?','6',1,1,2)
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra Navidad?'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO respuesta (resp, idPreg)
-                VALUES ('25 de Diciembre','33'),('2 de Mayo','33'),('25 de Mayo','33'),('3 de Junio ','33')
-[2023-06-09][INFO]Ejecutando query: SELECT id from respuesta r where r.resp= '25 de Diciembre'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta_respuesta_correcta(idPreg,idResp) values ('Array','136')
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta (preg, idCat, idEst,resCor,pregTot) 
-                VALUES ('¿Cuando se celebra Navidad?','6',1,1,2)
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra Navidad?'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO respuesta (resp, idPreg)
-                VALUES ('25 de Diciembre','33'),('2 de Mayo','33'),('25 de Mayo','33'),('3 de Junio ','33')
-[2023-06-09][INFO]Ejecutando query: SELECT id from respuesta r where r.resp= '25 de Diciembre'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta_respuesta_correcta(idPreg,idResp) values ('Array','136')
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta (preg, idCat, idEst,resCor,pregTot) 
-                VALUES ('¿Cuando se celebra Navidad?','6',1,1,2)
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra Navidad?'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO respuesta (resp, idPreg)
-                VALUES ('25 de Diciembre','33'),('2 de Mayo','33'),('25 de Mayo','33'),('3 de Junio ','33')
-[2023-06-09][INFO]Ejecutando query: SELECT id from respuesta r where r.resp= '25 de Diciembre'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta_respuesta_correcta(idPreg,idResp) values ('Array','136')
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta (preg, idCat, idEst,resCor,pregTot) 
-                VALUES ('¿Cuando se celebra Navidad?','6',1,1,2)
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra Navidad?'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO respuesta (resp, idPreg)
-                VALUES ('25 de Diciembre','33'),('2 de Mayo','33'),('25 de Mayo','33'),('3 de Junio ','33')
-[2023-06-09][INFO]Ejecutando query: SELECT id from respuesta r where r.resp= '25 de Diciembre'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta_respuesta_correcta(idPreg,idResp) values ('Array','136')
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta (preg, idCat, idEst,resCor,pregTot) 
-                VALUES ('¿Cuando se celebra Navidad?','6',1,1,2)
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra Navidad?'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO respuesta (resp, idPreg)
-                VALUES ('25 de Diciembre','33'),('2 de Mayo','33'),('25 de Mayo','33'),('3 de Junio ','33')
-[2023-06-09][INFO]Ejecutando query: SELECT id from respuesta r where r.resp= '25 de Diciembre'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta_respuesta_correcta(idPreg,idResp) values ('Array','136')
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta (preg, idCat, idEst,resCor,pregTot) 
-                VALUES ('¿Cuando se celebra Navidad?','6',1,1,2)
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra Navidad?'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO respuesta (resp, idPreg)
-                VALUES ('25 de Diciembre','33'),('2 de Mayo','33'),('25 de Mayo','33'),('3 de Junio ','33')
-[2023-06-09][INFO]Ejecutando query: SELECT id from respuesta r where r.resp= '25 de Diciembre'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta_respuesta_correcta(idPreg,idResp) values ('Array','184')
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra Navidad?'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO respuesta (resp, idPreg)
-                VALUES ('25 de Diciembre','33'),('2 de Mayo','33'),('25 de Mayo','33'),('3 de Junio ','33')
-[2023-06-09][INFO]Ejecutando query: SELECT id from respuesta r where r.resp= '25 de Diciembre'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta_respuesta_correcta(idPreg,idResp) values ('Array','184')
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra Navidad?'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO respuesta (resp, idPreg)
-                VALUES ('25 de Diciembre','33'),('2 de Mayo','33'),('25 de Mayo','33'),('3 de Junio ','33')
-[2023-06-09][INFO]Ejecutando query: SELECT id from respuesta r where r.resp= '25 de Diciembre'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta_respuesta_correcta(idPreg,idResp) values ('Array','184')
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra Navidad?'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO respuesta (resp, idPreg)
-                VALUES ('25 de Diciembre','33'),('2 de Mayo','33'),('25 de Mayo','33'),('3 de Junio ','33')
-[2023-06-09][INFO]Ejecutando query: SELECT id from respuesta r where r.resp= '25 de Diciembre'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta_respuesta_correcta(idPreg,idResp) values ('Array','184')
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra Navidad?'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO respuesta (resp, idPreg)
-                VALUES ('25 de Diciembre','33'),('2 de Mayo','33'),('25 de Mayo','33'),('3 de Junio ','33')
-[2023-06-09][INFO]Ejecutando query: SELECT id from respuesta r where r.resp= '25 de Diciembre'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta_respuesta_correcta(idPreg,idResp) values ('Array','184')
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra new year?'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO respuesta (resp, idPreg)
-                VALUES ('1 de Enero',''),('2 de Mayo',''),('25 de Mayo',''),('3 de Junio ','')
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta (preg, idCat, idEst,resCor,pregTot) 
-                VALUES ('¿Cuando se celebra new year?','6',1,1,2)
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra new year?'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO respuesta (resp, idPreg)
-                VALUES ('1 de Enero','51'),('2 de Mayo','51'),('25 de Mayo','51'),('3 de Junio ','51')
-[2023-06-09][INFO]Ejecutando query: SELECT id from respuesta r where r.resp= '1 de Enero'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta_respuesta_correcta(idPreg,idResp) values ('Array','208')
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra new year?'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO respuesta (resp, idPreg)
-                VALUES ('1 de Enero','51'),('2 de Mayo','51'),('25 de Mayo','51'),('3 de Junio ','51')
-[2023-06-09][INFO]Ejecutando query: SELECT id from respuesta r where r.resp= '1 de Enero'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta_respuesta_correcta(idPreg,idResp) values ('Array','208')
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra new year?'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO respuesta (resp, idPreg)
-                VALUES ('1 de Enero','51'),('2 de Mayo','51'),('25 de Mayo','51'),('3 de Junio ','51')
-[2023-06-09][INFO]Ejecutando query: SELECT id from respuesta r where r.resp= '1 de Enero'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta_respuesta_correcta(idPreg,idResp) values ('Array','208')
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra new year?'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO respuesta (resp, idPreg)
-                VALUES ('1 de Enero','51'),('2 de Mayo','51'),('25 de Mayo','51'),('3 de Junio ','51')
-[2023-06-09][INFO]Ejecutando query: SELECT id from respuesta r where r.resp= '1 de Enero'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta_respuesta_correcta(idPreg,idResp) values ('Array','208')
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra new year?'
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra new year?'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO respuesta (resp, idPreg)
-                VALUES ('1 de Enero','51'),('2 de Mayo','51'),('25 de Mayo','51'),('3 de Junio ','51')
-[2023-06-09][INFO]Ejecutando query: SELECT id from respuesta r where r.resp= '1 de Enero'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta_respuesta_correcta(idPreg,idResp) values ('Array','208')
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta (preg, idCat, idEst,resCor,pregTot) 
-                VALUES ('¿Cuando se celebra new year?','2',1,1,2)
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra new year?'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO respuesta (resp, idPreg)
-                VALUES ('1 de Enero','52'),('2 de Mayo','52'),('25 de Mayo','52'),('3 de Junio ','52')
-[2023-06-09][INFO]Ejecutando query: SELECT id from respuesta r where r.resp= '1 de Enero'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta_respuesta_correcta(idPreg,idResp) values ('Array','228')
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra new year?'
-[2023-06-09][INFO]Ejecutando query: SELECT id from respuesta r where r.resp= '1 de Enero'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta_respuesta_correcta(idPreg,idResp) values ('52','228')
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Que equipo es el Rey de Copas?'
-[2023-06-09][INFO]Ejecutando query: SELECT id from respuesta r where r.resp= 'Independiente '
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta_respuesta_correcta(idPreg,idResp) values ('','')
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta (preg, idCat, idEst,resCor,pregTot) 
-                VALUES ('¿Que equipo es el Rey de Copas?','4',1,1,2)
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Que equipo es el Rey de Copas?'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO respuesta (resp, idPreg)
-                VALUES ('Independiente ','53'),('Real Madrid','53'),('Inter','53'),('Milan','53')
-[2023-06-09][INFO]Ejecutando query: SELECT id from respuesta r where r.resp= 'Independiente '
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta_respuesta_correcta(idPreg,idResp) values ('53','232')
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta (preg, idCat, idEst,resCor,pregTot) 
-                VALUES ('¿Que equipo es el Rey de Copas?','4',1,1,2)
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Que equipo es el Rey de Copas?'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO respuesta (resp, idPreg)
-                VALUES ('Independiente ','53'),('Real Madrid','53'),('Inter','53'),('Milan','53')
-[2023-06-09][INFO]Ejecutando query: SELECT id from respuesta r where r.resp= 'Independiente '
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta_respuesta_correcta(idPreg,idResp) values ('53','232')
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta (preg, idCat, idEst,resCor,pregTot) 
-                VALUES ('¿Que equipo es el Rey de Copas?','4',1,1,2)
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Que equipo es el Rey de Copas?'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO respuesta (resp, idPreg)
-                VALUES ('Independiente ','53'),('Real Madrid','53'),('Inter','53'),('Milan','53')
-[2023-06-09][INFO]Ejecutando query: SELECT id from respuesta r where r.resp= 'Independiente '
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta_respuesta_correcta(idPreg,idResp) values ('53','232')
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta (preg, idCat, idEst,resCor,pregTot) 
-                VALUES ('¿Que equipo es el Rey de Copas?','4',1,1,2)
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Que equipo es el Rey de Copas?'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO respuesta (resp, idPreg)
-                VALUES ('Independiente ','53'),('Real Madrid','53'),('Inter','53'),('Milan','53')
-[2023-06-09][INFO]Ejecutando query: SELECT id from respuesta r where r.resp= 'Independiente '
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta_respuesta_correcta(idPreg,idResp) values ('53','232')
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario, u.activo, r.descr 'rol' FROM usuario u
-                                       JOIN rol_usuario ru on u.id = ru.idUs
-                                       JOIN rol r on r.id = ru.idRol
-                                       WHERE nombreUsuario='gab'
-                                       AND password='639bee393eecbc62256936a8e64d17b1'
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta (preg, idCat, idEst,resCor,pregTot, idUsuario)
-                VALUES ('¿En que continente se encuentra Argentina?','1',1,1,2,'5')
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿En que continente se encuentra Argentina?'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO respuesta (resp, idPreg)
-                VALUES ('America ','57'),('Europa','57'),('Asia','57'),('Africa','57')
-[2023-06-09][INFO]Ejecutando query: SELECT id from respuesta r where r.resp= 'America ' and r.idPreg= '57'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta_respuesta_correcta(idPreg,idResp) values ('57','248')
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra new year?'
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra new year?'
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE 'peralkjsakjdks'
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE 'peralkjsakjdks'
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE 'werwerewrewr'
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE 'werwerewrewr'
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE 'ujhhuh|'
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE 'ujhhuh|'
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE 'eeee'
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE 'eeee'
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra Navidad?'
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra Navidad?'
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra Navidad?'
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra Navidad?'
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra Navidad?'
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra Navidad?'
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra Navidad?'
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra Navidad?'
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra Navidad?'
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra Navidad?'
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra Navidad?'
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra Navidad?'
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE 'aaa'
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE 'aaa'
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuando se celebra new year?'
-[2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
-[2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuál de los siguientes elementos es esencial para la fotosíntesis en las plantas?'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta (preg, idCat, idEst,resCor,pregTot, idUsuario)
-                VALUES ('¿Cuál de los siguientes elementos es esencial para la fotosíntesis en las plantas?','2',1,1,2,'5')
-[2023-06-09][INFO]Ejecutando query: SELECT id FROM pregunta WHERE preg LIKE '¿Cuál de los siguientes elementos es esencial para la fotosíntesis en las plantas?'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO respuesta (resp, idPreg)
-                VALUES ('Clorofila','58'),('Hemoglobina','58'),(' Melanina','58'),('Clorofila','58')
-[2023-06-09][INFO]Ejecutando query: SELECT id from respuesta r where r.resp= 'Clorofila' and r.idPreg= '58'
-[2023-06-09][INFO]Ejecutando query: INSERT INTO pregunta_respuesta_correcta(idPreg,idResp) values ('58','252')
 [2023-06-09][INFO]Ejecutando query: SELECT id, categ FROM categoria
 [2023-06-09][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
 [2023-06-09][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3

@@ -101,6 +101,13 @@ class Configuration
     {
         return new perfilController($this->getRenderer(), new UserModel($this->getDatabase()), $this->getQRGenerator());
     }
+    public function getRankingController(){
+        include_once ('controller/RankingController.php');
+        include_once ('model/RankingModel.php');
+        return new rankingController($this->getRenderer(), new RankingModel($this->getDatabase()));
+    }
+
+
 
     private function getArrayConfig()
     {
