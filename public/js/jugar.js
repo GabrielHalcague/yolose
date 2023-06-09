@@ -7,7 +7,7 @@ $(document).ready(function () {
     finButton.hide();
     continuarButton.hide();
     var cantTrampasActuales = trampaButton.val();
-    if (cantTrampasActuales === 0) {
+    if (cantTrampasActuales < 0) {
         trampaButton.prop('disabled', true);
     }
     cuentaRegresiva();
