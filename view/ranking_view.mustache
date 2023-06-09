@@ -1,0 +1,91 @@
+
+{{#rankingBot}}
+    {{idUs}}
+{{/rankingBot}}
+{{#rankingPvP}}
+    {{idUs}}
+{{/rankingPvP}}
+
+<div class="container">
+    <div class="row">
+        <h5>Top 10 Solo</h5>
+
+        <div class="col-sm">
+<table class="table table-striped ">
+    <thead>
+    <tr>
+        <th scope="col">Usuario</th>
+        <th scope="col">Usuario</th>
+        <th scope="col">Puntaje</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#rankingSolo}}
+    <tr>
+        <td><img src="/public/{{fotoPerfil}}" style="width: 50px;"></td>
+        <td><a href="/">{{nombreUsuario}} </a></td>
+        <td>{{maximo}}</td>
+    </tr>
+    {{/rankingSolo}}
+    </tbody>
+</table>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <h5>Top 10 vs Ia</h5>
+
+        <div class="col-sm">
+            <table class="table table-striped ">
+                <thead>
+                <tr>
+                    <th scope="col">Usuario</th>
+                    <th scope="col">Usuario</th>
+                    <th scope="col">Puntaje</th>
+                </tr>
+                </thead>
+                <tbody>
+                {{#rankingBot}}
+                    <tr>
+                        <td><img src="/public/{{fotoPerfil}}" style="width: 50px;"></td>
+                        <td><a href="/">{{nombreUsuario}} </a></td>
+                        <td>{{maximo}}</td>
+                    </tr>
+                {{/rankingBot}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container">
+    <div class="row">
+        <h5>Top 10 P v P</h5>
+
+        <div class="col-sm">
+            <table class="table table-striped ">
+                <thead>
+                <tr>
+                    <th scope="col">Usuario</th>
+                    <th scope="col">Usuario</th>
+                    <th scope="col">Puntaje</th>
+                </tr>
+                </thead>
+                <tbody>
+                {{#rankingPvP}}
+                    <tr>
+                        <td><img src="/public/{{fotoPerfil}}" style="width: 50px;"></td>
+                        <td><a href="/">{{nombreUsuario}} </a></td>
+                        <td>{{maximo}}</td>
+                    </tr>
+                {{/rankingPvP}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
