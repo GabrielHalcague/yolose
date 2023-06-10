@@ -24,7 +24,6 @@
                         <p><strong>Activo:</strong> {{activo}}</p>
                         <p><strong>Mejor Partida:</strong> {{mejorPartida}}</p>
                         <p><strong>Ranking:</strong> {{rank}}</p>
-
                  {{/perfil}}
             </div>
     </article>
@@ -42,13 +41,11 @@
                 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
                     maxZoom: 25,
                 }).addTo(map);
-                L.circle([{{coordenadas}} ], {radius: 200}).addTo(map);
-            </script>
-            {{coordenadas}} </div>
+                L.circle([{{coordenadas}} ], {radius: 500}).addTo(map);
+            </script> </div>
 
         <div class="col-6">
-           {{rutaQR}}
-                    <img src="{{rutaQR}}"
+                    <img src="/{{rutaQR}}"
                          class="img-fluid responsive"
                          alt="">
         </div>
