@@ -50,7 +50,7 @@ class LoginController
         if ($usuarioBuscado['activo'] == 1) {
             Session::set('idUsuario', $usuarioBuscado["id"] );
             Session::set('logged', true);
-            Session::set($usuarioBuscado["rol"], true);
+            Session::set('rol', $usuarioBuscado["rol"]);
             Session::set('username', $username);
             Header::redirect("/");
             exit();
@@ -58,7 +58,5 @@ class LoginController
             header("location:validate.php");// no existe
             exit();
         }
-     
     }
-
 }
