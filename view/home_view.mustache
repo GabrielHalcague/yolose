@@ -1,16 +1,26 @@
-<section class="container d-flex flex-column justify-content-around align-items-center h-100">
-  {{#usuario}}
-  <p class="text-center text-white">{{nombre}}</p>
-  {{/usuario}}
-  <article>
-    <h1 class="titulo-yo">Yo</h1>
-    <h1 class="titulo-lose">LoSee</h1>
-  </article>
-
-  <article class="row">
-    <div class="col-md-6"><a href="/login" class="btn-yolose"><span>EMPEZAR</span></a></div>
-    <div class="col-md-6"><a href="/ranking" class="btn-yolose"><span>RANKING</span></a></div>
-    <div class="col-md-6"><a href="/creditos" class="btn-yolose"><span>CREDITOS</span></a></div>
-    <div class="col-md-6"><a href="/tutorial" class="btn-yolose"><span>TUTORIAL</span></a></div>
-  </article>
-</section>
+<article class="menu">
+    <div class="btn"><a href="/perfil">PERFIL</a></div>
+</article>
+<div class="bg-jugar d-flex flex-column justify-content-around align-items-center h-100">
+    <article>
+        <div class="title-wrapper">
+            <h1 class="sweet-title">
+                <span data-text="MODOS">MODOS</span>
+                <span data-text="DE JUEGO">DE JUEGO</span>
+            </h1>
+            <span class="top-title">-YO LOSE-</span>
+            <span class="bottom-title">¡Compite por tú honor!</span>
+        </div>
+    </article>
+    <article class="row justify-content-center">
+        <div class="col-md-4">
+            <a href="/partida&tipoPartida=solitario" class="btn-jugar solitario"><span>SOLITARIO</span></a>
+        </div>
+        <div class="col-md-4">
+            <a href="/partida&tipoPartida=vsbot" class="btn-jugar ia mt-md-5"><span>VS IA</span></a>
+        </div>
+        <div class="col-md-4">
+            <a href="/partida&tipoPartida=vsplayer" class="btn-jugar jugador"><span>VS JUGADOR</span></a>
+        </div>
+    </article>
+</div>
