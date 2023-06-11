@@ -1,0 +1,32 @@
+<section class="container">
+    <h2 class="mb-4 text-center">Preguntas de editor</h2>
+
+<!--           -->
+
+
+
+    <table class="table table-striped table-hover">
+        <h3>Tabla de editor</h3>
+        <thead>
+        <tr>
+            <th>Pregunta</th>
+            <th>Categoria</th>
+            <th>Cantidad de reportes</th>
+            <th>Estado</th>
+        </tr>
+        </thead>
+        <tbody>
+    {{#preguntas}}
+        <tr>
+            <td> <a href="/editor/verPregunta?pregunta={{id}}"  style="text-decoration: none; color: inherit;"> {{preg}}<br></a> </td>
+            <td>{{categ}}</td>
+            <td>{{cantReporte}}</td>
+            <td>{{descr}}</td>
+        </tr>
+
+        <!-- Agrega más filas según sea necesario -->
+    {{/preguntas}}
+        </tbody>
+    </table>
+
+</section>
