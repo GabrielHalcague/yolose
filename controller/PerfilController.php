@@ -23,16 +23,13 @@ class PerfilController
         $nombreUsuario = Session::get('username');
         $data["perfil"]= $this->userModel->getUsuarioByUsername($nombreUsuario);
         $idUsuario=$data["perfil"]["id"];
-
         $data = $this->datosComunesParaElPerfil($idUsuario, $data);
-
         $data['editarPerfil'] = true;
         $this->renderer->render("perfil", $data);
         exit();
 
     }
     public function usuario(){
-        //  http://localhost/perfil/usuario/user=gab
         $username = $_GET['user'];
         $data ["perfil"] = $this->userModel->getUsuarioByUsername($username);
         if(empty($data ["perfil"] )){

@@ -16,7 +16,6 @@
             VALUES ('$name', '$lastName', '$userName', '$password', '$genderId', '$email', '$namePhoto', '$birthDate', '$coordenadas',  NULL, '0')");
         }
 
-
         public function getUsuario($nickname, $password)
         {
             $password = hash('md5', $password);
@@ -51,6 +50,9 @@
             $this->database->execute($sql);
         }
 
-        
+        public function setRol($id){
+            $sql = "INSERT INTO rol_usuario(idUs, idRol) VALUES ('$id', 3)";
+            $this->database->execute($sql);
+        }
         
     }
