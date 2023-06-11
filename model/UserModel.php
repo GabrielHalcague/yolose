@@ -65,4 +65,15 @@ class UserModel{
                 GROUP BY h.n_partida, h.idUs";
         return $this->database->query($sql);
     }
+    public function getUsername($username){
+        return $this->database->SoloValorCampo("SELECT nombreUsuario FROM usuario WHERE nombreUsuario ='$username'");
+    }
+    public function setNuevoUsername($idUsuario, $nickName){
+        $sql="UPDATE usuario u SET u.nombreUsuario ='$nickName' where u.id='$idUsuario'";
+        $this->database->execute($sql);
+       // if(mysqli_affected_rows($sql) ==1){
+         //   return $nickName } else return null;
+    }
+
+
 }

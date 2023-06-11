@@ -23,11 +23,10 @@ class PerfilController
         $nombreUsuario = Session::get('username');
         $data["perfil"]= $this->userModel->getUsuarioByUsername($nombreUsuario);
         $idUsuario=$data["perfil"]["id"];
-        $data["maximoRespuestasCorrectas"]= $this->perfilModel->getMAximoRespuestasCorrectasPorIdUsuario($idUsuario);
-        $data["rank"]= $this->perfilModel->getRankingGlobalDelUsuario($data["perfil"]["id"]);
-        $data["historialPartidas"] = $this->perfilModel->obtenerHistorialPartidasUsuario($idUsuario);
-        $data["rutaQR"]=$this->generateQR($data["perfil"]["nombreUsuario"]);
-        $data['showQR'] = true;
+
+        $data = $this->datosComunesParaElPerfil($idUsuario, $data);
+
+        $data['editarPerfil'] = true;
         $this->renderer->render("perfil", $data);
         exit();
 
@@ -35,15 +34,13 @@ class PerfilController
     public function usuario(){
         //  http://localhost/perfil/usuario/user=gab
         $username = $_GET['user'];
-        $usuarioObtenido = $this->userModel->getUsuarioByUsername($username);
-        if(empty($usuarioObtenido) == 1){
+        $data ["perfil"] = $this->userModel->getUsuarioByUsername($username);
+        if(empty($data ["perfil"] )){
             Header::redirect("/");
         }
-        $data["perfil"]= $usuarioObtenido;
-        $data["mejorPartida"]= "10";
-        $data["rank"]= "100";
-        $data["rutaQR"]=$this->generateQR($data["perfil"]["nombreUsuario"]);
-        $data['showQR'] = true;
+
+        $idUsuario=$data["perfil"]["id"];
+        $data = $this->datosComunesParaElPerfil($idUsuario, $data);
         $this->renderer->render("perfil", $data);
         exit();
     }
@@ -51,17 +48,62 @@ class PerfilController
     private function generateQR($username){
         $enlace = "http:/localhost:80/perfil/usuario?user={$username}";
         $ruta = $this->qrGenerator->getQrPng($enlace);
-
         if(!$ruta){
             exit();
         }
         return $ruta;
     }
 
-    public function obtenerHistorialPartidas($nombreUsuario)
+  public function editar()
+  {
+      if (!Session::isLogged()) {
+          Header::redirect('/');
+      }
+      $nickName = $_POST["nickName"] ?? null;
+        if($this->validarFormatoNick($nickName)){
+            $data['nicknameEstado'] = $this->userModel->getUsername($nickName);
+        }else{
+            $data['nicknameEstado'] = $nickName;
+        }
+      echo json_encode($data);
+  }
+  public function confirmar(){
+      if (!Session::isLogged()) {
+          Header::redirect('/');
+      }
+      $nickName = $_POST["nickName"] ?? null;
+      $idUsuario = $_POST["idUsuario"] ?? null;
+      if ($idUsuario != Session::get('idUsuario')) {
+          Header::redirect('/');
+      }
+
+      if($this->validarFormatoNick($nickName)){
+         $this->userModel->setNuevoUsername($idUsuario, $nickName);
+          Session::deleteValue('username');
+          Session::set('username', $nickName);
+          $data['nicknameEstado'] = $nickName;
+      }else{
+          $data['nicknameEstado'] = null;
+      }
+      echo json_encode($data);
+  }
+
+  private function validarFormatoNick($nickName){
+        if(strlen($nickName)<3 ||strlen($nickName)>30 || $nickName == null){
+            return false;
+        }
+        return true;
+  }
+
+    public function datosComunesParaElPerfil(mixed $idUsuario, array $data): array
     {
-        $usuario = $this->userModel->getUsuarioByUsername($nombreUsuario);
-        return $this->userModel->obtenerHistorialPartidasUsuario($usuario["id"]);
+        $data["maximoRespuestasCorrectas"] = $this->perfilModel->getMAximoRespuestasCorrectasPorIdUsuario($idUsuario);
+        $data["rank"] = $this->perfilModel->getRankingGlobalDelUsuario($data["perfil"]["id"]);
+        $data["historialPartidas"] = $this->perfilModel->obtenerHistorialPartidasUsuario($idUsuario);
+        $data["rutaQR"] = $this->generateQR($data["perfil"]["nombreUsuario"]);
+        $data['showQR'] = true;
+        return $data;
     }
+
 
 }
