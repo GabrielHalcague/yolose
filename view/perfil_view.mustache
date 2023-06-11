@@ -2,7 +2,7 @@
 
 <!-- Button trigger modal -->
 {{#editarPerfil}}
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
     Editar Perfil
 </button>
 <!-- Modal -->
@@ -30,70 +30,7 @@
 </div>
 {{/perfil}}
 {{/editarPerfil}}
-<script>
-    const myModal = document.getElementById('myModal')
-    const myInput = document.getElementById('myInput')
-    myModal.addEventListener('shown.bs.modal', () => {
-        myInput.focus();
-    })
-    // esto tira un error, si saco los scrip, el ajax no anda
-</script>
-<script>
-    $('#validarNick').click(function (){
-        $('#confirmarNick').attr("disabled", "disabled");
-        $('#nuevoNickOculto').val($('#nuevoNick').val());
 
-        var valorInput = $('#nuevoNickOculto').val();
-
-        $.ajax({
-            url: '/perfil/editar',
-            method: 'POST',
-            data: {nickName: valorInput},
-                beforeSend: function () {
-                    $("#nickNameEstado").html("Procesando, espere por favor...");
-                    },
-                success: function (response) {
-                     const data = JSON.parse(response);
-                     var estado = data.nicknameEstado;
-                     console.log(estado);
-                     if(estado === null){
-                         $("#nickNameEstado").html('disponible');
-                         $('#confirmarNick').removeAttr("disabled");
-                     }
-                     else{
-                         $("#nickNameEstado").html('no Disponible');
-                     }
-                }
-            })
-        });
-    $('#confirmarNick').click(function (){
-        var valorInput = $('#nuevoNickOculto').val();
-        var idUsuario= $('#idUsuario').val();
-
-        $.ajax({
-            url: '/perfil/confirmar',
-            method: 'POST',
-            data: {nickName: valorInput, idUsuario: idUsuario},
-            beforeSend: function () {
-                $("#nickNameEstado").html("Procesando, espere por favor...");
-            },
-            success: function (response) {
-                const data = JSON.parse(response);
-                var estado = data.nicknameEstado;
-                console.log(estado);
-                if(estado === null){
-                    $("#nickNameEstado").html('Reintentar');
-                }
-                else{
-                    $("#nickNameEstado").html('Se cambio el usuario');
-                    location.reload()
-                 }
-            }
-        })
-    });
-
-
-</script>
 
 <section class="container">
     <article class="row text-center">
