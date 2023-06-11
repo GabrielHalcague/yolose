@@ -99,7 +99,7 @@ class Configuration
 
     public function getPerfilController()
     {
-        return new perfilController($this->getRenderer(), new UserModel($this->getDatabase()), $this->getQRGenerator());
+        return new perfilController($this->getRenderer(), new UserModel($this->getDatabase()), new PerfilModel($this->getDatabase()), $this->getQRGenerator());
     }
     public function getRankingController(){
         include_once ('controller/RankingController.php');

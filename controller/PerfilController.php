@@ -7,10 +7,12 @@ class PerfilController
 {
     private $renderer ;
     private $userModel;
+    private $perfilModel;
     private $qrGenerator;
 
-    public function __construct($renderer, $userModel, $qrGenerator) {
+    public function __construct($renderer, $userModel, $perfilModel, $qrGenerator) {
         $this->userModel = $userModel;
+        $this->perfilModel = $perfilModel;
         $this->renderer = $renderer;
         $this->qrGenerator = $qrGenerator;
     }
@@ -20,13 +22,15 @@ class PerfilController
         }
         $nombreUsuario = Session::get('username');
         $data["perfil"]= $this->userModel->getUsuarioByUsername($nombreUsuario);
-        $data["mejorPartida"]= "10"; // cambiar cuando est la bd
-        $data["rank"]= "100";
+        $idUsuario=$data["perfil"]["id"];
+        $data["maximoRespuestasCorrectas"]= $this->perfilModel->getMAximoRespuestasCorrectasPorIdUsuario($idUsuario);
+        $data["rank"]= $this->perfilModel->getRankingGlobalDelUsuario($data["perfil"]["id"]);
+        $data["historialPartidas"] = $this->perfilModel->obtenerHistorialPartidasUsuario($idUsuario);
         $data["rutaQR"]=$this->generateQR($data["perfil"]["nombreUsuario"]);
-        $data["historialPartida"] = $this->obtenerHistorialPartidas($nombreUsuario);
         $data['showQR'] = true;
         $this->renderer->render("perfil", $data);
         exit();
+
     }
     public function usuario(){
         //  http://localhost/perfil/usuario/user=gab
