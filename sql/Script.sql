@@ -1,3 +1,4 @@
+drop database if exists yolose2;
 CREATE DATABASE IF NOT EXISTS yolose2;
 USE yolose2;
 
@@ -74,7 +75,7 @@ CREATE TABLE IF NOT EXISTS estado
 
 CREATE TABLE IF NOT EXISTS pregunta
 (
-    id      int(11) PRIMARY KEY AUTO_INCREMENT,
+    id int(11) PRIMARY KEY AUTO_INCREMENT,
     preg    varchar(500),
     idCat   int(11),
     idEst   int(11),
@@ -355,13 +356,22 @@ VALUES (1, 1),(2, 5),
 (31,112);
 
 CREATE VIEW dificultadMedia AS
-SELECT p.id 'preguntaID', p.preg 'pregunta', prc.idResp 'respuestaCorrecta', c.color
-FROM pregunta p
-         JOIN categoria c ON p.idCat = c.id
-         JOIN pregunta_respuesta_correcta prc ON p.id = prc.idPreg
-         JOIN estado e ON p.idEst = e.id
-WHERE (p.resCor / p.pregTot) BETWEEN 0.3 AND 0.7
-  AND e.descr LIKE 'ACTIVO';
+    SELECT 
+        p.id 'preguntaID',
+        p.preg 'pregunta',
+        prc.idResp 'respuestaCorrecta',
+        c.color
+    FROM
+        pregunta p
+            JOIN
+        categoria c ON p.idCat = c.id
+            JOIN
+        pregunta_respuesta_correcta prc ON p.id = prc.idPreg
+            JOIN
+        estado e ON p.idEst = e.id
+    WHERE
+        (p.resCor / p.pregTot) BETWEEN 0.3 AND 0.7
+            AND e.descr LIKE 'ACTIVO';
 
 CREATE VIEW dificultadFacil AS
 SELECT p.id 'preguntaID', p.preg 'pregunta', prc.idResp 'respuestaCorrecta', c.color
@@ -400,12 +410,12 @@ FROM historialPartidas hp
 GROUP BY hp.idUs
 order by SUM(hp.estado=1) DESC;
 
+
 CREATE VIEW dificultadUsuario AS
 SELECT h.idUs, SUM(h.estado = 0) / COUNT(*) 'dificultad'
 FROM historialPartidas h
 GROUP BY h.idUs;
 
-select * from dificultadusuario;
 
 CREATE VIEW obtenerPreguntas AS
 SELECT p.id 'preguntaID', p.preg 'pregunta', prc.idResp 'respuestaCorrecta', c.color
@@ -413,3 +423,47 @@ FROM pregunta p
          JOIN pregunta_respuesta_correcta prc ON p.id = prc.idPreg
          JOIN categoria c ON p.idCat = c.id
          JOIN estado e ON p.idEst = e.id;
+         
+         
+CREATE TABLE tipoPartida(
+	Id INT PRIMARY KEY,
+    descripcion VARCHAR(20)
+);
+
+INSERT INTO tipoPartida(Id, descripcion) VALUES (1,'Solitario');
+INSERT INTO tipoPartida(Id, descripcion) VALUES (2,'IA');
+INSERT INTO tipoPartida(Id,descripcion) VALUES (3,'PVP');
+
+ALTER TABLE historialpartidas ADD COLUMN tipoPartida INT;
+ALTER TABLE historialpartidas ADD CONSTRAINT Fk_historialPartida_tipoPartida FOREIGN KEY (tipoPartida) REFERENCES tipoPartida(Id);
+
+
+
+create table motivoReporte(
+                              idMotivo int primary key auto_increment,
+                              descripcion varchar(100)
+);
+
+insert into motivoReporte(descripcion)
+values ('Respuesta equivocada'),('Pregunta mal redactada'), ('Contenido ofensivo'),('Otro');
+
+
+alter table pregunta add column idUsuario int references usuario (id),
+    add column f_creacion date DEFAULT curdate();
+
+update pregunta set idUsuario = 2 ;
+
+
+create table `reportePregunta`(
+    idReporte int primary key auto_increment,
+    idUsuario int,
+    idPregunta int,
+    f_reporte date default curdate()	    
+);
+
+ALTER TABLE reportePregunta ADD CONSTRAINT Fk_reportePregunta_idUsuario FOREIGN KEY (idUsuario)  references usuario (id);
+ALTER TABLE `reportepregunta` ADD CONSTRAINT `Fk_reportePregunta_idPregunta` FOREIGN KEY (`idPregunta`) REFERENCES `pregunta`(`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+
+
+
