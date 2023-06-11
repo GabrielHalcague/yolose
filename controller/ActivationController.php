@@ -28,7 +28,7 @@ class ActivationController{
         $momentoEnvio = strtotime( $user[0]['f_registro']);
         $momentoActual = (new DateTime)->getTimestamp();
 
-        $dif = (int)(($momentoActual - $momentoEnvio)/60)/60;
+        $dif = (int)(($momentoActual - $momentoEnvio)/6000)/6000;
 
         if($dif > 23){
             $data['id']=$id;

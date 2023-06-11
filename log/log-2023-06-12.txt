@@ -612,3 +612,150 @@ from (select idUs, n_partida, count(*) AS puntajeMaximo from historialpartidas  
                 FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
                 WHERE hp.n_partida LIKE '64864aca80375' AND u.nombreUsuario LIKE 'admin2'
                 GROUP BY u.id
+[2023-06-12][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-12][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-12][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-12][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-12][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-12][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-12][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-12][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-12][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-12][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 3
+[2023-06-12][INFO]Ejecutando query: SELECT * FROM dificultadFacil dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 3)
+				LIMIT 4
+[2023-06-12][INFO]Ejecutando query: DELETE FROM historialUsuario WHERE idUs = '3'
+[2023-06-12][INFO]Ejecutando query: SELECT * FROM dificultadFacil dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 3)
+				LIMIT 4
+[2023-06-12][INFO]Ejecutando query: SELECT u.trampas FROM usuario u WHERE u.id = 3
+[2023-06-12][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '14' ORDER BY RAND()
+[2023-06-12][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64864aca80375' AND u.nombreUsuario LIKE 'admin2'
+                GROUP BY u.id
+[2023-06-12][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-12][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-12][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-12][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-12][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-12][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-12][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-12][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-12][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-12][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-12][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-12][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-12][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-12][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-12][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-12][INFO]Ejecutando query: SELECT correo FROM usuario
+                                       WHERE correo ='gabirel@live.com'
+[2023-06-12][INFO]Ejecutando query: SELECT nombreUsuario FROM usuario WHERE nombreUsuario ='gabriel'
+[2023-06-12][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-12][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-12][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-12][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-12][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-12][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-12][INFO]Ejecutando query: SELECT correo FROM usuario
+                                       WHERE correo ='gabirel@live.com'
+[2023-06-12][INFO]Ejecutando query: SELECT nombreUsuario FROM usuario WHERE nombreUsuario ='gabriel'
+[2023-06-12][INFO]Ejecutando query: insert into usuario(`nombre`, `apellido`, `nombreUsuario`, `password`, `generoId`, `correo`, `fotoPerfil`, `f_nacimiento`, `coordenadas`, `activo`, `trampas`)
+            VALUES ('gabriel', 'gabriel', 'gabriel', '647431b5ca55b04fdf3c2fce31ef1915', '1', 'gabirel@live.com', '-34.650392,-58.55773', '1991-09-09', 'gabriel.jpg',  NULL, '0')
+[2023-06-12][INFO]Ejecutando query: SELECT * FROM usuario
+                                       WHERE nombreUsuario ='gabriel'
+[2023-06-12][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-12][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-12][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-12][INFO]Ejecutando query: SELECT * FROM usuario
+                                       WHERE id ='8'
+[2023-06-12][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-12][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-12][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-12][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-12][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-12][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-12][INFO]Ejecutando query: SELECT correo FROM usuario
+                                       WHERE correo ='gabirel@live.com'
+[2023-06-12][INFO]Ejecutando query: SELECT nombreUsuario FROM usuario WHERE nombreUsuario ='gabriel'
+[2023-06-12][INFO]Ejecutando query: insert into usuario(`nombre`, `apellido`, `nombreUsuario`, `password`, `generoId`, `correo`, `fotoPerfil`, `f_nacimiento`, `coordenadas`, `activo`, `trampas`)
+            VALUES ('gabriel', 'gabriel', 'gabriel', '647431b5ca55b04fdf3c2fce31ef1915', '1', 'gabirel@live.com', 'gabriel.jpg', '1991-09-09', '-34.647567,-58.535585',  NULL, '0')
+[2023-06-12][INFO]Ejecutando query: SELECT * FROM usuario
+                                       WHERE nombreUsuario ='gabriel'
+[2023-06-12][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-12][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-12][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-12][INFO]Ejecutando query: SELECT * FROM usuario
+                                       WHERE id ='9'
+[2023-06-12][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-12][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-12][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-12][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-12][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-12][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-12][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario, u.activo, r.descr 'rol' FROM usuario u
+                                       JOIN rol_usuario ru on u.id = ru.idUs
+                                       JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='gabriel'
+                                       AND password='647431b5ca55b04fdf3c2fce31ef1915'
+[2023-06-12][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-12][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-12][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-12][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario, u.activo, r.descr 'rol' FROM usuario u
+                                       JOIN rol_usuario ru on u.id = ru.idUs
+                                       JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='gabriel'
+                                       AND password='647431b5ca55b04fdf3c2fce31ef1915'
+[2023-06-12][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-12][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-12][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-12][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario, u.activo, r.descr 'rol' FROM usuario u
+                                       JOIN rol_usuario ru on u.id = ru.idUs
+                                       JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='admin2'
+                                       AND password='21232f297a57a5a743894a0e4a801fc3'
+[2023-06-12][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-12][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-12][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-12][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-12][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-12][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'admin2'
+[2023-06-12][INFO]Ejecutando query: select MAX(contador) as maxRespuetasC from (SELECT idUs, n_partida, COUNT(*) AS contador
+    FROM historialpartidas where idUs='3' GROUP BY idUs, n_partida) as subconsulta;
+[2023-06-12][INFO]Ejecutando query: select ranking from (select ROW_NUMBER() OVER (ORDER BY maximo desc) as ranking, idUs, n_partida, max(puntajeMaximo) as maximo 
+from (select idUs, n_partida, count(*) AS puntajeMaximo from historialpartidas  GROUP BY  n_partida, idUs)as sub group by idUs order by maximo desc) as subconsulta where idUs= '3';
+[2023-06-12][INFO]Ejecutando query: SELECT h.n_Partida, h.f_partida, u.nombreUsuario,h.tipoPartida, SUM(estado) AS sumaPreguntasContestadas
+                FROM historialpartidas AS h
+                JOIN usuario AS u 
+                WHERE h.idUs = '3'
+                GROUP BY h.n_partida, h.idUs
+[2023-06-12][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-12][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-12][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-12][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-12][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-12][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
