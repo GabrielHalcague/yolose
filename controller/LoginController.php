@@ -51,6 +51,7 @@ class LoginController
             Session::set('idUsuario', $usuarioBuscado["id"] );
             Session::set('logged', true);
             Session::set('rol', $usuarioBuscado["rol"]);
+
             Session::set('username', $username);
             Header::redirect("/");
             exit();

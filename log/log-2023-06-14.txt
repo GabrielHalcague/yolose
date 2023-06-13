@@ -1,0 +1,1305 @@
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.nombreUsuario, u.fotoPerfil, SUM(hp.estado='1') as puntaje FROM historialPartidas hp
+         JOIN usuario u ON hp.idUs = u.id  GROUP BY hp.idUs
+                    order by SUM(hp.estado='1') DESC
+[2023-06-14][INFO]Ejecutando query: SELECT u.nombreUsuario, u.fotoPerfil, SUM(hp.estado='2') as puntaje FROM historialPartidas hp
+         JOIN usuario u ON hp.idUs = u.id  GROUP BY hp.idUs
+                    order by SUM(hp.estado='2') DESC
+[2023-06-14][INFO]Ejecutando query: SELECT u.nombreUsuario, u.fotoPerfil, SUM(hp.estado='3') as puntaje FROM historialPartidas hp
+         JOIN usuario u ON hp.idUs = u.id  GROUP BY hp.idUs
+                    order by SUM(hp.estado='3') DESC
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.nombreUsuario, u.fotoPerfil, SUM(hp.estado='1') as puntaje FROM historialPartidas hp
+         JOIN usuario u ON hp.idUs = u.id  GROUP BY hp.idUs
+                    order by SUM(hp.estado='1') DESC
+[2023-06-14][INFO]Ejecutando query: SELECT u.nombreUsuario, u.fotoPerfil, SUM(hp.estado='2') as puntaje FROM historialPartidas hp
+         JOIN usuario u ON hp.idUs = u.id  GROUP BY hp.idUs
+                    order by SUM(hp.estado='2') DESC
+[2023-06-14][INFO]Ejecutando query: SELECT u.nombreUsuario, u.fotoPerfil, SUM(hp.estado='3') as puntaje FROM historialPartidas hp
+         JOIN usuario u ON hp.idUs = u.id  GROUP BY hp.idUs
+                    order by SUM(hp.estado='3') DESC
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.nombreUsuario, u.fotoPerfil, SUM(hp.estado='1') as puntaje FROM historialPartidas hp
+         JOIN usuario u ON hp.idUs = u.id  GROUP BY hp.idUs
+                    order by SUM(hp.estado='1') DESC
+[2023-06-14][INFO]Ejecutando query: SELECT u.nombreUsuario, u.fotoPerfil, SUM(hp.estado='2') as puntaje FROM historialPartidas hp
+         JOIN usuario u ON hp.idUs = u.id  GROUP BY hp.idUs
+                    order by SUM(hp.estado='2') DESC
+[2023-06-14][INFO]Ejecutando query: SELECT u.nombreUsuario, u.fotoPerfil, SUM(hp.estado='3') as puntaje FROM historialPartidas hp
+         JOIN usuario u ON hp.idUs = u.id  GROUP BY hp.idUs
+                    order by SUM(hp.estado='3') DESC
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.nombreUsuario, u.fotoPerfil, SUM(hp.estado='1') as puntaje FROM historialPartidas hp
+         JOIN usuario u ON hp.idUs = u.id  GROUP BY hp.idUs
+                    order by SUM(hp.estado='1') DESC
+[2023-06-14][INFO]Ejecutando query: SELECT u.nombreUsuario, u.fotoPerfil, SUM(hp.estado='2') as puntaje FROM historialPartidas hp
+         JOIN usuario u ON hp.idUs = u.id  GROUP BY hp.idUs
+                    order by SUM(hp.estado='2') DESC
+[2023-06-14][INFO]Ejecutando query: SELECT u.nombreUsuario, u.fotoPerfil, SUM(hp.estado='3') as puntaje FROM historialPartidas hp
+         JOIN usuario u ON hp.idUs = u.id  GROUP BY hp.idUs
+                    order by SUM(hp.estado='3') DESC
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.nombreUsuario, u.fotoPerfil, SUM(hp.estado='1') as puntaje FROM historialPartidas hp
+         JOIN usuario u ON hp.idUs = u.id  GROUP BY hp.idUs
+                    order by SUM(hp.estado='1') DESC
+[2023-06-14][INFO]Ejecutando query: SELECT u.nombreUsuario, u.fotoPerfil, SUM(hp.estado='2') as puntaje FROM historialPartidas hp
+         JOIN usuario u ON hp.idUs = u.id  GROUP BY hp.idUs
+                    order by SUM(hp.estado='2') DESC
+[2023-06-14][INFO]Ejecutando query: SELECT u.nombreUsuario, u.fotoPerfil, SUM(hp.estado='3') as puntaje FROM historialPartidas hp
+         JOIN usuario u ON hp.idUs = u.id  GROUP BY hp.idUs
+                    order by SUM(hp.estado='3') DESC
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.nombreUsuario, u.fotoPerfil, SUM(hp.estado='1') as puntaje FROM historialPartidas hp
+         JOIN usuario u ON hp.idUs = u.id  GROUP BY hp.idUs
+                    order by SUM(hp.estado='1') DESC
+[2023-06-14][INFO]Ejecutando query: SELECT u.nombreUsuario, u.fotoPerfil, SUM(hp.estado='2') as puntaje FROM historialPartidas hp
+         JOIN usuario u ON hp.idUs = u.id  GROUP BY hp.idUs
+                    order by SUM(hp.estado='2') DESC
+[2023-06-14][INFO]Ejecutando query: SELECT u.nombreUsuario, u.fotoPerfil, SUM(hp.estado='3') as puntaje FROM historialPartidas hp
+         JOIN usuario u ON hp.idUs = u.id  GROUP BY hp.idUs
+                    order by SUM(hp.estado='3') DESC
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.nombreUsuario, u.fotoPerfil, SUM(hp.estado='1') as puntaje FROM historialPartidas hp
+         JOIN usuario u ON hp.idUs = u.id  GROUP BY hp.idUs
+                    order by SUM(hp.estado='1') DESC
+[2023-06-14][INFO]Ejecutando query: SELECT u.nombreUsuario, u.fotoPerfil, SUM(hp.estado='2') as puntaje FROM historialPartidas hp
+         JOIN usuario u ON hp.idUs = u.id  GROUP BY hp.idUs
+                    order by SUM(hp.estado='2') DESC
+[2023-06-14][INFO]Ejecutando query: SELECT u.nombreUsuario, u.fotoPerfil, SUM(hp.estado='3') as puntaje FROM historialPartidas hp
+         JOIN usuario u ON hp.idUs = u.id  GROUP BY hp.idUs
+                    order by SUM(hp.estado='3') DESC
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.nombreUsuario, u.fotoPerfil, SUM(hp.estado='1') as puntaje FROM historialPartidas hp
+         JOIN usuario u ON hp.idUs = u.id  GROUP BY hp.idUs
+                    order by SUM(hp.estado='1') DESC
+[2023-06-14][INFO]Ejecutando query: SELECT u.nombreUsuario, u.fotoPerfil, SUM(hp.estado='2') as puntaje FROM historialPartidas hp
+         JOIN usuario u ON hp.idUs = u.id  GROUP BY hp.idUs
+                    order by SUM(hp.estado='2') DESC
+[2023-06-14][INFO]Ejecutando query: SELECT u.nombreUsuario, u.fotoPerfil, SUM(hp.estado='3') as puntaje FROM historialPartidas hp
+         JOIN usuario u ON hp.idUs = u.id  GROUP BY hp.idUs
+                    order by SUM(hp.estado='3') DESC
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.nombreUsuario, u.fotoPerfil, SUM(hp.estado='1') as puntaje FROM historialPartidas hp
+         JOIN usuario u ON hp.idUs = u.id  GROUP BY hp.idUs
+                    order by SUM(hp.estado='1') DESC
+[2023-06-14][INFO]Ejecutando query: SELECT u.nombreUsuario, u.fotoPerfil, SUM(hp.estado='2') as puntaje FROM historialPartidas hp
+         JOIN usuario u ON hp.idUs = u.id  GROUP BY hp.idUs
+                    order by SUM(hp.estado='2') DESC
+[2023-06-14][INFO]Ejecutando query: SELECT u.nombreUsuario, u.fotoPerfil, SUM(hp.estado='3') as puntaje FROM historialPartidas hp
+         JOIN usuario u ON hp.idUs = u.id  GROUP BY hp.idUs
+                    order by SUM(hp.estado='3') DESC
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'editor'
+[2023-06-14][INFO]Ejecutando query: select MAX(contador) as maxRespuetasC from (SELECT idUs, n_partida, COUNT(*) AS contador
+    FROM historialpartidas where idUs='2' GROUP BY idUs, n_partida) as subconsulta;
+[2023-06-14][INFO]Ejecutando query: select ranking from (select ROW_NUMBER() OVER (ORDER BY maximo desc) as ranking, idUs, n_partida, max(puntajeMaximo) as maximo 
+from (select idUs, n_partida, count(*) AS puntajeMaximo from historialpartidas  GROUP BY  n_partida, idUs)as sub group by idUs order by maximo desc) as subconsulta where idUs= '2';
+[2023-06-14][INFO]Ejecutando query: SELECT h.n_Partida, h.f_partida, u.nombreUsuario,h.tipoPartida, SUM(estado) AS sumaPreguntasContestadas
+                FROM historialpartidas AS h
+                JOIN usuario AS u 
+                WHERE h.idUs = '2'
+                GROUP BY h.n_partida, h.idUs
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.nombreUsuario, u.fotoPerfil, SUM(hp.estado='1') as puntaje FROM historialPartidas hp
+         JOIN usuario u ON hp.idUs = u.id  GROUP BY hp.idUs
+                    order by SUM(hp.estado='1') DESC
+[2023-06-14][INFO]Ejecutando query: SELECT u.nombreUsuario, u.fotoPerfil, SUM(hp.estado='2') as puntaje FROM historialPartidas hp
+         JOIN usuario u ON hp.idUs = u.id  GROUP BY hp.idUs
+                    order by SUM(hp.estado='2') DESC
+[2023-06-14][INFO]Ejecutando query: SELECT u.nombreUsuario, u.fotoPerfil, SUM(hp.estado='3') as puntaje FROM historialPartidas hp
+         JOIN usuario u ON hp.idUs = u.id  GROUP BY hp.idUs
+                    order by SUM(hp.estado='3') DESC
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'editor'
+[2023-06-14][INFO]Ejecutando query: select MAX(contador) as maxRespuetasC from (SELECT idUs, n_partida, COUNT(*) AS contador
+    FROM historialpartidas where idUs='2' GROUP BY idUs, n_partida) as subconsulta;
+[2023-06-14][INFO]Ejecutando query: select ranking from (select ROW_NUMBER() OVER (ORDER BY maximo desc) as ranking, idUs, n_partida, max(puntajeMaximo) as maximo 
+from (select idUs, n_partida, count(*) AS puntajeMaximo from historialpartidas  GROUP BY  n_partida, idUs)as sub group by idUs order by maximo desc) as subconsulta where idUs= '2';
+[2023-06-14][INFO]Ejecutando query: SELECT h.n_Partida, h.f_partida, u.nombreUsuario,h.tipoPartida, SUM(estado) AS sumaPreguntasContestadas
+                FROM historialpartidas AS h
+                JOIN usuario AS u 
+                WHERE h.idUs = '2'
+                GROUP BY h.n_partida, h.idUs
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'admin2'
+[2023-06-14][INFO]Ejecutando query: select MAX(contador) as maxRespuetasC from (SELECT idUs, n_partida, COUNT(*) AS contador
+    FROM historialpartidas where idUs='3' GROUP BY idUs, n_partida) as subconsulta;
+[2023-06-14][INFO]Ejecutando query: select ranking from (select ROW_NUMBER() OVER (ORDER BY maximo desc) as ranking, idUs, n_partida, max(puntajeMaximo) as maximo 
+from (select idUs, n_partida, count(*) AS puntajeMaximo from historialpartidas  GROUP BY  n_partida, idUs)as sub group by idUs order by maximo desc) as subconsulta where idUs= '3';
+[2023-06-14][INFO]Ejecutando query: SELECT h.n_Partida, h.f_partida, u.nombreUsuario,h.tipoPartida, SUM(estado) AS sumaPreguntasContestadas
+                FROM historialpartidas AS h
+                JOIN usuario AS u 
+                WHERE h.idUs = '3'
+                GROUP BY h.n_partida, h.idUs
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'admin2'
+[2023-06-14][INFO]Ejecutando query: select MAX(contador) as maxRespuetasC from (SELECT idUs, n_partida, COUNT(*) AS contador
+    FROM historialpartidas where idUs='3' GROUP BY idUs, n_partida) as subconsulta;
+[2023-06-14][INFO]Ejecutando query: select ranking from (select ROW_NUMBER() OVER (ORDER BY maximo desc) as ranking, idUs, n_partida, max(puntajeMaximo) as maximo 
+from (select idUs, n_partida, count(*) AS puntajeMaximo from historialpartidas  GROUP BY  n_partida, idUs)as sub group by idUs order by maximo desc) as subconsulta where idUs= '3';
+[2023-06-14][INFO]Ejecutando query: SELECT h.n_Partida, h.f_partida, u.nombreUsuario,h.tipoPartida, SUM(estado) AS sumaPreguntasContestadas
+                FROM historialpartidas AS h
+                JOIN usuario AS u 
+                WHERE h.idUs = '3'
+                GROUP BY h.n_partida, h.idUs
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'admin2'
+[2023-06-14][INFO]Ejecutando query: select MAX(contador) as maxRespuetasC from (SELECT idUs, n_partida, COUNT(*) AS contador
+    FROM historialpartidas where idUs='3' GROUP BY idUs, n_partida) as subconsulta;
+[2023-06-14][INFO]Ejecutando query: select ranking from (select ROW_NUMBER() OVER (ORDER BY maximo desc) as ranking, idUs, n_partida, max(puntajeMaximo) as maximo 
+from (select idUs, n_partida, count(*) AS puntajeMaximo from historialpartidas  GROUP BY  n_partida, idUs)as sub group by idUs order by maximo desc) as subconsulta where idUs= '3';
+[2023-06-14][INFO]Ejecutando query: SELECT h.n_Partida, h.f_partida, u.nombreUsuario,h.tipoPartida, SUM(estado) AS sumaPreguntasContestadas
+                FROM historialpartidas AS h
+                JOIN usuario AS u 
+                WHERE h.idUs = '3'
+                GROUP BY h.n_partida, h.idUs
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'admin2'
+[2023-06-14][INFO]Ejecutando query: select MAX(contador) as maxRespuetasC from (SELECT idUs, n_partida, COUNT(*) AS contador
+    FROM historialpartidas where idUs='3' GROUP BY idUs, n_partida) as subconsulta;
+[2023-06-14][INFO]Ejecutando query: select ranking from (select ROW_NUMBER() OVER (ORDER BY maximo desc) as ranking, idUs, n_partida, max(puntajeMaximo) as maximo 
+from (select idUs, n_partida, count(*) AS puntajeMaximo from historialpartidas  GROUP BY  n_partida, idUs)as sub group by idUs order by maximo desc) as subconsulta where idUs= '3';
+[2023-06-14][INFO]Ejecutando query: SELECT h.n_Partida, h.f_partida, u.nombreUsuario,h.tipoPartida, SUM(estado) AS sumaPreguntasContestadas
+                FROM historialpartidas AS h
+                JOIN usuario AS u 
+                WHERE h.idUs = '3'
+                GROUP BY h.n_partida, h.idUs
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'admin2'
+[2023-06-14][INFO]Ejecutando query: select MAX(contador) as maxRespuetasC from (SELECT idUs, n_partida, COUNT(*) AS contador
+    FROM historialpartidas where idUs='3' GROUP BY idUs, n_partida) as subconsulta;
+[2023-06-14][INFO]Ejecutando query: select ranking from (select ROW_NUMBER() OVER (ORDER BY maximo desc) as ranking, idUs, n_partida, max(puntajeMaximo) as maximo 
+from (select idUs, n_partida, count(*) AS puntajeMaximo from historialpartidas  GROUP BY  n_partida, idUs)as sub group by idUs order by maximo desc) as subconsulta where idUs= '3';
+[2023-06-14][INFO]Ejecutando query: SELECT h.n_Partida, h.f_partida, u.nombreUsuario,h.tipoPartida, SUM(estado) AS sumaPreguntasContestadas
+                FROM historialpartidas AS h
+                JOIN usuario AS u 
+                WHERE h.idUs = '3'
+                GROUP BY h.n_partida, h.idUs
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'admin2'
+[2023-06-14][INFO]Ejecutando query: select MAX(contador) as maxRespuetasC from (SELECT idUs, n_partida, COUNT(*) AS contador
+    FROM historialpartidas where idUs='3' GROUP BY idUs, n_partida) as subconsulta;
+[2023-06-14][INFO]Ejecutando query: select ranking from (select ROW_NUMBER() OVER (ORDER BY maximo desc) as ranking, idUs, n_partida, max(puntajeMaximo) as maximo 
+from (select idUs, n_partida, count(*) AS puntajeMaximo from historialpartidas  GROUP BY  n_partida, idUs)as sub group by idUs order by maximo desc) as subconsulta where idUs= '3';
+[2023-06-14][INFO]Ejecutando query: SELECT h.n_Partida, h.f_partida, u.nombreUsuario,h.tipoPartida, SUM(estado) AS sumaPreguntasContestadas
+                FROM historialpartidas AS h
+                JOIN usuario AS u 
+                WHERE h.idUs = '3'
+                GROUP BY h.n_partida, h.idUs
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario, u.activo, r.descr 'rol' FROM usuario u
+                                       JOIN rol_usuario ru on u.id = ru.idUs
+                                       JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='usuario'
+                                       AND password='f8032d5cae3de20fcec887f395ec9a6a'
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-14][INFO]Ejecutando query: select MAX(contador) as maxRespuetasC from (SELECT idUs, n_partida, COUNT(*) AS contador
+    FROM historialpartidas where idUs='1' GROUP BY idUs, n_partida) as subconsulta;
+[2023-06-14][INFO]Ejecutando query: select ranking from (select ROW_NUMBER() OVER (ORDER BY maximo desc) as ranking, idUs, n_partida, max(puntajeMaximo) as maximo 
+from (select idUs, n_partida, count(*) AS puntajeMaximo from historialpartidas  GROUP BY  n_partida, idUs)as sub group by idUs order by maximo desc) as subconsulta where idUs= '1';
+[2023-06-14][INFO]Ejecutando query: SELECT h.n_Partida, h.f_partida, u.nombreUsuario,h.tipoPartida, SUM(estado) AS sumaPreguntasContestadas
+                FROM historialpartidas AS h
+                JOIN usuario AS u 
+                WHERE h.idUs = '1'
+                GROUP BY h.n_partida, h.idUs
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-14][INFO]Ejecutando query: select MAX(contador) as maxRespuetasC from (SELECT idUs, n_partida, COUNT(*) AS contador
+    FROM historialpartidas where idUs='1' GROUP BY idUs, n_partida) as subconsulta;
+[2023-06-14][INFO]Ejecutando query: select ranking from (select ROW_NUMBER() OVER (ORDER BY maximo desc) as ranking, idUs, n_partida, max(puntajeMaximo) as maximo 
+from (select idUs, n_partida, count(*) AS puntajeMaximo from historialpartidas  GROUP BY  n_partida, idUs)as sub group by idUs order by maximo desc) as subconsulta where idUs= '1';
+[2023-06-14][INFO]Ejecutando query: SELECT h.n_Partida, h.f_partida, u.nombreUsuario,h.tipoPartida, SUM(estado) AS sumaPreguntasContestadas
+                FROM historialpartidas AS h
+                JOIN usuario AS u 
+                WHERE h.idUs = '1'
+                GROUP BY h.n_partida, h.idUs
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-14][INFO]Ejecutando query: select MAX(contador) as maxRespuetasC from (SELECT idUs, n_partida, COUNT(*) AS contador
+    FROM historialpartidas where idUs='1' GROUP BY idUs, n_partida) as subconsulta;
+[2023-06-14][INFO]Ejecutando query: select ranking from (select ROW_NUMBER() OVER (ORDER BY maximo desc) as ranking, idUs, n_partida, max(puntajeMaximo) as maximo 
+from (select idUs, n_partida, count(*) AS puntajeMaximo from historialpartidas  GROUP BY  n_partida, idUs)as sub group by idUs order by maximo desc) as subconsulta where idUs= '1';
+[2023-06-14][INFO]Ejecutando query: SELECT h.n_Partida, h.f_partida, u.nombreUsuario,h.tipoPartida, SUM(estado) AS sumaPreguntasContestadas
+                FROM historialpartidas AS h
+                JOIN usuario AS u 
+                WHERE h.idUs = '1'
+                GROUP BY h.n_partida, h.idUs
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-14][INFO]Ejecutando query: select MAX(contador) as maxRespuetasC from (SELECT idUs, n_partida, COUNT(*) AS contador
+    FROM historialpartidas where idUs='1' GROUP BY idUs, n_partida) as subconsulta;
+[2023-06-14][INFO]Ejecutando query: select ranking from (select ROW_NUMBER() OVER (ORDER BY maximo desc) as ranking, idUs, n_partida, max(puntajeMaximo) as maximo 
+from (select idUs, n_partida, count(*) AS puntajeMaximo from historialpartidas  GROUP BY  n_partida, idUs)as sub group by idUs order by maximo desc) as subconsulta where idUs= '1';
+[2023-06-14][INFO]Ejecutando query: SELECT h.n_Partida, h.f_partida, u.nombreUsuario,h.tipoPartida, SUM(estado) AS sumaPreguntasContestadas
+                FROM historialpartidas AS h
+                JOIN usuario AS u 
+                WHERE h.idUs = '1'
+                GROUP BY h.n_partida, h.idUs
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario, u.activo, r.descr 'rol' FROM usuario u
+                                       JOIN rol_usuario ru on u.id = ru.idUs
+                                       JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='admin'
+                                       AND password='21232f297a57a5a743894a0e4a801fc3'
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario, u.activo, r.descr 'rol' FROM usuario u
+                                       JOIN rol_usuario ru on u.id = ru.idUs
+                                       JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='usuario'
+                                       AND password='f8032d5cae3de20fcec887f395ec9a6a'
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-14][INFO]Ejecutando query: select MAX(contador) as maxRespuetasC from (SELECT idUs, n_partida, COUNT(*) AS contador
+    FROM historialpartidas where idUs='1' GROUP BY idUs, n_partida) as subconsulta;
+[2023-06-14][INFO]Ejecutando query: select ranking from (select ROW_NUMBER() OVER (ORDER BY maximo desc) as ranking, idUs, n_partida, max(puntajeMaximo) as maximo 
+from (select idUs, n_partida, count(*) AS puntajeMaximo from historialpartidas  GROUP BY  n_partida, idUs)as sub group by idUs order by maximo desc) as subconsulta where idUs= '1';
+[2023-06-14][INFO]Ejecutando query: SELECT h.n_Partida, h.f_partida, u.nombreUsuario,h.tipoPartida, SUM(estado) AS sumaPreguntasContestadas
+                FROM historialpartidas AS h
+                JOIN usuario AS u 
+                WHERE h.idUs = '1'
+                GROUP BY h.n_partida, h.idUs
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-14][INFO]Ejecutando query: select MAX(contador) as maxRespuetasC from (SELECT idUs, n_partida, COUNT(*) AS contador
+    FROM historialpartidas where idUs='1' GROUP BY idUs, n_partida) as subconsulta;
+[2023-06-14][INFO]Ejecutando query: select ranking from (select ROW_NUMBER() OVER (ORDER BY maximo desc) as ranking, idUs, n_partida, max(puntajeMaximo) as maximo 
+from (select idUs, n_partida, count(*) AS puntajeMaximo from historialpartidas  GROUP BY  n_partida, idUs)as sub group by idUs order by maximo desc) as subconsulta where idUs= '1';
+[2023-06-14][INFO]Ejecutando query: SELECT h.n_Partida, h.f_partida, u.nombreUsuario,h.tipoPartida, SUM(estado) AS sumaPreguntasContestadas
+                FROM historialpartidas AS h
+                JOIN usuario AS u 
+                WHERE h.idUs = '1'
+                GROUP BY h.n_partida, h.idUs
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-14][INFO]Ejecutando query: select MAX(contador) as maxRespuetasC from (SELECT idUs, n_partida, COUNT(*) AS contador
+    FROM historialpartidas where idUs='1' GROUP BY idUs, n_partida) as subconsulta;
+[2023-06-14][INFO]Ejecutando query: select ranking from (select ROW_NUMBER() OVER (ORDER BY maximo desc) as ranking, idUs, n_partida, max(puntajeMaximo) as maximo 
+from (select idUs, n_partida, count(*) AS puntajeMaximo from historialpartidas  GROUP BY  n_partida, idUs)as sub group by idUs order by maximo desc) as subconsulta where idUs= '1';
+[2023-06-14][INFO]Ejecutando query: SELECT h.n_Partida, h.f_partida, u.nombreUsuario,h.tipoPartida, SUM(estado) AS sumaPreguntasContestadas
+                FROM historialpartidas AS h
+                JOIN usuario AS u 
+                WHERE h.idUs = '1'
+                GROUP BY h.n_partida, h.idUs
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario, u.activo, r.descr 'rol' FROM usuario u
+                                       JOIN rol_usuario ru on u.id = ru.idUs
+                                       JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='admin'
+                                       AND password='21232f297a57a5a743894a0e4a801fc3'
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario, u.activo, r.descr 'rol' FROM usuario u
+                                       JOIN rol_usuario ru on u.id = ru.idUs
+                                       JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='admin2'
+                                       AND password='21232f297a57a5a743894a0e4a801fc3'
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'admin2'
+[2023-06-14][INFO]Ejecutando query: select MAX(contador) as maxRespuetasC from (SELECT idUs, n_partida, COUNT(*) AS contador
+    FROM historialpartidas where idUs='3' GROUP BY idUs, n_partida) as subconsulta;
+[2023-06-14][INFO]Ejecutando query: select ranking from (select ROW_NUMBER() OVER (ORDER BY maximo desc) as ranking, idUs, n_partida, max(puntajeMaximo) as maximo 
+from (select idUs, n_partida, count(*) AS puntajeMaximo from historialpartidas  GROUP BY  n_partida, idUs)as sub group by idUs order by maximo desc) as subconsulta where idUs= '3';
+[2023-06-14][INFO]Ejecutando query: SELECT h.n_Partida, h.f_partida, u.nombreUsuario,h.tipoPartida, SUM(estado) AS sumaPreguntasContestadas
+                FROM historialpartidas AS h
+                JOIN usuario AS u 
+                WHERE h.idUs = '3'
+                GROUP BY h.n_partida, h.idUs
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'admin2'
+[2023-06-14][INFO]Ejecutando query: select MAX(contador) as maxRespuetasC from (SELECT idUs, n_partida, COUNT(*) AS contador
+    FROM historialpartidas where idUs='3' GROUP BY idUs, n_partida) as subconsulta;
+[2023-06-14][INFO]Ejecutando query: select ranking from (select ROW_NUMBER() OVER (ORDER BY maximo desc) as ranking, idUs, n_partida, max(puntajeMaximo) as maximo 
+from (select idUs, n_partida, count(*) AS puntajeMaximo from historialpartidas  GROUP BY  n_partida, idUs)as sub group by idUs order by maximo desc) as subconsulta where idUs= '3';
+[2023-06-14][INFO]Ejecutando query: SELECT h.n_Partida, h.f_partida, u.nombreUsuario,h.tipoPartida, SUM(estado) AS sumaPreguntasContestadas
+                FROM historialpartidas AS h
+                JOIN usuario AS u 
+                WHERE h.idUs = '3'
+                GROUP BY h.n_partida, h.idUs
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'admin2'
+[2023-06-14][INFO]Ejecutando query: select MAX(contador) as maxRespuetasC from (SELECT idUs, n_partida, COUNT(*) AS contador
+    FROM historialpartidas where idUs='3' GROUP BY idUs, n_partida) as subconsulta;
+[2023-06-14][INFO]Ejecutando query: select ranking from (select ROW_NUMBER() OVER (ORDER BY maximo desc) as ranking, idUs, n_partida, max(puntajeMaximo) as maximo 
+from (select idUs, n_partida, count(*) AS puntajeMaximo from historialpartidas  GROUP BY  n_partida, idUs)as sub group by idUs order by maximo desc) as subconsulta where idUs= '3';
+[2023-06-14][INFO]Ejecutando query: SELECT h.n_Partida, h.f_partida, u.nombreUsuario,h.tipoPartida, SUM(estado) AS sumaPreguntasContestadas
+                FROM historialpartidas AS h
+                JOIN usuario AS u 
+                WHERE h.idUs = '3'
+                GROUP BY h.n_partida, h.idUs
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'admin2'
+[2023-06-14][INFO]Ejecutando query: select MAX(contador) as maxRespuetasC from (SELECT idUs, n_partida, COUNT(*) AS contador
+    FROM historialpartidas where idUs='3' GROUP BY idUs, n_partida) as subconsulta;
+[2023-06-14][INFO]Ejecutando query: select ranking from (select ROW_NUMBER() OVER (ORDER BY maximo desc) as ranking, idUs, n_partida, max(puntajeMaximo) as maximo 
+from (select idUs, n_partida, count(*) AS puntajeMaximo from historialpartidas  GROUP BY  n_partida, idUs)as sub group by idUs order by maximo desc) as subconsulta where idUs= '3';
+[2023-06-14][INFO]Ejecutando query: SELECT h.n_Partida, h.f_partida, u.nombreUsuario,h.tipoPartida, SUM(estado) AS sumaPreguntasContestadas
+                FROM historialpartidas AS h
+                JOIN usuario AS u 
+                WHERE h.idUs = '3'
+                GROUP BY h.n_partida, h.idUs
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'admin2'
+[2023-06-14][INFO]Ejecutando query: select MAX(contador) as maxRespuetasC from (SELECT idUs, n_partida, COUNT(*) AS contador
+    FROM historialpartidas where idUs='3' GROUP BY idUs, n_partida) as subconsulta;
+[2023-06-14][INFO]Ejecutando query: select ranking from (select ROW_NUMBER() OVER (ORDER BY maximo desc) as ranking, idUs, n_partida, max(puntajeMaximo) as maximo 
+from (select idUs, n_partida, count(*) AS puntajeMaximo from historialpartidas  GROUP BY  n_partida, idUs)as sub group by idUs order by maximo desc) as subconsulta where idUs= '3';
+[2023-06-14][INFO]Ejecutando query: SELECT h.n_Partida, h.f_partida, u.nombreUsuario,h.tipoPartida, SUM(estado) AS sumaPreguntasContestadas
+                FROM historialpartidas AS h
+                JOIN usuario AS u 
+                WHERE h.idUs = '3'
+                GROUP BY h.n_partida, h.idUs
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario, u.activo, r.descr 'rol' FROM usuario u
+                                       JOIN rol_usuario ru on u.id = ru.idUs
+                                       JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='admin2'
+                                       AND password='21232f297a57a5a743894a0e4a801fc3'
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'admin2'
+[2023-06-14][INFO]Ejecutando query: select MAX(contador) as maxRespuetasC from (SELECT idUs, n_partida, COUNT(*) AS contador
+    FROM historialpartidas where idUs='3' GROUP BY idUs, n_partida) as subconsulta;
+[2023-06-14][INFO]Ejecutando query: select ranking from (select ROW_NUMBER() OVER (ORDER BY maximo desc) as ranking, idUs, n_partida, max(puntajeMaximo) as maximo 
+from (select idUs, n_partida, count(*) AS puntajeMaximo from historialpartidas  GROUP BY  n_partida, idUs)as sub group by idUs order by maximo desc) as subconsulta where idUs= '3';
+[2023-06-14][INFO]Ejecutando query: SELECT h.n_Partida, h.f_partida, u.nombreUsuario,h.tipoPartida, SUM(estado) AS sumaPreguntasContestadas
+                FROM historialpartidas AS h
+                JOIN usuario AS u 
+                WHERE h.idUs = '3'
+                GROUP BY h.n_partida, h.idUs
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'admin2'
+[2023-06-14][INFO]Ejecutando query: select MAX(contador) as maxRespuetasC from (SELECT idUs, n_partida, COUNT(*) AS contador
+    FROM historialpartidas where idUs='3' GROUP BY idUs, n_partida) as subconsulta;
+[2023-06-14][INFO]Ejecutando query: select ranking from (select ROW_NUMBER() OVER (ORDER BY maximo desc) as ranking, idUs, n_partida, max(puntajeMaximo) as maximo 
+from (select idUs, n_partida, count(*) AS puntajeMaximo from historialpartidas  GROUP BY  n_partida, idUs)as sub group by idUs order by maximo desc) as subconsulta where idUs= '3';
+[2023-06-14][INFO]Ejecutando query: SELECT h.n_Partida, h.f_partida, u.nombreUsuario,h.tipoPartida, SUM(estado) AS sumaPreguntasContestadas
+                FROM historialpartidas AS h
+                JOIN usuario AS u 
+                WHERE h.idUs = '3'
+                GROUP BY h.n_partida, h.idUs
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'admin2'
+[2023-06-14][INFO]Ejecutando query: select MAX(contador) as maxRespuetasC from (SELECT idUs, n_partida, COUNT(*) AS contador
+    FROM historialpartidas where idUs='3' GROUP BY idUs, n_partida) as subconsulta;
+[2023-06-14][INFO]Ejecutando query: select ranking from (select ROW_NUMBER() OVER (ORDER BY maximo desc) as ranking, idUs, n_partida, max(puntajeMaximo) as maximo 
+from (select idUs, n_partida, count(*) AS puntajeMaximo from historialpartidas  GROUP BY  n_partida, idUs)as sub group by idUs order by maximo desc) as subconsulta where idUs= '3';
+[2023-06-14][INFO]Ejecutando query: SELECT h.n_Partida, h.f_partida, u.nombreUsuario,h.tipoPartida, SUM(estado) AS sumaPreguntasContestadas
+                FROM historialpartidas AS h
+                JOIN usuario AS u 
+                WHERE h.idUs = '3'
+                GROUP BY h.n_partida, h.idUs
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario, u.activo, r.descr 'rol' FROM usuario u
+                                       JOIN rol_usuario ru on u.id = ru.idUs
+                                       JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='admin2'
+                                       AND password='21232f297a57a5a743894a0e4a801fc3'
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'admin2'
+[2023-06-14][INFO]Ejecutando query: select MAX(contador) as maxRespuetasC from (SELECT idUs, n_partida, COUNT(*) AS contador
+    FROM historialpartidas where idUs='3' GROUP BY idUs, n_partida) as subconsulta;
+[2023-06-14][INFO]Ejecutando query: select ranking from (select ROW_NUMBER() OVER (ORDER BY maximo desc) as ranking, idUs, n_partida, max(puntajeMaximo) as maximo 
+from (select idUs, n_partida, count(*) AS puntajeMaximo from historialpartidas  GROUP BY  n_partida, idUs)as sub group by idUs order by maximo desc) as subconsulta where idUs= '3';
+[2023-06-14][INFO]Ejecutando query: SELECT h.n_Partida, h.f_partida, u.nombreUsuario,h.tipoPartida, SUM(estado) AS sumaPreguntasContestadas
+                FROM historialpartidas AS h
+                JOIN usuario AS u 
+                WHERE h.idUs = '3'
+                GROUP BY h.n_partida, h.idUs
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario, u.activo, r.descr 'rol' FROM usuario u
+                                       JOIN rol_usuario ru on u.id = ru.idUs
+                                       JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='usuario'
+                                       AND password='f8032d5cae3de20fcec887f395ec9a6a'
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-14][INFO]Ejecutando query: select MAX(contador) as maxRespuetasC from (SELECT idUs, n_partida, COUNT(*) AS contador
+    FROM historialpartidas where idUs='1' GROUP BY idUs, n_partida) as subconsulta;
+[2023-06-14][INFO]Ejecutando query: select ranking from (select ROW_NUMBER() OVER (ORDER BY maximo desc) as ranking, idUs, n_partida, max(puntajeMaximo) as maximo 
+from (select idUs, n_partida, count(*) AS puntajeMaximo from historialpartidas  GROUP BY  n_partida, idUs)as sub group by idUs order by maximo desc) as subconsulta where idUs= '1';
+[2023-06-14][INFO]Ejecutando query: SELECT h.n_Partida, h.f_partida, u.nombreUsuario,h.tipoPartida, SUM(estado) AS sumaPreguntasContestadas
+                FROM historialpartidas AS h
+                JOIN usuario AS u 
+                WHERE h.idUs = '1'
+                GROUP BY h.n_partida, h.idUs
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario, u.activo, r.descr 'rol' FROM usuario u
+                                       JOIN rol_usuario ru on u.id = ru.idUs
+                                       JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='admin2'
+                                       AND password='21232f297a57a5a743894a0e4a801fc3'
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario, u.activo, r.descr 'rol' FROM usuario u
+                                       JOIN rol_usuario ru on u.id = ru.idUs
+                                       JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='admin2'
+                                       AND password='21232f297a57a5a743894a0e4a801fc3'
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'admin2'
+[2023-06-14][INFO]Ejecutando query: select MAX(contador) as maxRespuetasC from (SELECT idUs, n_partida, COUNT(*) AS contador
+    FROM historialpartidas where idUs='3' GROUP BY idUs, n_partida) as subconsulta;
+[2023-06-14][INFO]Ejecutando query: select ranking from (select ROW_NUMBER() OVER (ORDER BY maximo desc) as ranking, idUs, n_partida, max(puntajeMaximo) as maximo 
+from (select idUs, n_partida, count(*) AS puntajeMaximo from historialpartidas  GROUP BY  n_partida, idUs)as sub group by idUs order by maximo desc) as subconsulta where idUs= '3';
+[2023-06-14][INFO]Ejecutando query: SELECT h.n_Partida, h.f_partida, u.nombreUsuario,h.tipoPartida, SUM(estado) AS sumaPreguntasContestadas
+                FROM historialpartidas AS h
+                JOIN usuario AS u 
+                WHERE h.idUs = '3'
+                GROUP BY h.n_partida, h.idUs
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'admin2'
+[2023-06-14][INFO]Ejecutando query: select MAX(contador) as maxRespuetasC from (SELECT idUs, n_partida, COUNT(*) AS contador
+    FROM historialpartidas where idUs='3' GROUP BY idUs, n_partida) as subconsulta;
+[2023-06-14][INFO]Ejecutando query: select ranking from (select ROW_NUMBER() OVER (ORDER BY maximo desc) as ranking, idUs, n_partida, max(puntajeMaximo) as maximo 
+from (select idUs, n_partida, count(*) AS puntajeMaximo from historialpartidas  GROUP BY  n_partida, idUs)as sub group by idUs order by maximo desc) as subconsulta where idUs= '3';
+[2023-06-14][INFO]Ejecutando query: SELECT h.n_Partida, h.f_partida, u.nombreUsuario,h.tipoPartida, SUM(estado) AS sumaPreguntasContestadas
+                FROM historialpartidas AS h
+                JOIN usuario AS u 
+                WHERE h.idUs = '3'
+                GROUP BY h.n_partida, h.idUs
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'admin2'
+[2023-06-14][INFO]Ejecutando query: select MAX(contador) as maxRespuetasC from (SELECT idUs, n_partida, COUNT(*) AS contador
+    FROM historialpartidas where idUs='3' GROUP BY idUs, n_partida) as subconsulta;
+[2023-06-14][INFO]Ejecutando query: select ranking from (select ROW_NUMBER() OVER (ORDER BY maximo desc) as ranking, idUs, n_partida, max(puntajeMaximo) as maximo 
+from (select idUs, n_partida, count(*) AS puntajeMaximo from historialpartidas  GROUP BY  n_partida, idUs)as sub group by idUs order by maximo desc) as subconsulta where idUs= '3';
+[2023-06-14][INFO]Ejecutando query: SELECT h.n_Partida, h.f_partida, u.nombreUsuario,h.tipoPartida, SUM(estado) AS sumaPreguntasContestadas
+                FROM historialpartidas AS h
+                JOIN usuario AS u 
+                WHERE h.idUs = '3'
+                GROUP BY h.n_partida, h.idUs
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'admin2'
+[2023-06-14][INFO]Ejecutando query: select MAX(contador) as maxRespuetasC from (SELECT idUs, n_partida, COUNT(*) AS contador
+    FROM historialpartidas where idUs='3' GROUP BY idUs, n_partida) as subconsulta;
+[2023-06-14][INFO]Ejecutando query: select ranking from (select ROW_NUMBER() OVER (ORDER BY maximo desc) as ranking, idUs, n_partida, max(puntajeMaximo) as maximo 
+from (select idUs, n_partida, count(*) AS puntajeMaximo from historialpartidas  GROUP BY  n_partida, idUs)as sub group by idUs order by maximo desc) as subconsulta where idUs= '3';
+[2023-06-14][INFO]Ejecutando query: SELECT h.n_Partida, h.f_partida, u.nombreUsuario,h.tipoPartida, SUM(estado) AS sumaPreguntasContestadas
+                FROM historialpartidas AS h
+                JOIN usuario AS u 
+                WHERE h.idUs = '3'
+                GROUP BY h.n_partida, h.idUs
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario, u.activo, r.descr 'rol' FROM usuario u
+                                       JOIN rol_usuario ru on u.id = ru.idUs
+                                       JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='admin2'
+                                       AND password='21232f297a57a5a743894a0e4a801fc3'
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario, u.activo, r.descr 'rol' FROM usuario u
+                                       JOIN rol_usuario ru on u.id = ru.idUs
+                                       JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='editor'
+                                       AND password='5aee9dbd2a188839105073571bee1b1f'
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario, u.activo, r.descr 'rol' FROM usuario u
+                                       JOIN rol_usuario ru on u.id = ru.idUs
+                                       JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='usuario'
+                                       AND password='f8032d5cae3de20fcec887f395ec9a6a'
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-06-14][INFO]Ejecutando query: select MAX(contador) as maxRespuetasC from (SELECT idUs, n_partida, COUNT(*) AS contador
+    FROM historialpartidas where idUs='1' GROUP BY idUs, n_partida) as subconsulta;
+[2023-06-14][INFO]Ejecutando query: select ranking from (select ROW_NUMBER() OVER (ORDER BY maximo desc) as ranking, idUs, n_partida, max(puntajeMaximo) as maximo 
+from (select idUs, n_partida, count(*) AS puntajeMaximo from historialpartidas  GROUP BY  n_partida, idUs)as sub group by idUs order by maximo desc) as subconsulta where idUs= '1';
+[2023-06-14][INFO]Ejecutando query: SELECT h.n_Partida, h.f_partida, u.nombreUsuario,h.tipoPartida, SUM(estado) AS sumaPreguntasContestadas
+                FROM historialpartidas AS h
+                JOIN usuario AS u 
+                WHERE h.idUs = '1'
+                GROUP BY h.n_partida, h.idUs
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.nombreUsuario, u.fotoPerfil, SUM(hp.estado='1') as puntaje FROM historialPartidas hp
+         JOIN usuario u ON hp.idUs = u.id  GROUP BY hp.idUs
+                    order by SUM(hp.estado='1') DESC
+[2023-06-14][INFO]Ejecutando query: SELECT u.nombreUsuario, u.fotoPerfil, SUM(hp.estado='2') as puntaje FROM historialPartidas hp
+         JOIN usuario u ON hp.idUs = u.id  GROUP BY hp.idUs
+                    order by SUM(hp.estado='2') DESC
+[2023-06-14][INFO]Ejecutando query: SELECT u.nombreUsuario, u.fotoPerfil, SUM(hp.estado='3') as puntaje FROM historialPartidas hp
+         JOIN usuario u ON hp.idUs = u.id  GROUP BY hp.idUs
+                    order by SUM(hp.estado='3') DESC
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
