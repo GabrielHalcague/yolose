@@ -121,6 +121,7 @@ class PartidaController
                 Session::set('estadoPartida',2);
             }
             $data['resultado'] = $resultado;
+            $data['respuestasBot'] = $scoreBot;
         }
 
         /*if ($tipoPartida == 3) {
