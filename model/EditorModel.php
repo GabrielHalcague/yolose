@@ -39,9 +39,36 @@
         
         public function obtenerIdRespuestaCorrecta($idPreg)
         {
-            $sql = "SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idResp='$idPreg'";
-            return $this->database->query_row($sql);
+            $sql = "SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='$idPreg'";
+            return $this->database->SoloValorCampo($sql);
         }
+        public function obtenerCategorias(){
+            $sql = "SELECT * FROM  categoria ";
+            return $this->database->query($sql);
+        }
+        public function obtenerEstados(){
+            $sql = "SELECT * FROM  estado ";
+            return $this->database->query($sql);
+        }
+        public function obtenerEstadoActual($idPreg){
+            $sql = "SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '$idPreg'";
+            return $this->database->query($sql);
+        }
+    
+        public function obtenerCategoriaActual($idPreg){
+            $sql = "SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '$idPreg'";
+            return $this->database->query($sql);
+        }
+    
+        public function obtenerCreadorDePRegunta($idPreg){
+            $sql = "SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '$idPreg'";
+            return $this->database->query($sql);
+        }
+        
+
         
         
     }

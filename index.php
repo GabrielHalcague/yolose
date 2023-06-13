@@ -16,6 +16,7 @@ $controladoresValidosSINLogeo = [
     'registro',
     'activation',
     'perfil',
+    'ranking',
 
 ];
 $controladoresINVALIDOSLogeado = [

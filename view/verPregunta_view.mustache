@@ -1,33 +1,67 @@
-<section class="container">
-    <h1>Vas a ver la pregunta</h1>
+    <section class="container">
+        <h1 class="text-center">Editar Pregunta</h1>
+    <form action="/editor/actualizarPregunta" method="post" enctype="multipart/form-data">
+    <div class="container">
+    <div class="row">
+    <div class="col-sm-6">
+    {{#usuarioPregu}}
+        <p>Creado por: {{nombreUsuario}}</p>
+        {{/usuarioPregu}}
 
-    <table class="table table-striped table-hover">
-        <h3>Tabla pregunta</h3>
-        <thead>
-        <tr>
-            <th>Pregunta</th>
-            <th>Categoria</th>
-            <th>Dar de baja</th>
-            <th>Columna 4</th>
-        </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>{{pregunta}}</td>
+        {{#estActual}}
+            <p>Estado actual:  {{descr}} <br></p>
+        {{/estActual}}
+            <div class="input-group has-validation mt-4">
+                <label for="estado">Cambiar estado : </label>
+                <select class="custom-select" name="estado" id="estado">
+                    <option value="">Seleccione estado</option>
+                    {{#estado}}
+                        <option value="{{id}}">{{descr}}</option>
+                    {{/estado}}
+                </select>
+            </div>
 
-                <td>Dato 3</td>
-                <td>Dato 4</td>
-            </tr>
-            <tr>
+        </div>
+            <div class="col-sm-6">
+                <p>Fecha de cracion: 22/03/2006</p>
+                {{#cateActual}}
+                    <p>Categoria actual : {{categ}} </br> </p>
+                {{/cateActual}}
+                <div class="input-group has-validation mt-4">
+                    <label for="cate">Cambiar categoria </label>
+                    <select class="custom-select" name="categoria" id="categoria">
+                        <option value="">Seleccione categoria</option>
+                        {{#categoria}}
+                            <option value="{{id}}">{{categ}}</option>
+                        {{/categoria}}
+                    </select>
+                </div>
+            </div>
+        </div>
+        </div>
+
+            <div class="input-group has-validation mt-4">
+                <label for="pregunta">Pregunta</label>
+                <input type="text" class="form-control" name="pregunta" id="{{id}}" value="{{pregunta}}">
+            </div>
 
 
-                <td>Dato 3</td>
-                <td>Dato 4</td>
-            </tr>
 
-            <!-- Agrega más filas según sea necesario -->
 
-        </tbody>
-    </table>
+        {{#respuestas}}
 
-</section>
+            <input type="text" class="form-control" name="{{id}}" id="{{id}}" value="{{resp}}">
+
+        </div>
+        {{/respuestas}}
+
+            <button type="submit" class="btn btn-success">Actualizar</button>
+        </form>
+        {{error}}
+        </section>
+    <script>
+            $(document).ready(function (){
+                $("#{{idRespCorrecta}}").css("borderColor", "red");
+            })
+
+    </script>

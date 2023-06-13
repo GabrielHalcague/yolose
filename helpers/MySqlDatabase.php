@@ -35,5 +35,15 @@ class MySqlDatabase{
         Logger::info('Ejecutando query: ' . $sql);
         mysqli_query($this->connection, $sql);
     }
+    public function SoloValorCampo($sql){
+        Logger::info('Ejecutando query: ' . $sql);
+        $result = mysqli_query($this->connection, $sql);
+        $valor= mysqli_fetch_row($result);
+        if ($valor) {
+            return $valor[0];
+        } else {
+            return null;
+        }
+    }
 
 }

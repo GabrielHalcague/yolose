@@ -48,7 +48,7 @@ class RegistroController
         if( $errores == 0 && $verficar){
             $namePhoto=   $this->saveUserPhoto();
 
-            $this->registerModel->register($name,$lastName,$email, $birthDate, $genderId, $password,$userName, $Coordenadas,$namePhoto);
+            $this->registerModel->register($name, $lastName, $email, $birthDate, $genderId, $password, $userName,$namePhoto,$Coordenadas);
             $registro = $this->registerModel->getUserByUsername($userName);
             $data['id'] = $registro[0]['id'];
             $data['username'] = $registro[0]['nombreUsuario'];
@@ -115,9 +115,9 @@ class RegistroController
             $password = $_POST['password'] ;
             $password2 = $_POST['password2'] ;
             $userName= $_POST['usuario'] ;
-            $Coordenadas= $_POST['coordenadas'] ;
+            $coordenadas= $_POST['coordenadas'] ;
             $userPhoto = $_FILES["archivo"] ;
-            return array($name, $lastName, $email, $birthDate, $genderId, $password, $password2,$userName,$Coordenadas,$userPhoto );
+            return array($name, $lastName, $email, $birthDate, $genderId, $password, $password2,$userName,$coordenadas,$userPhoto);
 
         } else {
             echo "debe cargar todos los datos";
@@ -126,7 +126,7 @@ class RegistroController
         }
     }
 
-    private function verificarDatos(mixed $firstName, mixed $lastName, mixed $email, mixed $birthDate, mixed $genderId, mixed $password, mixed $password2, mixed $userName,mixed $Coordenadas)
+    private function verificarDatos(mixed $firstName, mixed $lastName, mixed $email, mixed $birthDate, mixed $genderId, mixed $password, mixed $password2, mixed $userName,mixed $coordenadas)
     {
         $respuesta= true;
         if(!$this->verifyPassword($password,$password2)&&filter_var($email, FILTER_VALIDATE_EMAIL)){

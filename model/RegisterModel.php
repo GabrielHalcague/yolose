@@ -9,11 +9,11 @@
             $this->database = $database;
         }
         
-        public function register($name, $lastName, $email, $birthDate, $genderId, $password, $userName,$namePhoto, $f_registro){
+        public function register($name, $lastName, $email, $birthDate, $genderId, $password, $userName,$namePhoto,$coordenadas){
             $password= hash('md5',$password);
             return $this->database->
-            execute("insert into usuario(nombre,apellido,correo,password,nombreUsuario,f_nacimiento,generoId,fotoPerfil, f_registro )
-                values('$name','$lastName','$email','$password','$userName','$birthDate','$genderId','$namePhoto','$f_registro')");
+            execute("insert into usuario(`nombre`, `apellido`, `nombreUsuario`, `password`, `generoId`, `correo`, `fotoPerfil`, `f_nacimiento`, `coordenadas`, `activo`, `trampas`)
+            VALUES ('$name', '$lastName', '$userName', '$password', '$genderId', '$email', '$namePhoto', '$birthDate', '$coordenadas',  NULL, '0')");
         }
 
         public function getUsuario($nickname, $password)
@@ -50,6 +50,9 @@
             $this->database->execute($sql);
         }
 
-        
+        public function setRol($id){
+            $sql = "INSERT INTO rol_usuario(idUs, idRol) VALUES ('$id', 3)";
+            $this->database->execute($sql);
+        }
         
     }
