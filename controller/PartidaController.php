@@ -81,7 +81,8 @@ class PartidaController
             'muestroPregunta' => Session::get('envioPregunta'),
             'respondioPregunta' => time(),
             'tokenPartida' => Session::get('tokenPartida'),
-            'tipoPartida' => Session::get('tipoPartida')
+            'tipoPartida' => Session::get('tipoPartida'),
+            'estadoPartida' => Session::get('estadoPartida')
         ]);
 
         $data['tipoPartida']=Session::get('tipoPartida');
@@ -111,10 +112,13 @@ class PartidaController
             $scoreBot = rand(1, count($maxPregBot));
             if ($scoreUsuario > $scoreBot) {
                 $resultado = "HAS GANADO AL BOT";
+                Session::set('estadoPartida',1);
             } elseif ($scoreUsuario < $scoreBot) {
                 $resultado = "HAS PERDIDO CON EL BOT";
+                Session::set('estadoPartida',3);
             } else {
                 $resultado = "HAS EMPATADO CON EL BOT";
+                Session::set('estadoPartida',2);
             }
             $data['resultado'] = $resultado;
         }
@@ -129,6 +133,7 @@ class PartidaController
 
         if ($tipoPartida == 1) {
             $data['resultado'] = "HAS MEJORADO";
+            Session::set('estadoPartida',0);
         }
 
         $response = array(

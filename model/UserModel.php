@@ -58,7 +58,7 @@ class UserModel{
     }
 
     public function obtenerHistorialPartidasUsuario($idUsuario){
-        $sql = "SELECT h.n_Partida, u.nombreUsuario,h.tipoPartida, SUM(estado) AS sumaPreguntasContestadas
+        $sql = "SELECT h.n_Partida, u.nombreUsuario,h.tipoPartida, SUM(estado) AS sumaPreguntasContestadas,h.estadoPartida
                 FROM historialpartidas AS h
                 JOIN usuario AS u 
                 WHERE h.idUs = '$idUsuario'
