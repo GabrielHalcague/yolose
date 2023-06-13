@@ -13,6 +13,7 @@ class MySqlDatabase{
         if (!$this->connection) {
             die('Connection failed: ' . mysqli_connect_error());
         }
+        mysqli_set_charset($this->connection,'utf8mb4');
     }
 
     public function __destruct(){

@@ -20,7 +20,9 @@ class RegistroController
     public function list()
     {
         if (!Session::get("logged")) {
-            $this->renderer->render('registro');
+            $data['mapa'] = true;
+            $data['registroJS'] = true;
+            $this->renderer->render('registro',$data);
             exit();
         }else{
             Header::redirect("/");
@@ -32,7 +34,7 @@ class RegistroController
         $errores = 0;
         list($name, $lastName, $email, $birthDate, $genderId, $password, $password2,$userName, $Coordenadas ,$userPhoto) =$this->getDatos();
         $emailObtenido = $this->registerModel->getUserEmail($email);
-        if(!empty($emailObtenido) && $emailObtenido[0]['correo'] == $email){
+        if(!empty($emailObtenido) && $emailObtenido['correo'] == $email){
             $data['emailDuplicado']="El email ya se encuentra en la bd";
             $errores ++;
         }
@@ -43,15 +45,15 @@ class RegistroController
             $errores ++;
         }
         $verficar = $this->verificarDatos($name,$lastName,$email, $birthDate, $genderId, $password, $password2, $userName, $Coordenadas);
-        //Header::debug($errores . "<br>". $verficar . "<br>". $data);
+
 
         if( $errores == 0 && $verficar){
             $namePhoto=   $this->saveUserPhoto();
 
             $this->registerModel->register($name, $lastName, $email, $birthDate, $genderId, $password, $userName,$namePhoto,$Coordenadas);
             $registro = $this->registerModel->getUserByUsername($userName);
-            $data['id'] = $registro[0]['id'];
-            $data['username'] = $registro[0]['nombreUsuario'];
+            $data['id'] = $registro['id'];
+            $data['username'] = $registro['nombreUsuario'];
 
             $html = $this->renderMail->generateTemplatedStringForEmail('templanteMail',$data);
             $this->emailSender->sendEmail($email,'Confirmacion de Registro',$html);
@@ -67,7 +69,7 @@ class RegistroController
 
     public function saveUserPhoto()
     {
-        $ruta = "./public/";
+        $ruta = "./public/img/";
 
         $nombre='';
         if ($_SERVER["REQUEST_METHOD"] == "POST") {

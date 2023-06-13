@@ -24,9 +24,43 @@ class PartidaController
             Session::set('tokenPartida', uniqid());
         }
 
+        $data = [
+            'js' => true,
+            'username' => Session::get('username'),
+            'tipoPartida' => Session::get('tipoPartida'),
+            'puntaje' => $this->partidaModel->obtenerScoreDelUsuario(Session::get('tokenPartida'), Session::get('username'))['puntos'] ?? 0
+        ];
+
+        if(empty(Session::get('respondio'))){
+            Logger::info("EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR O COMIENZO JUEGO");
+            Session::set('respondio',true);
+            $array=$this->comenzarJuego();
+        }else{
+            Logger::info("EL USUARIO REALIZO UN REDIRECCIONAMIENTO");
+            $pregunta = Session::get('preguntaSeleccionada');
+            $horaActual = time();
+            $horaAnterior = Session::get('envioPregunta');
+            $dif = $horaActual - $horaAnterior;
+            if(empty(Session::get('tiempoRestante'))) {
+                $tiempoRestante = 10 - $dif;
+            }else{
+                $tiempoRestante = Session::get('tiempoRestante') - $dif;
+            }
+            Session::set('tiempoRestante', $tiempoRestante);
+            $array=[
+                'pregunta' => $pregunta['pregunta'],
+                'preguntaID' => $pregunta['preguntaID'],
+                'color' => $pregunta['color'],
+                'tiempo' => $tiempoRestante,
+                'trampas' => Session::get('trampas'),
+                'opc' => $this->partidaModel->obtenerRespuestaDePregunta($pregunta['preguntaID'])
+            ];
+
+        }
+
         // Realizar el envio de mail para que en el vsplayer, el otro usuario pueda jugar con el tokenPartida
-        Session::set('mostrarPregunta', (new DateTime)->getTimestamp());
-        $this->render->render("jugar", $this->comenzarJuego());
+        Session::set('envioPregunta', time());
+        $this->render->render("jugar", array_merge($data,$array) );
     }
 
 
@@ -38,12 +72,14 @@ class PartidaController
             $nTrampa = intval(Session::get('trampas')) - 1;
             Session::set('trampas', $nTrampa);
         }
+        Session::deleteValue('respondio');
+        Session::deleteValue('tiempoRestante');
         $data = $this->partidaModel->validarRespuesta([
             'seleccionUsuario' => $_POST['id'],
             'idUsuario' => Session::get('idUsuario'),
             'preguntaActual' => Session::get('preguntaSeleccionada'),
-            'muestroPregunta' => Session::get('mostrarPregunta'),
-            'respondioPregunta' => (new DateTime)->getTimestamp(),
+            'muestroPregunta' => Session::get('envioPregunta'),
+            'respondioPregunta' => time(),
             'tokenPartida' => Session::get('tokenPartida'),
             'tipoPartida' => Session::get('tipoPartida')
         ]);
@@ -110,6 +146,8 @@ class PartidaController
         Session::deleteValue('tipoPartida');
         Session::deleteValue('preguntas');
         Session::deleteValue('preguntaSeleccionada');
+        Session::deleteValue('tiempo');
+        Session::deleteValue('envioPregunta');
         $trampasActuales = Session::get('trampas');
         Session::deleteValue('trampas');
         $this->partidaModel->actualizaTrampasUsuario($trampasActuales, Session::get('idUsuario'));
@@ -132,16 +170,12 @@ class PartidaController
             Session::set('trampas', $this->partidaModel->obtenerTrampasDelUsuario(Session::get('idUsuario'))['trampas']);
         }
         $data = [
-            'js' => true,
             'pregunta' => $preguntas[$indicePregunta]['pregunta'],
             'preguntaID' => $preguntas[$indicePregunta]['preguntaID'],
             'color' => $preguntas[$indicePregunta]['color'],
-            'logged' => Session::get('logged'),
-            'username' => Session::get('username'),
-            'opc' => $this->partidaModel->obtenerRespuestaDePregunta($preguntas[$indicePregunta]['preguntaID']),
+            'tiempo' => 10,
             'trampas' => Session::get('trampas') ?? 5,
-            'tipoPartida' => Session::get('tipoPartida'),
-            'puntaje' => $this->partidaModel->obtenerScoreDelUsuario(Session::get('tokenPartida'), Session::get('username'))['puntos'] ?? 0
+            'opc' => $this->partidaModel->obtenerRespuestaDePregunta($preguntas[$indicePregunta]['preguntaID']),
         ];
         unset($preguntas[$indicePregunta]);
         Session::set('preguntas', $preguntas);

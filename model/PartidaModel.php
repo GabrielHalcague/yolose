@@ -57,10 +57,10 @@ class PartidaModel
             'correcto' => false,
             'fueraTiempo' => false,
         ];
-        $dif = (int)(($respondioPregunta - $muestroPregunta) / 60) / 60;
+        $dif = $respondioPregunta - $muestroPregunta;
         Logger::info("LA DIFERENCIA ENTRE LA MUESTRA Y RESPUESTA ES: $dif");
         if ($id != 'FUERA_TIEMPO') {
-            if ($dif < 9999) {
+            if ($dif < 10) {
                 Logger::info("[CONTESTO LA PREGUNTA EN EL TIEMPO LIMITE DE LOS 10 SEG]");
                 if ($id != 'trampa') {
                     $array['respActual'] = $id;

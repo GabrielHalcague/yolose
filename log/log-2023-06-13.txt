@@ -1,0 +1,1788 @@
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario, u.activo, r.descr 'rol' FROM usuario u
+                                       JOIN rol_usuario ru on u.id = ru.idUs
+                                       JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='gab'
+                                       AND password='639bee393eecbc62256936a8e64d17b1'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64886726d1e1f' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR Y/O COMIENZO JUEGO
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadMedia dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 5)
+			    LIMIT 4
+[2023-06-13][INFO]Ejecutando query: DELETE FROM historialUsuario WHERE idUs = '5'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadMedia dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 5)
+			    LIMIT 4
+[2023-06-13][INFO]Ejecutando query: SELECT u.trampas FROM usuario u WHERE u.id = 5
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '17' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64886726d1e1f' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario, u.activo, r.descr 'rol' FROM usuario u
+                                       JOIN rol_usuario ru on u.id = ru.idUs
+                                       JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='gab'
+                                       AND password='639bee393eecbc62256936a8e64d17b1'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '6488679129b26' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR Y/O COMIENZO JUEGO
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadMedia dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 5)
+			    LIMIT 4
+[2023-06-13][INFO]Ejecutando query: SELECT u.trampas FROM usuario u WHERE u.id = 5
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '16' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '6488679129b26' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '6488679129b26' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '6488679129b26' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario, u.activo, r.descr 'rol' FROM usuario u
+                                       JOIN rol_usuario ru on u.id = ru.idUs
+                                       JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='gab'
+                                       AND password='639bee393eecbc62256936a8e64d17b1'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '648867fc431f8' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR Y/O COMIENZO JUEGO
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadMedia dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 5)
+			    LIMIT 4
+[2023-06-13][INFO]Ejecutando query: SELECT u.trampas FROM usuario u WHERE u.id = 5
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '16' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '648867fc431f8' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '648867fc431f8' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario, u.activo, r.descr 'rol' FROM usuario u
+                                       JOIN rol_usuario ru on u.id = ru.idUs
+                                       JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='gab'
+                                       AND password='639bee393eecbc62256936a8e64d17b1'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64886ae12eff9' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR Y/O COMIENZO JUEGO
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadMedia dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 5)
+			    LIMIT 4
+[2023-06-13][INFO]Ejecutando query: SELECT u.trampas FROM usuario u WHERE u.id = 5
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '19' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64886ae12eff9' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario, u.activo, r.descr 'rol' FROM usuario u
+                                       JOIN rol_usuario ru on u.id = ru.idUs
+                                       JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='gab'
+                                       AND password='639bee393eecbc62256936a8e64d17b1'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64886bbade2cc' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR Y/O COMIENZO JUEGO
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadMedia dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 5)
+			    LIMIT 4
+[2023-06-13][INFO]Ejecutando query: SELECT u.trampas FROM usuario u WHERE u.id = 5
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '16' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64886bbade2cc' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '16' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64886bbade2cc' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '16' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64886bbade2cc' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '16' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64886bbade2cc' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '16' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64886bbade2cc' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '16' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]COMIENZA LA VERIFICACIÓN DE LA RESPUESTA
+[2023-06-13][INFO]LA DIFERENCIA ENTRE LA MUESTRA Y RESPUESTA ES: 0
+[2023-06-13][INFO][NO CONTESTO LA PREGUNTA SALIO POR EL TIMEOUT]
+[2023-06-13][INFO]Ejecutando query: UPDATE pregunta p 
+                    SET p.pregTot = p.pregTot + 1
+                    WHERE p.id = 16
+[2023-06-13][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','16')
+[2023-06-13][INFO]Ejecutando query: INSERT INTO historialPartidas (idUs, idPreg, n_partida,tipoPartida) VALUES ('5','16','64886bbade2cc','1')
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64886bbade2cc' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: UPDATE usuario u SET u.trampas = 5 WHERE id = 5
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64886c2c98358' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR Y/O COMIENZO JUEGO
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadMedia dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 5)
+			    LIMIT 4
+[2023-06-13][INFO]Ejecutando query: SELECT u.trampas FROM usuario u WHERE u.id = 5
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '19' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64886c2c98358' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '19' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64886c2c98358' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '19' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64886c2c98358' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '19' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64886c2c98358' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '19' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64886c2c98358' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '19' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64886c2c98358' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '19' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64886c2c98358' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '19' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64886c2c98358' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '19' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: UPDATE usuario u SET u.trampas = 5 WHERE id = 5
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario, u.activo, r.descr 'rol' FROM usuario u
+                                       JOIN rol_usuario ru on u.id = ru.idUs
+                                       JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='gab'
+                                       AND password='639bee393eecbc62256936a8e64d17b1'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64886dc309f41' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR Y/O COMIENZO JUEGO
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadMedia dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 5)
+			    LIMIT 4
+[2023-06-13][INFO]Ejecutando query: SELECT u.trampas FROM usuario u WHERE u.id = 5
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '17' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64886dc309f41' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '17' ORDER BY RAND()
+[2023-06-13][ERROR]TIEMPO RESTANTE: 8
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64886dc309f41' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '17' ORDER BY RAND()
+[2023-06-13][ERROR]TIEMPO RESTANTE: 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64886dc309f41' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '17' ORDER BY RAND()
+[2023-06-13][ERROR]TIEMPO RESTANTE: 8
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]COMIENZA LA VERIFICACIÓN DE LA RESPUESTA
+[2023-06-13][INFO]LA DIFERENCIA ENTRE LA MUESTRA Y RESPUESTA ES: 0
+[2023-06-13][INFO][NO CONTESTO LA PREGUNTA SALIO POR EL TIMEOUT]
+[2023-06-13][INFO]Ejecutando query: UPDATE pregunta p 
+                    SET p.pregTot = p.pregTot + 1
+                    WHERE p.id = 17
+[2023-06-13][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','17')
+[2023-06-13][INFO]Ejecutando query: INSERT INTO historialPartidas (idUs, idPreg, n_partida,tipoPartida) VALUES ('5','17','64886dc309f41','1')
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64886dc309f41' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: UPDATE usuario u SET u.trampas = 5 WHERE id = 5
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64886e2bd234d' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR Y/O COMIENZO JUEGO
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadMedia dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 5)
+			    LIMIT 4
+[2023-06-13][INFO]Ejecutando query: SELECT u.trampas FROM usuario u WHERE u.id = 5
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '19' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64886e2bd234d' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '19' ORDER BY RAND()
+[2023-06-13][ERROR]TIEMPO RESTANTE: 2
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]COMIENZA LA VERIFICACIÓN DE LA RESPUESTA
+[2023-06-13][INFO]LA DIFERENCIA ENTRE LA MUESTRA Y RESPUESTA ES: 0
+[2023-06-13][INFO][NO CONTESTO LA PREGUNTA SALIO POR EL TIMEOUT]
+[2023-06-13][INFO]Ejecutando query: UPDATE pregunta p 
+                    SET p.pregTot = p.pregTot + 1
+                    WHERE p.id = 19
+[2023-06-13][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','19')
+[2023-06-13][INFO]Ejecutando query: INSERT INTO historialPartidas (idUs, idPreg, n_partida,tipoPartida) VALUES ('5','19','64886e2bd234d','1')
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64886e2bd234d' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: UPDATE usuario u SET u.trampas = 5 WHERE id = 5
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64886ec31f3a1' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR Y/O COMIENZO JUEGO
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadMedia dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 5)
+			    LIMIT 4
+[2023-06-13][INFO]Ejecutando query: SELECT u.trampas FROM usuario u WHERE u.id = 5
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '11' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64886ec31f3a1' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64886ec31f3a1' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario, u.activo, r.descr 'rol' FROM usuario u
+                                       JOIN rol_usuario ru on u.id = ru.idUs
+                                       JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='gab'
+                                       AND password='639bee393eecbc62256936a8e64d17b1'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64886f02a59ba' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR Y/O COMIENZO JUEGO
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadMedia dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 5)
+			    LIMIT 4
+[2023-06-13][INFO]Ejecutando query: SELECT u.trampas FROM usuario u WHERE u.id = 5
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '11' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64886f02a59ba' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario, u.activo, r.descr 'rol' FROM usuario u
+                                       JOIN rol_usuario ru on u.id = ru.idUs
+                                       JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='gab'
+                                       AND password='639bee393eecbc62256936a8e64d17b1'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64886f49de70f' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR Y/O COMIENZO JUEGO
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadMedia dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 5)
+			    LIMIT 4
+[2023-06-13][INFO]Ejecutando query: SELECT u.trampas FROM usuario u WHERE u.id = 5
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '20' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64886f49de70f' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario, u.activo, r.descr 'rol' FROM usuario u
+                                       JOIN rol_usuario ru on u.id = ru.idUs
+                                       JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='gab'
+                                       AND password='639bee393eecbc62256936a8e64d17b1'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '648870b7c2110' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR Y/O COMIENZO JUEGO
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadMedia dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 5)
+			    LIMIT 4
+[2023-06-13][INFO]Ejecutando query: SELECT u.trampas FROM usuario u WHERE u.id = 5
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '11' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '648870b7c2110' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '648870b7c2110' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario, u.activo, r.descr 'rol' FROM usuario u
+                                       JOIN rol_usuario ru on u.id = ru.idUs
+                                       JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='gab'
+                                       AND password='639bee393eecbc62256936a8e64d17b1'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '648871396d3ca' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR Y/O COMIENZO JUEGO
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadMedia dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 5)
+			    LIMIT 4
+[2023-06-13][INFO]Ejecutando query: SELECT u.trampas FROM usuario u WHERE u.id = 5
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '11' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '648871396d3ca' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '648871396d3ca' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '648871396d3ca' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario, u.activo, r.descr 'rol' FROM usuario u
+                                       JOIN rol_usuario ru on u.id = ru.idUs
+                                       JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='gab'
+                                       AND password='639bee393eecbc62256936a8e64d17b1'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '648873eb17147' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR Y/O COMIENZO JUEGO
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadMedia dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 5)
+			    LIMIT 4
+[2023-06-13][INFO]Ejecutando query: SELECT u.trampas FROM usuario u WHERE u.id = 5
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '20' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '648873eb17147' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '648873eb17147' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '20' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]COMIENZA LA VERIFICACIÓN DE LA RESPUESTA
+[2023-06-13][INFO]LA DIFERENCIA ENTRE LA MUESTRA Y RESPUESTA ES: 7
+[2023-06-13][INFO][CONTESTO LA PREGUNTA EN EL TIEMPO LIMITE DE LOS 10 SEG]
+[2023-06-13][INFO][RESPUESTA CORRECTA]
+[2023-06-13][INFO]Ejecutando query: UPDATE pregunta p 
+                    SET p.resCor = p.resCor + 1,
+                        p.pregTot = p.pregTot + 1
+                    WHERE p.id = 20
+[2023-06-13][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','20')
+[2023-06-13][INFO]Ejecutando query: INSERT INTO historialPartidas (estado, idUs, idPreg, n_partida,tipoPartida) VALUES ('1','5','20','648873eb17147','1')
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '648873eb17147' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR Y/O COMIENZO JUEGO
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '11' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]COMIENZA LA VERIFICACIÓN DE LA RESPUESTA
+[2023-06-13][INFO]LA DIFERENCIA ENTRE LA MUESTRA Y RESPUESTA ES: 10
+[2023-06-13][INFO][NO CONTESTO LA PREGUNTA SALIO POR EL TIMEOUT]
+[2023-06-13][INFO]Ejecutando query: UPDATE pregunta p 
+                    SET p.pregTot = p.pregTot + 1
+                    WHERE p.id = 11
+[2023-06-13][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','11')
+[2023-06-13][INFO]Ejecutando query: INSERT INTO historialPartidas (idUs, idPreg, n_partida,tipoPartida) VALUES ('5','11','648873eb17147','1')
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '648873eb17147' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: UPDATE usuario u SET u.trampas = 5 WHERE id = 5
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64887464bfb76' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR Y/O COMIENZO JUEGO
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadMedia dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 5)
+			    LIMIT 4
+[2023-06-13][INFO]Ejecutando query: DELETE FROM historialUsuario WHERE idUs = '5'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadMedia dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 5)
+			    LIMIT 4
+[2023-06-13][INFO]Ejecutando query: SELECT u.trampas FROM usuario u WHERE u.id = 5
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '17' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]COMIENZA LA VERIFICACIÓN DE LA RESPUESTA
+[2023-06-13][INFO]LA DIFERENCIA ENTRE LA MUESTRA Y RESPUESTA ES: 8
+[2023-06-13][INFO][CONTESTO LA PREGUNTA EN EL TIEMPO LIMITE DE LOS 10 SEG]
+[2023-06-13][INFO][RESPUESTA INCORRECTA]
+[2023-06-13][INFO]Ejecutando query: UPDATE pregunta p 
+                    SET p.pregTot = p.pregTot + 1
+                    WHERE p.id = 17
+[2023-06-13][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','17')
+[2023-06-13][INFO]Ejecutando query: INSERT INTO historialPartidas (idUs, idPreg, n_partida,tipoPartida) VALUES ('5','17','64887464bfb76','1')
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64887464bfb76' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: UPDATE usuario u SET u.trampas = 5 WHERE id = 5
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '648874758897e' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR Y/O COMIENZO JUEGO
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadMedia dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 5)
+			    LIMIT 4
+[2023-06-13][INFO]Ejecutando query: SELECT u.trampas FROM usuario u WHERE u.id = 5
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '20' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]COMIENZA LA VERIFICACIÓN DE LA RESPUESTA
+[2023-06-13][INFO]LA DIFERENCIA ENTRE LA MUESTRA Y RESPUESTA ES: 4
+[2023-06-13][INFO][CONTESTO LA PREGUNTA EN EL TIEMPO LIMITE DE LOS 10 SEG]
+[2023-06-13][INFO][RESPUESTA CORRECTA]
+[2023-06-13][INFO]Ejecutando query: UPDATE pregunta p 
+                    SET p.resCor = p.resCor + 1,
+                        p.pregTot = p.pregTot + 1
+                    WHERE p.id = 20
+[2023-06-13][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','20')
+[2023-06-13][INFO]Ejecutando query: INSERT INTO historialPartidas (estado, idUs, idPreg, n_partida,tipoPartida) VALUES ('1','5','20','648874758897e','1')
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '648874758897e' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR Y/O COMIENZO JUEGO
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '11' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]COMIENZA LA VERIFICACIÓN DE LA RESPUESTA
+[2023-06-13][INFO]LA DIFERENCIA ENTRE LA MUESTRA Y RESPUESTA ES: 6
+[2023-06-13][INFO][CONTESTO LA PREGUNTA EN EL TIEMPO LIMITE DE LOS 10 SEG]
+[2023-06-13][INFO][RESPUESTA INCORRECTA]
+[2023-06-13][INFO]Ejecutando query: UPDATE pregunta p 
+                    SET p.pregTot = p.pregTot + 1
+                    WHERE p.id = 11
+[2023-06-13][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','11')
+[2023-06-13][INFO]Ejecutando query: INSERT INTO historialPartidas (idUs, idPreg, n_partida,tipoPartida) VALUES ('5','11','648874758897e','1')
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '648874758897e' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: UPDATE usuario u SET u.trampas = 5 WHERE id = 5
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario, u.activo, r.descr 'rol' FROM usuario u
+                                       JOIN rol_usuario ru on u.id = ru.idUs
+                                       JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='gab'
+                                       AND password='639bee393eecbc62256936a8e64d17b1'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64887df301b12' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR O COMIENZO JUEGO
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadMedia dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 5)
+			    LIMIT 4
+[2023-06-13][INFO]Ejecutando query: SELECT u.trampas FROM usuario u WHERE u.id = 5
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '16' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64887df301b12' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64887df301b12' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario, u.activo, r.descr 'rol' FROM usuario u
+                                       JOIN rol_usuario ru on u.id = ru.idUs
+                                       JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='gab'
+                                       AND password='639bee393eecbc62256936a8e64d17b1'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64887e6367971' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR O COMIENZO JUEGO
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadMedia dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 5)
+			    LIMIT 4
+[2023-06-13][INFO]Ejecutando query: SELECT u.trampas FROM usuario u WHERE u.id = 5
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '19' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64887e6367971' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64887e6367971' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64887e6367971' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario, u.activo, r.descr 'rol' FROM usuario u
+                                       JOIN rol_usuario ru on u.id = ru.idUs
+                                       JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='gab'
+                                       AND password='639bee393eecbc62256936a8e64d17b1'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64887ef63cf94' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR O COMIENZO JUEGO
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadMedia dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 5)
+			    LIMIT 4
+[2023-06-13][INFO]Ejecutando query: SELECT u.trampas FROM usuario u WHERE u.id = 5
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '16' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64887ef63cf94' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario, u.activo, r.descr 'rol' FROM usuario u
+                                       JOIN rol_usuario ru on u.id = ru.idUs
+                                       JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='gab'
+                                       AND password='639bee393eecbc62256936a8e64d17b1'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64887f7a29e0b' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR O COMIENZO JUEGO
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadMedia dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 5)
+			    LIMIT 4
+[2023-06-13][INFO]Ejecutando query: SELECT u.trampas FROM usuario u WHERE u.id = 5
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '19' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64887f7a29e0b' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario, u.activo, r.descr 'rol' FROM usuario u
+                                       JOIN rol_usuario ru on u.id = ru.idUs
+                                       JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='gab'
+                                       AND password='639bee393eecbc62256936a8e64d17b1'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64887fd6253bd' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR O COMIENZO JUEGO
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadMedia dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 5)
+			    LIMIT 4
+[2023-06-13][INFO]Ejecutando query: SELECT u.trampas FROM usuario u WHERE u.id = 5
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '19' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64887fd6253bd' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '19' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64887fd6253bd' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '19' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64887fd6253bd' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '19' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]COMIENZA LA VERIFICACIÓN DE LA RESPUESTA
+[2023-06-13][INFO]LA DIFERENCIA ENTRE LA MUESTRA Y RESPUESTA ES: 7
+[2023-06-13][INFO][NO CONTESTO LA PREGUNTA SALIO POR EL TIMEOUT]
+[2023-06-13][INFO]Ejecutando query: UPDATE pregunta p 
+                    SET p.pregTot = p.pregTot + 1
+                    WHERE p.id = 19
+[2023-06-13][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','19')
+[2023-06-13][INFO]Ejecutando query: INSERT INTO historialPartidas (idUs, idPreg, n_partida,tipoPartida) VALUES ('5','19','64887fd6253bd','1')
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64887fd6253bd' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: UPDATE usuario u SET u.trampas = 5 WHERE id = 5
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario, u.activo, r.descr 'rol' FROM usuario u
+                                       JOIN rol_usuario ru on u.id = ru.idUs
+                                       JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='gab'
+                                       AND password='639bee393eecbc62256936a8e64d17b1'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64888184b7baf' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR O COMIENZO JUEGO
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadMedia dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 5)
+			    LIMIT 4
+[2023-06-13][INFO]Ejecutando query: SELECT u.trampas FROM usuario u WHERE u.id = 5
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '16' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64888184b7baf' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '16' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64888184b7baf' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '16' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64888184b7baf' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '16' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]COMIENZA LA VERIFICACIÓN DE LA RESPUESTA
+[2023-06-13][INFO]LA DIFERENCIA ENTRE LA MUESTRA Y RESPUESTA ES: 1
+[2023-06-13][INFO][NO CONTESTO LA PREGUNTA SALIO POR EL TIMEOUT]
+[2023-06-13][INFO]Ejecutando query: UPDATE pregunta p 
+                    SET p.pregTot = p.pregTot + 1
+                    WHERE p.id = 16
+[2023-06-13][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','16')
+[2023-06-13][INFO]Ejecutando query: INSERT INTO historialPartidas (idUs, idPreg, n_partida,tipoPartida) VALUES ('5','16','64888184b7baf','1')
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '64888184b7baf' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: UPDATE usuario u SET u.trampas = 5 WHERE id = 5
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario, u.activo, r.descr 'rol' FROM usuario u
+                                       JOIN rol_usuario ru on u.id = ru.idUs
+                                       JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='gab'
+                                       AND password='639bee393eecbc62256936a8e64d17b1'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '648881fb58d08' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR O COMIENZO JUEGO
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadMedia dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 5)
+			    LIMIT 4
+[2023-06-13][INFO]Ejecutando query: DELETE FROM historialUsuario WHERE idUs = '5'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadMedia dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 5)
+			    LIMIT 4
+[2023-06-13][INFO]Ejecutando query: SELECT u.trampas FROM usuario u WHERE u.id = 5
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '20' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '648881fb58d08' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '20' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '648881fb58d08' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '20' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '648881fb58d08' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO REALIZO UN REDIRECCIONAMIENTO
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '20' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]COMIENZA LA VERIFICACIÓN DE LA RESPUESTA
+[2023-06-13][INFO]LA DIFERENCIA ENTRE LA MUESTRA Y RESPUESTA ES: 2
+[2023-06-13][INFO][NO CONTESTO LA PREGUNTA SALIO POR EL TIMEOUT]
+[2023-06-13][INFO]Ejecutando query: UPDATE pregunta p 
+                    SET p.pregTot = p.pregTot + 1
+                    WHERE p.id = 20
+[2023-06-13][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','20')
+[2023-06-13][INFO]Ejecutando query: INSERT INTO historialPartidas (idUs, idPreg, n_partida,tipoPartida) VALUES ('5','20','648881fb58d08','1')
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '648881fb58d08' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: UPDATE usuario u SET u.trampas = 5 WHERE id = 5
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '648882a736e9e' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR O COMIENZO JUEGO
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadMedia dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 5)
+			    LIMIT 4
+[2023-06-13][INFO]Ejecutando query: SELECT u.trampas FROM usuario u WHERE u.id = 5
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '11' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]COMIENZA LA VERIFICACIÓN DE LA RESPUESTA
+[2023-06-13][INFO]LA DIFERENCIA ENTRE LA MUESTRA Y RESPUESTA ES: 41
+[2023-06-13][INFO][NO CONTESTO LA PREGUNTA EN EL TIEMPO LIMITE DE LOS 10 SEG]
+[2023-06-13][INFO]Ejecutando query: UPDATE pregunta p 
+                    SET p.pregTot = p.pregTot + 1
+                    WHERE p.id = 11
+[2023-06-13][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','11')
+[2023-06-13][INFO]Ejecutando query: INSERT INTO historialPartidas (idUs, idPreg, n_partida,tipoPartida) VALUES ('5','11','648882a736e9e','1')
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: UPDATE usuario u SET u.trampas = 5 WHERE id = 5
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '648883c67ada9' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR O COMIENZO JUEGO
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadMedia dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 5)
+			    LIMIT 4
+[2023-06-13][INFO]Ejecutando query: SELECT u.trampas FROM usuario u WHERE u.id = 5
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '19' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]COMIENZA LA VERIFICACIÓN DE LA RESPUESTA
+[2023-06-13][INFO]LA DIFERENCIA ENTRE LA MUESTRA Y RESPUESTA ES: 29
+[2023-06-13][INFO][NO CONTESTO LA PREGUNTA EN EL TIEMPO LIMITE DE LOS 10 SEG]
+[2023-06-13][INFO]Ejecutando query: UPDATE pregunta p 
+                    SET p.pregTot = p.pregTot + 1
+                    WHERE p.id = 19
+[2023-06-13][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','19')
+[2023-06-13][INFO]Ejecutando query: INSERT INTO historialPartidas (idUs, idPreg, n_partida,tipoPartida) VALUES ('5','19','648883c67ada9','1')
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '648883c67ada9' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: UPDATE usuario u SET u.trampas = 5 WHERE id = 5
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '648884ab2183e' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR O COMIENZO JUEGO
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadMedia dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 5)
+			    LIMIT 4
+[2023-06-13][INFO]Ejecutando query: SELECT u.trampas FROM usuario u WHERE u.id = 5
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '16' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]COMIENZA LA VERIFICACIÓN DE LA RESPUESTA
+[2023-06-13][INFO]LA DIFERENCIA ENTRE LA MUESTRA Y RESPUESTA ES: 2
+[2023-06-13][INFO][CONTESTO LA PREGUNTA EN EL TIEMPO LIMITE DE LOS 10 SEG]
+[2023-06-13][INFO][RESPUESTA CORRECTA]
+[2023-06-13][INFO]Ejecutando query: UPDATE pregunta p 
+                    SET p.resCor = p.resCor + 1,
+                        p.pregTot = p.pregTot + 1
+                    WHERE p.id = 16
+[2023-06-13][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','16')
+[2023-06-13][INFO]Ejecutando query: INSERT INTO historialPartidas (estado, idUs, idPreg, n_partida,tipoPartida) VALUES ('1','5','16','648884ab2183e','1')
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '648884ab2183e' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR O COMIENZO JUEGO
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadMedia dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 5)
+			    LIMIT 4
+[2023-06-13][INFO]Ejecutando query: DELETE FROM historialUsuario WHERE idUs = '5'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadMedia dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 5)
+			    LIMIT 4
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '16' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]COMIENZA LA VERIFICACIÓN DE LA RESPUESTA
+[2023-06-13][INFO]LA DIFERENCIA ENTRE LA MUESTRA Y RESPUESTA ES: 2
+[2023-06-13][INFO][CONTESTO LA PREGUNTA EN EL TIEMPO LIMITE DE LOS 10 SEG]
+[2023-06-13][INFO][RESPUESTA CORRECTA]
+[2023-06-13][INFO]Ejecutando query: UPDATE pregunta p 
+                    SET p.resCor = p.resCor + 1,
+                        p.pregTot = p.pregTot + 1
+                    WHERE p.id = 16
+[2023-06-13][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','16')
+[2023-06-13][INFO]Ejecutando query: INSERT INTO historialPartidas (estado, idUs, idPreg, n_partida,tipoPartida) VALUES ('1','5','16','648884ab2183e','1')
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '648884ab2183e' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR O COMIENZO JUEGO
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '20' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]COMIENZA LA VERIFICACIÓN DE LA RESPUESTA
+[2023-06-13][INFO]LA DIFERENCIA ENTRE LA MUESTRA Y RESPUESTA ES: 2
+[2023-06-13][INFO][CONTESTO LA PREGUNTA EN EL TIEMPO LIMITE DE LOS 10 SEG]
+[2023-06-13][INFO][RESPUESTA CORRECTA]
+[2023-06-13][INFO]Ejecutando query: UPDATE pregunta p 
+                    SET p.resCor = p.resCor + 1,
+                        p.pregTot = p.pregTot + 1
+                    WHERE p.id = 20
+[2023-06-13][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','20')
+[2023-06-13][INFO]Ejecutando query: INSERT INTO historialPartidas (estado, idUs, idPreg, n_partida,tipoPartida) VALUES ('1','5','20','648884ab2183e','1')
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '648884ab2183e' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR O COMIENZO JUEGO
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadMedia dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 5)
+			    LIMIT 4
+[2023-06-13][INFO]Ejecutando query: DELETE FROM historialUsuario WHERE idUs = '5'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadMedia dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 5)
+			    LIMIT 4
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '16' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]COMIENZA LA VERIFICACIÓN DE LA RESPUESTA
+[2023-06-13][INFO]LA DIFERENCIA ENTRE LA MUESTRA Y RESPUESTA ES: 2
+[2023-06-13][INFO][CONTESTO LA PREGUNTA EN EL TIEMPO LIMITE DE LOS 10 SEG]
+[2023-06-13][INFO][RESPUESTA CORRECTA]
+[2023-06-13][INFO]Ejecutando query: UPDATE pregunta p 
+                    SET p.resCor = p.resCor + 1,
+                        p.pregTot = p.pregTot + 1
+                    WHERE p.id = 16
+[2023-06-13][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','16')
+[2023-06-13][INFO]Ejecutando query: INSERT INTO historialPartidas (estado, idUs, idPreg, n_partida,tipoPartida) VALUES ('1','5','16','648884ab2183e','1')
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '648884ab2183e' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR O COMIENZO JUEGO
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '20' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]COMIENZA LA VERIFICACIÓN DE LA RESPUESTA
+[2023-06-13][INFO]LA DIFERENCIA ENTRE LA MUESTRA Y RESPUESTA ES: 3
+[2023-06-13][INFO][CONTESTO LA PREGUNTA EN EL TIEMPO LIMITE DE LOS 10 SEG]
+[2023-06-13][INFO][RESPUESTA CORRECTA]
+[2023-06-13][INFO]Ejecutando query: UPDATE pregunta p 
+                    SET p.resCor = p.resCor + 1,
+                        p.pregTot = p.pregTot + 1
+                    WHERE p.id = 20
+[2023-06-13][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','20')
+[2023-06-13][INFO]Ejecutando query: INSERT INTO historialPartidas (estado, idUs, idPreg, n_partida,tipoPartida) VALUES ('1','5','20','648884ab2183e','1')
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '648884ab2183e' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR O COMIENZO JUEGO
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadUsuario WHERE idUs = 5
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadMedia dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 5)
+			    LIMIT 4
+[2023-06-13][INFO]Ejecutando query: DELETE FROM historialUsuario WHERE idUs = '5'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM dificultadMedia dm
+                WHERE dm.preguntaID NOT IN (
+                                    SELECT h.idPreg
+					                FROM historialUsuario h 
+					                WHERE h.idUs = 5)
+			    LIMIT 4
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '20' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]COMIENZA LA VERIFICACIÓN DE LA RESPUESTA
+[2023-06-13][INFO]LA DIFERENCIA ENTRE LA MUESTRA Y RESPUESTA ES: 1
+[2023-06-13][INFO][CONTESTO LA PREGUNTA EN EL TIEMPO LIMITE DE LOS 10 SEG]
+[2023-06-13][INFO][RESPUESTA CORRECTA]
+[2023-06-13][INFO]Ejecutando query: UPDATE pregunta p 
+                    SET p.resCor = p.resCor + 1,
+                        p.pregTot = p.pregTot + 1
+                    WHERE p.id = 20
+[2023-06-13][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','20')
+[2023-06-13][INFO]Ejecutando query: INSERT INTO historialPartidas (estado, idUs, idPreg, n_partida,tipoPartida) VALUES ('1','5','20','648884ab2183e','1')
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '648884ab2183e' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][INFO]EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR O COMIENZO JUEGO
+[2023-06-13][INFO]Ejecutando query: SELECT r.id, r.resp FROM respuesta r WHERE r.idPreg = '16' ORDER BY RAND()
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]COMIENZA LA VERIFICACIÓN DE LA RESPUESTA
+[2023-06-13][INFO]LA DIFERENCIA ENTRE LA MUESTRA Y RESPUESTA ES: 4
+[2023-06-13][INFO][CONTESTO LA PREGUNTA EN EL TIEMPO LIMITE DE LOS 10 SEG]
+[2023-06-13][INFO][RESPUESTA INCORRECTA]
+[2023-06-13][INFO]Ejecutando query: UPDATE pregunta p 
+                    SET p.pregTot = p.pregTot + 1
+                    WHERE p.id = 16
+[2023-06-13][INFO]Ejecutando query: INSERT INTO historialUsuario (idUs, idPreg) VALUES ('5','16')
+[2023-06-13][INFO]Ejecutando query: INSERT INTO historialPartidas (idUs, idPreg, n_partida,tipoPartida) VALUES ('5','16','648884ab2183e','1')
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id, SUM(hp.estado=1) 'puntos'
+                FROM historialPartidas hp JOIN usuario u on u.id = hp.idUs
+                WHERE hp.n_partida LIKE '648884ab2183e' AND u.nombreUsuario LIKE 'gab'
+                GROUP BY u.id
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: UPDATE usuario u SET u.trampas = 5 WHERE id = 5
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
