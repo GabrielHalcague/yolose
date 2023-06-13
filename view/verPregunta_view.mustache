@@ -41,8 +41,11 @@
         </div>
 
             <div class="input-group has-validation mt-4">
-                <label for="pregunta">Pregunta</label>
-                <input type="text" class="form-control" name="pregunta" id="{{id}}" value="{{pregunta}}">
+                {{#pregunta}}
+                    <label for="pregunta">Pregunta</label>
+                    <input type="text" class="form-control" name="pregunta" id="{{id}}" value="{{preg}}">
+                {{/pregunta}}
+
             </div>
 
 
@@ -50,7 +53,7 @@
 
         {{#respuestas}}
 
-            <input type="text" class="form-control" name="{{id}}" id="{{id}}" value="{{resp}}">
+            <input type="text" class="form-control" name="respuesta{{id}}" id="{{id}}" value="{{resp}}">
 
         </div>
         {{/respuestas}}

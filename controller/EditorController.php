@@ -26,30 +26,67 @@
             Session::deleteValue('datosActualizar');
             $idPreg = $_GET['pregunta'];
             $pregunta = $this->editorModel->obtenerPreguntaPorId($idPreg);
-            $data['usuarioPregu']= $this->editorModel->obtenerCreadorDePRegunta($idPreg);
+            $data['usuarioPregu'] = $this->editorModel->obtenerCreadorDePRegunta($idPreg);
             $data['categoria'] = $this->editorModel->obtenerCategorias();
-            $data['cateActual']= $this->editorModel->obtenerCategoriaActual($idPreg);
-            $data['estActual']= $this->editorModel->obtenerEstadoActual($idPreg);
-            $data['estado']= $this->editorModel->obtenerEstados();
-            $data['pregunta'] = $pregunta['preg'];
+            $data['cateActual'] = $this->editorModel->obtenerCategoriaActual($idPreg);
+            $data['estActual'] = $this->editorModel->obtenerEstadoActual($idPreg);
+            $data['estado'] = $this->editorModel->obtenerEstados();
+            $data['pregunta'] = $pregunta;
             $data['respuestas'] = $this->editorModel->obtenerRespuestasDePregunta($idPreg);
             $data['idRespCorrecta'] = $this->editorModel->obtenerIdRespuestaCorrecta($idPreg);
             var_dump($data['idRespCorrecta']);
-            Session::set('datosActualizar',$data);
+            Session::set('datosActualizar', $data);
             $this->render->render("verPregunta", $data);
         }
-        public function actualizarPregunta(){
-            echo "llegaste hasta editor";
-            $datos= $this->obtenerDatos();
-            
-            var_dump($_POST);
-            exit();
-        }
-    
-        private function obtenerDatos()
+        
+        public function actualizarPregunta()
         {
-            if(empty($_POST['pregunta'])){
+            echo "llegaste hasta editor";
+            echo "<br>";
+            $datosPregunta = $this->obtenerDatosPregunta();
+            $datosRespuesta = $this->obtenerDatosRespuesta();
+            $this->editorModel->actualizarPregunta($datosPregunta);
+            $this->editorModel->actualizarRespuesta($datosRespuesta);
             
+        }
+        
+        private function obtenerDatosPregunta()
+        {
+            $preguActualizada['id'] = Session::get('datosActualizar')['pregunta']['id'];
+            $preguActualizada['preg'] = $_POST['pregunta'];
+            $preguActualizada['idCat'] = $this->obtenerIdCategoria();
+            $preguActualizada['idEst'] = $this->obtenerEstado();
+            
+            return $preguActualizada;
+        }
+        
+        private function obtenerEstado()
+        {
+            if (!empty($_POST['estado'])) {
+                return $_POST['estado'];
+            } else {
+                return Session::get('datosActualizar')['estActual']['id'];
             }
+        }
+        
+        private function obtenerIdCategoria()
+        {
+            if (!empty($_POST['categoria'])) {
+                return $_POST['categoria'];
+            } else {
+                return Session::get('datosActualizar')['cateActual']['id'];
+            }
+        }
+        
+        private function obtenerDatosRespuesta()
+        {
+            $datosActualizar = Session::get('datosActualizar')['respuestas'];
+            $nuevaRespuesta = [];
+            foreach ($datosActualizar as $dato) {
+                $resp['id'] = $dato['id'];
+                $resp['resp'] = $_POST["respuesta" . $dato['id']];
+                $nuevaRespuesta[$dato['id']] = $resp;
+            }
+            return $nuevaRespuesta;
         }
     }

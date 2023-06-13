@@ -2541,3 +2541,2153 @@ from (select idUs, n_partida, count(*) AS puntajeMaximo from historialpartidas  
 [2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
 [2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
 [2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario, u.activo, r.descr 'rol' FROM usuario u
+                                       JOIN rol_usuario ru on u.id = ru.idUs
+                                       JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='editor'
+                                       AND password='5aee9dbd2a188839105073571bee1b1f'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.preg FROM pregunta P WHERE P.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='11'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.preg FROM pregunta P WHERE P.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='11'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.preg FROM pregunta P WHERE P.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='11'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.preg FROM pregunta P WHERE P.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='11'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.preg FROM pregunta P WHERE P.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='11'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.preg FROM pregunta P WHERE P.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='11'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.preg FROM pregunta P WHERE P.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='11'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.preg FROM pregunta P WHERE P.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='11'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.preg FROM pregunta P WHERE P.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='11'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.preg FROM pregunta P WHERE P.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='14'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.preg FROM pregunta P WHERE P.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='14'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.preg FROM pregunta P WHERE P.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='14'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.preg FROM pregunta P WHERE P.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='14'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.preg FROM pregunta P WHERE P.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='14'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.preg FROM pregunta P WHERE P.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='14'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.preg FROM pregunta P WHERE P.id= '16'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '16'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '16'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '16'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '16'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='16'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.preg FROM pregunta P WHERE P.id= '16'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '16'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '16'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '16'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '16'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='16'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.preg FROM pregunta P WHERE P.id= '16'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '16'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '16'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '16'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '16'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='16'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.preg FROM pregunta P WHERE P.id= '16'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '16'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '16'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '16'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '16'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='16'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.preg FROM pregunta P WHERE P.id= '16'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '16'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '16'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '16'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '16'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='16'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.preg FROM pregunta P WHERE P.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='14'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.preg FROM pregunta P WHERE P.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='14'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.preg FROM pregunta P WHERE P.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='14'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.preg FROM pregunta P WHERE P.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='14'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.preg FROM pregunta P WHERE P.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='14'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.preg FROM pregunta P WHERE P.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='14'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.preg FROM pregunta P WHERE P.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='14'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.preg FROM pregunta P WHERE P.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='14'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.preg FROM pregunta P WHERE P.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='14'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.preg FROM pregunta P WHERE P.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='14'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.preg FROM pregunta P WHERE P.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='14'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.preg FROM pregunta P WHERE P.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='14'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.preg FROM pregunta P WHERE P.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='14'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.preg FROM pregunta P WHERE P.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='14'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.preg FROM pregunta P WHERE P.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='14'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.preg FROM pregunta P WHERE P.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='14'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.preg FROM pregunta P WHERE P.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='14'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.preg FROM pregunta P WHERE P.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='14'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.preg FROM pregunta P WHERE P.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='14'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.preg FROM pregunta P WHERE P.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='14'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='14'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='14'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='32'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='32'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='32'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='32'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '5'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '5'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '5'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '5'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '5'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='5'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '5'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '5'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '5'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '5'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '5'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='5'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='3'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='3'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='3'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='3'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='3'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='3'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='3'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='3'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '21'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '21'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '21'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '21'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '21'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='21'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='32'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='32'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='32'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='32'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='32'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='32'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='32'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='3'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '3'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='3'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '30'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '30'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '30'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '30'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '30'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='30'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '30'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '30'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '30'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '30'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '30'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='30'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '30'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '30'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '30'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '30'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '30'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='30'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '5'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '5'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '5'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '5'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '5'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='5'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='1'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='1'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='1'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='1'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='1'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '26'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '26'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '26'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '26'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '26'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='26'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '26'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '26'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '26'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '26'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '26'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='26'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='11'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='11'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='32'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='32'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='32'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='1'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='1'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='1'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='1'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='1'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='1'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='1'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '1'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='1'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '15'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '15'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '15'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '15'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '15'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='15'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '15'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '15'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '15'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '15'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '15'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='15'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '15'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '15'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '15'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '15'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '15'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='15'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '15'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '15'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '15'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '15'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '15'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='15'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='32'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: UPDATE  pregunta p
+                    set p.preg= '¿Cuando se celebra Navidad?',
+                        p.idCat= '¿Cuando se celebra Navidad?',
+                        p.idEst= '1'
+                        where id= '32';
+                            
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='32'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='32'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='32'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='32'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: UPDATE  pregunta p
+                    set p.preg= '¿Cuando se celebra Navidad?',
+                        p.idCat= '3',
+                        p.idEst= '1'
+                        where id= '32';
+                            
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='32'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: UPDATE  pregunta p
+                    set p.preg= '¿Cuando se celebra Navidad?',
+                        p.idCat= '2',
+                        p.idEst= '1'
+                        where id= '32';
+                            
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='32'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='32'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: UPDATE  pregunta p
+                    set p.preg= '¿Cuando se celebra Navidad?',
+                        p.idCat= '3',
+                        p.idEst= '1'
+                        where id= '32';
+                            
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='32'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: UPDATE  pregunta p
+                    set p.preg= '¿Cuando se celebra Navidad?',
+                        p.idCat= '3',
+                        p.idEst= '1'
+                        where id= '32';
+                            
+[2023-06-13][INFO]Ejecutando query: UPDATE  respuesta r
+            set r.resp= '24 de Diciembre'
+                where r.id= '116'
+            
+[2023-06-13][INFO]Ejecutando query: UPDATE  respuesta r
+            set r.resp= '2 de Mayo'
+                where r.id= '117'
+            
+[2023-06-13][INFO]Ejecutando query: UPDATE  respuesta r
+            set r.resp= '25 de Mayo'
+                where r.id= '118'
+            
+[2023-06-13][INFO]Ejecutando query: UPDATE  respuesta r
+            set r.resp= '3 de Junio '
+                where r.id= '119'
+            
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='32'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: UPDATE  pregunta p
+                    set p.preg= '¿Cuando se celebra Navidad?',
+                        p.idCat= '3',
+                        p.idEst= '4'
+                        where id= '32';
+                            
+[2023-06-13][INFO]Ejecutando query: UPDATE  respuesta r
+            set r.resp= '25 de Diciembre'
+                where r.id= '116'
+            
+[2023-06-13][INFO]Ejecutando query: UPDATE  respuesta r
+            set r.resp= '2 de Mayo'
+                where r.id= '117'
+            
+[2023-06-13][INFO]Ejecutando query: UPDATE  respuesta r
+            set r.resp= '25 de Mayo'
+                where r.id= '118'
+            
+[2023-06-13][INFO]Ejecutando query: UPDATE  respuesta r
+            set r.resp= '3 de Junio '
+                where r.id= '119'
+            
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '32'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='32'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
