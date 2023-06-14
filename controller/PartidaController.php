@@ -13,6 +13,9 @@ class PartidaController
 
     public function list(): void
     {
+        if(!empty(Session::get('perdio'))){
+            Header::redirect("/");
+        }
         $tipoPartida = $_GET['tipoPartida'] ?? '';
         if ($tipoPartida == '') {
             Header::redirect("/");
@@ -85,6 +88,9 @@ class PartidaController
         ]);
 
         $data['tipoPartida']=Session::get('tipoPartida');
+        if(!$data['correcto']) {
+            Session::set('perdio', true);
+        }
 
         $response = array(
             'success' => true,
