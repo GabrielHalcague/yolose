@@ -9,6 +9,16 @@
             $this->database = $database;
         }
         
+        public function obtenerDatosDePregunta($idPreg){
+            $sql= "select p.id as idPreg,p.preg,p.f_creacion,e.id as idEst, e.descr, c.id as idCat, c.categ, u.nombreUsuario
+                    from pregunta p
+                    join categoria c on c.id = p.idCat
+                    join estado e on e.id = p.idEst
+                                     join usuario u on u.id= p.idUsuario
+                    where p.id= '$idPreg'";
+            return $this->database->query_row($sql);
+        }
+        
         public function obtenerPreguntas()
         {
             $sql = "SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
@@ -49,27 +59,6 @@
         public function obtenerEstados()
         {
             $sql = "SELECT * FROM  estado ";
-            return $this->database->query($sql);
-        }
-        
-        public function obtenerEstadoActual($idPreg)
-        {
-            $sql = "SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
-                where p.id= '$idPreg'";
-            return $this->database->query_row($sql);
-        }
-        
-        public function obtenerCategoriaActual($idPreg)
-        {
-            $sql = "SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
-                where p.id= '$idPreg'";
-            return $this->database->query_row($sql);
-        }
-        
-        public function obtenerCreadorDePRegunta($idPreg)
-        {
-            $sql = "SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
-                where p.id= '$idPreg'";
             return $this->database->query($sql);
         }
         

@@ -13,9 +13,7 @@
         
         public function list()
         {
-            if (!Session::get('logged') || Session::get('rol')== 'Usuario') {
-                Header::redirect("/");
-            }
+            if (!Session::get('logged') || Session::get('rol') == 'Usuario') Header::redirect("/");
             Session::set('listaPreguntas', $this->editorModel->obtenerPreguntas());
             $data['preguntas'] = Session::get('listaPreguntas');
             $this->render->render("editor", $data);
@@ -24,14 +22,13 @@
         public function verPregunta()
         {
             Session::deleteValue('datosActualizar');
+           
             $idPreg = $_GET['pregunta'];
-            $data['pregunta'] = $this->editorModel->obtenerPreguntaPorId($idPreg);
-            $data['usuarioPregu'] = $this->editorModel->obtenerCreadorDePRegunta($idPreg);
-            $data['categoria'] = $this->editorModel->obtenerCategorias();
-            $data['cateActual'] = $this->editorModel->obtenerCategoriaActual($idPreg);
-            $data['estActual'] = $this->editorModel->obtenerEstadoActual($idPreg);
+            $data['idPreg']= $idPreg;
+            $data['pregunta']=$this->editorModel->obtenerDatosDePregunta($idPreg);
             $data['estado'] = $this->editorModel->obtenerEstados();
             $data['respuestas'] = $this->editorModel->obtenerRespuestasDePregunta($idPreg);
+            $data['categoria'] = $this->editorModel->obtenerCategorias();
             $data['idRespCorrecta'] = $this->editorModel->obtenerIdRespuestaCorrecta($idPreg);
             Session::set('datosActualizar', $data);
             $this->render->render("verPregunta", $data);
@@ -40,7 +37,7 @@
         public function actualizarPregunta()
         {
             $datosPregunta = $this->obtenerDatosPregunta();
-            $datosRespuesta = $this->obtenerDatosRespuesta();
+           $datosRespuesta = $this->obtenerDatosRespuesta();
             $this->editorModel->actualizarPregunta($datosPregunta);
             $this->editorModel->actualizarRespuesta($datosRespuesta);
            Header::redirect('/editor');
@@ -55,7 +52,7 @@
         
         private function obtenerDatosPregunta()
         {
-            $preguActualizada['id'] = Session::get('datosActualizar')['pregunta']['id'];
+            $preguActualizada['id'] = Session::get('datosActualizar')['pregunta']['idPreg'];
             $preguActualizada['preg'] = $_POST['pregunta'];
             $preguActualizada['idCat'] = $this->obtenerIdCategoria();
             $preguActualizada['idEst'] = $this->obtenerEstado();
@@ -64,22 +61,15 @@
         
         private function obtenerEstado()
         {
-            if (!empty($_POST['estado'])) {
-                return $_POST['estado'];
-            } else {
-                return Session::get('datosActualizar')['estActual']['id'];
-            }
+            if (!empty($_POST['estado'])) return $_POST['estado'];
+            else return Session::get('datosActualizar')['pregunta']['idEst'];
         }
         
         private function obtenerIdCategoria()
         {
-            if (!empty($_POST['categoria'])) {
-                return $_POST['categoria'];
-            } else {
-                return Session::get('datosActualizar')['cateActual']['id'];
-            }
+            if (!empty($_POST['categoria'])) return $_POST['categoria'];
+            else return Session::get('datosActualizar')['pregunta']['idCat'];
         }
-        
         private function obtenerDatosRespuesta()
         {
             $datosActualizar = Session::get('datosActualizar')['respuestas'];
