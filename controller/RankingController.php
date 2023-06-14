@@ -17,7 +17,7 @@ class rankingController
         $data['rankingSolo']= $this->rankingModel->getTop10PorTipoDePartida("1") ;
         $data['rankingBot']= $this->rankingModel->getTop10PorTipoDePartida("2") ;
         $data['rankingPvP']= $this->rankingModel->getTop10PorTipoDePartida("3") ;
-
+       // Header::debugExit($data['rankingSolo']);
         $this->renderer->render('ranking',$data);
     }
 

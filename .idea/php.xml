@@ -12,11 +12,6 @@
   </component>
   <component name="PhpIncludePathManager">
     <include_path>
-      <path value="C:/xampp/php/PEAR" />
-    </include_path>
-  </component>
-  <component name="PhpIncludePathManager">
-    <include_path>
       <path value="$PROJECT_DIR$/../php/PEAR" />
     </include_path>
   </component>

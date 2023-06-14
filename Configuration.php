@@ -9,6 +9,7 @@ include_once('controller/LoginController.php');
 include_once('controller/ActivationController.php');
 include_once('controller/PreguntaController.php');
 include_once('controller/PartidaController.php');
+include_once('controller/EditorController.php');
 include_once('controller/TiendaController.php');
 
 // Inclusión de Helpers
@@ -31,6 +32,8 @@ include_once('model/PreguntaModel.php');
 include_once('model/OpcionModel.php');
 include_once('model/PartidaModel.php');
 include_once('model/TiendaModel.php');
+include_once('model/EditorModel.php');
+
 
 //Inclusión de Servicios
 require_once 'Services/PreguntaServices.php';
@@ -56,11 +59,19 @@ class Configuration
         return self::$instance;
     }
 
-    public function getTiendaController(){
-        return new TiendaController($this->getRenderer(),[
-           'tiendaModel' => new TiendaModel($this->getDatabase()),
+    public function getTiendaController()
+    {
+        return new TiendaController($this->getRenderer(), [
+            'tiendaModel' => new TiendaModel($this->getDatabase()),
             'pdf' => $this->getPDF(),
             'pdfRender' => $this->getPDFRender()
+        ]);
+    }
+
+    public function getEditorController()
+    {
+        return new EditorController($this->getRenderer(), [
+            'editorModel' => new EditorModel($this->getDatabase())
         ]);
     }
 
@@ -112,12 +123,13 @@ class Configuration
     {
         return new perfilController($this->getRenderer(), new UserModel($this->getDatabase()), new PerfilModel($this->getDatabase()), $this->getQRGenerator());
     }
-    public function getRankingController(){
-        include_once ('controller/RankingController.php');
-        include_once ('model/RankingModel.php');
+
+    public function getRankingController()
+    {
+        include_once('controller/RankingController.php');
+        include_once('model/RankingModel.php');
         return new rankingController($this->getRenderer(), new RankingModel($this->getDatabase()));
     }
-
 
 
     private function getArrayConfig()
