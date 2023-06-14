@@ -32,5 +32,6 @@ if (Session::isLogged() && in_array($module, $controladoresINVALIDOSLogeado)){
       $module = 'home';
 }
 
+
 $router->route($module, $method);
 ?>

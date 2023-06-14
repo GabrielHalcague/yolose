@@ -119,14 +119,6 @@ class PartidaController
             $data['resultado'] = $resultado;
         }
 
-        /*if ($tipoPartida == 3) {
-            $arrayScores = $this->partidaModel->obtenerScoresDeUnVsPlayer($tokenPartida);
-            if (count($arrayScores) == 1) {
-                $usuarioGanador = array_keys(max($arrayScores));
-               $data['resultado'] = $usuarioGanador;
-            }
-        }*/
-
         if ($tipoPartida == 1) {
             $data['resultado'] = "HAS MEJORADO";
         }

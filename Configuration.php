@@ -9,6 +9,7 @@ include_once('controller/LoginController.php');
 include_once('controller/ActivationController.php');
 include_once('controller/PreguntaController.php');
 include_once('controller/PartidaController.php');
+include_once('controller/TiendaController.php');
 
 // Inclusión de Helpers
 include_once('helpers/MySqlDatabase.php');
@@ -17,6 +18,7 @@ include_once('helpers/Router.php');
 include_once "helpers/Mailer.php";
 include_once "helpers/QRGenerator.php";
 require_once "helpers/Logger.php";
+require_once "helpers/PDFGenerator.php";
 
 // Inclusión de Models
 include_once('model/HomeModel.php');
@@ -28,6 +30,7 @@ include_once('model/CategoriaModel.php');
 include_once('model/PreguntaModel.php');
 include_once('model/OpcionModel.php');
 include_once('model/PartidaModel.php');
+include_once('model/TiendaModel.php');
 
 //Inclusión de Servicios
 require_once 'Services/PreguntaServices.php';
@@ -51,6 +54,16 @@ class Configuration
             self::$instance = new self();
         }
         return self::$instance;
+    }
+
+    public function getTiendaController(){
+        return new TiendaController($this->getRenderer(),[
+           'tiendaModel' => new TiendaModel($this->getDatabase()),
+           'mailer' => $this->getMailer(),
+            'mailRender' => $this->getMailRenderer(),
+            'pdf' => $this->getPDF(),
+            'pdfRender' => $this->getPDFRender()
+        ]);
     }
 
     public function getPreguntaController()
@@ -151,5 +164,15 @@ class Configuration
     public function getQRGenerator()
     {
         return new QRGenerator('public/qr');
+    }
+
+    private function getPDF()
+    {
+        return new PDFGenerator();
+    }
+
+    private function getPDFRender()
+    {
+        return new MustacheRender("public/template");
     }
 }
