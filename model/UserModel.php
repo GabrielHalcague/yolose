@@ -71,8 +71,6 @@ class UserModel{
     public function setNuevoUsername($idUsuario, $nickName){
         $sql="UPDATE usuario u SET u.nombreUsuario ='$nickName' where u.id='$idUsuario'";
         $this->database->execute($sql);
-       // if(mysqli_affected_rows($sql) ==1){
-         //   return $nickName } else return null;
     }
 
 
