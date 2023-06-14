@@ -13,7 +13,7 @@
         
         public function list()
         {
-            if (!Session::get('logged')) {
+            if (!Session::get('logged') || Session::get('rol')== 'Usuario') {
                 Header::redirect("/");
             }
             Session::set('listaPreguntas', $this->editorModel->obtenerPreguntas());
@@ -25,29 +25,32 @@
         {
             Session::deleteValue('datosActualizar');
             $idPreg = $_GET['pregunta'];
-            $pregunta = $this->editorModel->obtenerPreguntaPorId($idPreg);
+            $data['pregunta'] = $this->editorModel->obtenerPreguntaPorId($idPreg);
             $data['usuarioPregu'] = $this->editorModel->obtenerCreadorDePRegunta($idPreg);
             $data['categoria'] = $this->editorModel->obtenerCategorias();
             $data['cateActual'] = $this->editorModel->obtenerCategoriaActual($idPreg);
             $data['estActual'] = $this->editorModel->obtenerEstadoActual($idPreg);
             $data['estado'] = $this->editorModel->obtenerEstados();
-            $data['pregunta'] = $pregunta;
             $data['respuestas'] = $this->editorModel->obtenerRespuestasDePregunta($idPreg);
             $data['idRespCorrecta'] = $this->editorModel->obtenerIdRespuestaCorrecta($idPreg);
-            var_dump($data['idRespCorrecta']);
             Session::set('datosActualizar', $data);
             $this->render->render("verPregunta", $data);
         }
         
         public function actualizarPregunta()
         {
-            echo "llegaste hasta editor";
-            echo "<br>";
             $datosPregunta = $this->obtenerDatosPregunta();
             $datosRespuesta = $this->obtenerDatosRespuesta();
             $this->editorModel->actualizarPregunta($datosPregunta);
             $this->editorModel->actualizarRespuesta($datosRespuesta);
-            
+           Header::redirect('/editor');
+        }
+        
+        public function verQuienReporto(){
+            $idPreg= $_GET['pregunta'];
+            $data['pregunta'] = $this->editorModel->obtenerPreguntaPorId($idPreg);
+            $data['reporte']= $this->editorModel->obtenerInformacionDeReporte($idPreg);
+            $this->render->render("verReporte",$data);
         }
         
         private function obtenerDatosPregunta()
@@ -56,7 +59,6 @@
             $preguActualizada['preg'] = $_POST['pregunta'];
             $preguActualizada['idCat'] = $this->obtenerIdCategoria();
             $preguActualizada['idEst'] = $this->obtenerEstado();
-            
             return $preguActualizada;
         }
         

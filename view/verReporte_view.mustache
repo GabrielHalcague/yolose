@@ -1,0 +1,28 @@
+<div class="container">
+    <h1>Reporte preguntas</h1>
+    {{#pregunta}}
+        <p>{{preg}}</p>
+    {{/pregunta}}
+    <table class="table table-striped table-hover">
+
+        <thead class="table-primary">
+        <tr>
+            <td>Reportada por</td>
+            <td>Fecha de reporte</td>
+        </tr>
+        </thead>
+        <tbody>
+        {{#reporte}}
+            <tr>
+             <td>{{nombreUsuario}}</td>
+                <td> {{f_reporte}}</td>
+            </tr>
+        {{/reporte}}
+        </tbody>
+    </table>
+
+    {{^reporte}}
+        <h3>La pregunta no ha sido reportada</h3>
+    {{/reporte}}
+    <a href="/editor" class="btn btn-primary px-5">Volver</a>
+</div>

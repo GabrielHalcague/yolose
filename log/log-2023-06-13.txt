@@ -4691,3 +4691,708 @@ from (select idUs, n_partida, count(*) AS puntajeMaximo from historialpartidas  
             order by count(r.idPregunta) DESC  
 [2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
 [2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='14'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '14'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='14'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: UPDATE  pregunta p
+                    set p.preg= 'El folding en una aplicación web se refiere a:',
+                        p.idCat= '5',
+                        p.idEst= '2'
+                        where id= '14'  
+[2023-06-13][INFO]Ejecutando query: UPDATE  respuesta r
+                 set r.resp= 'una forma de disponer de las consultas en la base de datos'
+                where r.id= '43'  
+[2023-06-13][INFO]Ejecutando query: UPDATE  respuesta r
+                 set r.resp= 'una forma de escribir el código de manera que sea legible'
+                where r.id= '44'  
+[2023-06-13][INFO]Ejecutando query: UPDATE  respuesta r
+                 set r.resp= 'una forma de ordenar el código de manera que el proyecto sea comprensible'
+                where r.id= '45'  
+[2023-06-13][INFO]Ejecutando query: UPDATE  respuesta r
+                 set r.resp= 'un método de foldear vistas'
+                where r.id= '46'  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg FROM pregunta P WHERE P.id= '13'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '13'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '13'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '13'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '13'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='13'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg, p.f_creacion FROM pregunta P WHERE P.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='11'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg, p.f_creacion FROM pregunta P WHERE P.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='11'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg, p.f_creacion FROM pregunta P WHERE P.id= '16'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '16'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '16'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '16'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '16'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='16'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg, p.f_creacion FROM pregunta P WHERE P.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='11'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg, p.f_creacion FROM pregunta P WHERE P.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='11'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg, p.f_creacion FROM pregunta P WHERE P.id= '13'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '13'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '13'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '13'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '13'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='13'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: UPDATE  pregunta p
+                    set p.preg= 'El enrutador en un modelo MVC es el encargado de ejecutar las operaciones de acceso a la base de datos',
+                        p.idCat= '5',
+                        p.idEst= '4'
+                        where id= '13'  
+[2023-06-13][INFO]Ejecutando query: UPDATE  respuesta r
+                 set r.resp= 'Verdadero'
+                where r.id= '41'  
+[2023-06-13][INFO]Ejecutando query: UPDATE  respuesta r
+                 set r.resp= 'Falso'
+                where r.id= '42'  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg, p.f_creacion FROM pregunta P WHERE P.id= '18'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '18'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '18'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '18'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '18'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='18'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: UPDATE  pregunta p
+                    set p.preg= 'La principal diferencia entre los enfoques Responsive y Mobile First es',
+                        p.idCat= '5',
+                        p.idEst= '4'
+                        where id= '18'  
+[2023-06-13][INFO]Ejecutando query: UPDATE  respuesta r
+                 set r.resp= 'Que el enfoque Mobile First se basa en CSS3 y HTML 5.'
+                where r.id= '59'  
+[2023-06-13][INFO]Ejecutando query: UPDATE  respuesta r
+                 set r.resp= 'Que el enfoque Mobile First se basa en la idea de diseñar pensando en el ambiente móvil y de allí llevar el diseño al desktop.'
+                where r.id= '60'  
+[2023-06-13][INFO]Ejecutando query: UPDATE  respuesta r
+                 set r.resp= 'En que el enfoque Responsive el sitio debe adaptarse a diferentes dispositivos y en el enfoque Mobile First no.'
+                where r.id= '61'  
+[2023-06-13][INFO]Ejecutando query: UPDATE  respuesta r
+                 set r.resp= 'Los dos enfoques son iguales, dos nombres para identificar o mismo.'
+                where r.id= '62'  
+[2023-06-13][INFO]Ejecutando query: UPDATE  respuesta r
+                 set r.resp= 'La 1 y 4 son correctas'
+                where r.id= '63'  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg, p.f_creacion FROM pregunta P WHERE P.id= '13'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '13'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '13'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '13'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '13'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='13'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: UPDATE  pregunta p
+                    set p.preg= 'El enrutador en un modelo MVC es el encargado de ejecutar las operaciones de acceso a la base de datos',
+                        p.idCat= '5',
+                        p.idEst= '4'
+                        where id= '13'  
+[2023-06-13][INFO]Ejecutando query: UPDATE  respuesta r
+                 set r.resp= 'Verdadero'
+                where r.id= '41'  
+[2023-06-13][INFO]Ejecutando query: UPDATE  respuesta r
+                 set r.resp= 'Falso'
+                where r.id= '42'  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.id, p.preg, p.f_creacion FROM pregunta P WHERE P.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT u.id ,u.nombreUsuario  FROM  usuario u join pregunta p on u.id = p.idUsuario
+                where p.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  categoria 
+[2023-06-13][INFO]Ejecutando query: SELECT c.id, c.categ FROM  categoria c join pregunta p on c.id = p.idCat
+                where p.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT e.id, e.descr FROM  estado e join pregunta p on e.id = p.idEst
+                where p.id= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM  estado 
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM respuesta r WHERE r.idPreg= '11'
+[2023-06-13][INFO]Ejecutando query: SELECT prc.idResp FROM  pregunta_respuesta_correcta prc WHERE prc.idPreg='11'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: UPDATE  pregunta p
+                    set p.preg= 'El modelo en un esquema MVC es el encargado de almacenar y ejecutar la lógica del negocio',
+                        p.idCat= '5',
+                        p.idEst= '4'
+                        where id= '11'  
+[2023-06-13][INFO]Ejecutando query: UPDATE  respuesta r
+                 set r.resp= 'Verdadero'
+                where r.id= '37'  
+[2023-06-13][INFO]Ejecutando query: UPDATE  respuesta r
+                 set r.resp= 'Falso'
+                where r.id= '38'  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT id, categ FROM categoria
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT id, categ FROM categoria
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT id, categ FROM categoria
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT id, categ FROM categoria
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT id, categ FROM categoria
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT id, categ FROM categoria
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT id, categ FROM categoria
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT id, categ FROM categoria
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT id, categ FROM categoria
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT id, categ FROM categoria
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT id, categ FROM categoria
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT id, categ FROM categoria
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT id, categ FROM categoria
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT id, categ FROM categoria
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT id, categ FROM categoria
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT id, categ FROM categoria
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT id, categ FROM categoria
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT id, categ FROM categoria
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT distinct p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ, count(r.idPregunta) as 'cantReporte', e.descr
+                FROM pregunta p join categoria c on c.id = p.idCat
+                    join estado e  on  e.id= p.idEst
+              left join   reportepregunta r on p.id = r.idPregunta
+              
+            group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
+            order by count(r.idPregunta) DESC  
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT p.preg, e.descr 'estado' 
+                FROM pregunta p JOIN estado e ON p.idEst = e.id
+                WHERE e.descr NOT LIKE 'ACTIVO'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario, u.activo, r.descr 'rol' FROM usuario u
+                                       JOIN rol_usuario ru on u.id = ru.idUs
+                                       JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='usuario'
+                                       AND password='f8032d5cae3de20fcec887f395ec9a6a'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT u.id,u.nombreUsuario, u.activo, r.descr 'rol' FROM usuario u
+                                       JOIN rol_usuario ru on u.id = ru.idUs
+                                       JOIN rol r on r.id = ru.idRol
+                                       WHERE nombreUsuario='editor'
+                                       AND password='5aee9dbd2a188839105073571bee1b1f'
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-13][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3

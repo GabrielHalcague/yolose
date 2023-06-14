@@ -18,15 +18,13 @@
               
             group by p.id,p.preg, p.idCat, p.idEst,p.f_creacion, c.categ,e.descr
             order by count(r.idPregunta) DESC  ";
-            
             return $this->database->query($sql);
         }
         
         public function obtenerPreguntaPorId($idPreg)
         {
-            $sql = "SELECT p.id, p.preg FROM pregunta P WHERE P.id= '$idPreg'";
+            $sql = "SELECT p.id, p.preg, p.f_creacion FROM pregunta P WHERE P.id= '$idPreg'";
             return $this->database->query_row($sql);
-            
             
         }
         
@@ -81,8 +79,7 @@
                     set p.preg= '$datosPregunta[preg]',
                         p.idCat= '$datosPregunta[idCat]',
                         p.idEst= '$datosPregunta[idEst]'
-                        where id= '$datosPregunta[id]';
-                            ";
+                        where id= '$datosPregunta[id]'  ";
             $this->database->execute($sql);
         }
         
@@ -90,13 +87,16 @@
         {
             foreach ($datosRespuesta as $dato) {
                 $sql = "UPDATE  respuesta r
-            set r.resp= '$dato[resp]'
-                where r.id= '$dato[id]'
-            ";
+                 set r.resp= '$dato[resp]'
+                where r.id= '$dato[id]'  ";
                 $this->database->execute($sql);
             }
-            
         }
-        
+        public function obtenerInformacionDeReporte($idPreg){
+            $sql = "SELECT  p.id,u.nombreUsuario, r.f_reporte FROM  pregunta p join reportepregunta r on p.id= r.idPregunta
+                    join usuario u on u.id = r.idUsuario
+                where p.id= '$idPreg'";
+            return $this->database->query($sql);
+    }
         
     }
