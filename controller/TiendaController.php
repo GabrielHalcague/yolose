@@ -4,8 +4,6 @@ class TiendaController
 {
     private mixed $renderer;
     private mixed $tiendaModel;
-    private mixed $mailer;
-    private mixed $mailRender;
     private mixed $pdf;
     private mixed $pdfRender;
 
@@ -13,8 +11,6 @@ class TiendaController
     {
         $this->renderer = $renderer;
         $this->tiendaModel = $models['tiendaModel'];
-        $this->mailer = $models['mailer'];
-        $this->mailRender = $models['mailRender'];
         $this->pdf = $models['pdf'];
         $this->pdfRender = $models['pdfRender'];
     }
@@ -54,7 +50,7 @@ class TiendaController
         }
         $item = Session::get('item');
         $data['producto'] = $item['descr'];
-        $usuario = $this->tiendaModel->obtenerUsuarioPorID(Session::get('idUsuario'));
+        $usuario = $this->tiendaModel->getUsuarioByID(Session::get('idUsuario'));
         $data['firstname'] = $usuario['nombre'];
         $data['surname'] = $usuario['apellido'];
         $this->renderer->render("tarjeta", $data );
@@ -81,9 +77,9 @@ class TiendaController
     {
         $data = [
             'fecha' => date("Y-m-d"),
-            'nombreCompleto' => $this->tiendaModel->obtenerNombreCompletoDel(Session::get('idUsuario'))['nombreCompleto'],
-            'productos' => Session::get('item'),
-            'precioTotal' => Session::get('item')['precio']
+            'nombreCompleto' => $this->tiendaModel->getUsuarioByID(Session::get('idUsuario'))['nombreCompleto'],
+            'email' => $this->tiendaModel->getUsuarioByID(Session::get('idUsuario'))['correo'],
+            'productos' => Session::get('item')
         ];
         $html = $this->pdfRender->generateTemplatedStringForPDF('factura', $data);
         $this->pdf->getPDF($html, 'factura');

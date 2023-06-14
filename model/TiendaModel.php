@@ -47,19 +47,16 @@ class TiendaModel
         return $this->database->query_row($sql);
     }
 
-    public function obtenerNombreCompletoDel($id){
-        $sql = "SELECT CONCAT(nombre, ' ', apellido) as 'nombreCompleto' FROM usuario where id = '$id'";
-        return $this->database->query_row($sql);
-    }
-
     public function obtenerTrampaPorId($id)
     {
         $sql = "SELECT * FROM trampa where idTrampa = '$id'";
         return $this->database->query_row($sql);
     }
 
-    public function obtenerUsuarioPorID($id){
-        $sql = "SELECT nombre, apellido FROM usuario where id='$id'";
+    public function getUsuarioByID($id){
+        $sql = "SELECT nombre, apellido, CONCAT(nombre,' ', apellido) as 'nombreCompleto', correo
+                FROM usuario
+                WHERE id = '$id'";
         return $this->database->query_row($sql);
     }
 }

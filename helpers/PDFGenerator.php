@@ -14,7 +14,6 @@ class PDFGenerator extends Dompdf
 
     public function getPDF($html, $filename)
     {
-        $this->setBasePath("/public/css/");
         $this->loadHtml($html);
         $this->setPaper('A4');
         $this->render();

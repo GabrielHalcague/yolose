@@ -59,8 +59,6 @@ class Configuration
     public function getTiendaController(){
         return new TiendaController($this->getRenderer(),[
            'tiendaModel' => new TiendaModel($this->getDatabase()),
-           'mailer' => $this->getMailer(),
-            'mailRender' => $this->getMailRenderer(),
             'pdf' => $this->getPDF(),
             'pdfRender' => $this->getPDFRender()
         ]);
