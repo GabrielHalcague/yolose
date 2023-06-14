@@ -47,18 +47,17 @@ class LoginController
             exit();
         }
 
-        if ($usuarioBuscado[0]['activo'] == 1) {
+        if ($usuarioBuscado['activo'] == 1) {
+            Session::set('idUsuario', $usuarioBuscado["id"] );
             Session::set('logged', true);
-            Session::set('rol', $usuarioBuscado[0]["generoId"]); // cambiar a rol, no esta en la BD
+            Session::set('rol', $usuarioBuscado["rol"]);
+
             Session::set('username', $username);
-            $data['logged'] = Session::get('logged');
-            $this->rendered->render('home', $data);
+            Header::redirect("/");
             exit();
         }else{
-            header("location:validate.php");
+            header("location:validate.php");// no existe
             exit();
         }
-     
     }
-
 }

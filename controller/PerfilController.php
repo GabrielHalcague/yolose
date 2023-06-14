@@ -1,64 +1,111 @@
 <?php
-
+require_once "helpers/Session.php";
+require_once "helpers/QRGenerator.php";
 use JetBrains\PhpStorm\NoReturn;
 
 class PerfilController
 {
     private $renderer ;
+    private $userModel;
     private $perfilModel;
+    private $qrGenerator;
 
-    public function __construct($renderer, $perfilModel) {
+    public function __construct($renderer, $userModel, $perfilModel, $qrGenerator) {
+        $this->userModel = $userModel;
         $this->perfilModel = $perfilModel;
         $this->renderer = $renderer;
+        $this->qrGenerator = $qrGenerator;
     }
     public function list(){
-        if (Session::getDataSession() == null) {
+        if (!Session::get('logged')) {
             Header::redirect("/");
         }
-        $rol= Session::get('rol');// para el menu
-        $data = $this->menuSegunUsuario($rol);
+        $nombreUsuario = Session::get('username');
+        $data["perfil"]= $this->userModel->getUsuarioByUsername($nombreUsuario);
+        $idUsuario=$data["perfil"]["id"];
+        $data = $this->datosComunesParaElPerfil($idUsuario, $data);
+        $data['editarPerfil'] = true;
+        $data['perfilJS'] = true;
+        $data['mapa'] = true;
+        $this->renderer->render("perfil", $data);
+        exit();
 
-        $username= Session::get('username');
-        $data["perfil"]= $this->perfilModel->getPerfilUsuarioPorNombreUsuario($username);
-        $data['logged'] = Session::get('logged');
+    }
+    public function usuario(){
+        $username = $_GET['user'];
+        $data ["perfil"] = $this->userModel->getUsuarioByUsername($username);
+        if(empty($data ["perfil"] )){
+            Header::redirect("/");
+        }
+
+        $idUsuario=$data["perfil"]["id"];
+        $data['editarPerfil'] = false;
+        $data['perfilJS'] = true;
+        $data['mapa'] = true;
+        $data = $this->datosComunesParaElPerfil($idUsuario, $data);
         $this->renderer->render("perfil", $data);
         exit();
     }
 
-      public function usuario(){
-        if (Session::getDataSession() == null) {
-            $data = $this->menuSegunUsuario(0);
+    private function generateQR($username){
+        $enlace = "http:/localhost:80/perfil/usuario?user={$username}";
+        $ruta = $this->qrGenerator->getQrPng($enlace);
+        if(!$ruta){
+            exit();
         }
-        else{
-            $rol= Session::get('rol');
-            $data = $this->menuSegunUsuario($rol);
-        }
-
-        $username = $_GET['usuario'] ?? '';
-        $data["perfil"]= $this->perfilModel->getPerfilUsuarioPorNombreUsuario($username);
-        $data['logged'] = Session::get('logged');
-        $this->renderer->render("perfil", $data);
-        exit();
-     }
-    private function menuSegunUsuario($rol): array {
-        $menu ['menu'][] = array('nombreBoton' => 'home', 'ruta' => '/');
-        switch ($rol) {
-            case 1:
-                $menu ['menu'][] = array('nombreBoton' => 'Solitario', 'ruta' => 'Solitario');
-                $menu ['menu'][] = array('nombreBoton' => 'Vs Ia', 'ruta' => 'vsia');
-                $menu ['menu'][] = array('nombreBoton' => 'P v P', 'ruta' => 'pvp');
-                $menu ['menu'][] = array('nombreBoton' => 'Perfil', 'ruta' => 'perfil');
-                return $menu;
-            case 2:
-                $menu ['menu'][] = array('nombreBoton' => 'editor', 'ruta' => 'editor');
-                return $menu;
-
-            case 3:
-                $menu ['menu'][] = array('nombreBoton' => 'editor', 'ruta' => 'editor');
-                $menu ['menu'][] =array('nombreBoton' => 'admin', 'ruta' => 'admin');
-                return $menu;
-            default:
-                return  $menu;
-        }
+        return $ruta;
     }
+
+  public function editar()
+  {
+      /*if (!Session::isLogged()) {
+          Header::redirect('/');
+      }*/
+      $nickName = $_POST["nickName"] ?? null;
+        if($this->validarFormatoNick($nickName)){
+            $data['nicknameEstado'] = $this->userModel->getUsername($nickName);
+        }else{
+            $data['nicknameEstado'] = $nickName;
+        }
+      echo json_encode($data);
+  }
+  public function confirmar(){
+     /* if (!Session::isLogged()) {
+          Header::redirect('/');
+      }*/
+      $nickName = $_POST["nickName"] ?? null;
+      $idUsuario = $_POST["idUsuario"] ?? null;
+      /*if ($idUsuario != Session::get('idUsuario')) {
+          Header::redirect('/');
+      }*/
+
+      if($this->validarFormatoNick($nickName)){
+         $this->userModel->setNuevoUsername($idUsuario, $nickName);
+          Session::deleteValue('username');
+          Session::set('username', $nickName);
+          $data['nicknameEstado'] = $nickName;
+      }else{
+          $data['nicknameEstado'] = null;
+      }
+      echo json_encode($data);
+  }
+
+  private function validarFormatoNick($nickName){
+        if(strlen($nickName)<3 ||strlen($nickName)>30 || $nickName == null){
+            return false;
+        }
+        return true;
+  }
+
+    public function datosComunesParaElPerfil(mixed $idUsuario, array $data): array
+    {
+        $data["maximoRespuestasCorrectas"] = $this->perfilModel->getMAximoRespuestasCorrectasPorIdUsuario($idUsuario);
+        $data["rank"] = $this->perfilModel->getRankingGlobalDelUsuario($data["perfil"]["id"]);
+        $data["historialPartidas"] = $this->perfilModel->obtenerHistorialPartidasUsuario($idUsuario);
+        $data["rutaQR"] = $this->generateQR($data["perfil"]["nombreUsuario"]);
+        $data['showQR'] = true;
+        return $data;
+    }
+
+
 }

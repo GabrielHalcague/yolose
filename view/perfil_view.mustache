@@ -1,21 +1,117 @@
-{{> header}}
+
+
+<!-- Button trigger modal -->
+{{#editarPerfil}}
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+    Editar Perfil
+</button>
+<!-- Modal -->
+{{#perfil}}
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <article class="p-5 bg-dark-subtle rounded">
+                    <div class="d-flex justify-content-center">
+                        <input id="idUsuario" name="prodId" type="hidden" value="{{id}}">
+                        <input id="nuevoNickOculto" name="prodId" type="hidden" value="">
+                        <div>
+                            <label for="usuario" class="form-label">Usuario : {{nombreUsuario}}</label>
+                            <input type="text" name="usuario" id="nuevoNick" class="form-control"/>
+                            <h5 id="nickNameEstado"></h5>
+                            <button type="button" class="btn btn-success" id="validarNick">Validar</button>
+                            <button type="button" class="btn btn-secondary" disabled id="confirmarNick">Confirmar</button>
+                        </div>
+                    </div>
+                </article>
+             </div>
+        </div>
+    </div>
+</div>
+{{/perfil}}
+{{/editarPerfil}}
+
+
 <section class="container">
     <article class="row text-center">
-        <div class="col-4">
-            {{#perfil}}
-                <img src="public/{{fotoPerfil}}" class="img-fluid" style="max-height: 500px;">
-            {{/perfil}}
-            </div>
-            <div class="col-8">
-                 {{#perfil}}
+        <div class="col-6">
+
+                {{#perfil}}
+                <img src="/public/img/{{fotoPerfil}}" class="img-fluid" style="max-height: 500px;">
+
+
+
+            <div id="map" style="width: 100%; height: 50%; "></div>
+           </div>
+            <div class="col-6">
                         <p><strong>Usuario:</strong> {{nombreUsuario}}</p>
                         <p><strong>Nombre:</strong> {{nombre}}</p>
-                        <p><strong>Edad:</strong> {{f_nacimiento}}</p>
-                        <p><strong>Genero:</strong> {{generoId}}</p>
-                        <p><strong>Fecha de ingreso:</strong> {{f_registro}}</p>
-                        <p><strong>Activo:</strong> {{activo}}</p>
+                        <p><strong>Fecha Nacimiento:</strong> {{f_nacimiento}}</p>
+                        <p><strong>Genero:</strong> {{descr}}</p>
+                        <p><strong>Miembro desde:</strong> {{f_registro}}</p>
+
+                        <p><strong>Activo:</strong>
+                            {{#activo}}  <b>Activo</b> {{/activo}}
+                            {{^activo}}   Inactivo {{/activo}}
+                        </p>
+
+                        <p><strong>Mejor Partida:</strong> {{maximoRespuestasCorrectas}}</p>
+                        <p><strong>Ranking:</strong> {{rank}}</p>
                  {{/perfil}}
             </div>
     </article>
 </section>
-{{> footer}}
+
+{{#perfil}}
+<section class="container">
+    <article class="row text-center">
+        <div class="col-6">
+
+            <div id="map" style="max-height: 500px; max-width: 500px; "></div>
+            <script>
+                var map = L.map('map').setView([{{coordenadas}} ], 13);
+                L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    maxZoom: 25,
+                }).addTo(map);
+                L.circle([{{coordenadas}} ], {radius: 500}).addTo(map);
+            </script> </div>
+
+        <div class="col-6">
+                    <img src="/{{rutaQR}}"
+                         class="img-fluid responsive"
+                         alt="">
+        </div>
+    </article>
+</section>
+{{/perfil}}
+{{#perfil}}
+    <section class="container">
+        <article class="row text-center">
+            <div class="col-6">
+                <h5>Historial de partidas</h5>
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th scope="col">Tipo</th>
+                        <th scope="col">Puntaje Maximo</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {{#historialPartidas}}
+
+                    <tr>
+                        <td>{{tipoPartida}}</td>
+                        <td>{{f_partida}}</td>
+                        <td>{{sumaPreguntasContestadas}}</td>
+                    </tr>
+                    {{/historialPartidas}}
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-6">
+
+            </div>
+        </article>
+    </section>
+{{/perfil}}
+

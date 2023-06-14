@@ -1,0 +1,62 @@
+<section class="container">
+
+    <div class="row">
+        <div class="col-4">
+            <h1 class="text-center">Jugador: <strong class="text-primary">{{username}}</strong></h1>
+        </div>
+        <div class="col-4">
+            <h1 class="text-center">Puntaje: <strong class="text-primary">{{puntaje}}</strong></h1>
+        </div>
+        <div class="col-4">
+            <h1 class="text-center">Tiempo: <strong id="tiempoRestante" class="text-primary">{{tiempo}}</strong></h1>
+        </div>
+    </div>
+
+
+    <h2 class="text-center {{color}}">{{pregunta}}</h2>
+
+    <article class="row">
+        {{#opc}}
+            <div class="col-md-6 col-sm-12 my-3">
+                <button type="button" name="{{id}}" id="{{id}}" style="min-height: 5rem; min-width: 20rem; width: 100%"
+                        class="btn btn-primary opcion" value="{{id}}"> {{resp}}
+                </button>
+            </div>
+        {{/opc}}
+    </article>
+
+
+    <article>
+        <button type="button" name="trampa" id="trampa"
+                class="btn btn-primary btn-lg btn-block btn-next opcion text-center" value="trampa"> Trampas
+            restantes: {{trampas}}
+        </button>
+
+        <button type="button" name="{{preguntaID}}" id="{{preguntaID}}"
+                class="btn btn-primary btn-lg btn-block btn-next text-center reporte" value="{{preguntaID}}">
+             Reportar
+        </button>
+        <a id="fin" class="btn btn-lg btn-block btn-next text-center btn-danger" href="/partida/salir" style="display: none;"
+           role="button">Fin</a>
+    </article>
+</section>
+<!-- Modal -->
+<div class="modal fade" id="ventana" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="modelTitleId">Partida Finalizada</h4>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h1 class="text-center">Gracias Por Jugar en Yolose</h1>
+                <p>Resultado: <strong id="tPartida" class="text-primary"></strong></p>
+                <p>Jugador: <strong class="text-primary">{{username}}</strong></p>
+                <p>Puntaje: <strong class="text-primary">{{puntaje}}</strong></p>
+                <p>Resultado: <strong id="result" class="text-primary"></strong></p>
+            </div>
+        </div>
+    </div>
+</div>

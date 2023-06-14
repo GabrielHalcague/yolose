@@ -1,0 +1,36 @@
+<section class="container">
+    <h2 class="mb-4 text-center">Preguntas de editor</h2>
+
+<!--           -->
+
+
+    <h3>Tabla de editor</h3>
+    <a href="/pregunta"><button>Agregar pregunta</button></a>
+    <table class="table table-striped table-hover">
+
+
+        <thead class="table-primary">
+        <tr>
+            <th>Pregunta</th>
+            <th>Accion</th>
+            <th>Categoria</th>
+            <th>Reportes</th>
+            <th>Estado</th>
+        </tr>
+        </thead>
+        <tbody>
+    {{#preguntas}}
+        <tr>
+            <td> <a href="/editor/verPregunta?pregunta={{id}}"  style="text-decoration: none; color: inherit;"> {{preg}}<br></a> </td>
+            <td> <a href="/editor/verPregunta?pregunta={{id}}"  style="text-decoration: none; color: inherit;"> <button class="btn btn-outline-yolose">Editar</button><br></a> </td>
+            <td>{{categ}}</td>
+            <td>{{cantReporte}} <a href="/editor/verQuienReporto?pregunta={{id}}" > <button class="btn btn-outline-yolose"> Ver </button> </a> </td>
+            <td>{{descr}}</td>
+        </tr>
+
+
+    {{/preguntas}}
+        </tbody>
+    </table>
+
+</section>

@@ -17,9 +17,22 @@ class Session {
     public static function getDataSession(){
         return $_SESSION;
     }
+
+    public static function deleteValue($value){
+        if(isset($_SESSION[$value])){
+            unset($_SESSION[$value]);
+        }
+    }
+
     public static function finalizarSesion(){
      session_unset();
      session_destroy();
+
+    }
+
+    public static function isLogged()
+    {
+        return isset($_SESSION['logged']);
     }
 
 
