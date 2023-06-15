@@ -37,9 +37,7 @@
         <div class="col-6">
 
                 {{#perfil}}
-                <img src="/public/{{fotoPerfil}}" class="img-fluid" style="max-height: 500px;">
-
-
+                <img src="/public/img/{{fotoPerfil}}" class="img-fluid" style="max-height: 500px;">
 
             <div id="map" style="width: 100%; height: 50%; "></div>
            </div>
@@ -56,7 +54,7 @@
                         </p>
 
                         <p><strong>Mejor Partida:</strong> {{maximoRespuestasCorrectas}}</p>
-                        <p><strong>Ranking:</strong> {{rank}}</p>
+                        <p><strong>Ranking solitario :</strong> {{rank}}</p>
                  {{/perfil}}
             </div>
     </article>
@@ -92,7 +90,9 @@
                 <table class="table table-striped">
                     <thead>
                     <tr>
-                        <th scope="col">Tipo</th>
+                        <th scope="col">Mode de juego</th>
+                        <th scope="col">Nro partida</th>
+                        <th scope="col">Fecha</th>
                         <th scope="col">Puntaje Maximo</th>
                     </tr>
                     </thead>
@@ -100,7 +100,8 @@
                     {{#historialPartidas}}
 
                     <tr>
-                        <td>{{tipoPartida}}</td>
+                        <td>{{descripcion}}</td>
+                        <td>{{n_partida}}</td>
                         <td>{{f_partida}}</td>
                         <td>{{sumaPreguntasContestadas}}</td>
                     </tr>

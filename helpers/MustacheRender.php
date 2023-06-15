@@ -37,11 +37,22 @@ class MustacheRender{
 
         return $this->mustache->render($contentAsString, $data);
     }
+
+    public function generateTemplatedStringForPDF($template, $data = [])
+    {
+        $contentAsString = file_get_contents("public/template/". $template . "_view.mustache");
+        return $this->mustache->render($contentAsString, $data);
+    }
+
     public function menuSegunElRol($data): array  {
         if(isset($_SESSION['logged'])){
             $data['logged'] = Session::get('logged');
-            $data['editor'] = Session::get('editor')?? false;
-            $data['administrador'] = Session::get('administrador')?? false;
+            if(Session::get('rol') =='Editor'){
+                $data['editor'] = true;
+            }
+            if(Session::get('rol') =='Administrador'){
+                $data['administrador'] = true;
+            }
             $data['nombre']= Session::get('nombre') ?? '';
             $data['ranking']="123";
         }

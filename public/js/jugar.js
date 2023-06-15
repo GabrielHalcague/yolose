@@ -1,13 +1,10 @@
 var finButton = $('#fin');
-var continuarButton = $('#continuar');
 var trampaButton = $('#trampa');
-var segundos = 10;
+var segundos = document.getElementById('tiempoRestante').innerText;
 var cronometro;
 $(document).ready(function () {
-    finButton.hide();
-    continuarButton.hide();
     var cantTrampasActuales = trampaButton.val();
-    if (cantTrampasActuales < 0) {
+    if (cantTrampasActuales <= 0) {
         trampaButton.prop('disabled', true);
     }
     cuentaRegresiva();
@@ -31,12 +28,16 @@ $(document).ready(function () {
 
                 // Hacer algo con los datos en caso de éxito
                 validarRespuesta(datos);
-
-
             }
         });
     });
 
+    reporte();
+
+});
+
+
+const reporte = () => {
     $('.reporte').click(function (){
         var preguntaId= $(this).val()
         $.ajax({
@@ -45,16 +46,14 @@ $(document).ready(function () {
             data: {preguntaId: preguntaId}
         }).done(function (){
             $('.reporte').prop('disabled',true)
-        })
-
-    })
-
-});
+        });
+    });
+}
 
 
 function cuentaRegresiva() {
     document.getElementById('tiempoRestante').innerHTML = segundos;
-    if (segundos === 0) {
+    if (parseInt(segundos) === 0) {
         clearTimeout(cronometro);
         $.ajax({
             url: '/partida/verificar',
@@ -98,12 +97,12 @@ function validarRespuesta(data) {
         if (data['correcto'] === true) {
             respuestaActual.css('backgroundColor', 'green');
             setTimeout(function (){
-                $(location).attr('href',"http://localhost:80/partida&tipoPartida="+data['tipoPartida']);
+                $(location).attr('href',"/partida&tipoPartida="+data['tipoPartida']);
             },5000);
-            //continuarButton.show();
         }
     } else {
         respuestaValida.css('backgroundColor', 'green');
+        terminarPartida();
         finButton.show();
     }
     disableButtons();
@@ -130,8 +129,8 @@ const terminarPartida = () => {
             // Operación exitosa
             var datos = data.data;
             console.log(datos);
-            $('#result').data('resultado', datos['resultado']);
-            $('#tPartida').data('tipoPartida', datos['tipo']);
+            $('#result').text(datos['resultado']);
+            $('#tPartida').text(datos['tipo']);
             $('#ventana').modal('show');
 
         }

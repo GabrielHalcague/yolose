@@ -20,17 +20,19 @@ $controladoresValidosSINLogeo = [
 
 ];
 $controladoresINVALIDOSLogeado = [
-    //'login', // bloquea el cerrar session
     'registro',
     'activation',
+    //'home',
 ];
 
 if (!Session::isLogged() && !in_array($module, $controladoresValidosSINLogeo)){
         $module = 'home';
 }
 if (Session::isLogged() && in_array($module, $controladoresINVALIDOSLogeado)){
-      $module = 'home';
+        $module = 'home';
+      //$module = 'juego';
 }
+
 
 $router->route($module, $method);
 ?>

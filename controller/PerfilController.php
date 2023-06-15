@@ -25,6 +25,8 @@ class PerfilController
         $idUsuario=$data["perfil"]["id"];
         $data = $this->datosComunesParaElPerfil($idUsuario, $data);
         $data['editarPerfil'] = true;
+        $data['perfilJS'] = true;
+        $data['mapa'] = true;
         $this->renderer->render("perfil", $data);
         exit();
 
@@ -37,6 +39,9 @@ class PerfilController
         }
 
         $idUsuario=$data["perfil"]["id"];
+        $data['editarPerfil'] = false;
+        $data['perfilJS'] = true;
+        $data['mapa'] = true;
         $data = $this->datosComunesParaElPerfil($idUsuario, $data);
         $this->renderer->render("perfil", $data);
         exit();
@@ -53,9 +58,9 @@ class PerfilController
 
   public function editar()
   {
-      if (!Session::isLogged()) {
+      /*if (!Session::isLogged()) {
           Header::redirect('/');
-      }
+      }*/
       $nickName = $_POST["nickName"] ?? null;
         if($this->validarFormatoNick($nickName)){
             $data['nicknameEstado'] = $this->userModel->getUsername($nickName);
@@ -65,14 +70,14 @@ class PerfilController
       echo json_encode($data);
   }
   public function confirmar(){
-      if (!Session::isLogged()) {
+     /* if (!Session::isLogged()) {
           Header::redirect('/');
-      }
+      }*/
       $nickName = $_POST["nickName"] ?? null;
       $idUsuario = $_POST["idUsuario"] ?? null;
-      if ($idUsuario != Session::get('idUsuario')) {
+      /*if ($idUsuario != Session::get('idUsuario')) {
           Header::redirect('/');
-      }
+      }*/
 
       if($this->validarFormatoNick($nickName)){
          $this->userModel->setNuevoUsername($idUsuario, $nickName);
@@ -84,7 +89,7 @@ class PerfilController
       }
       echo json_encode($data);
   }
-
+  
   private function validarFormatoNick($nickName){
         if(strlen($nickName)<3 ||strlen($nickName)>30 || $nickName == null){
             return false;
