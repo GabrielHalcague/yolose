@@ -1,0 +1,57 @@
+
+
+<div>UsuariosNuevos {{nuevosUsuariosMes}}</div>
+<div>UsuariosTotales {{usuariosTotales}}</div>
+<div>UsuariosTotales {{cantidadDePartidasJugadas}}</div>
+
+
+
+<div class="input-group">
+    <span><select name="tipo" id="" class="form-select">
+        <option value="2">cantidad de partidas jugadas</option>
+        <option value="2">cantidad de preguntas en el juego</option>
+        <option value="3">cantidad de preguntas creadas </option>
+        <option value="4">cantidad de usuarios nuevos </option>
+        <option value="5">porcentaje de preguntas respondidas correctamente por usuario</option>
+        <option value="6">cantidad de usuarios por pais</option>
+        <option value="7">cantidad de usuarios por sexo</option>
+        <option value="8">cantidad de usuarios por grupo de edad (menores, jubilados, medio)</option>
+        <option value="9">cantidad de usuarios por sexo</option>
+        <option value="10"> trampitas acumulados por el  usuario</option>
+        <option value="11">Ganancia de Trampitas</option>
+    </select></span>
+    <input type="date" value="2020-01-01" id="fechaInicio">
+    <input type="date" id="fechaFin" >
+
+    <button class="btn btn-outline-secondary" type="button" id="consultar">Button</button>
+</div>
+<div id="tipoConsulta" value="1">asd</div>
+<div id="resultado"></div>
+
+<script>
+    $('#consultar').click(function () {
+        var tipoConsulta1 = $("#tipoConsulta").val();
+        var fechaInicio1 = $('#fechaInicio').val();
+        var fechaFin1 = $('#fechaFin').val();
+        $.ajax({
+            url: '/administrador/consultaPorTipo',
+            method: 'POST',
+            data: {
+                tipoConsulta: tipoConsulta1,
+                fechaInicio: fechaInicio1,
+                fechaFin: fechaFin1
+            },
+            beforeSend: function () {
+                $("#resultado").html("Procesando, espere por favor...");
+            },
+            success: function (response) {
+                var data = JSON.parse(response);
+                var estado = data.respuesta;
+                console.log(estado);
+                $("#resultado").html(estado);
+            }
+        });
+    });
+</script>
+
+
