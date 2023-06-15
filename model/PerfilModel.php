@@ -59,7 +59,7 @@
         {
             $sql = "select MAX(contador) as maxRespuetasC from (SELECT idUs, n_partida, COUNT(*) AS contador
              FROM historialPartidas hp where idUs='$idUsuario' and hp.estado=1
-                              GROUP BY idUs, n_partida) as subconsulta;";
+                              GROUP BY idUs, n_partida) as subconsulta";
             return $this->database->SoloValorCampo($sql);
         }
         
