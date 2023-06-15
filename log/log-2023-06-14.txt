@@ -1303,3 +1303,67 @@ from (select idUs, n_partida, count(*) AS puntajeMaximo from historialpartidas  
 [2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
 [2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
 [2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT id, categ FROM categoria
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'admin2'
+[2023-06-14][INFO]Ejecutando query: select MAX(contador) as maxRespuetasC from (SELECT idUs, n_partida, COUNT(*) AS contador
+    FROM historialpartidas where idUs='3' GROUP BY idUs, n_partida) as subconsulta;
+[2023-06-14][INFO]Ejecutando query: select ranking from (select ROW_NUMBER() OVER (ORDER BY maximo desc) as ranking, idUs, n_partida, max(puntajeMaximo) as maximo 
+from (select idUs, n_partida, count(*) AS puntajeMaximo from historialpartidas  GROUP BY  n_partida, idUs)as sub group by idUs order by maximo desc) as subconsulta where idUs= '3';
+[2023-06-14][INFO]Ejecutando query: SELECT h.n_Partida, h.f_partida, u.nombreUsuario,h.tipoPartida, SUM(estado) AS sumaPreguntasContestadas
+                FROM historialpartidas AS h
+                JOIN usuario AS u 
+                WHERE h.idUs = '3'
+                GROUP BY h.n_partida, h.idUs
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM ranking LIMIT 3
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM usuario WHERE MONTH(F_registro) = MONTH(CURDATE()) AND YEAR(F_registro) = YEAR(CURDATE());
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM usuario WHERE MONTH(F_registro) = MONTH(CURDATE()) AND YEAR(F_registro) = YEAR(CURDATE());
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT * FROM usuario WHERE MONTH(F_registro) = MONTH(CURDATE()) AND YEAR(F_registro) = YEAR(CURDATE());
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE MONTH(F_registro) = MONTH(CURDATE()) AND YEAR(F_registro) = YEAR(CURDATE());
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE MONTH(F_registro) = MONTH(CURDATE()) AND YEAR(F_registro) = YEAR(CURDATE());
+[2023-06-14][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-14';
+[2023-06-14][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-14';
+[2023-06-14][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-14';
+[2023-06-14][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-14][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-14][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-14';
+[2023-06-14][INFO]Ejecutando query: SELECT count(*) FROM usuario 

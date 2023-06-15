@@ -106,6 +106,12 @@ class Configuration
         include_once ('model/RankingModel.php');
         return new rankingController($this->getRenderer(), new RankingModel($this->getDatabase()));
     }
+    public function getAdministradorController(){
+        include_once ('controller/AdministradorController.php');
+        include_once ('model/AdministradorModel.php');
+        return new administradorController($this->getRenderer(), new AdministradorModel($this->getDatabase()));
+    }
+
 
 
 

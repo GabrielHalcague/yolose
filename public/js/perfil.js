@@ -5,7 +5,6 @@
     myInput.show();
 })
 
-
     $('#validarNick').click(function (){
     $('#confirmarNick').attr("disabled", "disabled");
     $('#nuevoNickOculto').val($('#nuevoNick').val());
