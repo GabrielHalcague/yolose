@@ -47,14 +47,20 @@
 
 <div id="resultado">resultado</div>
 
-<div style="width: 400px; height: 300px;">
-    <canvas id="myChart"></canvas>
+<div id="canvasDiv" style="width: 400px; height: 300px;">
+<canvas id="myChart"></canvas>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
+
     function crearGrafico(ejeX ,ejey) {
+        const canvas = document.getElementById('myChart');
+        if (canvas) {
+            Chart.getChart(canvas)?.destroy();
+        }
+
     const ctx = document.getElementById('myChart');
     new Chart(ctx, {
         type: 'bar',
@@ -75,9 +81,7 @@
         }
     });
     }
-
 </script>
-
 
 <script>
     $('#consultar').click(function () {
@@ -98,15 +102,13 @@
                 $("#resultado").html("Procesando, espere por favor...");
             },
             success: function (response) {
-                console.log("asd");
-                console.log(response);
                 var data = JSON.parse(response);
-                console.log(data);
                 var ejex = data.arrays[0];
                 var ejey = data.arrays[1];
-                console.log(ejex);
-              //  $("#resultado").html(estado);
                 crearGrafico(ejex,ejey);
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown) {
+                alert("Status: " + textStatus);
             }
         });
     });

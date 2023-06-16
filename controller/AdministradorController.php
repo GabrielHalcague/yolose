@@ -34,6 +34,15 @@ class AdministradorController
         }
         $data= $this->AdministradorModel->getCantidadPartidasJugadasPorFecha($filtro,$fechaInicio,$fechaFin);
 
+
+        if (true) {
+            $error = array('mensaje' => 'error Bd');
+            // Convertir el arreglo en formato JSON
+            $jsonError = json_encode($error);
+            // Establecer el encabezado de respuesta como JSON
+            header('Content-Type: application/json');
+            echo $jsonError;
+        }
         echo json_encode($data);
     }
 
