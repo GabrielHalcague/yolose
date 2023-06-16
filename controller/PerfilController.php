@@ -56,6 +56,19 @@ class PerfilController
         return $ruta;
     }
 
+
+    public function obtenerCoordenadas(){
+        $username = $_POST['username'];
+        Logger::error("USERNAME OBTENIDO: " . $username);
+        $coord = $this->perfilModel->obtenerCoordenadas($username);
+        $array = explode(",",$coord);
+        $data=[
+            'lat' => $array[0],
+            'lng' => $array[1]
+        ];
+        echo json_encode($data);
+    }
+
   public function editar()
   {
       /*if (!Session::isLogged()) {
@@ -103,7 +116,6 @@ class PerfilController
         $data["rank"] = $this->perfilModel->getRankingGlobalDelUsuario($data["perfil"]["id"]);
         $data["historialPartidas"] = $this->perfilModel->obtenerHistorialPartidasUsuario($idUsuario);
         $data["rutaQR"] = $this->generateQR($data["perfil"]["nombreUsuario"]);
-        $data['showQR'] = true;
         return $data;
     }
 

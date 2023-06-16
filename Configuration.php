@@ -5,11 +5,13 @@
     include_once('controller/ReportarController.php');
     include_once('controller/PerfilController.php');
     include_once('controller/HomeController.php');
+include_once('controller/InicioController.php');
     include_once('controller/LoginController.php');
     include_once('controller/ActivationController.php');
     include_once('controller/PreguntaController.php');
     include_once('controller/PartidaController.php');
     include_once('controller/EditorController.php');
+include_once('controller/TiendaController.php');
 
 // Inclusión de Helpers
     include_once('helpers/MySqlDatabase.php');
@@ -18,6 +20,8 @@
     include_once "helpers/Mailer.php";
     include_once "helpers/QRGenerator.php";
     require_once "helpers/Logger.php";
+require_once "helpers/PDFGenerator.php";
+
 
 // Inclusión de Models
     include_once('model/HomeModel.php');
@@ -30,6 +34,7 @@
     include_once('model/OpcionModel.php');
     include_once('model/PartidaModel.php');
     include_once('model/EditorModel.php');
+include_once('model/TiendaModel.php');
     
 
 //Inclusión de Servicios
@@ -54,6 +59,15 @@
                 self::$instance = new self();
             }
             return self::$instance;
+        }
+
+        public function getTiendaController()
+        {
+            return new TiendaController($this->getRenderer(), [
+                'tiendaModel' => new TiendaModel($this->getDatabase()),
+                'pdf' => $this->getPDF(),
+                'pdfRender' => $this->getPDFRender()
+            ]);
         }
         
         public function getEditorController()
@@ -85,10 +99,15 @@
             return new ActivationController($this->getRenderer(),
                 new RegisterModel($this->getDatabase()));
         }
+
+        public function getInicioController(): InicioController
+        {
+            return new InicioController($this->getRenderer());
+        }
         
         public function getHomeController()
         {
-            return new homeController($this->getRenderer(), new HomeModel($this->getDatabase()));
+            return new homeController($this->getRenderer());
         }
         
         public function getRegistroController()
@@ -162,5 +181,15 @@
         public function getQRGenerator()
         {
             return new QRGenerator('public/qr');
+        }
+
+        private function getPDF()
+        {
+            return new PDFGenerator();
+        }
+
+        private function getPDFRender()
+        {
+            return new MustacheRender("public/template");
         }
     }

@@ -7,6 +7,14 @@ class PerfilModel
     {
         $this->database = $database;
     }
+
+    public function obtenerCoordenadas($username){
+        $sql = "SELECT coordenadas from usuario u WHERE u.nombreUsuario = '$username'";
+        $result = $this->database->query_row($sql)['coordenadas'];
+        Logger::error("COORDENADAS OBTENIDAS: ". $result);
+        return $result ;
+    }
+
     public function getPerfilUsuarioPorId($id){
 
         $sql= "SELECT `id`, `nombre`,`activo`, `nombreUsuario`, `f_nacimiento`, `generoId`, `f_registro`, `fotoPerfil`  FROM usuario  WHERE id='$id' ";

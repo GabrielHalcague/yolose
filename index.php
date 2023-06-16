@@ -7,10 +7,10 @@ Session::initializeSession();
 /*$configuration = new Configuration();*/
 $router = Configuration::getInstance()->getRouter();
 
-$module = $_GET['module'] ?? 'home';
+$module = $_GET['module'] ?? 'inicio';
 $method = $_GET['action'] ?? 'list';
 
-$controladoresValidosSINLogeo = [
+/*$controladoresValidosSINLogeo = [
     'home',
     'login',
     'registro',
@@ -31,7 +31,7 @@ if (!Session::isLogged() && !in_array($module, $controladoresValidosSINLogeo)){
 if (Session::isLogged() && in_array($module, $controladoresINVALIDOSLogeado)){
         $module = 'home';
       //$module = 'juego';
-}
+}*/
 
 $router->route($module, $method);
 ?>
