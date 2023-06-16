@@ -1,23 +1,26 @@
-<section class="container">
-    <article class="row text-center">
-        <div class="col-4">
-            {{#perfil}}
-                <img src="/public/{{fotoPerfil}}" class="img-fluid" style="max-height: 500px;">
-            {{/perfil}}
+<div class="bg-jugar">
+    <section class="container text-center text-white text-shadow">
+        <h1 class="titulo-partida py-5">MI PERFIL</h1>
+        <article class="row pt-5">
+            <div class="col-md-4">
+                {{#perfil}}
+                <p><strong>Usuario:</strong> {{nombreUsuario}}</p>
+                <p><strong>Nombre:</strong> {{nombre}}</p>
+                <p><strong>Fecha Nacimiento:</strong> {{f_nacimiento}}</p>
+                <p><strong>Genero:</strong> {{descr}}</p>
+                <p><strong>Fecha de ingreso:</strong> {{f_registro}}</p>
+                <p><strong>Activo:</strong> {{activo}}</p>
+                {{/perfil}}
             </div>
-            <div class="col-8">
-                 {{#perfil}}
-                        <p><strong>Usuario:</strong> {{nombreUsuario}}</p>
-                        <p><strong>Nombre:</strong> {{nombre}}</p>
-                        <p><strong>Fecha Nacimiento:</strong> {{f_nacimiento}}</p>
-                        <p><strong>Genero:</strong> {{descr}}</p>
-                        <p><strong>Fecha de ingreso:</strong> {{f_registro}}</p>
-                        <p><strong>Activo:</strong> {{activo}}</p>
-                 {{/perfil}}
-                <img src="/{{rutaQR}}"
-                     class="img-fluid responsive"
-                     style="max-height: 500px;"
-                     alt="">
+            <div class="col-md-4">
+                {{#perfil}}
+                <img src="/public/{{fotoPerfil}}" class="img-fluid" style="max-height: 200px;">
+                {{/perfil}}
             </div>
-    </article>
-</section>
+            <div class="col-md-4">
+                <img src="/{{rutaQR}}" class="img-fluid responsive" style="max-height: 200px;" alt="QR">
+            </div>
+        </article>
+        <a href="/" class="btn-yolose p-3 my-5 w-50 m-auto">Ir al incio</a>
+    </section>
+</div>

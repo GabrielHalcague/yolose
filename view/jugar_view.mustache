@@ -1,57 +1,55 @@
-<section class="container">
+<div class="bg-partida">
+    <section class="container text-white">
 
-    <div class="row">
-        <div class="col-4">
-            <h1 class="text-center">Jugador: <strong class="text-primary">{{username}}</strong></h1>
-        </div>
-        <div class="col-4">
-            <h1 class="text-center">Puntaje: <strong class="text-primary">{{puntaje}}</strong></h1>
-        </div>
-        <div class="col-4">
-            <h1 class="text-center">Tiempo: <strong id="tiempoRestante" class="text-primary"></strong></h1>
-        </div>
-    </div>
-
-
-    <h2 class="text-center {{color}}">{{pregunta}}</h2>
-
-    <article class="row">
-        {{#opc}}
-            <div class="col-md-6 col-sm-12 my-3">
-                <button type="button" name="{{id}}" id="{{id}}" style="min-height: 5rem; min-width: 20rem; width: 100%"
-                        class="btn btn-primary opcion" value="{{id}}"> {{resp}}
-                </button>
+        <article class="text-center mb-5">
+            <h1 class="titulo-partida pt-5 pb-3">{{username}}</h1>
+            <div class="row gx-5">
+                <div class="col-6">
+                    <h3 class="bg-dark rounded py-3">Puntaje <strong class="text-primary ms-3">{{puntaje}}</strong></h3>
+                </div>
+                <div class="col-6">
+                    <h3 class="bg-dark rounded py-3">Tiempo <strong id="tiempoRestante" class="text-danger ms-3"></strong></h3>
+                </div>
             </div>
-        {{/opc}}
-    </article>
+        </article>
+    
+        <article class="row">
+            <h2 class="text-center text-shadow {{color}}">{{pregunta}}</h2>
+            {{#opc}}
+                <div class="col-md-6 col-sm-12 my-3">
+                    <button type="button" name="{{id}}" id="{{id}}" style="min-height: 5rem; min-width: 20rem; width: 100%"
+                            class="btn btn-primary opcion" value="{{id}}"> {{resp}}
+                    </button>
+                </div>
+            {{/opc}}
+        </article>
+    
+    
+        <article class="text-end">
+            <button type="button" name="trampa" id="trampa"
+                    class="btn btn-success btn-lg btn-block btn-next opcion" value="trampa"> Trampas
+                restantes: {{trampas}}
+            </button>
+        </article>
+    </section>
 
-
-    <article>
-        <button type="button" name="trampa" id="trampa"
-                class="btn btn-primary btn-lg btn-block btn-next opcion text-center" value="trampa"> Trampas
-            restantes: {{trampas}}
-        </button>
-        <a id="fin" class="btn btn-next btn-danger" href="http://localhost:80/partida/salir"
-           role="button">Fin</a>
-    </article>
-</section>
-<!-- Modal -->
-<div class="modal fade" id="ventana" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="modelTitleId">Partida Finalizada</h4>
-                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <h1 class="text-center">Gracias Por Jugar en Yolose</h1>
-                <h2 class="text-center" id="tPartida"></h2>
-                <p>Jugador: <strong class="text-primary">{{username}}</strong></p>
-                <p>Puntaje: <strong class="text-primary">{{puntaje}}</strong></p>
-                <p>Resultado: <strong id="result" class="text-primary"></strong></p>
+    <!-- Modal -->
+    <div class="modal fade" id="ventana" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <h2>¡Buen juego!</h2>
+                    <h3 id="tPartida"></h3>
+                    <p>Jugador: <strong class="text-primary">{{username}}</strong></p>
+                    <p>Puntaje: <strong class="text-primary">{{puntaje}}</strong></p>
+                    <p>Resultado: <strong id="result" class="text-primary"></strong></p>
+                    <div class="text-end">
+                        <a id="fin" class="btn btn-next btn-danger px-5" href="http://localhost:80/partida/salir"
+                        role="button">Fin</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
 </div>
