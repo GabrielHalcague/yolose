@@ -1,0 +1,676 @@
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-16';
+[2023-06-16][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-16][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-16][INFO]Ejecutando query: select f_partida, count(distinct(n_partida)) as cantidad from historialpartidas group by f_partida;

@@ -8,7 +8,7 @@
 
 <div class="input-group">
     <span><select name="tipo" id="" class="form-select">
-        <option value="2">cantidad de partidas jugadas</option>
+        <option value="1">cantidad de partidas jugadas</option>
         <option value="2">cantidad de preguntas en el juego</option>
         <option value="3">cantidad de preguntas creadas </option>
         <option value="4">cantidad de usuarios nuevos </option>
@@ -23,32 +23,90 @@
     <input type="date" value="2020-01-01" id="fechaInicio">
     <input type="date" id="fechaFin" >
 
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="filtro" value="d" checked>
+        <label class="form-check-label" for="exampleRadios1">
+            Filtro por dia
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="filtro" value="m">
+        <label class="form-check-label" for="exampleRadios2">
+           filtro mes
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="filtro" value="a">
+        <label class="form-check-label" for="exampleRadios3">
+           filtro añio
+        </label>
+    </div>
+
     <button class="btn btn-outline-secondary" type="button" id="consultar">Button</button>
 </div>
-<div id="tipoConsulta" value="1">asd</div>
-<div id="resultado"></div>
+
+<div id="resultado">resultado</div>
+
+<div style="width: 400px; height: 300px;">
+    <canvas id="myChart"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    function crearGrafico(ejeX ,ejey) {
+    const ctx = document.getElementById('myChart');
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ejeX,
+            datasets: [{
+                label: '# of Votes',
+                data: ejey,
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+    }
+
+</script>
+
 
 <script>
     $('#consultar').click(function () {
         var tipoConsulta1 = $("#tipoConsulta").val();
         var fechaInicio1 = $('#fechaInicio').val();
         var fechaFin1 = $('#fechaFin').val();
+        var filtro1 =$('#filtro').val();
         $.ajax({
             url: '/administrador/consultaPorTipo',
             method: 'POST',
             data: {
                 tipoConsulta: tipoConsulta1,
                 fechaInicio: fechaInicio1,
-                fechaFin: fechaFin1
+                fechaFin: fechaFin1,
+                filtro : filtro1
             },
             beforeSend: function () {
                 $("#resultado").html("Procesando, espere por favor...");
             },
             success: function (response) {
+                console.log("asd");
+                console.log(response);
                 var data = JSON.parse(response);
-                var estado = data.respuesta;
-                console.log(estado);
-                $("#resultado").html(estado);
+                console.log(data);
+                var ejex = data.arrays[0];
+                var ejey = data.arrays[1];
+                console.log(ejex);
+              //  $("#resultado").html(estado);
+                crearGrafico(ejex,ejey);
             }
         });
     });

@@ -133,6 +133,8 @@ class Configuration
     public function getAdministradorController(){
         include_once ('controller/AdministradorController.php');
         include_once ('model/AdministradorModel.php');
+        require_once('third-party/jpgraph/src/jpgraph.php');
+        require_once('third-party/jpgraph/src/jpgraph_line.php');
         return new administradorController($this->getRenderer(), new AdministradorModel($this->getDatabase()));
     }
 
