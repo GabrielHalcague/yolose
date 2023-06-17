@@ -1,0 +1,1526 @@
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT YEAR(f_creacion) AS fecha, COUNT(*) AS cantidad FROM pregunta 
+                where f_registro  between  "2020-01-01" and "2023-06-16"  group BY YEAR(f_creacion);
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-17';
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_registro), "-" , MONTH(f_registro)) AS fecha, COUNT(*) AS cantidad
+        FROM usuario WHERE f_registro BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_registro), "-", MONTH(f_registro));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: select f_registro as fecha, count(*) AS cantidad 
+                    from usuario  where f_registro  between  "2020-01-01" and "2023-06-17"  group by f_registro;
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_registro), "-" , MONTH(f_registro)) AS fecha, COUNT(*) AS cantidad
+        FROM usuario WHERE f_registro BETWEEN "2020-01-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_registro), "-", MONTH(f_registro));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT YEAR(f_registro) AS fecha, COUNT(*) AS cantidad FROM usuario 
+                where f_registro  between  "2020-01-01" and "2023-06-17"  group BY YEAR(f_registro);
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT YEAR(f_creacion) AS fecha, COUNT(*) AS cantidad FROM pregunta 
+                where f_creacion  between  "2020-01-01" and "2023-06-17"  group BY YEAR(f_creacion);
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_creacion), "-" , MONTH(f_creacion)) AS fecha, COUNT(*) AS cantidad
+        FROM pregunta WHERE f_creacion BETWEEN "2020-01-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_creacion), "-", MONTH(f_creacion));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: select f_creacion as fecha, count(*) AS cantidad 
+                    from pregunta  where f_creacion  between  "2020-01-01" and "2023-06-17"  group by f_creacion;
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: select f_registro as fecha, count(*) AS cantidad 
+                    from usuario  where f_registro  between  "2020-01-01" and "2023-06-17"  group by f_registro;
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_registro), "-" , MONTH(f_registro)) AS fecha, COUNT(*) AS cantidad
+        FROM usuario WHERE f_registro BETWEEN "2020-01-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_registro), "-", MONTH(f_registro));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT YEAR(f_registro) AS fecha, COUNT(*) AS cantidad FROM usuario 
+                where f_registro  between  "2020-01-01" and "2023-06-17"  group BY YEAR(f_registro);
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-17';
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-17';
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-17';
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-17';
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-17';
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-17';
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-17';
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-17';
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-17';
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-17';
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-17';
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-17';
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT nombre, apellido, CONCAT(nombre,' ', apellido) as 'nombreCompleto', correo
+                FROM usuario
+                WHERE id = '3'
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-17';
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-17';
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_registro), "-" , MONTH(f_registro)) AS fecha, COUNT(distinct(n_partida)) AS cantidad
+        FROM historialpartidas WHERE f_registro BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_registro), "-", MONTH(f_registro));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-17';
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_partida), "-" , MONTH(f_partida)) AS fecha, COUNT(distinct(n_partida)) AS cantidad
+        FROM historialpartidas WHERE f_partida BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_partida), "-", MONTH(f_partida));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-17';
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_partida), "-" , MONTH(f_partida)) AS fecha, COUNT(distinct(n_partida)) AS cantidad
+        FROM historialpartidas WHERE f_partida BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_partida), "-", MONTH(f_partida));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: select f_partida as fecha, count(distinct(n_partida)) AS cantidad 
+                    from historialpartidas  where f_partida  between  "2020-01-01" and "2023-06-17"  group by f_partida;
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_partida), "-" , MONTH(f_partida)) AS fecha, COUNT(distinct(n_partida)) AS cantidad
+        FROM historialpartidas WHERE f_partida BETWEEN "2020-01-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_partida), "-", MONTH(f_partida));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT YEAR(f_partida) AS fecha, COUNT(distinct(n_partida)) AS cantidad FROM historialpartidas 
+                where f_partida  between  "2020-01-01" and "2023-06-17"  group BY YEAR(f_partida);
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT YEAR(f_creacion) AS fecha, COUNT(*) AS cantidad FROM pregunta 
+                where f_creacion  between  "2020-01-01" and "2023-06-17"  group BY YEAR(f_creacion);
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_creacion), "-" , MONTH(f_creacion)) AS fecha, COUNT(*) AS cantidad
+        FROM pregunta WHERE f_creacion BETWEEN "2020-01-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_creacion), "-", MONTH(f_creacion));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: select f_creacion as fecha, count(*) AS cantidad 
+                    from pregunta  where f_creacion  between  "2020-01-01" and "2023-06-17"  group by f_creacion;
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: select f_registro as fecha, count(*) AS cantidad 
+                    from usuario  where f_registro  between  "2020-01-01" and "2023-06-17"  group by f_registro;
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_registro), "-" , MONTH(f_registro)) AS fecha, COUNT(*) AS cantidad
+        FROM usuario WHERE f_registro BETWEEN "2020-01-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_registro), "-", MONTH(f_registro));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT YEAR(f_registro) AS fecha, COUNT(*) AS cantidad FROM usuario 
+                where f_registro  between  "2020-01-01" and "2023-06-17"  group BY YEAR(f_registro);
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-17';
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_partida), "-" , MONTH(f_partida)) AS fecha, COUNT(distinct(n_partida)) AS cantidad
+        FROM historialpartidas WHERE f_partida BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_partida), "-", MONTH(f_partida));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: select f_partida as fecha, count(distinct(n_partida)) AS cantidad 
+                    from historialpartidas  where f_partida  between  "2020-01-01" and ""  group by f_partida;
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-17';
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_partida), "-" , MONTH(f_partida)) AS fecha, COUNT(distinct(n_partida)) AS cantidad
+        FROM historialpartidas WHERE f_partida BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_partida), "-", MONTH(f_partida));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: select f_registro as fecha, count(*) AS cantidad 
+                    from usuario  where f_registro  between  "2020-01-01" and ""  group by f_registro;
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: select f_registro as fecha, count(*) AS cantidad 
+                    from usuario  where f_registro  between  "2020-01-01" and "2023-06-16"  group by f_registro;
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: select f_registro as fecha, count(*) AS cantidad 
+                    from usuario  where f_registro  between  "2020-01-01" and "2023-06-16"  group by f_registro;
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: select f_registro as fecha, count(*) AS cantidad 
+                    from usuario  where f_registro  between  "2020-01-01" and "2023-06-16"  group by f_registro;
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: select e.descr as fecha, count(*) AS cantidad 
+                    from pregunta p join estado e on p.idEst = e.id  where e.descr  between  "2020-01-01" and "2023-06-16"  group by e.descr;
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(e.descr), "-" , MONTH(e.descr)) AS fecha, COUNT(*) AS cantidad
+        FROM pregunta p join estado e on p.idEst = e.id WHERE e.descr BETWEEN "2020-01-01" AND "2023-06-16"  
+        GROUP BY CONCAT(YEAR(e.descr), "-", MONTH(e.descr));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT YEAR(e.descr) AS fecha, COUNT(*) AS cantidad FROM pregunta p join estado e on p.idEst = e.id 
+                where e.descr  between  "2020-01-01" and "2023-06-16"  group BY YEAR(e.descr);
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-17';
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_partida), "-" , MONTH(f_partida)) AS fecha, COUNT(distinct(n_partida)) AS cantidad
+        FROM historialpartidas WHERE f_partida BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_partida), "-", MONTH(f_partida));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: select p.f_creacion as fecha, count(*) AS cantidad 
+                    from pregunta p join estado e on p.idEst = e.id  where p.f_creacion  between  "2020-01-01" and "2023-06-17"  group by p.f_creacion;
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(p.f_creacion), "-" , MONTH(p.f_creacion)) AS fecha, COUNT(*) AS cantidad
+        FROM pregunta p join estado e on p.idEst = e.id WHERE p.f_creacion BETWEEN "2020-01-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(p.f_creacion), "-", MONTH(p.f_creacion));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT YEAR(p.f_creacion) AS fecha, COUNT(*) AS cantidad FROM pregunta p join estado e on p.idEst = e.id 
+                where p.f_creacion  between  "2020-01-01" and "2023-06-17"  group BY YEAR(p.f_creacion);
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT YEAR(p.f_creacion) AS fecha, COUNT(*) AS cantidad FROM pregunta p join estado e on p.idEst = e.id 
+                where p.f_creacion  between  "2020-01-01" and "2023-06-17"  group BY YEAR(p.f_creacion);
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(p.f_creacion), "-" , MONTH(p.f_creacion)) AS fecha, COUNT(*) AS cantidad
+        FROM pregunta p join estado e on p.idEst = e.id WHERE p.f_creacion BETWEEN "2020-01-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(p.f_creacion), "-", MONTH(p.f_creacion));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: select p.f_creacion as fecha, count(*) AS cantidad 
+                    from pregunta p join estado e on p.idEst = e.id  where p.f_creacion  between  "2020-01-01" and "2023-06-17"  group by p.f_creacion;
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: select f_registro as fecha, count(*) AS cantidad 
+                    from usuario  where f_registro  between  "2020-01-01" and "2023-06-17"  group by f_registro;
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_registro), "-" , MONTH(f_registro)) AS fecha, COUNT(*) AS cantidad
+        FROM usuario WHERE f_registro BETWEEN "2020-01-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_registro), "-", MONTH(f_registro));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_registro), "-" , MONTH(f_registro)) AS fecha, COUNT(*) AS cantidad
+        FROM usuario WHERE f_registro BETWEEN "2020-01-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_registro), "-", MONTH(f_registro));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT YEAR(f_registro) AS fecha, COUNT(*) AS cantidad FROM usuario 
+                where f_registro  between  "2020-01-01" and "2023-06-17"  group BY YEAR(f_registro);
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_registro), "-" , MONTH(f_registro)) AS fecha, COUNT(*) AS cantidad
+        FROM usuario WHERE f_registro BETWEEN "2020-01-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_registro), "-", MONTH(f_registro));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: select f_registro as fecha, count(*) AS cantidad 
+                    from usuario  where f_registro  between  "2020-01-01" and "2023-06-17"  group by f_registro;
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: select f_registro as fecha, count(*) AS cantidad 
+                    from usuario  where f_registro  between  "2020-01-01" and ""  group by f_registro;
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: select f_registro as fecha, count(*) AS cantidad 
+                    from usuario  where f_registro  between  "2020-01-01" and ""  group by f_registro;
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_registro), "-" , MONTH(f_registro)) AS fecha, COUNT(*) AS cantidad
+        FROM usuario WHERE f_registro BETWEEN "2020-01-01" AND ""  
+        GROUP BY CONCAT(YEAR(f_registro), "-", MONTH(f_registro));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_registro), "-" , MONTH(f_registro)) AS fecha, COUNT(*) AS cantidad
+        FROM usuario WHERE f_registro BETWEEN "2020-01-01" AND ""  
+        GROUP BY CONCAT(YEAR(f_registro), "-", MONTH(f_registro));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_registro), "-" , MONTH(f_registro)) AS fecha, COUNT(*) AS cantidad
+        FROM usuario WHERE f_registro BETWEEN "2020-01-01" AND "2023-06-24"  
+        GROUP BY CONCAT(YEAR(f_registro), "-", MONTH(f_registro));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-17';
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_partida), "-" , MONTH(f_partida)) AS fecha, COUNT(distinct(n_partida)) AS cantidad
+        FROM historialpartidas WHERE f_partida BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_partida), "-", MONTH(f_partida));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: select f_partida as fecha, count(distinct(n_partida)) AS cantidad 
+                    from historialpartidas  where f_partida  between  "2020-01-01" and "2023-06-15"  group by f_partida;
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-17';
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_partida), "-" , MONTH(f_partida)) AS fecha, COUNT(distinct(n_partida)) AS cantidad
+        FROM historialpartidas WHERE f_partida BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_partida), "-", MONTH(f_partida));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: select f_partida as fecha, count(distinct(n_partida)) AS cantidad 
+                    from historialpartidas  where f_partida  between  "2020-01-01" and "2023-06-16"  group by f_partida;
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-17';
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_partida), "-" , MONTH(f_partida)) AS fecha, COUNT(distinct(n_partida)) AS cantidad
+        FROM historialpartidas WHERE f_partida BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_partida), "-", MONTH(f_partida));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: select f_partida as fecha, count(distinct(n_partida)) AS cantidad 
+                    from historialpartidas  where f_partida  between  "2020-01-01" and ""  group by f_partida;
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-17';
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_partida), "-" , MONTH(f_partida)) AS fecha, COUNT(distinct(n_partida)) AS cantidad
+        FROM historialpartidas WHERE f_partida BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_partida), "-", MONTH(f_partida));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: select f_partida as fecha, count(distinct(n_partida)) AS cantidad 
+                    from historialpartidas  where f_partida  between  "2020-01-01" and ""  group by f_partida;
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-17';
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_partida), "-" , MONTH(f_partida)) AS fecha, COUNT(distinct(n_partida)) AS cantidad
+        FROM historialpartidas WHERE f_partida BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_partida), "-", MONTH(f_partida));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: select f_partida as fecha, count(distinct(n_partida)) AS cantidad 
+                    from historialpartidas  where f_partida  between  "2020-01-01" and ""  group by f_partida;
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: select f_partida as fecha, count(distinct(n_partida)) AS cantidad 
+                    from historialpartidas  where f_partida  between  "2020-01-01" and "2023-06-16"  group by f_partida;
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_partida), "-" , MONTH(f_partida)) AS fecha, COUNT(distinct(n_partida)) AS cantidad
+        FROM historialpartidas WHERE f_partida BETWEEN "2020-01-01" AND "2023-06-16"  
+        GROUP BY CONCAT(YEAR(f_partida), "-", MONTH(f_partida));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT YEAR(f_partida) AS fecha, COUNT(distinct(n_partida)) AS cantidad FROM historialpartidas 
+                where f_partida  between  "2020-01-01" and "2023-06-16"  group BY YEAR(f_partida);
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_partida), "-" , MONTH(f_partida)) AS fecha, COUNT(distinct(n_partida)) AS cantidad
+        FROM historialpartidas WHERE f_partida BETWEEN "2020-01-01" AND "2023-06-16"  
+        GROUP BY CONCAT(YEAR(f_partida), "-", MONTH(f_partida));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT * FROM trampa
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT * FROM trampa where idTrampa = '1'
+[2023-06-17][INFO]SE COMPRO EL ITEM #1
+[2023-06-17][ERROR]EL ITEM NO ES VACIO
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT nombre, apellido, CONCAT(nombre,' ', apellido) as 'nombreCompleto', correo
+                FROM usuario
+                WHERE id = '3'
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: UPDATE usuario u SET u.trampas = u.trampas + 1 WHERE id = 3
+[2023-06-17][INFO]Ejecutando query: INSERT INTO historialCompras(cant, idUs, idTr) 
+                VALUES ('5','3','1')
+[2023-06-17][INFO]Ejecutando query: SELECT nombre, apellido, CONCAT(nombre,' ', apellido) as 'nombreCompleto', correo
+                FROM usuario
+                WHERE id = '3'
+[2023-06-17][INFO]Ejecutando query: SELECT nombre, apellido, CONCAT(nombre,' ', apellido) as 'nombreCompleto', correo
+                FROM usuario
+                WHERE id = '3'
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-17';
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_partida), "-" , MONTH(f_partida)) AS fecha, COUNT(distinct(n_partida)) AS cantidad
+        FROM historialpartidas WHERE f_partida BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_partida), "-", MONTH(f_partida));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: select f_compra as fecha, count(*) AS cantidad 
+                    from historialcompras  where f_compra  between  "2020-01-01" and "2023-06-17"  group by f_compra;
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_compra), "-" , MONTH(f_compra)) AS fecha, COUNT(*) AS cantidad
+        FROM historialcompras WHERE f_compra BETWEEN "2020-01-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_compra), "-", MONTH(f_compra));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT YEAR(f_compra) AS fecha, COUNT(*) AS cantidad FROM historialcompras 
+                where f_compra  between  "2020-01-01" and "2023-06-17"  group BY YEAR(f_compra);
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-17';
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_partida), "-" , MONTH(f_partida)) AS fecha, COUNT(distinct(n_partida)) AS cantidad
+        FROM historialpartidas WHERE f_partida BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_partida), "-", MONTH(f_partida));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-17';
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_partida), "-" , MONTH(f_partida)) AS fecha, COUNT(distinct(n_partida)) AS cantidad
+        FROM historialpartidas WHERE f_partida BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_partida), "-", MONTH(f_partida));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-17';
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_partida), "-" , MONTH(f_partida)) AS fecha, COUNT(distinct(n_partida)) AS cantidad
+        FROM historialpartidas WHERE f_partida BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_partida), "-", MONTH(f_partida));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-17';
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_partida), "-" , MONTH(f_partida)) AS fecha, COUNT(distinct(n_partida)) AS cantidad
+        FROM historialpartidas WHERE f_partida BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_partida), "-", MONTH(f_partida));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-17';
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_partida), "-" , MONTH(f_partida)) AS fecha, COUNT(distinct(n_partida)) AS cantidad
+        FROM historialpartidas WHERE f_partida BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_partida), "-", MONTH(f_partida));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: select f_partida as fecha, count(distinct(n_partida)) AS cantidad 
+                    from historialpartidas  where f_partida  between  "2020-01-01" and ""  group by f_partida;
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_partida), "-" , MONTH(f_partida)) AS fecha, COUNT(distinct(n_partida)) AS cantidad
+        FROM historialpartidas WHERE f_partida BETWEEN "2020-01-01" AND ""  
+        GROUP BY CONCAT(YEAR(f_partida), "-", MONTH(f_partida));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-17';
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_partida), "-" , MONTH(f_partida)) AS fecha, COUNT(distinct(n_partida)) AS cantidad
+        FROM historialpartidas WHERE f_partida BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_partida), "-", MONTH(f_partida));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-17';
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_partida), "-" , MONTH(f_partida)) AS fecha, COUNT(distinct(n_partida)) AS cantidad
+        FROM historialpartidas WHERE f_partida BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_partida), "-", MONTH(f_partida));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-17';
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_partida), "-" , MONTH(f_partida)) AS fecha, COUNT(distinct(n_partida)) AS cantidad
+        FROM historialpartidas WHERE f_partida BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_partida), "-", MONTH(f_partida));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-17';
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_partida), "-" , MONTH(f_partida)) AS fecha, COUNT(distinct(n_partida)) AS cantidad
+        FROM historialpartidas WHERE f_partida BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_partida), "-", MONTH(f_partida));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-17';
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_partida), "-" , MONTH(f_partida)) AS fecha, COUNT(distinct(n_partida)) AS cantidad
+        FROM historialpartidas WHERE f_partida BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_partida), "-", MONTH(f_partida));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-17';
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_partida), "-" , MONTH(f_partida)) AS fecha, COUNT(distinct(n_partida)) AS cantidad
+        FROM historialpartidas WHERE f_partida BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_partida), "-", MONTH(f_partida));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-17';
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_partida), "-" , MONTH(f_partida)) AS fecha, COUNT(distinct(n_partida)) AS cantidad
+        FROM historialpartidas WHERE f_partida BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_partida), "-", MONTH(f_partida));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-17';
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_partida), "-" , MONTH(f_partida)) AS fecha, COUNT(distinct(n_partida)) AS cantidad
+        FROM historialpartidas WHERE f_partida BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_partida), "-", MONTH(f_partida));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-17';
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_partida), "-" , MONTH(f_partida)) AS fecha, COUNT(distinct(n_partida)) AS cantidad
+        FROM historialpartidas WHERE f_partida BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_partida), "-", MONTH(f_partida));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-17';
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_partida), "-" , MONTH(f_partida)) AS fecha, COUNT(distinct(n_partida)) AS cantidad
+        FROM historialpartidas WHERE f_partida BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_partida), "-", MONTH(f_partida));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-17';
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_partida), "-" , MONTH(f_partida)) AS fecha, COUNT(distinct(n_partida)) AS cantidad
+        FROM historialpartidas WHERE f_partida BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_partida), "-", MONTH(f_partida));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-17';
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_partida), "-" , MONTH(f_partida)) AS fecha, COUNT(distinct(n_partida)) AS cantidad
+        FROM historialpartidas WHERE f_partida BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_partida), "-", MONTH(f_partida));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-17';
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_partida), "-" , MONTH(f_partida)) AS fecha, COUNT(distinct(n_partida)) AS cantidad
+        FROM historialpartidas WHERE f_partida BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_partida), "-", MONTH(f_partida));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-17';
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_partida), "-" , MONTH(f_partida)) AS fecha, COUNT(distinct(n_partida)) AS cantidad
+        FROM historialpartidas WHERE f_partida BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_partida), "-", MONTH(f_partida));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-17';
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_partida), "-" , MONTH(f_partida)) AS fecha, COUNT(distinct(n_partida)) AS cantidad
+        FROM historialpartidas WHERE f_partida BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_partida), "-", MONTH(f_partida));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-17';
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_partida), "-" , MONTH(f_partida)) AS fecha, COUNT(distinct(n_partida)) AS cantidad
+        FROM historialpartidas WHERE f_partida BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_partida), "-", MONTH(f_partida));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario WHERE F_registro BETWEEN '2023-06-01' AND '2023-06-17';
+[2023-06-17][INFO]Ejecutando query: SELECT count(*) FROM usuario 
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_partida), "-" , MONTH(f_partida)) AS fecha, COUNT(distinct(n_partida)) AS cantidad
+        FROM historialpartidas WHERE f_partida BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_partida), "-", MONTH(f_partida));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_compra), "-" , MONTH(f_compra)) AS fecha, COUNT(*) AS cantidad
+        FROM historialcompras WHERE f_compra BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_compra), "-", MONTH(f_compra));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_registro), "-" , MONTH(f_registro)) AS fecha, COUNT(*) AS cantidad
+        FROM usuario WHERE f_registro BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_registro), "-", MONTH(f_registro));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_partida), "-" , MONTH(f_partida)) AS fecha, COUNT(distinct(n_partida)) AS cantidad
+        FROM historialpartidas WHERE f_partida BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_partida), "-", MONTH(f_partida));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_partida), "-" , MONTH(f_partida)) AS fecha, COUNT(distinct(n_partida)) AS cantidad
+        FROM historialpartidas WHERE f_partida BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_partida), "-", MONTH(f_partida));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_partida), "-" , MONTH(f_partida)) AS fecha, COUNT(distinct(n_partida)) AS cantidad
+        FROM historialpartidas WHERE f_partida BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_partida), "-", MONTH(f_partida));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_compra), "-" , MONTH(f_compra)) AS fecha, COUNT(*) AS cantidad
+        FROM historialcompras WHERE f_compra BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_compra), "-", MONTH(f_compra));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_registro), "-" , MONTH(f_registro)) AS fecha, COUNT(*) AS cantidad
+        FROM usuario WHERE f_registro BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_registro), "-", MONTH(f_registro));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(p.f_creacion), "-" , MONTH(p.f_creacion)) AS fecha, COUNT(*) AS cantidad
+        FROM pregunta p join estado e on p.idEst = e.id WHERE p.f_creacion BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(p.f_creacion), "-", MONTH(p.f_creacion));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_compra), "-" , MONTH(f_compra)) AS fecha, COUNT(*) AS cantidad
+        FROM historialcompras WHERE f_compra BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_compra), "-", MONTH(f_compra));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_registro), "-" , MONTH(f_registro)) AS fecha, COUNT(*) AS cantidad
+        FROM usuario WHERE f_registro BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_registro), "-", MONTH(f_registro));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(p.f_creacion), "-" , MONTH(p.f_creacion)) AS fecha, COUNT(*) AS cantidad
+        FROM pregunta p join estado e on p.idEst = e.id WHERE p.f_creacion BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(p.f_creacion), "-", MONTH(p.f_creacion));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_compra), "-" , MONTH(f_compra)) AS fecha, COUNT(*) AS cantidad
+        FROM historialcompras WHERE f_compra BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_compra), "-", MONTH(f_compra));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_registro), "-" , MONTH(f_registro)) AS fecha, COUNT(*) AS cantidad
+        FROM usuario WHERE f_registro BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_registro), "-", MONTH(f_registro));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(p.f_creacion), "-" , MONTH(p.f_creacion)) AS fecha, COUNT(*) AS cantidad
+        FROM pregunta p join estado e on p.idEst = e.id WHERE p.f_creacion BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(p.f_creacion), "-", MONTH(p.f_creacion));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_compra), "-" , MONTH(f_compra)) AS fecha, COUNT(*) AS cantidad
+        FROM historialcompras WHERE f_compra BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_compra), "-", MONTH(f_compra));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(p.f_creacion), "-" , MONTH(p.f_creacion)) AS fecha, COUNT(*) AS cantidad
+        FROM pregunta p join estado e on p.idEst = e.id WHERE p.f_creacion BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(p.f_creacion), "-", MONTH(p.f_creacion));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_compra), "-" , MONTH(f_compra)) AS fecha, COUNT(*) AS cantidad
+        FROM historialcompras WHERE f_compra BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_compra), "-", MONTH(f_compra));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(p.f_creacion), "-" , MONTH(p.f_creacion)) AS fecha, COUNT(*) AS cantidad
+        FROM pregunta p join estado e on p.idEst = e.id WHERE p.f_creacion BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(p.f_creacion), "-", MONTH(p.f_creacion));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_compra), "-" , MONTH(f_compra)) AS fecha, COUNT(*) AS cantidad
+        FROM historialcompras WHERE f_compra BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_compra), "-", MONTH(f_compra));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(p.f_creacion), "-" , MONTH(p.f_creacion)) AS fecha, COUNT(*) AS cantidad
+        FROM pregunta p join estado e on p.idEst = e.id WHERE p.f_creacion BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(p.f_creacion), "-", MONTH(p.f_creacion));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_compra), "-" , MONTH(f_compra)) AS fecha, COUNT(*) AS cantidad
+        FROM historialcompras WHERE f_compra BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_compra), "-", MONTH(f_compra));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(p.f_creacion), "-" , MONTH(p.f_creacion)) AS fecha, COUNT(*) AS cantidad
+        FROM pregunta p join estado e on p.idEst = e.id WHERE p.f_creacion BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(p.f_creacion), "-", MONTH(p.f_creacion));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_compra), "-" , MONTH(f_compra)) AS fecha, COUNT(*) AS cantidad
+        FROM historialcompras WHERE f_compra BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_compra), "-", MONTH(f_compra));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_compra), "-" , MONTH(f_compra)) AS fecha, COUNT(*) AS cantidad
+        FROM historialcompras WHERE f_compra BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_compra), "-", MONTH(f_compra));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(p.f_creacion), "-" , MONTH(p.f_creacion)) AS fecha, COUNT(*) AS cantidad
+        FROM pregunta p join estado e on p.idEst = e.id WHERE p.f_creacion BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(p.f_creacion), "-", MONTH(p.f_creacion));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_compra), "-" , MONTH(f_compra)) AS fecha, COUNT(*) AS cantidad
+        FROM historialcompras WHERE f_compra BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_compra), "-", MONTH(f_compra));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_compra), "-" , MONTH(f_compra)) AS fecha, COUNT(*) AS cantidad
+        FROM historialcompras WHERE f_compra BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_compra), "-", MONTH(f_compra));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(p.f_creacion), "-" , MONTH(p.f_creacion)) AS fecha, COUNT(*) AS cantidad
+        FROM pregunta p join estado e on p.idEst = e.id WHERE p.f_creacion BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(p.f_creacion), "-", MONTH(p.f_creacion));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_compra), "-" , MONTH(f_compra)) AS fecha, COUNT(*) AS cantidad
+        FROM historialcompras WHERE f_compra BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_compra), "-", MONTH(f_compra));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_compra), "-" , MONTH(f_compra)) AS fecha, COUNT(*) AS cantidad
+        FROM historialcompras WHERE f_compra BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_compra), "-", MONTH(f_compra));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(p.f_creacion), "-" , MONTH(p.f_creacion)) AS fecha, COUNT(*) AS cantidad
+        FROM pregunta p join estado e on p.idEst = e.id WHERE p.f_creacion BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(p.f_creacion), "-", MONTH(p.f_creacion));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_compra), "-" , MONTH(f_compra)) AS fecha, COUNT(*) AS cantidad
+        FROM historialcompras WHERE f_compra BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_compra), "-", MONTH(f_compra));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_compra), "-" , MONTH(f_compra)) AS fecha, COUNT(*) AS cantidad
+        FROM historialcompras WHERE f_compra BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_compra), "-", MONTH(f_compra));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(p.f_creacion), "-" , MONTH(p.f_creacion)) AS fecha, COUNT(*) AS cantidad
+        FROM pregunta p join estado e on p.idEst = e.id WHERE p.f_creacion BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(p.f_creacion), "-", MONTH(p.f_creacion));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_compra), "-" , MONTH(f_compra)) AS fecha, COUNT(*) AS cantidad
+        FROM historialcompras WHERE f_compra BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_compra), "-", MONTH(f_compra));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_compra), "-" , MONTH(f_compra)) AS fecha, COUNT(*) AS cantidad
+        FROM historialcompras WHERE f_compra BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_compra), "-", MONTH(f_compra));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(p.f_creacion), "-" , MONTH(p.f_creacion)) AS fecha, COUNT(*) AS cantidad
+        FROM pregunta p join estado e on p.idEst = e.id WHERE p.f_creacion BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(p.f_creacion), "-", MONTH(p.f_creacion));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_compra), "-" , MONTH(f_compra)) AS fecha, COUNT(*) AS cantidad
+        FROM historialcompras WHERE f_compra BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_compra), "-", MONTH(f_compra));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_compra), "-" , MONTH(f_compra)) AS fecha, COUNT(*) AS cantidad
+        FROM historialcompras WHERE f_compra BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_compra), "-", MONTH(f_compra));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(p.f_creacion), "-" , MONTH(p.f_creacion)) AS fecha, COUNT(*) AS cantidad
+        FROM pregunta p join estado e on p.idEst = e.id WHERE p.f_creacion BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(p.f_creacion), "-", MONTH(p.f_creacion));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_compra), "-" , MONTH(f_compra)) AS fecha, COUNT(*) AS cantidad
+        FROM historialcompras WHERE f_compra BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_compra), "-", MONTH(f_compra));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_compra), "-" , MONTH(f_compra)) AS fecha, COUNT(*) AS cantidad
+        FROM historialcompras WHERE f_compra BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_compra), "-", MONTH(f_compra));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(p.f_creacion), "-" , MONTH(p.f_creacion)) AS fecha, COUNT(*) AS cantidad
+        FROM pregunta p join estado e on p.idEst = e.id WHERE p.f_creacion BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(p.f_creacion), "-", MONTH(p.f_creacion));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_compra), "-" , MONTH(f_compra)) AS fecha, COUNT(*) AS cantidad
+        FROM historialcompras WHERE f_compra BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_compra), "-", MONTH(f_compra));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_compra), "-" , MONTH(f_compra)) AS fecha, COUNT(*) AS cantidad
+        FROM historialcompras WHERE f_compra BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_compra), "-", MONTH(f_compra));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(p.f_creacion), "-" , MONTH(p.f_creacion)) AS fecha, COUNT(*) AS cantidad
+        FROM pregunta p join estado e on p.idEst = e.id WHERE p.f_creacion BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(p.f_creacion), "-", MONTH(p.f_creacion));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_compra), "-" , MONTH(f_compra)) AS fecha, COUNT(*) AS cantidad
+        FROM historialcompras WHERE f_compra BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_compra), "-", MONTH(f_compra));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_compra), "-" , MONTH(f_compra)) AS fecha, COUNT(*) AS cantidad
+        FROM historialcompras WHERE f_compra BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_compra), "-", MONTH(f_compra));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(p.f_creacion), "-" , MONTH(p.f_creacion)) AS fecha, COUNT(*) AS cantidad
+        FROM pregunta p join estado e on p.idEst = e.id WHERE p.f_creacion BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(p.f_creacion), "-", MONTH(p.f_creacion));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_compra), "-" , MONTH(f_compra)) AS fecha, COUNT(*) AS cantidad
+        FROM historialcompras WHERE f_compra BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_compra), "-", MONTH(f_compra));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_compra), "-" , MONTH(f_compra)) AS fecha, COUNT(*) AS cantidad
+        FROM historialcompras WHERE f_compra BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_compra), "-", MONTH(f_compra));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(p.f_creacion), "-" , MONTH(p.f_creacion)) AS fecha, COUNT(*) AS cantidad
+        FROM pregunta p join estado e on p.idEst = e.id WHERE p.f_creacion BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(p.f_creacion), "-", MONTH(p.f_creacion));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_compra), "-" , MONTH(f_compra)) AS fecha, COUNT(*) AS cantidad
+        FROM historialcompras WHERE f_compra BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_compra), "-", MONTH(f_compra));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_compra), "-" , MONTH(f_compra)) AS fecha, COUNT(*) AS cantidad
+        FROM historialcompras WHERE f_compra BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_compra), "-", MONTH(f_compra));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(p.f_creacion), "-" , MONTH(p.f_creacion)) AS fecha, COUNT(*) AS cantidad
+        FROM pregunta p join estado e on p.idEst = e.id WHERE p.f_creacion BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(p.f_creacion), "-", MONTH(p.f_creacion));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_compra), "-" , MONTH(f_compra)) AS fecha, COUNT(*) AS cantidad
+        FROM historialcompras WHERE f_compra BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_compra), "-", MONTH(f_compra));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_compra), "-" , MONTH(f_compra)) AS fecha, COUNT(*) AS cantidad
+        FROM historialcompras WHERE f_compra BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_compra), "-", MONTH(f_compra));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(p.f_creacion), "-" , MONTH(p.f_creacion)) AS fecha, COUNT(*) AS cantidad
+        FROM pregunta p join estado e on p.idEst = e.id WHERE p.f_creacion BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(p.f_creacion), "-", MONTH(p.f_creacion));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_compra), "-" , MONTH(f_compra)) AS fecha, COUNT(*) AS cantidad
+        FROM historialcompras WHERE f_compra BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_compra), "-", MONTH(f_compra));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_compra), "-" , MONTH(f_compra)) AS fecha, COUNT(*) AS cantidad
+        FROM historialcompras WHERE f_compra BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_compra), "-", MONTH(f_compra));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(p.f_creacion), "-" , MONTH(p.f_creacion)) AS fecha, COUNT(*) AS cantidad
+        FROM pregunta p join estado e on p.idEst = e.id WHERE p.f_creacion BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(p.f_creacion), "-", MONTH(p.f_creacion));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_compra), "-" , MONTH(f_compra)) AS fecha, COUNT(*) AS cantidad
+        FROM historialcompras WHERE f_compra BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_compra), "-", MONTH(f_compra));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_compra), "-" , MONTH(f_compra)) AS fecha, COUNT(*) AS cantidad
+        FROM historialcompras WHERE f_compra BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_compra), "-", MONTH(f_compra));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(p.f_creacion), "-" , MONTH(p.f_creacion)) AS fecha, COUNT(*) AS cantidad
+        FROM pregunta p join estado e on p.idEst = e.id WHERE p.f_creacion BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(p.f_creacion), "-", MONTH(p.f_creacion));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_compra), "-" , MONTH(f_compra)) AS fecha, COUNT(*) AS cantidad
+        FROM historialcompras WHERE f_compra BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_compra), "-", MONTH(f_compra));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_registro), "-" , MONTH(f_registro)) AS fecha, COUNT(*) AS cantidad
+        FROM usuario WHERE f_registro BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_registro), "-", MONTH(f_registro));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(p.f_creacion), "-" , MONTH(p.f_creacion)) AS fecha, COUNT(*) AS cantidad
+        FROM pregunta p join estado e on p.idEst = e.id WHERE p.f_creacion BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(p.f_creacion), "-", MONTH(p.f_creacion));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_compra), "-" , MONTH(f_compra)) AS fecha, * AS cantidad
+        FROM historialcompras WHERE f_compra BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_compra), "-", MONTH(f_compra));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_compra), "-" , MONTH(f_compra)) AS fecha, COUNT(*) AS cantidad
+        FROM historialcompras WHERE f_compra BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_compra), "-", MONTH(f_compra));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_registro), "-" , MONTH(f_registro)) AS fecha, COUNT(*) AS cantidad
+        FROM usuario WHERE f_registro BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_registro), "-", MONTH(f_registro));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(p.f_creacion), "-" , MONTH(p.f_creacion)) AS fecha, COUNT(*) AS cantidad
+        FROM pregunta p join estado e on p.idEst = e.id WHERE p.f_creacion BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(p.f_creacion), "-", MONTH(p.f_creacion));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: select f_partida as fecha, COUNT(distinct(n_partida)) AS cantidad 
+                    from historialpartidas  where f_partida  between  "2020-01-01" and "2023-06-16"  group by f_partida;
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_partida), "-" , MONTH(f_partida)) AS fecha, COUNT(distinct(n_partida)) AS cantidad
+        FROM historialpartidas WHERE f_partida BETWEEN "2020-01-01" AND "2023-06-16"  
+        GROUP BY CONCAT(YEAR(f_partida), "-", MONTH(f_partida));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT YEAR(f_partida) AS fecha, COUNT(distinct(n_partida))  AS cantidad FROM historialpartidas 
+                where f_partida  between  "2020-01-01" and "2023-06-16"  group BY YEAR(f_partida);
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT YEAR(f_creacion) AS fecha, count(*)  AS cantidad FROM pregunta 
+                where f_creacion  between  "2020-01-01" and "2023-06-16"  group BY YEAR(f_creacion);
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_creacion), "-" , MONTH(f_creacion)) AS fecha, count(*) AS cantidad
+        FROM pregunta WHERE f_creacion BETWEEN "2020-01-01" AND "2023-06-16"  
+        GROUP BY CONCAT(YEAR(f_creacion), "-", MONTH(f_creacion));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_registro), "-" , MONTH(f_registro)) AS fecha, COUNT(*) AS cantidad
+        FROM usuario WHERE f_registro BETWEEN "2020-01-01" AND "2023-06-16"  
+        GROUP BY CONCAT(YEAR(f_registro), "-", MONTH(f_registro));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: select f_registro as fecha, COUNT(*) AS cantidad 
+                    from usuario  where f_registro  between  "2020-01-01" and "2023-06-16"  group by f_registro;
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: select f_compra as fecha, COUNT(*) AS cantidad 
+                    from historialcompras  where f_compra  between  "2020-01-01" and "2023-06-16"  group by f_compra;
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_compra), "-" , MONTH(f_compra)) AS fecha, COUNT(*) AS cantidad
+        FROM historialcompras WHERE f_compra BETWEEN "2020-01-01" AND "2023-06-16"  
+        GROUP BY CONCAT(YEAR(f_compra), "-", MONTH(f_compra));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: select f_compra as fecha, COUNT(*) AS cantidad 
+                    from historialcompras  where f_compra  between  "2020-01-01" and "2023-06-16"  group by f_compra;
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(), "-" , MONTH()) AS fecha, COUNT(*) AS cantidad
+        FROM historialcompras WHERE  BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(), "-", MONTH());
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(), "-" , MONTH()) AS fecha, COUNT(*) AS cantidad
+        FROM historialcompras WHERE  BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(), "-", MONTH());
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(id), "-" , MONTH(id)) AS fecha, COUNT(*) AS cantidad
+        FROM historialcompras WHERE id BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(id), "-", MONTH(id));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_registro), "-" , MONTH(f_registro)) AS fecha, COUNT(*) AS cantidad
+        FROM usuario WHERE f_registro BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_registro), "-", MONTH(f_registro));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(p.f_creacion), "-" , MONTH(p.f_creacion)) AS fecha, COUNT(*) AS cantidad
+        FROM pregunta p join estado e on p.idEst = e.id WHERE p.f_creacion BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(p.f_creacion), "-", MONTH(p.f_creacion));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: select id as fecha, COUNT(*) AS cantidad 
+                    from historialcompras  where id  between  "2020-01-01" and ""  group by id;
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: select id as fecha, COUNT(*) AS cantidad 
+                    from historialcompras  where id  between  "2020-01-01" and "2023-06-17"  group by id;
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_compra), "-" , MONTH(f_compra)) AS fecha, SUM(cant) AS cantidad
+        FROM historialcompras WHERE f_compra BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_compra), "-", MONTH(f_compra));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_registro), "-" , MONTH(f_registro)) AS fecha, COUNT(*) AS cantidad
+        FROM usuario WHERE f_registro BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_registro), "-", MONTH(f_registro));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(p.f_creacion), "-" , MONTH(p.f_creacion)) AS fecha, COUNT(*) AS cantidad
+        FROM pregunta p join estado e on p.idEst = e.id WHERE p.f_creacion BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(p.f_creacion), "-", MONTH(p.f_creacion));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: select f_registro as fecha, COUNT(*) AS cantidad 
+                    from usuario  where f_registro  between  "2020-01-01" and ""  group by f_registro;
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: select f_registro as fecha, COUNT(*) AS cantidad 
+                    from usuario  where f_registro  between  "2020-01-01" and "2023-06-17"  group by f_registro;
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_registro), "-" , MONTH(f_registro)) AS fecha, COUNT(*) AS cantidad
+        FROM usuario WHERE f_registro BETWEEN "2020-01-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_registro), "-", MONTH(f_registro));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT YEAR(f_registro) AS fecha, COUNT(*)  AS cantidad FROM usuario 
+                where f_registro  between  "2020-01-01" and "2023-06-17"  group BY YEAR(f_registro);
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: select f_compra as fecha, SUM(cant) AS cantidad 
+                    from historialcompras  where f_compra  between  "2020-01-01" and "2023-06-17"  group by f_compra;
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_compra), "-" , MONTH(f_compra)) AS fecha, SUM(cant) AS cantidad
+        FROM historialcompras WHERE f_compra BETWEEN "2020-01-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_compra), "-", MONTH(f_compra));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT YEAR(f_compra) AS fecha, SUM(cant)  AS cantidad FROM historialcompras 
+                where f_compra  between  "2020-01-01" and "2023-06-17"  group BY YEAR(f_compra);
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_compra), "-" , MONTH(f_compra)) AS fecha, SUM(cant) AS cantidad
+        FROM historialcompras WHERE f_compra BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_compra), "-", MONTH(f_compra));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_registro), "-" , MONTH(f_registro)) AS fecha, COUNT(*) AS cantidad
+        FROM usuario WHERE f_registro BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_registro), "-", MONTH(f_registro));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(p.f_creacion), "-" , MONTH(p.f_creacion)) AS fecha, COUNT(*) AS cantidad
+        FROM pregunta p join estado e on p.idEst = e.id WHERE p.f_creacion BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(p.f_creacion), "-", MONTH(p.f_creacion));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: select u.generoId as fecha, COUNT(*) AS cantidad 
+                    from usuario u join genero g on u.generoId = g.id  where u.generoId  between  "2020-01-01" and ""  group by u.generoId;
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: select u.generoId as fecha, COUNT(*) AS cantidad 
+                    from usuario u join genero g on u.generoId = g.id  where u.generoId  between  "2020-01-01" and "2023-06-17"  group by u.generoId;
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(u.generoId), "-" , MONTH(u.generoId)) AS fecha, COUNT(*) AS cantidad
+        FROM usuario u join genero g on u.generoId = g.id WHERE u.generoId BETWEEN "2020-01-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(u.generoId), "-", MONTH(u.generoId));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT YEAR(u.generoId) AS fecha, COUNT(*)  AS cantidad FROM usuario u join genero g on u.generoId = g.id 
+                where u.generoId  between  "2020-01-01" and "2023-06-17"  group BY YEAR(u.generoId);
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_compra), "-" , MONTH(f_compra)) AS fecha, SUM(cant) AS cantidad
+        FROM historialcompras WHERE f_compra BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_compra), "-", MONTH(f_compra));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_registro), "-" , MONTH(f_registro)) AS fecha, COUNT(*) AS cantidad
+        FROM usuario WHERE f_registro BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_registro), "-", MONTH(f_registro));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(p.f_creacion), "-" , MONTH(p.f_creacion)) AS fecha, COUNT(*) AS cantidad
+        FROM pregunta p join estado e on p.idEst = e.id WHERE p.f_creacion BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(p.f_creacion), "-", MONTH(p.f_creacion));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: select f_partida as fecha, COUNT(distinct(n_partida)) AS cantidad 
+                    from historialpartidas  where f_partida  between  "2020-01-01" and ""  group by f_partida;
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: select f_partida as fecha, COUNT(distinct(n_partida)) AS cantidad 
+                    from historialpartidas  where f_partida  between  "2020-01-01" and "2023-06-17"  group by f_partida;
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: select f_compra as fecha, SUM(cant) AS cantidad 
+                    from historialcompras  where f_compra  between  "2020-01-01" and "2023-06-17"  group by f_compra;
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_compra), "-" , MONTH(f_compra)) AS fecha, SUM(cant) AS cantidad
+        FROM historialcompras WHERE f_compra BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_compra), "-", MONTH(f_compra));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(f_registro), "-" , MONTH(f_registro)) AS fecha, COUNT(*) AS cantidad
+        FROM usuario WHERE f_registro BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(f_registro), "-", MONTH(f_registro));
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(p.f_creacion), "-" , MONTH(p.f_creacion)) AS fecha, COUNT(*) AS cantidad
+        FROM pregunta p join estado e on p.idEst = e.id WHERE p.f_creacion BETWEEN "2023-06-01" AND "2023-06-17"  
+        GROUP BY CONCAT(YEAR(p.f_creacion), "-", MONTH(p.f_creacion));
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query:  select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: select u.f_registro as fech, g.descr AS fecha, count(g.descr) AS cantidad 
+                    from usuario u join genero g on u.generoId = g.id  where u.f_registro  between  "2020-01-01" and "2023-06-15"  group by u.f_registro,g.descr;
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(u.f_registro), "-" , MONTH(u.f_registro)) AS fech, g.descr AS fecha, count(g.descr) AS cantidad
+        FROM usuario u join genero g on u.generoId = g.id WHERE u.f_registro BETWEEN "2020-01-01" AND "2023-06-15"  
+        GROUP BY CONCAT(YEAR(u.f_registro), "-", MONTH(u.f_registro)).g.descr;
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT YEAR(u.f_registro) AS fech, g.descr AS fecha, count(g.descr)  AS cantidad FROM usuario u join genero g on u.generoId = g.id 
+                where u.f_registro  between  "2020-01-01" and "2023-06-15"  group BY YEAR(u.f_registro)g.descr;
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT YEAR(u.f_registro) AS fech, g.descr AS fecha, count(g.descr)  AS cantidad FROM usuario u join genero g on u.generoId = g.id 
+                where u.f_registro  between  "2020-01-01" and "2023-06-15"  group BY YEAR(u.f_registro)g.descr;
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT YEAR(u.f_registro) AS fech, g.descr AS fecha, count(g.descr)  AS cantidad FROM usuario u join genero g on u.generoId = g.id 
+                where u.f_registro  between  "2020-01-01" and "2023-06-15"  group BY YEAR(u.f_registro)g.descr;
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT YEAR(u.f_registro) AS fech, g.descr AS fecha, count(g.descr)  AS cantidad FROM usuario u join genero g on u.generoId = g.id 
+                where u.f_registro  between  "2020-01-01" and "2023-06-15"  group BY YEAR(u.f_registro)g.descr;
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT YEAR(u.f_registro) AS fech, g.descr AS fecha, count(g.descr)  AS cantidad FROM usuario u join genero g on u.generoId = g.id 
+                where u.f_registro  between  "2020-01-01" and "2023-06-15"  group BY YEAR(u.f_registro)g.descr;
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: select u.f_registro as fech, g.descr AS fecha, count(g.descr) AS cantidad 
+                    from usuario u join genero g on u.generoId = g.id  where u.f_registro  between  "2020-01-01" and "2023-06-15"  group by u.f_registro,g.descr;
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: select u.f_registro as fech, g.descr AS fecha, count(g.descr) AS cantidad 
+                    from usuario u join genero g on u.generoId = g.id  where u.f_registro  between  "2020-01-01" and "2023-06-15"  group by u.f_registro,g.descr;
+[2023-06-17][ERROR]LLAMANDO AL CONSTRUCTOR DE LA CONFIGURACION
+[2023-06-17][INFO]Ejecutando query: SELECT CONCAT(YEAR(u.f_registro), "-" , MONTH(u.f_registro)) AS fech, g.descr AS fecha, count(g.descr) AS cantidad
+        FROM usuario u join genero g on u.generoId = g.id WHERE u.f_registro BETWEEN "2020-01-01" AND "2023-06-15"  
+        GROUP BY CONCAT(YEAR(u.f_registro), "-", MONTH(u.f_registro)).g.descr;

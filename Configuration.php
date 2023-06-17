@@ -1,6 +1,10 @@
 <?php
 
 // Inclusión de Controladores
+
+
+use Dompdf\Dompdf;
+
 include_once('controller/RegistroController.php');
 include_once('controller/ReportarController.php');
 include_once('controller/PerfilController.php');
@@ -133,9 +137,8 @@ class Configuration
     public function getAdministradorController(){
         include_once ('controller/AdministradorController.php');
         include_once ('model/AdministradorModel.php');
-        require_once('third-party/jpgraph/src/jpgraph.php');
-        require_once('third-party/jpgraph/src/jpgraph_line.php');
-        return new administradorController($this->getRenderer(), new AdministradorModel($this->getDatabase()));
+        require_once('third-party/dompdf/autoload.inc.php');
+        return new administradorController($this->getRenderer(), new AdministradorModel($this->getDatabase()),  $this->getPDF());
     }
 
 

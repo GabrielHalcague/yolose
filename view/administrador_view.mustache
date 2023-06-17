@@ -1,42 +1,59 @@
 
 
-<div>UsuariosNuevos {{nuevosUsuariosMes}}</div>
-<div>UsuariosTotales {{usuariosTotales}}</div>
-<div>UsuariosTotales {{cantidadDePartidasJugadas}}</div>
-
+<div class="container text-center">
+    <h4>Informacion de mes</h4>
+    <div class="row">
+        <div class="col">
+            Ingresos : {{Ingresos}} Dolares
+        </div>
+        <div class="col">
+            Usuarios Nuevos {{nuevosUsuariosMes}}
+         </div>
+        <div class="col">
+            Preguntas Nuevas: :{{preguntasNuevasDelMes}}
+        </div>
+    </div>
+</div>
 
 
 <div class="input-group">
-    <span><select name="tipo" id="" class="form-select">
+    <span><select name="tipo" id="tipo" class="form-select">
         <option value="1">cantidad de partidas jugadas</option>
-        <option value="2">cantidad de preguntas en el juego</option>
-        <option value="3">cantidad de preguntas creadas </option>
-        <option value="4">cantidad de usuarios nuevos </option>
-        <option value="5">porcentaje de preguntas respondidas correctamente por usuario</option>
-        <option value="6">cantidad de usuarios por pais</option>
-        <option value="7">cantidad de usuarios por sexo</option>
-        <option value="8">cantidad de usuarios por grupo de edad (menores, jubilados, medio)</option>
-        <option value="9">cantidad de usuarios por sexo</option>
-        <option value="10"> trampitas acumulados por el  usuario</option>
+        <option value="2">cantidad de preguntas creadas </option>
+        <option value="3">cantidad de preguntas Disponibles en el juego</option>
+        <option value="4">cantidad de usuarios nuevos por fecha </option>
         <option value="11">Ganancia de Trampitas</option>
-    </select></span>
+
+        <option value="">hasta aca llegue </option>
+        <option value="5">cantidad de usuarios por pais</option>
+        <option value="6">cantidad de usuarios por sexo</option>
+        <option value="7">cantidad de usuarios por grupo de edad (menores, jubilados, medio)</option>
+        <option value="8">cantidad de usuarios por sexo</option>
+
+        <option value="9"> trampitas acumulados por el  usuario</option>
+        <option value="10">porcentaje de preguntas respondidas correctamente por usuario</option>
+
+
+    </select>
+    </span>
+
     <input type="date" value="2020-01-01" id="fechaInicio">
     <input type="date" id="fechaFin" >
 
     <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="filtro" value="d" checked>
+        <input class="form-check-input" type="radio" name="exampleRadios" id="filtroD" value="d" checked>
         <label class="form-check-label" for="exampleRadios1">
             Filtro por dia
         </label>
     </div>
     <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="filtro" value="m">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="filtroM" value="m">
         <label class="form-check-label" for="exampleRadios2">
            filtro mes
         </label>
     </div>
     <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="filtro" value="a">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="filtroY" value="y">
         <label class="form-check-label" for="exampleRadios3">
            filtro añio
         </label>
@@ -45,16 +62,17 @@
     <button class="btn btn-outline-secondary" type="button" id="consultar">Button</button>
 </div>
 
-<div id="resultado">resultado</div>
+<div id="resultado"></div>
 
-<div id="canvasDiv" style="width: 400px; height: 300px;">
+<div id="canvasDiv" style="width: 800px; height: 300px;">
 <canvas id="myChart"></canvas>
 </div>
+
+<button class="btn btn-outline-secondary" type="button" id="Imprimir">Imprimir</button>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
-
     function crearGrafico(ejeX ,ejey) {
         const canvas = document.getElementById('myChart');
         if (canvas) {
@@ -67,7 +85,7 @@
         data: {
             labels: ejeX,
             datasets: [{
-                label: '# of Votes',
+                label: 'estadisticas',
                 data: ejey,
                 borderWidth: 1
             }]
@@ -84,11 +102,45 @@
 </script>
 
 <script>
+    $('#Imprimir').click(function () {
+        const canvas = document.getElementById('myChart');
+
+        var html = canvas.toDataURL(); // Obtiene la representación base64 del contenido del canvas
+        console.log(html);
+        $.ajax({
+            url: 'administrador/generarPDF',
+            method: 'POST',
+            data: { html: html },
+            success: function(response) {
+                // Convertir el contenido binario a un Blob
+                var blob = new Blob([response], { type: 'application/pdf' });
+
+                // Crear una URL para el Blob
+                var url = URL.createObjectURL(blob);
+
+                // Abrir una nueva ventana o descargar el PDF
+                window.open(url);
+            }
+        });
+    });
+</script>
+
+<script>
     $('#consultar').click(function () {
-        var tipoConsulta1 = $("#tipoConsulta").val();
+
+        var selectElement = document.getElementById('tipo');
+        var tipoConsulta1 = selectElement.value;
         var fechaInicio1 = $('#fechaInicio').val();
         var fechaFin1 = $('#fechaFin').val();
-        var filtro1 =$('#filtro').val();
+
+        var radioButtons = document.getElementsByName('exampleRadios');
+        var valorFiltro = '';
+        for (var i = 0; i < radioButtons.length; i++) {
+            if (radioButtons[i].checked) {
+                valorFiltro = radioButtons[i].value;
+                break;
+            }
+        }
         $.ajax({
             url: '/administrador/consultaPorTipo',
             method: 'POST',
@@ -96,19 +148,20 @@
                 tipoConsulta: tipoConsulta1,
                 fechaInicio: fechaInicio1,
                 fechaFin: fechaFin1,
-                filtro : filtro1
+                filtro : valorFiltro
             },
             beforeSend: function () {
                 $("#resultado").html("Procesando, espere por favor...");
             },
             success: function (response) {
+                $("#resultado").html("");
                 var data = JSON.parse(response);
                 var ejex = data.arrays[0];
                 var ejey = data.arrays[1];
                 crearGrafico(ejex,ejey);
             },
-            error: function(XMLHttpRequest, textStatus, errorThrown) {
-                alert("Status: " + textStatus);
+            error: function(jqXHR, textStatus, errorThrown) {
+                alert("Problema: " + jqXHR.responseText);
             }
         });
     });
