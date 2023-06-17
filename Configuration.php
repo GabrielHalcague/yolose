@@ -164,7 +164,7 @@ include_once('model/TiendaModel.php');
         {
             return new Router(
                 $this,
-                "getHomeController",
+                "getInicioController",
                 "list");
         }
         
