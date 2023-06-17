@@ -21,7 +21,7 @@ class LoginController
     public function cerrarSesion()
     {
         Session::finalizarSesion();
-        Header::redirect("/");
+        Header::redirect("/inicio");
     }
 
     public function iniciarSesion()
@@ -53,7 +53,7 @@ class LoginController
             Session::set('rol', $usuarioBuscado["rol"]);
 
             Session::set('username', $username);
-            Header::redirect("/");
+            Header::redirect("/home");
             exit();
         }else{
             header("location:validate.php");// no existe
