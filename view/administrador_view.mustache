@@ -14,31 +14,20 @@
         </div>
     </div>
 </div>
-
-
 <div class="input-group">
     <span><select name="tipo" id="tipo" class="form-select">
         <option value="1">cantidad de partidas jugadas</option>
         <option value="2">cantidad de preguntas creadas </option>
         <option value="3">cantidad de preguntas Disponibles en el juego</option>
         <option value="4">cantidad de usuarios nuevos por fecha </option>
-        <option value="11">Ganancia de Trampitas</option>
-
-        <option value="">hasta aca llegue </option>
-        <option value="5">cantidad de usuarios por pais</option>
+        <option value="5" disabled>cantidad de usuarios por pais</option>
         <option value="6">cantidad de usuarios por sexo</option>
         <option value="7">cantidad de usuarios por grupo de edad (menores, jubilados, medio)</option>
-        <option value="8">cantidad de usuarios por sexo</option>
-
-        <option value="9"> trampitas acumulados por el  usuario</option>
-        <option value="10">porcentaje de preguntas respondidas correctamente por usuario</option>
-
-
+        <option value="8">Ganancia de Trampitas</option>
     </select>
     </span>
-
     <input type="date" value="2020-01-01" id="fechaInicio">
-    <input type="date" id="fechaFin" >
+    <input type="date" value="2023-06-17" id="fechaFin" >
 
     <div class="form-check">
         <input class="form-check-input" type="radio" name="exampleRadios" id="filtroD" value="d" checked>
@@ -55,51 +44,20 @@
     <div class="form-check">
         <input class="form-check-input" type="radio" name="exampleRadios" id="filtroY" value="y">
         <label class="form-check-label" for="exampleRadios3">
-           filtro añio
+           filtro año
         </label>
     </div>
-
     <button class="btn btn-outline-secondary" type="button" id="consultar">Button</button>
 </div>
+
 
 <div id="resultado"></div>
 
 <div id="canvasDiv" style="width: 800px; height: 300px;">
 <canvas id="myChart"></canvas>
 </div>
-
 <button class="btn btn-outline-secondary" type="button" id="Imprimir">Imprimir</button>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-<script>
-    function crearGrafico(ejeX ,ejey) {
-        const canvas = document.getElementById('myChart');
-        if (canvas) {
-            Chart.getChart(canvas)?.destroy();
-        }
-
-    const ctx = document.getElementById('myChart');
-    new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: ejeX,
-            datasets: [{
-                label: 'estadisticas',
-                data: ejey,
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
-        }
-    });
-    }
-</script>
 
 <script>
     $('#Imprimir').click(function () {
@@ -120,48 +78,6 @@
 
                 // Abrir una nueva ventana o descargar el PDF
                 window.open(url);
-            }
-        });
-    });
-</script>
-
-<script>
-    $('#consultar').click(function () {
-
-        var selectElement = document.getElementById('tipo');
-        var tipoConsulta1 = selectElement.value;
-        var fechaInicio1 = $('#fechaInicio').val();
-        var fechaFin1 = $('#fechaFin').val();
-
-        var radioButtons = document.getElementsByName('exampleRadios');
-        var valorFiltro = '';
-        for (var i = 0; i < radioButtons.length; i++) {
-            if (radioButtons[i].checked) {
-                valorFiltro = radioButtons[i].value;
-                break;
-            }
-        }
-        $.ajax({
-            url: '/administrador/consultaPorTipo',
-            method: 'POST',
-            data: {
-                tipoConsulta: tipoConsulta1,
-                fechaInicio: fechaInicio1,
-                fechaFin: fechaFin1,
-                filtro : valorFiltro
-            },
-            beforeSend: function () {
-                $("#resultado").html("Procesando, espere por favor...");
-            },
-            success: function (response) {
-                $("#resultado").html("");
-                var data = JSON.parse(response);
-                var ejex = data.arrays[0];
-                var ejey = data.arrays[1];
-                crearGrafico(ejex,ejey);
-            },
-            error: function(jqXHR, textStatus, errorThrown) {
-                alert("Problema: " + jqXHR.responseText);
             }
         });
     });

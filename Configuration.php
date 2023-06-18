@@ -16,6 +16,7 @@ include_once('controller/PartidaController.php');
 include_once('controller/EditorController.php');
 include_once('controller/TiendaController.php');
 
+
 // Inclusión de Helpers
 include_once('helpers/MySqlDatabase.php');
 include_once("helpers/MustacheRender.php");
@@ -140,7 +141,11 @@ class Configuration
         require_once('third-party/dompdf/autoload.inc.php');
         return new administradorController($this->getRenderer(), new AdministradorModel($this->getDatabase()),  $this->getPDF());
     }
-
+    public function getAdministradorUsuarioController(){
+        include_once('controller/AdministratorUsurioController.php');
+        include_once ('model/AdministradorUsuarioModel.php');
+        return new AdministratorUsurioController($this->getRenderer(), new AdministradorUsuarioModel($this->getDatabase()), $this->getPDF());
+    }
 
 
     private function getArrayConfig()

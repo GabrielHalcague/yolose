@@ -24,7 +24,7 @@ class AdministradorModel
         $campoFiltro2="g.descr";
         $operacion= 'count(g.descr)';
         $tabla = $this->generarSQLporTablaYCampoConTresColumnas($tabla, $campoFiltro, $campoFiltro2, $operacion , $filtro , $f_inicio , $f_fin );
-        return $this->regresoDeArrayConEjes($tabla);
+        return $tabla;
     }
 
 
@@ -50,11 +50,12 @@ class AdministradorModel
 
     public function getCantidadPartidasJugadasPorFecha( $filtro ='d', $f_inicio = null, $f_fin = null)
     {
-        $tabla = 'historialpartidas';
+        $tabla = 'historialpartidas h join tipopartida t on h.tipoPartida = t.id';
         $campoFiltro = 'f_partida';
+        $campoFiltro2= "t.descripcion";
         $operacion = 'COUNT(distinct(n_partida))';
-        $tabla = $this->generarSQLporTablaYCampo($tabla, $campoFiltro, $operacion, $filtro, $f_inicio, $f_fin);
-        return $this->regresoDeArrayConEjes($tabla);
+        $tabla = $this->generarSQLporTablaYCampoConTresColumnas($tabla, $campoFiltro, $campoFiltro2, $operacion , $filtro , $f_inicio , $f_fin );
+        return $tabla;
 
     }
 
@@ -82,7 +83,23 @@ class AdministradorModel
 
     }
 
-    //cantidad de partidas jugadas por defecto trae los del mes con filtro diario
+    public function getCantidadDeUsuariosPorRangoDeEdad($filtro ='d', $f_inicio = null, $f_fin = null)
+    {
+        $tabla = '(
+    SELECT
+        f_registro,
+        CASE
+            WHEN TIMESTAMPDIFF(YEAR, f_nacimiento, CURDATE()) < 30 THEN "Joven"
+            WHEN TIMESTAMPDIFF(YEAR, f_nacimiento, CURDATE()) BETWEEN 30 AND 60 THEN "Edad Media"
+            ELSE "Adulto"        END AS rango_edad    FROM        usuario) AS subconsulta';
+        $campoFiltro = 'f_registro';
+        $campoFiltro2= "rango_edad";
+        $operacion = 'COUNT(rango_edad)';
+        $tabla = $this->generarSQLporTablaYCampoConTresColumnas($tabla, $campoFiltro, $campoFiltro2, $operacion , $filtro , $f_inicio , $f_fin );
+        return $tabla;
+
+    }
+
     public function generarSQLporTablaYCampo($tabla, $campoFiltro, $operacion , $filtro , $f_inicio , $f_fin ){
         $filtro = !is_null($filtro) ? $filtro : 'd';
         $f_inicio = !is_null($f_inicio) ? $f_inicio : date('Y-m-01');
@@ -115,37 +132,41 @@ class AdministradorModel
 
         switch ($filtro){
             case "d":
-                $sql= 'select '.$campoFiltro.' as fech, '.$campoFiltro2.' AS fecha, '.$operacion.' AS cantidad 
+                $sql= 'select '.$campoFiltro.' as campoFiltro, '.$campoFiltro2.' AS descripcion, '.$operacion.' AS cantidad 
                     from '.$tabla.'  where '.$campoFiltro.'  between  "'.$f_inicio.'" and "'.$f_fin.'"  group by '.$campoFiltro.','.$campoFiltro2.';';
                 break;
             case "m":
-                $sql = 'SELECT CONCAT(YEAR('.$campoFiltro.'), "-" , MONTH('.$campoFiltro.')) AS fech, '.$campoFiltro2.' AS fecha, '.$operacion.' AS cantidad
+                $sql = 'SELECT CONCAT(YEAR('.$campoFiltro.'), "-" , MONTH('.$campoFiltro.')) AS campoFiltro, '.$campoFiltro2.' AS descripcion, '.$operacion.' AS cantidad
         FROM '.$tabla.' WHERE '.$campoFiltro.' BETWEEN "'.$f_inicio.'" AND "'.$f_fin.'"  
-        GROUP BY CONCAT(YEAR('.$campoFiltro.'), "-", MONTH('.$campoFiltro.')).'.$campoFiltro2.';';
+        GROUP BY CONCAT(YEAR('.$campoFiltro.'), "-", MONTH('.$campoFiltro.')) , '.$campoFiltro2.';';
                 break;
 
             case "y":
-                $sql= 'SELECT YEAR('.$campoFiltro.') AS fech, '.$campoFiltro2.' AS fecha, '.$operacion.'  AS cantidad FROM '.$tabla.' 
-                where '.$campoFiltro.'  between  "'.$f_inicio.'" and "'.$f_fin.'"  group BY YEAR('.$campoFiltro.')'.$campoFiltro2.';';
+                $sql= 'SELECT YEAR('.$campoFiltro.') AS campoFiltro, '.$campoFiltro2.' AS descripcion, '.$operacion.'  AS cantidad FROM '.$tabla.' 
+                where '.$campoFiltro.'  between  "'.$f_inicio.'" and "'.$f_fin.'"  group BY YEAR('.$campoFiltro.') , '.$campoFiltro2.';';
                 break;
         }
         return $this->database->query($sql);
     }
 
     public function regresoDeArrayConEjes($tabla){
+        $matriz=[];
         if(count($tabla)>0){
-            foreach ($tabla as $row) {
-                $f_partida = $row['fecha'];
-                $cantidad = $row['cantidad'];
-                $array1["ejex"][] = $f_partida;
-                $array2["ejey"][] = $cantidad;
+            foreach ($tabla as $fila) {
+                $datosTabla= array(
+                    "campoFiltro" => $fila["fecha"],
+                    "descripcion" => "",
+                    "cantidad" => $fila["cantidad"]
+                );
+            array_push($matriz,$datosTabla);
             }
         }else{
-            $array1["ejex"][] = "Sin Datos";
-            $array2["ejey"][] = 0;}
-        $data["arrays"] = array( $array1["ejex"],$array2["ejey"] );
-        return $data;
+            $matriz [] = array('sin datos' => array(array('0' => 0)));
+        }
+        return $matriz;
     }
+
+
 
 
 

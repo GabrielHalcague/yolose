@@ -16,17 +16,19 @@ class AdministradorController
 
     }
     public function list(){
-
         if(session::get("rol") !="Administrador" ){
             Header::redirect("/");
         }
-        $data ["Ingresos"] = $this->AdministradorModel->getCantidadGananciaDeTrampasVendidasPorFecha( 'm', null, null)["arrays"][1][0];
-        $data ["nuevosUsuariosMes"] = $this->AdministradorModel->getCantidadDeUsuariosNuevosPorFecha('m', null, null)["arrays"][1][0];
-        $data ["preguntasNuevasDelMes"] = $this->AdministradorModel->getCantidadDePreguntasDisponiblesPorFecha('m', null, null)["arrays"][1][0];
+        $data ["Ingresos"] = $this->AdministradorModel->getCantidadGananciaDeTrampasVendidasPorFecha( 'm', null, null)[0]['cantidad'];
+        $data ["nuevosUsuariosMes"] = $this->AdministradorModel->getCantidadDeUsuariosNuevosPorFecha('m', null, null)[0]['cantidad'];
+        $data ["preguntasNuevasDelMes"] = $this->AdministradorModel->getCantidadDePreguntasDisponiblesPorFecha('m', null, null)[0]['cantidad'];
         return $this->renderer->render("administrador",$data);
     }
 
     public function consultaPorTipo() {
+        if(session::get("rol") !="Administrador" ){
+            Header::redirect("/");
+        }
         $tipoConsulta = $_POST['tipoConsulta']?? 1;
         $fechaInicio = $_POST['fechaInicio']?? null;
         $fechaFin = $_POST["fechaFin"] ?? null;
@@ -51,16 +53,12 @@ class AdministradorController
                 $data= $this->AdministradorModel->getCantidadDeUsuariosPorSexo($filtro,$fechaInicio,$fechaFin);
                 break;
             case 7:
-                $data= $this->AdministradorModel->getCantidadDeUsuariosNuevosPorFecha($filtro,$fechaInicio,$fechaFin);
+                $data= $this->AdministradorModel->getCantidadDeUsuariosPorRangoDeEdad($filtro,$fechaInicio,$fechaFin);
                 break;
             case 8:
-                $data= $this->AdministradorModel->getCantidadDeUsuariosNuevosPorFecha($filtro,$fechaInicio,$fechaFin);
-                break;
-            case 11:
                 $data= $this->AdministradorModel->getCantidadGananciaDeTrampasVendidasPorFecha($filtro,$fechaInicio,$fechaFin);
                 break;
         }
-
         $error=0;
         if ($error>0) {
             http_response_code(503);
@@ -71,6 +69,7 @@ class AdministradorController
             echo json_encode($data);
         }
     }
+
 
     public function generarPDF(){ // no anda
 
@@ -88,8 +87,6 @@ class AdministradorController
 // Envía el archivo PDF al navegador para su descarga
         $this->Dompdf->stream('archivo.pdf');
        // (new PDFGenerator)->getPDF($decodedData,"asd");
-
-
     }
 
 
