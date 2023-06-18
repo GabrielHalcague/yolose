@@ -95,7 +95,7 @@ function validarRespuesta(data) {
             finButton.show();
         }
         if (data['correcto'] === true) {
-            respuestaActual.css('backgroundColor', 'green');
+            respuestaValida.css('backgroundColor', 'green');
             setTimeout(function (){
                 $(location).attr('href',"/partida&tipoPartida="+data['tipoPartida']);
             },5000);
@@ -130,7 +130,20 @@ const terminarPartida = () => {
             var datos = data.data;
             console.log(datos);
             $('#result').text(datos['resultado']);
-            $('#tPartida').text(datos['tipo']);
+            var tipoPartida=undefined;
+            switch(datos['tipo']){
+                case '1':
+                    tipoPartida = "Solitario";
+                    break;
+                case '2':
+                    tipoPartida = "VS BOT";
+                    $('#resultBot').text(datos['respuestasBot']);
+                    break;
+                default:
+                    tipoPartida = "PvP";
+                    break;
+            }
+            $('#tPartida').text(tipoPartida);
             $('#ventana').modal('show');
 
         }

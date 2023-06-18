@@ -30,22 +30,37 @@ class PerfilModel
     }
 
     public function obtenerHistorialPartidasUsuario($idUsuario){
-        $sql = "SELECT h.n_Partida, h.f_partida, u.nombreUsuario,h.tipoPartida, SUM(estado) AS sumaPreguntasContestadas
-                FROM historialPartidas AS h
-                JOIN usuario AS u 
-                WHERE h.idUs = '$idUsuario'
-                GROUP BY h.n_partida, h.idUs";
+        $sql = " select hp.f_partida, u.nombreUsuario,hp.tipoPartida,
+            count(*) as sumaPreguntasContestadas , hp.n_partida,t.descripcion
+                from historialPartidas hp join usuario u on u.id = hp.idUs
+                join tipoPartida t on t.Id = hp.tipoPartida
+            where hp.estado = 1 and hp.idUs= '$idUsuario'
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 5";
+        return $this->database->query($sql);
+    }
+
+    private function rankingGeneral(){
+
+        $sql = " select u.id, u.nombreUsuario, count(*) as puntaje , hp.n_partida
+                from historialPartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 10";
         return $this->database->query($sql);
     }
 
     public function getRankingGlobalDelUsuario($idUsuario) {
-        $sql= "select ranking from (select ROW_NUMBER() OVER (ORDER BY maximo desc) as ranking, idUs, n_partida, max(puntajeMaximo) as maximo 
-from (select idUs, n_partida, count(*) AS puntajeMaximo from historialPartidas  GROUP BY  n_partida, idUs)as sub group by idUs order by maximo desc) as subconsulta where idUs= '$idUsuario';";
-        return $this->database->SoloValorCampo($sql);
+        $data= $this->rankingGeneral();
+        $posicion=array_search($idUsuario, array_column($data,'id') )+1;
+        return $posicion;
     }
     public function getMAximoRespuestasCorrectasPorIdUsuario($idUsuario) {
         $sql= "select MAX(contador) as maxRespuetasC from (SELECT idUs, n_partida, COUNT(*) AS contador
-    FROM historialPartidas where idUs='$idUsuario' GROUP BY idUs, n_partida) as subconsulta;";
+                FROM historialPartidas hp where idUs='$idUsuario' and hp.estado=1
+                GROUP BY idUs, n_partida) as subconsulta";
         return $this->database->SoloValorCampo($sql);
     }
 

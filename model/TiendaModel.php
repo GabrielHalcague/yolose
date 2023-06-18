@@ -12,7 +12,7 @@ class TiendaModel
     }
 
     public function registroPago($array){
-        $this->actualizaTrampasUsuario($array['item']['idTrampa'],$array['idusuario']);
+        $this->actualizaTrampasUsuario($array['item']['cantidad'],$array['idusuario']);
         $this->agregarInformacionDeCompra([
             'idUsuario' => $array['idusuario'],
             'idTrampa' => $array['item']['idTrampa'],

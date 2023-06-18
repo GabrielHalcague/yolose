@@ -29,9 +29,12 @@ class PartidaController
         $data = [
             'js' => true,
             'username' => Session::get('username'),
-            'tipoPartida' => Session::get('tipoPartida'),
             'puntaje' => $this->partidaModel->obtenerScoreDelUsuario(Session::get('tokenPartida'), Session::get('username'))['puntos'] ?? 0
         ];
+
+        if($tipoPartida == '2'){
+            $data['tipoPartida'] = Session::get('tipoPartida');
+        }
 
         if(empty(Session::get('respondio'))){
             Logger::info("EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR O COMIENZO JUEGO");
@@ -86,7 +89,7 @@ class PartidaController
             'tipoPartida' => Session::get('tipoPartida')
         ]);
         
-        if($data['correcto'] ==false){
+        if(!$data['correcto']){
             Session::set('perdiste' ,true);
         }
 
@@ -115,18 +118,25 @@ class PartidaController
         if ($tipoPartida == 2) {
             $maxPregBot = $this->partidaModel->obtenerPreguntasParaUsuario(-1);
             $scoreBot = rand(1, count($maxPregBot));
-            if ($scoreUsuario > $scoreBot) {
+            $score = $scoreUsuario['puntos'];
+            Logger::info("CANTIDAD DE RESPUESTAS DEL USUARIO [$score] - CANTIDAD DE RESPUESTAS DEL BOT [$scoreBot] ");
+            if ($score > $scoreBot) {
                 $resultado = "HAS GANADO AL BOT";
-            } elseif ($scoreUsuario < $scoreBot) {
+                Session::set('estadoPartida',1);
+            } elseif ($score < $scoreBot) {
                 $resultado = "HAS PERDIDO CON EL BOT";
+                Session::set('estadoPartida',3);
             } else {
                 $resultado = "HAS EMPATADO CON EL BOT";
+                Session::set('estadoPartida',2);
             }
             $data['resultado'] = $resultado;
+            $data['respuestasBot'] = $scoreBot;
         }
 
         if ($tipoPartida == 1) {
-            $data['resultado'] = "HAS MEJORADO";
+            $data['resultado'] = "BUENA SUERTE LA PROXIMA VEZ";
+            Session::set('estadoPartida',0);
         }
 
         $response = array(
@@ -147,6 +157,7 @@ class PartidaController
         Session::deleteValue('preguntaSeleccionada');
         Session::deleteValue('tiempo');
         Session::deleteValue('envioPregunta');
+        Session::deleteValue('estadoPregunta');
         $trampasActuales = Session::get('trampas');
         Session::deleteValue('trampas');
         $this->partidaModel->actualizaTrampasUsuario($trampasActuales, Session::get('idUsuario'));
@@ -173,7 +184,7 @@ class PartidaController
             'preguntaID' => $preguntas[$indicePregunta]['preguntaID'],
             'color' => $preguntas[$indicePregunta]['color'],
             'tiempo' => 10,
-            'trampas' => Session::get('trampas') ?? 5,
+            'trampas' => Session::get('trampas'),
             'opc' => $this->partidaModel->obtenerRespuestaDePregunta($preguntas[$indicePregunta]['preguntaID']),
         ];
         unset($preguntas[$indicePregunta]);

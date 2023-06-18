@@ -33,7 +33,7 @@
         
         public function obtenerPreguntaPorId($idPreg)
         {
-            $sql = "SELECT p.id, p.preg, p.f_creacion FROM pregunta P WHERE P.id= '$idPreg'";
+            $sql = "SELECT p.id, p.preg, p.f_creacion FROM pregunta p WHERE p.id= '$idPreg'";
             return $this->database->query_row($sql);
             
         }
@@ -82,7 +82,7 @@
             }
         }
         public function obtenerInformacionDeReporte($idPreg){
-            $sql = "SELECT  p.id,u.nombreUsuario, r.f_reporte FROM  pregunta p join reportepregunta r on p.id= r.idPregunta
+            $sql = "SELECT  p.id,u.nombreUsuario, r.f_reporte FROM  pregunta p join reportePregunta r on p.id= r.idPregunta
                     join usuario u on u.id = r.idUsuario
                 where p.id= '$idPreg'";
             return $this->database->query($sql);

@@ -8,23 +8,25 @@
                     <h3 class="bg-dark rounded py-3">Puntaje <strong class="text-primary ms-3">{{puntaje}}</strong></h3>
                 </div>
                 <div class="col-6">
-                    <h3 class="bg-dark rounded py-3">Tiempo <strong id="tiempoRestante" class="text-danger ms-3">{{tiempo}}</strong></h3>
+                    <h3 class="bg-dark rounded py-3">Tiempo <strong id="tiempoRestante"
+                                                                    class="text-danger ms-3">{{tiempo}}</strong></h3>
                 </div>
             </div>
         </article>
-    
+
         <article class="row">
             <h2 class="text-center text-shadow {{color}}">{{pregunta}}</h2>
             {{#opc}}
                 <div class="col-md-6 col-sm-12 my-3">
-                    <button type="button" name="{{id}}" id="{{id}}" style="min-height: 5rem; min-width: 20rem; width: 100%"
+                    <button type="button" name="{{id}}" id="{{id}}"
+                            style="min-height: 5rem; min-width: 20rem; width: 100%"
                             class="btn btn-primary opcion" value="{{id}}"> {{resp}}
                     </button>
                 </div>
             {{/opc}}
         </article>
-    
-    
+
+
         <article class="text-end">
             <button type="button" name="trampa" id="trampa"
                     class="btn btn-success btn-lg btn-block btn-next opcion" value="trampa"> Trampas
@@ -38,18 +40,22 @@
     </section>
 
     <!-- Modal -->
-    <div class="modal fade" id="ventana" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal modal-static fade" id="ventana" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog"
+         aria-labelledby="Partida Finalizada" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
-                <div class="modal-body text-center">
+                <div class="modal-body text-center" id="modal-body">
                     <h2>¡Buen juego!</h2>
-                    <h3 id="tPartida"></h3>
+                    <p>Tipo Partida: <strong id="tPartida"></strong></p>
                     <p>Jugador: <strong class="text-primary">{{username}}</strong></p>
                     <p>Puntaje: <strong class="text-primary">{{puntaje}}</strong></p>
-                    <p>Resultado: <strong id="result" class="text-primary"></strong></p>
+                    {{#tipoPartida}}
+                        <p>Resultado Bot: <strong id="resultBot" class="text-primary"></strong></p>
+                    {{/tipoPartida}}
+                    <p>RESULTADO FINAL: <strong id="result" class="text-primary"></strong></p>
                     <div class="text-end">
                         <a id="fin" class="btn btn-next btn-danger px-5" href="/partida/salir"
-                        role="button">Fin</a>
+                           role="button">Fin</a>
                     </div>
                 </div>
             </div>

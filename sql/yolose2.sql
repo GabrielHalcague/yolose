@@ -129,6 +129,7 @@ CREATE TABLE IF NOT EXISTS historialPartidas
     n_partida varchar(50),
     f_partida date    DEFAULT curdate(),
     estado    BOOLEAN DEFAULT false,
+    estadoPartida int(11) DEFAULT 0,
     idUs      int(11),
     idPreg    int(11),
     tipoPartida int(11),
@@ -185,12 +186,12 @@ VALUES (1, 3),
 
 INSERT INTO `categoria` (`categ`, `color`)
 VALUES ('Geografía', 'brown'),
-       ('Ciencia', 'Purple'),
-       ('Historia', 'Light Blue'),
-       ('Deporte', 'Khaki'),
-       ('Tecnologia', 'Blue Gray'),
-       ('Entretenimiento', 'Pale Green'),
-       ('Peliculas', 'Pale Yellow');
+       ('Ciencia', 'purple'),
+       ('Historia', 'blue'),
+       ('Deporte', 'green'),
+       ('Tecnologia', 'blueviolet'),
+       ('Entretenimiento', 'orange'),
+       ('Peliculas', 'turquoise');
 
 INSERT INTO estado (descr)
 VALUES ('PENDIENTE APROBACIÓN'),

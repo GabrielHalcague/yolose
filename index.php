@@ -18,12 +18,15 @@ $controladoresValios = [
     'editor',
     'administrador',
     'partida',
-    'tarjeta'
+    'tarjeta',
+    'agregarPregunta',
+    'verReporte',
+    'verPregunta',
+    'activation'
 ];
 
 if(empty(Session::get('logged'))&& in_array($module, $controladoresValios)){
-    $module = 'inicio';
-    $method = 'list';
+   Header::redirect("/");
 }
 
 $router->route($module, $method);
