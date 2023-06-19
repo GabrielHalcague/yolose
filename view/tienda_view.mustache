@@ -1,7 +1,7 @@
 <div class="bg-inicio">
     <section class="mx-5 py-5">
         <h1 class="mb-4 text-center text-logo">Tienda</h1>
-        <article class="border-yolose w-85 m-auto">
+        <article class="w-85 m-auto">
             <div class="row p-5">
                 {{#trampas}}
                     <div class="col-md-4">
@@ -9,8 +9,7 @@
                              class="img-fluid"
                              alt="estrella">
                         <h2 class="text-white">{{descr}}</h2>
-                        <hr/>
-                        <p class="text-white">Con esta trampa podes salterar una pregunta sin responderla</p>
+                        <p class="text-white">Con esta trampa puedes saltear una pregunta sin responderla</p>
                         <p class="text-white"><strong>Precio:</strong> ${{precio}}</p>
                         <button type="button" name="{{idTrampa}}" id="{{idTrampa}}"
                                 class="btn-yolose comprar" value="{{idTrampa}}">
@@ -19,6 +18,7 @@
                     </div>
                 {{/trampas}}
             </div>
+            <a href="/" class="btn-yolose p-3 my-5 w-50 m-auto">Volver</a>
         </article>
     </section>
 </div>

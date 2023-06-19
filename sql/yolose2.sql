@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS usuario
     fotoPerfil    varchar(50),
     f_nacimiento  date,
     f_registro    date         DEFAULT current_timestamp(),
-    coordenadas   varchar(255) DEFAULT '',
+    coordenadas   varchar(255) DEFAULT '-34.670616392464304, -58.56284811910162',
     activo        tinyint(1),
     trampas       int(11)      DEFAULT 0,
     CONSTRAINT FK_Usuario_Genero FOREIGN KEY (generoId) REFERENCES genero (id)
@@ -138,7 +138,7 @@ CREATE TABLE IF NOT EXISTS historialPartidas
     CONSTRAINT Fk_HistorialPartida_tipoPartida FOREIGN KEY (tipoPartida) REFERENCES tipoPartida(Id)
 );
 
-create table IF NOT EXISTS reportePregunta(
+CREATE TABLE IF NOT EXISTS reportePregunta(
     idReporte int primary key auto_increment,
     idUsuario int,
     idPregunta int,
@@ -412,23 +412,6 @@ FROM pregunta p
 WHERE (p.resCor / p.pregTot) BETWEEN 0.7 AND 1
   AND e.descr LIKE 'ACTIVO';
 
-CREATE VIEW IF NOT EXISTS cantidadUsuariosPorGenero AS
-SELECT CASE
-           WHEN u.generoId = 1 THEN 'Masculino'
-           WHEN u.generoId = 2 THEN 'Femenino'
-           ELSE 'No Especificado'
-           END  'sexo',
-       COUNT(*) 'cantidad'
-FROM usuario u
-GROUP BY u.generoId;
-
-CREATE VIEW IF NOT EXISTS ranking AS
-SELECT u.nombreUsuario, SUM(hp.estado = 1) 'puntaje'
-FROM historialPartidas hp
-         JOIN usuario u ON hp.idUs = u.id
-GROUP BY hp.idUs;
-
-drop view if exists dificultadUsuario;
 CREATE VIEW IF NOT EXISTS dificultadUsuario AS
 SELECT h.idUs, SUM(h.estado = 0) / COUNT(*) 'dificultad'
 FROM historialPartidas h
