@@ -211,12 +211,12 @@ class PartidaModel
         $token = $data['n_partida'];
         $estado = $data['estado'];
         $tipoPartida = $data['tipoPartida'];
-        //$estadoPartida = $data['estadoPartida'];
+        $estadoPartida = $data['estadoPartida'];
 
         if (!$estado) {
-            $sql = "INSERT INTO historialPartidas (idUs, idPreg, n_partida,tipoPartida) VALUES ('$idUsuario','$idPreg','$token','$tipoPartida')";
+            $sql = "INSERT INTO historialPartidas (idUs, idPreg, n_partida,tipoPartida) VALUES ('$idUsuario','$idPreg','$token','$tipoPartida','$estadoPartida')";
         } else {
-            $sql = "INSERT INTO historialPartidas (estado, idUs, idPreg, n_partida,tipoPartida) VALUES ('$estado','$idUsuario','$idPreg','$token','$tipoPartida')";
+            $sql = "INSERT INTO historialPartidas (estado, idUs, idPreg, n_partida,tipoPartida) VALUES ('$estado','$idUsuario','$idPreg','$token','$tipoPartida','$estadoPartida')";
         }
         $this->database->execute($sql);
     }

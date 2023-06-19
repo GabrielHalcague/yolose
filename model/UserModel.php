@@ -58,9 +58,14 @@ class UserModel{
     }
 
     public function obtenerHistorialPartidasUsuario($idUsuario){
-        $sql = "SELECT h.n_Partida, u.nombreUsuario,h.tipoPartida, SUM(estado) AS sumaPreguntasContestadas
+        $sql = "SELECT h.n_Partida, u.nombreUsuario,t.descripcion, SUM(h.estado) AS sumaPreguntasContestadas, e.descripcion
                 FROM historialPartidas AS h
                 JOIN usuario AS u 
+                ON h.idUs = u.id
+                JOIN tipoPartida AS t 
+                ON h.tipoPartida = t.Id
+                JOIN estadopartida AS e
+                ON h.estadoPartida = e.Id
                 WHERE h.idUs = '$idUsuario'
                 GROUP BY h.n_partida, h.idUs";
         return $this->database->query($sql);
