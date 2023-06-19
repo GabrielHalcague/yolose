@@ -56,34 +56,7 @@
 <div id="canvasDiv" style="width: 800px; height: 300px;">
 <canvas id="myChart"></canvas>
 </div>
-<button class="btn btn-outline-secondary" type="button" id="imprimir">Imprimir</button>
+<button class="btn btn-outline-secondary" type="button" id="generatePDF" disabled>Imprimir</button>
 
 
-<div id="chartContainer">
-    <canvas id="myChart"></canvas>
-</div>
 
-<button onclick="exportChartToPDF()">Exportar a PDF</button>
-
-<script>
-    // Obtiene una referencia al elemento del gráfico
-    const chartContainer = document.getElementById('canvasDiv');
-
-    // Crea una función para exportar el gráfico a PDF
-    function exportChartToPDF() {
-        // Captura una imagen del gráfico utilizando html2canvas
-        html2canvas(chartContainer).then(canvas => {
-            // Obtiene la imagen en formato base64
-            const chartImage = canvas.toDataURL('image/png');
-
-            // Crea una nueva instancia de jsPDF
-            const pdf = new jsPDF();
-
-            // Agrega la imagen del gráfico al PDF
-            pdf.addImage(chartImage, 'PNG', 10, 10, 190, 100); // Puedes ajustar los valores de posición y tamaño según tus necesidades
-
-            // Guarda el PDF en un archivo
-            pdf.save('chart.pdf');
-        });
-    }
-</script>

@@ -1,6 +1,5 @@
 
 
-
 function crearGrafico(data) {
     const canvas = document.getElementById('myChart');
     if (canvas) {
@@ -8,7 +7,7 @@ function crearGrafico(data) {
 }
     const ctx = document.getElementById('myChart');
 
-// Paso 1: Obtener todas las fechas y descripciones únicas
+// Obtener todas las fechas y descripciones unicas
     var labels = [];
     var descriptions = [];
 
@@ -22,7 +21,7 @@ function crearGrafico(data) {
 }
 });
 
-// Paso 2: Crear los conjuntos de datos para cada descripción
+// Crear los conjuntos de datos para cada descripcion
     var datasets = [];
 
     descriptions.forEach(function(desc) {
@@ -45,7 +44,7 @@ function crearGrafico(data) {
 });
 });
 
-// Paso 3: Crear la configuración del gráfico
+//  Crear la configuracion del grafico
     var chartConfig = {
     type: 'bar',
     data: {
@@ -92,9 +91,10 @@ $('#consultar').click(function () {
 },
     success: function (response) {
     var data = JSON.parse(response);
-    $("#resultado").text(response);
-    console.log(data);
+    $("#resultado").text('');
+   // console.log(data);
     crearGrafico(data);
+    $("#generatePDF").removeAttr('disabled');
 },
     error: function(jqXHR, textStatus, errorThrown) {
     alert("Problema: " + jqXHR.responseText);
@@ -132,12 +132,36 @@ $('#consultarUsuario').click(function () {
         },
         success: function (response) {
             var data = JSON.parse(response);
-            $("#resultado").text(response);
-            console.log(data);
+            $("#resultado").text('');
+            //console.log(data);
             crearGrafico(data);
         },
         error: function(jqXHR, textStatus, errorThrown) {
             alert("Problema: " + jqXHR.responseText);
         }
     });
+});
+
+$('#generatePDF').click(function() {
+    const canvas = document.getElementById('myChart');
+    // Convertir el canvas a una imagen base64
+    const imageData = canvas.toDataURL('image/png');
+    var consulta =  $('#tipo option:selected').text();
+
+    // Crear un formulario y agregar la imagen base64 como un campo oculto
+    const form = document.createElement('form');
+    form.method = 'POST';
+    form.action = '/administrador/generarPDF';
+    const input = document.createElement('input');
+    input.type = 'hidden';
+    input.name = 'imageData';
+    input.value = imageData;
+    form.appendChild(input);
+    const titulo = document.createElement('input');
+    titulo.type = 'hidden';
+    titulo.name = 'consulta';
+    titulo.value = consulta;
+    form.appendChild(titulo);
+    document.body.appendChild(form);
+    form.submit();
 });

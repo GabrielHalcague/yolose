@@ -71,22 +71,25 @@ class AdministradorController
     }
 
 
-    public function generarPDF()
-    {
-        $html = $_POST['imageData'];
-        $this->Dompdf->getPDF($html, 'factura');
-        $this->Dompdf->addPage();
+    public function generarPDF() {
+        if(session::get("rol") !="Administrador" ){
+            Header::redirect("/");
+        }
+        if (isset($_POST['imageData'])) {
+            $imageData = $_POST['imageData'];
+            $titulo = $_POST['consulta'];
+            $tmpFilePath = 'public/imagepdf.png';
+            file_put_contents($tmpFilePath, base64_decode(preg_replace('#^data:image/\w+;base64,#i', '', $imageData)));
+            // Generar el PDF utilizando Dompdf
+            $this->Dompdf->loadHtml('<html><body><h2>'. $titulo .'</h2><img src="' . $tmpFilePath . '"></body></html>');
+            $this->Dompdf->setPaper('A4', 'portrait');
+            $this->Dompdf->render();
+            $this->Dompdf->stream('Estadistica '.date('Y-m-d').'.pdf', ['Attachment' => true]);
 
-// Agrega la imagen desde el contenido del canvas
-        $this->Dompdf->addImageFromDataUrl($html);
+        } else {
 
-// Genera el contenido del PDF
-        $pdfContent = $this->Dompdf->output();
-// Devuelve el contenido del PDF como respuesta
-        header('Content-Type: application/pdf');
-        header('Content-Disposition: attachment; filename="resultado.pdf"');
-        echo $pdfContent;
-
+            echo 'Error: No se recibieron los datos de la imagen.';
+        }
     }
 
 }
