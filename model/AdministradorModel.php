@@ -151,7 +151,7 @@ class AdministradorModel
 
     public function regresoDeArrayConEjes($tabla){
         $matriz=[];
-        if(count($tabla)>0){
+        if(!empty($tabla)){
             foreach ($tabla as $fila) {
                 $datosTabla= array(
                     "campoFiltro" => $fila["fecha"],
@@ -161,7 +161,11 @@ class AdministradorModel
             array_push($matriz,$datosTabla);
             }
         }else{
-            $matriz [] = array('sin datos' => array(array('0' => 0)));
+            $matriz [] = array(
+                "campoFiltro" => "sin datos",
+                "descripcion" => "",
+                "cantidad" => 0
+            );
         }
         return $matriz;
     }
