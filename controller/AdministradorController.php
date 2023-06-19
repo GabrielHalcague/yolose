@@ -81,7 +81,7 @@ class AdministradorController
             $tmpFilePath = 'public/imagepdf.png';
             file_put_contents($tmpFilePath, base64_decode(preg_replace('#^data:image/\w+;base64,#i', '', $imageData)));
             // Generar el PDF utilizando Dompdf
-            $this->Dompdf->loadHtml('<html><body><h2>'. $titulo .'</h2><img src="' . $tmpFilePath . '"></body></html>');
+            $this->Dompdf->loadHtml('<html><body><h2>'. $titulo .'</h2><img src="' . $tmpFilePath . '" style="width: 100%;"></body></html>');
             $this->Dompdf->setPaper('A4', 'portrait');
             $this->Dompdf->render();
             $this->Dompdf->stream('Estadistica '.date('Y-m-d').'.pdf', ['Attachment' => true]);
