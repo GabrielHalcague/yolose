@@ -1,0 +1,66 @@
+
+
+<div class="container text-center m-4">
+    <h4 class="m-4">Informacion de mes</h4>
+    <div class="row">
+        <div class="col">
+            Ingresos : {{Ingresos}} Dolares
+        </div>
+        <div class="col">
+            Usuarios Nuevos {{nuevosUsuariosMes}}
+         </div>
+        <div class="col">
+            Preguntas Nuevas: :{{preguntasNuevasDelMes}}
+        </div>
+    </div>
+</div>
+<div class="row">
+
+<div class="input-group">
+    <select name="tipo" id="tipo" class="form-select">
+        <option value="1">cantidad de partidas jugadas</option>
+        <option value="2">cantidad de preguntas creadas </option>
+        <option value="3">cantidad de preguntas Disponibles en el juego</option>
+        <option value="4">cantidad de usuarios nuevos por fecha </option>
+        <option value="5" disabled>cantidad de usuarios por pais</option>
+        <option value="6">cantidad de usuarios por sexo</option>
+        <option value="7">cantidad de usuarios por grupo de edad (menores, jubilados, medio)</option>
+        <option value="8">Ganancia de Trampitas</option>
+    </select>
+
+    <input type="date" value="2020-01-01" id="fechaInicio">
+    <input type="date" value="2023-06-17" id="fechaFin" >
+
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="filtroD" value="d" checked>
+        <label class="form-check-label" for="exampleRadios1">
+            Filtro por dia
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="filtroM" value="m">
+        <label class="form-check-label" for="exampleRadios2">
+           filtro mes
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="filtroY" value="y">
+        <label class="form-check-label" for="exampleRadios3">
+           filtro año
+        </label>
+    </div>
+    <button class="btn btn-outline-secondary" type="button" id="consultar">Button</button>
+</div>
+
+</div>
+
+<div id="resultado"></div>
+
+<div id="canvasDiv" style="width: 800px; height: 300px;">
+<canvas id="myChart"></canvas>
+</div>
+
+<button class="btn btn-outline-secondary" type="button" id="generatePDF" disabled>Imprimir</button>
+
+
+

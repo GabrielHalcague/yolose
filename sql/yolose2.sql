@@ -42,11 +42,12 @@ CREATE TABLE IF NOT EXISTS usuario
     CONSTRAINT FK_Usuario_Genero FOREIGN KEY (generoId) REFERENCES genero (id)
 );
 
+
 CREATE TABLE IF NOT EXISTS historialCompras
 (
     id       int(11) PRIMARY KEY AUTO_INCREMENT,
     f_compra date DEFAULT curdate(),
-    cant     int(11),
+    cantidad     int(11),
     idUs     int(11),
     idTr     int(11),
     CONSTRAINT FK_HistorialCompras_Usuario FOREIGN KEY (idUs) REFERENCES usuario (id),

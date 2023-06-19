@@ -75,15 +75,15 @@ class TiendaController
         }
     }
 
-    private function generarPDF()
-    {
-        $data = [
-            'fecha' => date("Y-m-d"),
-            'nombreCompleto' => $this->tiendaModel->getUsuarioByID(Session::get('idUsuario'))['nombreCompleto'],
-            'email' => $this->tiendaModel->getUsuarioByID(Session::get('idUsuario'))['correo'],
-            'productos' => Session::get('item')
-        ];
-        $html = $this->pdfRender->generateTemplatedStringForPDF('factura', $data);
-        $this->pdf->getPDF($html, 'factura');
-    }
+        private function generarPDF()
+        {
+            $data = [
+                'fecha' => date("Y-m-d"),
+                'nombreCompleto' => $this->tiendaModel->getUsuarioByID(Session::get('idUsuario'))['nombreCompleto'],
+                'email' => $this->tiendaModel->getUsuarioByID(Session::get('idUsuario'))['correo'],
+                'productos' => Session::get('item')
+            ];
+            $html = $this->pdfRender->generateTemplatedStringForPDF('factura', $data);
+            $this->pdf->getPDF($html, 'factura');
+        }
 }

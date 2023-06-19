@@ -1,0 +1,72 @@
+
+
+
+
+<form  method="post" action="/administradorUsuario/consultar">
+<div class="input-group mb-3">
+    <span class="input-group-text" id="addon-wrapping"> Ingresar Usuario</span>
+    <input name="usuario" type="text" class="form-control" placeholder="UserName" aria-label="Recipient's username" aria-describedby="button-addon2">
+    <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Buscar</button>
+</div>
+</form>
+    {{#error}}
+            <div> {{error}}</div>
+    {{/error}}
+
+    {{#usuario}}
+        <div class="container ">
+            <div class="row">
+                <div class="col-4"><img src="/public/img/{{fotoPerfil}}" class="img-fluid" style="max-height: 500px;"></div>
+                <div class="col-8">
+                    <p><strong>id:</strong> {{id}}</p>
+                    <input id="usuarioId" name="prodId" type="hidden" value="{{id}}">
+                    <p><strong>UserName:</strong> {{nombreUsuario}}</p>
+                    <p><strong>Fecha registro:</strong> {{f_registro}}</p>
+
+                    <p><strong>Rol:</strong> {{rol}}</p>
+                    <p><strong>Activo:</strong>
+                        {{#activo}}  <b>Activo</b> {{/activo}}
+                        {{^activo}}   Inactivo {{/activo}}
+                    </p>
+                </div>
+            </div>
+        </div>
+
+<div class="row">
+    <div class="input-group">
+       <select name="tipo" id="tipo" class="form-select">
+            <option value="1"> trampitas acumulados por el  usuario</option>
+            <option value="2">porcentaje de preguntas respondidas correctamente por usuario</option>
+        </select>
+
+        <input type="date" value="2020-01-01" id="fechaInicio">
+        <input type="date" value="2023-06-17" id="fechaFin" >
+
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="filtroD" value="d" checked>
+            <label class="form-check-label" for="exampleRadios1">
+                Filtro por dia
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="filtroM" value="m">
+            <label class="form-check-label" for="exampleRadios2">
+                filtro mes
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="filtroY" value="y">
+            <label class="form-check-label" for="exampleRadios3">
+                filtro año
+            </label>
+        </div>
+        <button class="btn btn-outline-secondary" type="button" id="consultarUsuario">Filtrar</button>
+    </div>
+</div>
+        <div id="resultado"></div>
+        <div id="canvasDiv" style="width: 800px; height: 300px;">
+            <canvas id="myChart"></canvas>
+        </div>
+        <button class="btn btn-outline-secondary" type="button" id="generatePDF" disabled >Imprimir</button>
+
+{{/usuario}}
