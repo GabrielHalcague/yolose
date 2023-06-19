@@ -135,6 +135,7 @@ $('#consultarUsuario').click(function () {
             $("#resultado").text('');
             //console.log(data);
             crearGrafico(data);
+            $("#generatePDF").removeAttr('disabled');
         },
         error: function(jqXHR, textStatus, errorThrown) {
             alert("Problema: " + jqXHR.responseText);
