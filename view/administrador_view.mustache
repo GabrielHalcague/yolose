@@ -56,31 +56,34 @@
 <div id="canvasDiv" style="width: 800px; height: 300px;">
 <canvas id="myChart"></canvas>
 </div>
-<button class="btn btn-outline-secondary" type="button" id="Imprimir">Imprimir</button>
+<button class="btn btn-outline-secondary" type="button" id="imprimir">Imprimir</button>
 
+
+<div id="chartContainer">
+    <canvas id="myChart"></canvas>
+</div>
+
+<button onclick="exportChartToPDF()">Exportar a PDF</button>
 
 <script>
-    $('#Imprimir').click(function () {
-        const canvas = document.getElementById('myChart');
+    // Obtiene una referencia al elemento del gráfico
+    const chartContainer = document.getElementById('canvasDiv');
 
-        var html = canvas.toDataURL(); // Obtiene la representación base64 del contenido del canvas
-        console.log(html);
-        $.ajax({
-            url: 'administrador/generarPDF',
-            method: 'POST',
-            data: { html: html },
-            success: function(response) {
-                // Convertir el contenido binario a un Blob
-                var blob = new Blob([response], { type: 'application/pdf' });
+    // Crea una función para exportar el gráfico a PDF
+    function exportChartToPDF() {
+        // Captura una imagen del gráfico utilizando html2canvas
+        html2canvas(chartContainer).then(canvas => {
+            // Obtiene la imagen en formato base64
+            const chartImage = canvas.toDataURL('image/png');
 
-                // Crear una URL para el Blob
-                var url = URL.createObjectURL(blob);
+            // Crea una nueva instancia de jsPDF
+            const pdf = new jsPDF();
 
-                // Abrir una nueva ventana o descargar el PDF
-                window.open(url);
-            }
+            // Agrega la imagen del gráfico al PDF
+            pdf.addImage(chartImage, 'PNG', 10, 10, 190, 100); // Puedes ajustar los valores de posición y tamaño según tus necesidades
+
+            // Guarda el PDF en un archivo
+            pdf.save('chart.pdf');
         });
-    });
+    }
 </script>
-
-

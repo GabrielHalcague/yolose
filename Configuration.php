@@ -139,12 +139,12 @@ class Configuration
         include_once ('controller/AdministradorController.php');
         include_once ('model/AdministradorModel.php');
         require_once('third-party/dompdf/autoload.inc.php');
-        return new administradorController($this->getRenderer(), new AdministradorModel($this->getDatabase()),  $this->getPDF());
+        return new administradorController($this->getRenderer(), new AdministradorModel($this->getDatabase()), new PDFGenerator());
     }
     public function getAdministradorUsuarioController(){
         include_once('controller/AdministratorUsurioController.php');
         include_once ('model/AdministradorUsuarioModel.php');
-        return new AdministratorUsurioController($this->getRenderer(), new AdministradorUsuarioModel($this->getDatabase()), $this->getPDF());
+        return new AdministratorUsurioController($this->getRenderer(), new AdministradorUsuarioModel($this->getDatabase()));
     }
 
 

@@ -71,23 +71,22 @@ class AdministradorController
     }
 
 
-    public function generarPDF(){ // no anda
+    public function generarPDF()
+    {
+        $html = $_POST['imageData'];
+        $this->Dompdf->getPDF($html, 'factura');
+        $this->Dompdf->addPage();
 
-        $base64String = $_POST['html']; // Obtén la cadena base64 desde la variable POST
+// Agrega la imagen desde el contenido del canvas
+        $this->Dompdf->addImageFromDataUrl($html);
 
-        $decodedData = base64_decode($base64String); // Decodifica la cadena base64
-        $html = '<html><body>';
-        $html .= '<img src="data:image/png;base64,' . base64_encode($decodedData) . '" />';
-        $html .= '</body></html>';
-        $this->Dompdf->loadHtml($html);
+// Genera el contenido del PDF
+        $pdfContent = $this->Dompdf->output();
+// Devuelve el contenido del PDF como respuesta
+        header('Content-Type: application/pdf');
+        header('Content-Disposition: attachment; filename="resultado.pdf"');
+        echo $pdfContent;
 
-// Renderiza el contenido HTML a PDF
-        $this->Dompdf->render();
-
-// Envía el archivo PDF al navegador para su descarga
-        $this->Dompdf->stream('archivo.pdf');
-       // (new PDFGenerator)->getPDF($decodedData,"asd");
     }
-
 
 }
