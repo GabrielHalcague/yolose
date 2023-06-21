@@ -24,7 +24,7 @@ class LoginController
         Header::redirect("/inicio");
     }
 
-    public function iniciarSesion()
+    public function iniciarSesion(): void
     {
         $usuarioBuscado = [];
         $username = $_POST['username'] ?? '';
@@ -54,10 +54,9 @@ class LoginController
 
             Session::set('username', $username);
             Header::redirect("/home");
-            exit();
-        }else{
+        }/*else{
             header("location:validate.php");// no existe
             exit();
-        }
+        }*/
     }
 }

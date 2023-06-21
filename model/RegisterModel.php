@@ -54,5 +54,7 @@
             $sql = "INSERT INTO rol_usuario(idUs, idRol) VALUES ('$id', 3)";
             $this->database->execute($sql);
         }
+
+
         
     }

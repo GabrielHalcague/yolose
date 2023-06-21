@@ -49,6 +49,7 @@ class AdministradorController
                 $data= $this->AdministradorModel->getCantidadDeUsuariosNuevosPorFecha($filtro,$fechaInicio,$fechaFin);
                 break;
             case 5:
+                $data = $this->AdministradorModel->getCantidadDeUsuariosPorPais($filtro,$fechaInicio,$fechaFin);
                 break;
             case 6:
                 $data= $this->AdministradorModel->getCantidadDeUsuariosPorSexo($filtro,$fechaInicio,$fechaFin);

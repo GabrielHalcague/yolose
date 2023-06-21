@@ -3,9 +3,8 @@ include_once('Configuration.php');
 include_once('helpers/Session.php');
 
 Session::initializeSession();
-
-/*$configuration = new Configuration();*/
-$router = Configuration::getInstance()->getRouter();
+$config = new Configuration();
+$router = $config->getRouter();
 
 $module = $_GET['module'] ?? 'inicio';
 $method = $_GET['action'] ?? 'list';

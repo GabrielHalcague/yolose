@@ -5,7 +5,6 @@ class ActivationController{
 
     private $renderer;
     private $registerModel;
-    private $email;
 
     public function __construct($renderer, $registroModel){
         $this->renderer = $renderer;
@@ -18,7 +17,8 @@ class ActivationController{
         $this->renderer->render("activacion",$data);
     }
 
-    public function activarCuenta(){
+    public function activarCuenta(): void
+    {
         $id = $_GET['id'];
         $user= $this->registerModel->getUserByID($id);
         if(empty($user) || $user['activo']==1) {
@@ -33,6 +33,7 @@ class ActivationController{
         if($dif > 72){
             $data['id']=$id;
             $data['error']="el enlace de activación caduco";
+            //$datos=$this->registerModel->enviarEmail($id);
             $this->renderer->render("activacion",$data);
             exit();
         }
@@ -44,7 +45,4 @@ class ActivationController{
             $data["error"]="No existe el usuario a validar";
         $this->renderer->render('home',$data); //aca debemos ir a home
     }
-
-
-
 }
