@@ -101,6 +101,7 @@ class PartidaModel
             'idUsuario' => $data['idUsuario'],
             'idPreg' => $preguntaSeleccionada['preguntaID'],
             'tipoPartida' => $data['tipoPartida']
+            //'estadoPartida' => $data['estadoPartida']
         ]);
         return $array;
     }
@@ -210,6 +211,7 @@ class PartidaModel
         $token = $data['n_partida'];
         $estado = $data['estado'];
         $tipoPartida = $data['tipoPartida'];
+        //$estadoPartida = $data['estadoPartida'];
 
         if (!$estado) {
             $sql = "INSERT INTO historialPartidas (idUs, idPreg, n_partida,tipoPartida) VALUES ('$idUsuario','$idPreg','$token','$tipoPartida')";

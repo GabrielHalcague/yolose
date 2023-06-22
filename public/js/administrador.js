@@ -1,64 +1,62 @@
-
-
 function crearGrafico(data) {
     const canvas = document.getElementById('myChart');
     if (canvas) {
-    Chart.getChart(canvas)?.destroy();
-}
+        Chart.getChart(canvas)?.destroy();
+    }
     const ctx = document.getElementById('myChart');
 
 // Obtener todas las fechas y descripciones unicas
     var labels = [];
     var descriptions = [];
 
-    data.forEach(function(obj) {
-    if (!labels.includes(obj.campoFiltro)) {
-    labels.push(obj.campoFiltro);
-}
+    data.forEach(function (obj) {
+        if (!labels.includes(obj.campoFiltro)) {
+            labels.push(obj.campoFiltro);
+        }
 
-    if (!descriptions.includes(obj.descripcion)) {
-    descriptions.push(obj.descripcion);
-}
-});
+        if (!descriptions.includes(obj.descripcion)) {
+            descriptions.push(obj.descripcion);
+        }
+    });
 
 // Crear los conjuntos de datos para cada descripcion
     var datasets = [];
 
-    descriptions.forEach(function(desc) {
-    var dataArr = [];
+    descriptions.forEach(function (desc) {
+        var dataArr = [];
 
-    labels.forEach(function(fecha) {
-    var cantidad = 0;
+        labels.forEach(function (fecha) {
+            var cantidad = 0;
 
-    data.forEach(function(obj) {
-    if (obj.campoFiltro === fecha && obj.descripcion === desc) {
-    cantidad = parseInt(obj.cantidad);
-}
-});
+            data.forEach(function (obj) {
+                if (obj.campoFiltro === fecha && obj.descripcion === desc) {
+                    cantidad = parseInt(obj.cantidad);
+                }
+            });
 
-    dataArr.push(cantidad);
-});
-    datasets.push({
-    label: desc,
-    data: dataArr
-});
-});
+            dataArr.push(cantidad);
+        });
+        datasets.push({
+            label: desc,
+            data: dataArr
+        });
+    });
 
 //  Crear la configuracion del grafico
     var chartConfig = {
-    type: 'bar',
-    data: {
-    labels: labels,
-    datasets: datasets
-},
-    options: {
-    scales: {
-    y: {
-    beginAtZero: true
-}
-}
-}
-};
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: datasets
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    };
     // Paso 4: Crear el grafico
     new Chart(ctx, chartConfig);
 }
@@ -72,34 +70,34 @@ $('#consultar').click(function () {
     var radioButtons = document.getElementsByName('exampleRadios');
     var valorFiltro = '';
     for (var i = 0; i < radioButtons.length; i++) {
-    if (radioButtons[i].checked) {
-    valorFiltro = radioButtons[i].value;
-    break;
-}
-}
+        if (radioButtons[i].checked) {
+            valorFiltro = radioButtons[i].value;
+            break;
+        }
+    }
     $.ajax({
-    url: '/administrador/consultaPorTipo',
-    method: 'POST',
-    data: {
-    tipoConsulta: tipoConsulta1,
-    fechaInicio: fechaInicio1,
-    fechaFin: fechaFin1,
-    filtro : valorFiltro
-},
-    beforeSend: function () {
-    $("#resultado").html("Procesando, espere por favor...");
-},
-    success: function (response) {
-    var data = JSON.parse(response);
-    $("#resultado").text('');
-   // console.log(data);
-    crearGrafico(data);
-    $("#generatePDF").removeAttr('disabled');
-},
-    error: function(jqXHR, textStatus, errorThrown) {
-    alert("Problema: " + jqXHR.responseText);
-}
-});
+        url: '/administrador/consultaPorTipo',
+        method: 'POST',
+        data: {
+            tipoConsulta: tipoConsulta1,
+            fechaInicio: fechaInicio1,
+            fechaFin: fechaFin1,
+            filtro: valorFiltro
+        },
+        beforeSend: function () {
+            $("#resultado").html("Procesando, espere por favor...");
+        },
+        success: function (response) {
+            var data = JSON.parse(response);
+            $("#resultado").text('');
+            // console.log(data);
+            crearGrafico(data);
+            $("#generatePDF").removeAttr('disabled');
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            alert("Problema: " + jqXHR.responseText);
+        }
+    });
 });
 
 $('#consultarUsuario').click(function () {
@@ -124,8 +122,8 @@ $('#consultarUsuario').click(function () {
             tipoConsulta: tipoConsulta1,
             fechaInicio: fechaInicio1,
             fechaFin: fechaFin1,
-            filtro : valorFiltro,
-            usuarioId : usuarioId
+            filtro: valorFiltro,
+            usuarioId: usuarioId
         },
         beforeSend: function () {
             $("#resultado").html("Procesando, espere por favor...");
@@ -137,17 +135,17 @@ $('#consultarUsuario').click(function () {
             crearGrafico(data);
             $("#generatePDF").removeAttr('disabled');
         },
-        error: function(jqXHR, textStatus, errorThrown) {
+        error: function (jqXHR, textStatus, errorThrown) {
             alert("Problema: " + jqXHR.responseText);
         }
     });
 });
 
-$('#generatePDF').click(function() {
+$('#generatePDF').click(function () {
     const canvas = document.getElementById('myChart');
     // Convertir el canvas a una imagen base64
     const imageData = canvas.toDataURL('image/png');
-    var consulta =  $('#tipo option:selected').text();
+    var consulta = $('#tipo option:selected').text();
 
     // Crear un formulario y agregar la imagen base64 como un campo oculto
     const form = document.createElement('form');

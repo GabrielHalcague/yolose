@@ -15,6 +15,7 @@ class AdministratorUsurioController
             Header::redirect("/");
         }
         $data =[];
+        $data["administradorJS"]=true;
         $this->renderer->render("administradorUsuario", $data);
     }
 

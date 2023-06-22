@@ -1,12 +1,28 @@
 $(document).ready(function () {
-    const myModal = document.getElementById('myModal')
+    /*const myModal = document.getElementById('myModal')
     const myInput = document.getElementById('exampleModal')
     myModal.addEventListener('click', () => {
         myInput.show();
-    })
+    });*/
+
+    var contenido = $('#nUsuario').html();
+    contenido = contenido.replace('<strong>Usuario:</strong>', '').trim();
+    var map = L.map('map');
+    $.ajax({
+        url: '/perfil/obtenerCoordenadas',
+        method: 'POST',
+        data: {username: contenido}
+    }).done(function (response) {
+        var data = JSON.parse(response);
+        const coord = L.latLng(data['lat'],data['lng']);
+        console.log(coord);
+        map.setView(coord, 13);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 25,}).addTo(map);
+        L.circle(coord, {radius: 500}).addTo(map);
+    });
 
 
-    $('#validarNick').click(function () {
+    /*$('#validarNick').click(function () {
         $('#confirmarNick').attr("disabled", "disabled");
         $('#nuevoNickOculto').val($('#nuevoNick').val());
 
@@ -55,6 +71,6 @@ $(document).ready(function () {
                 }
             }
         })
-    });
+    });*/
 });
 

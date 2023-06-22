@@ -53,6 +53,8 @@ class TiendaController
         $usuario = $this->tiendaModel->getUsuarioByID(Session::get('idUsuario'));
         $data['firstname'] = $usuario['nombre'];
         $data['surname'] = $usuario['apellido'];
+        $data['tarjetaCSS'] = true;
+        $data['jsTienda'] = true;
         $this->renderer->render("tarjeta", $data );
 
     }

@@ -3,36 +3,31 @@ include_once('Configuration.php');
 include_once('helpers/Session.php');
 
 Session::initializeSession();
+$config = new Configuration();
+$router = $config->getRouter();
 
-/*$configuration = new Configuration();*/
-$router = Configuration::getInstance()->getRouter();
-
-$module = $_GET['module'] ?? 'home';
+$module = $_GET['module'] ?? 'inicio';
 $method = $_GET['action'] ?? 'list';
 
-$controladoresValidosSINLogeo = [
+
+$controladoresValios = [
     'home',
-    'login',
-    'registro',
-    'activation',
     'perfil',
-    'ranking',
-
+    'tienda',
+    'editor',
+    'administrador',
+    'administradorUsuario',
+    'partida',
+    'tarjeta',
+    'agregarPregunta',
+    'verReporte',
+    'verPregunta',
+    'activation'
 ];
-$controladoresINVALIDOSLogeado = [
-    'registro',
-    'activation',
-    //'home',
-];
 
-if (!Session::isLogged() && !in_array($module, $controladoresValidosSINLogeo)){
-        $module = 'home';
+if(empty(Session::get('logged'))&& in_array($module, $controladoresValios)){
+   Header::redirect("/");
 }
-if (Session::isLogged() && in_array($module, $controladoresINVALIDOSLogeado)){
-        $module = 'home';
-      //$module = 'juego';
-}
-
 
 $router->route($module, $method);
 ?>

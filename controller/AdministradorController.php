@@ -22,6 +22,7 @@ class AdministradorController
         $data ["Ingresos"] = $this->AdministradorModel->getCantidadGananciaDeTrampasVendidasPorFecha( 'm', null, null)[0]['cantidad'];
         $data ["nuevosUsuariosMes"] = $this->AdministradorModel->getCantidadDeUsuariosNuevosPorFecha('m', null, null)[0]['cantidad'];
         $data ["preguntasNuevasDelMes"] = $this->AdministradorModel->getCantidadDePreguntasDisponiblesPorFecha('m', null, null)[0]['cantidad'];
+        $data ["administradorJS"] = true;
         return $this->renderer->render("administrador",$data);
     }
 
@@ -48,6 +49,7 @@ class AdministradorController
                 $data= $this->AdministradorModel->getCantidadDeUsuariosNuevosPorFecha($filtro,$fechaInicio,$fechaFin);
                 break;
             case 5:
+                $data = $this->AdministradorModel->getCantidadDeUsuariosPorPais($filtro,$fechaInicio,$fechaFin);
                 break;
             case 6:
                 $data= $this->AdministradorModel->getCantidadDeUsuariosPorSexo($filtro,$fechaInicio,$fechaFin);

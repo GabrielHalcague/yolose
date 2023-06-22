@@ -8,90 +8,12 @@
           integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/public/css/styles.css">
-
-    <script src="/public/js/code.jquery.com_jquery-3.7.0.min.js"></script>
-
     {{#mapa}}
-    <!-- esto es para el mapa-->
-    <link rel="stylesheet" href="/public/leaflet/leaflet.css" />
-    <script src="/public/leaflet/leaflet.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css" />
     {{/mapa}}
+    {{#tarjetaCSS}}
+        <link rel="stylesheet" href="/public/css/tienda.css">
+    {{/tarjetaCSS}}
 </head>
-<header class="navbar bg-dark">
-    <div class="container">
-        <a href="/" class="text-logo">
-            <img src="/public/img/yolose_logo.png" alt="Logo YoLoSe"/>
-            <strong>YoLoSe</strong>
-        </a>
-        <div>
-            {{^logged}}
-                <a href="/login" class="ms-3 btn btn-yolose">Ingresar</a>
-                <a href="/registro" class="ms-3 btn btn-outline-yolose">Registrarse</a>
-            {{/logged}}
-            {{#logged}}
-                <a href="/perfil" class="ms-3 btn btn-yolose">Perfil</a>
-                <a href="/login/cerrarSesion" class="ms-3 btn btn-outline-yolose">Cerrar
-                    sesión</a>
-            {{/logged}}
-        </div>
-    </div>
-</header>
-
-
-
-                    {{#editor}}
-                        <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-auto">
-                        <ul class="navbar-nav mr-auto">
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Editor Solo
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Agregar Pregunta</a>
-                            <a class="dropdown-item" href="#">ACtivar Preguntas</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    {{/editor}}
-                    {{#administrador}}
-                        <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-auto">
-                        <ul class="navbar-nav mr-auto">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Editor
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            administrador
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    {{/administrador}}
-                </ul>
-        </div>
-    </nav>
-
+<body>
 <main>
