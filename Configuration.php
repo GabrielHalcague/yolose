@@ -13,7 +13,6 @@ include_once('controller/PartidaController.php');
 include_once('controller/EditorController.php');
 include_once('controller/AdministradorController.php');
 include_once('controller/TiendaController.php');
-include_once('controller/AdministratorUsurioController.php');
 include_once('controller/RankingController.php');
 
 // Inclusión de Helpers
@@ -39,7 +38,6 @@ include_once('model/PartidaModel.php');
 include_once('model/EditorModel.php');
 include_once('model/TiendaModel.php');
 include_once('model/AdministradorModel.php');
-include_once('model/AdministradorUsuarioModel.php');
 include_once('model/RankingModel.php');
 
 //Inclusión de Servicios
@@ -58,11 +56,6 @@ class Configuration
     public function getAdministradorController(): AdministradorController
     {
         return new administradorController($this->getRenderer(), new AdministradorModel($this->getDatabase()), $this->getPDF());
-    }
-
-    public function getAdministradorUsuarioController(): AdministratorUsurioController
-    {
-        return new AdministratorUsurioController($this->getRenderer(), new AdministradorUsuarioModel($this->getDatabase()));
     }
 
     public function getTiendaController(): TiendaController

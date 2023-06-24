@@ -66,6 +66,7 @@ $('#consultar').click(function () {
     var tipoConsulta1 = selectElement.value;
     var fechaInicio1 = $('#fechaInicio').val();
     var fechaFin1 = $('#fechaFin').val();
+    var usuarioId = $('#usuarioId').val() ?? '';
 
     var radioButtons = document.getElementsByName('exampleRadios');
     var valorFiltro = '';
@@ -82,71 +83,33 @@ $('#consultar').click(function () {
             tipoConsulta: tipoConsulta1,
             fechaInicio: fechaInicio1,
             fechaFin: fechaFin1,
-            filtro: valorFiltro
-        },
-        beforeSend: function () {
-            $("#resultado").html("Procesando, espere por favor...");
-        },
-        success: function (response) {
-            var data = JSON.parse(response);
-            $("#resultado").text('');
-            // console.log(data);
-            crearGrafico(data);
-            $("#generatePDF").removeAttr('disabled');
-        },
-        error: function (jqXHR, textStatus, errorThrown) {
-            alert("Problema: " + jqXHR.responseText);
-        }
-    });
-});
-
-$('#consultarUsuario').click(function () {
-    var selectElement = document.getElementById('tipo');
-    var tipoConsulta1 = selectElement.value;
-    var fechaInicio1 = $('#fechaInicio').val();
-    var fechaFin1 = $('#fechaFin').val();
-    var usuarioId = $('#usuarioId').val();
-
-    var radioButtons = document.getElementsByName('exampleRadios');
-    var valorFiltro = '';
-    for (var i = 0; i < radioButtons.length; i++) {
-        if (radioButtons[i].checked) {
-            valorFiltro = radioButtons[i].value;
-            break;
-        }
-    }
-    $.ajax({
-        url: '/administradorUsuario/consultaPorId',
-        method: 'POST',
-        data: {
-            tipoConsulta: tipoConsulta1,
-            fechaInicio: fechaInicio1,
-            fechaFin: fechaFin1,
             filtro: valorFiltro,
             usuarioId: usuarioId
+
         },
         beforeSend: function () {
             $("#resultado").html("Procesando, espere por favor...");
         },
         success: function (response) {
-            var data = JSON.parse(response);
+            var data = JSON.parse(response)
             $("#resultado").text('');
             //console.log(data);
             crearGrafico(data);
             $("#generatePDF").removeAttr('disabled');
+
         },
         error: function (jqXHR, textStatus, errorThrown) {
             alert("Problema: " + jqXHR.responseText);
         }
     });
 });
+
 
 $('#generatePDF').click(function () {
     const canvas = document.getElementById('myChart');
     // Convertir el canvas a una imagen base64
     const imageData = canvas.toDataURL('image/png');
     var consulta = $('#tipo option:selected').text();
-
     // Crear un formulario y agregar la imagen base64 como un campo oculto
     const form = document.createElement('form');
     form.method = 'POST';

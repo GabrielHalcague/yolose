@@ -1,6 +1,6 @@
 <?php
 
-use Dompdf\Dompdf;
+
 
 class AdministradorController
 {
@@ -15,7 +15,7 @@ class AdministradorController
         $this->Dompdf =$pdf;
 
     }
-    public function list(){
+    public function list( $data = null){
         if(session::get("rol") !="Administrador" ){
             Header::redirect("/");
         }
@@ -34,6 +34,7 @@ class AdministradorController
         $fechaInicio = $_POST['fechaInicio']?? null;
         $fechaFin = $_POST["fechaFin"] ?? null;
         $filtro = $_POST["filtro"] ?? 'd';
+        $usuarioId = $_POST["usuarioId"] ?? '1';
         $data =[];
         switch ($tipoConsulta){
             case 1:
@@ -60,6 +61,12 @@ class AdministradorController
             case 8:
                 $data= $this->AdministradorModel->getCantidadGananciaDeTrampasVendidasPorFecha($filtro,$fechaInicio,$fechaFin);
                 break;
+            case 11:
+                $data= $this->AdministradorModel->getTrampitasAcumuladasPorElUsuario($usuarioId , $filtro, $fechaInicio, $fechaFin);
+                break;
+            case 12:
+                $data= $this->AdministradorModel->getPorcentajeDePreguntasRespondidasCorrectamentePorElUsuario($usuarioId, $filtro, $fechaInicio, $fechaFin);
+                break;
         }
         $error=0;
         if ($error>0) {
@@ -68,9 +75,31 @@ class AdministradorController
             echo ($filtro);
 
         }else{
+           // Header::debugExit($data);
             echo json_encode($data);
         }
     }
+
+    public function buscarUsuario(){
+        if(session::get("rol") !="Administrador" ){
+            Header::redirect("/");
+        }
+        $data=[];
+        if(!isset($_POST['usuario']) && empty($_POST['usuario'])){
+            $data['error']= 'formato Invalido';
+            $this->renderer->render('administrador', $data);
+        }
+        $username = $_POST['usuario'];
+        $data["usuario"] = $this->AdministradorModel->getDatosDelUsuario($username);
+        if(is_null($data["usuario"])){
+            $data['error']= 'Usuario no Encontrado';
+        }
+        //$this->renderer->render('administrador', $data);
+        $this->list($data);
+       //header("Location: /administrador");
+        //exit();
+    }
+
 
 
     public function generarPDF() {
@@ -89,7 +118,6 @@ class AdministradorController
             $this->Dompdf->stream('Estadistica '.date('Y-m-d').'.pdf', ['Attachment' => true]);
 
         } else {
-
             echo 'Error: No se recibieron los datos de la imagen.';
         }
     }

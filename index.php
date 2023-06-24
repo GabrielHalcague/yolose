@@ -16,7 +16,6 @@ $controladoresValios = [
     'tienda',
     'editor',
     'administrador',
-    'administradorUsuario',
     'partida',
     'tarjeta',
     'agregarPregunta',
