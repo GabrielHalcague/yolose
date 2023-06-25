@@ -37,6 +37,8 @@ class AdministradorController
         $filtro = $_POST["filtro"] ?? 'd';
         $usuarioId = $_POST["usuarioId"] ?? '1';
         $data =[];
+
+        try {
         switch ($tipoConsulta){
             case 1:
                 $data= $this->AdministradorModel->getCantidadPartidasJugadasPorFecha($filtro,$fechaInicio,$fechaFin);
@@ -69,15 +71,13 @@ class AdministradorController
                 $data= $this->AdministradorModel->getPorcentajeDePreguntasRespondidasCorrectamentePorElUsuario($usuarioId, $filtro, $fechaInicio, $fechaFin);
                 break;
         }
-        $error=0;
-        if ($error>0) {
+          echo json_encode($data);
+          // throw new Exception("Este es un mensaje de error.");
+        }
+        catch (Exception $e) {
             http_response_code(503);
             header('Content-Type: text/plain; charset=utf-8');
-            echo ($filtro);
-
-        }else{
-           // Header::debugExit($data);
-            echo json_encode($data);
+            echo $e->getMessage();
         }
     }
 
