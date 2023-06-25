@@ -1,6 +1,7 @@
 <div class="bg-inicio">
-    <section class="mx-5 py-5">
-        <h1 class="mb-4 text-center text-logo">Editar Pregunta</h1>
+   <section class="d-flex justify-content-center">
+    <article class="mx-5 py-5 w-50">
+        <h1 class="mb-4 text-center text-logo">EDITAR PREGUNTA</h1>
         <article class="border-yolose w-85 m-auto">
             <form action="/editor/actualizarPregunta" method="post" class="form-yolose p-5"
                   enctype="multipart/form-data">
@@ -64,10 +65,11 @@
 
             {{error}}
         </article>
-    </section>
+    </article>
+   </section>
 </div>
 <script>
-    $(document).ready(function () {
-        $("#{{idRespCorrecta}}").css("borderColor", "red");
-    });
+    window.onload = function() {
+        $("#{{idRespCorrecta}}").css("backgroundColor", "green");
+}
 </script>

@@ -1,90 +1,58 @@
+<div class="bg-jugar">
+    <section class="container">
+        {{#rankingBot}}
+        {{idUs}}
+        {{/rankingBot}}
+        {{#rankingPvP}}
+        {{idUs}}
+        {{/rankingPvP}}
 
-{{#rankingBot}}
-    {{idUs}}
-{{/rankingBot}}
-{{#rankingPvP}}
-    {{idUs}}
-{{/rankingPvP}}
-
-<div class="container">
-    <div class="row">
-        <h5>Top 10 Solo</h5>
-
-        <div class="col-sm">
-<table class="table table-striped ">
-    <thead>
-    <tr>
-        <th scope="col">Usuario</th>
-        <th scope="col">Usuario</th>
-        <th scope="col">Puntaje</th>
-    </tr>
-    </thead>
-    <tbody>
-    {{#rankingSolo}}
-    <tr>
-        <td><img src="/public/img/{{fotoPerfil}}" style="width: 50px;"></td>
-        <td><a href="/perfil/usuario/user={{nombreUsuario}} ">{{nombreUsuario}}</a></td>
-        <td>{{puntaje}}</td>
-    </tr>
-    {{/rankingSolo}}
-    </tbody>
-</table>
-        </div>
-    </div>
-</div>
-
-
-<div class="container">
-    <div class="row">
-        <h5>Top 10 vs Ia</h5>
-
-        <div class="col-sm">
-            <table class="table table-striped ">
+        <h2 class="text-logo pt-5 text-center">Top 10 Solo</h2>
+        <div class="table-responsive">
+            <table class="table text-white">
                 <thead>
-                <tr>
-                    <th scope="col">Usuario</th>
-                    <th scope="col">Usuario</th>
-                    <th scope="col">Puntaje</th>
-                </tr>
+                    <tr>
+                        <th scope="col">Usuario</th>
+                        <th scope="col">Avatar</th>
+                        <th scope="col">Puntaje</th>
+                    </tr>
                 </thead>
                 <tbody>
-                {{#rankingBot}}
+                    {{#rankingSolo}}
                     <tr>
-                        <td><img src="/public/{{fotoPerfil}}" style="width: 50px;"></td>
-                        <td><a href="/perfil/usuario/user={{nombreUsuario}} ">{{nombreUsuario}}</a></td>
-                        <td>{{puntaje}}</td>
+                        <td><a href="/perfil/usuario/user={{nombreUsuario}} " class="text-white fw-bold">{{nombreUsuario}}</a></td>
+                        <td><img src="/public/img/{{fotoPerfil}}" style="width: 50px;"></td>
+                        <td class="fw-bold">{{puntaje}}</td>
                     </tr>
-                {{/rankingBot}}
+                    {{/rankingSolo}}
                 </tbody>
             </table>
         </div>
-    </div>
-</div>
 
-<!--<div class="container">
-    <div class="row">
-        <h5>Top 10 P v P</h5>
-
-        <div class="col-sm">
-            <table class="table table-striped ">
+        <h2 class="text-logo pt-5 text-center">Top 10 vs Ia</h2>
+        <div class="table-responsive">
+            <table class="table text-white">
                 <thead>
-                <tr>
-                    <th scope="col">Usuario</th>
-                    <th scope="col">Usuario</th>
-                    <th scope="col">Puntaje</th>
-                </tr>
+                    <tr>
+                        <th scope="col">Usuario</th>
+                        <th scope="col">Avatar</th>
+                        <th scope="col">Puntaje</th>
+                    </tr>
                 </thead>
                 <tbody>
-                {{#rankingPvP}}
+                    {{#rankingBot}}
                     <tr>
-                        <td><img src="/public/{{fotoPerfil}}" style="width: 50px;"></td>
                         <td><a href="/perfil/usuario/user={{nombreUsuario}} ">{{nombreUsuario}}</a></td>
+                        <td><img src="/public/{{fotoPerfil}}" style="width: 50px;"></td>
                         <td>{{puntaje}}</td>
                     </tr>
-                {{/rankingPvP}}
+                    {{/rankingBot}}
                 </tbody>
             </table>
         </div>
-    </div>-->
-    <a href="/" class="btn btn-primary px-5">Volver al home</a>
+
+        <div class="py-5">
+            <a href="/" class="btn-yolose p-3 w-50 m-auto">Volver</a>
+        </div>
+    </section>
 </div>

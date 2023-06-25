@@ -83,8 +83,6 @@ function cuentaRegresiva() {
 
 
 function validarRespuesta(data) {
-    console.log("En funcion validar");
-    console.log(data);
     const respuestaActual = $("#" + data["respActual"]);
     const respuestaValida = $("#" + data["respValida"]);
     if (data["fueraTiempo"] === false) {
@@ -95,6 +93,7 @@ function validarRespuesta(data) {
             finButton.show();
         }
         if (data['correcto'] === true) {
+            respuestaActual.css('backgroundColor', 'green');
             respuestaValida.css('backgroundColor', 'green');
             setTimeout(function (){
                 $(location).attr('href',"/partida&tipoPartida="+data['tipoPartida']);

@@ -38,6 +38,26 @@ main {
     background-size: cover;
 }
 
+.bg-tienda {
+    min-height: 100vh;
+    background-image: url(/public/img/fondo-tienda.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-admin {
+    min-height: 100vh;
+    background-image: url(/public/img/fondo-admin.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-gris{
+    background-color: #f7f7f7;
+}
+
 /* TITULOS 3D */
 .title-wrapper {
     display: grid;

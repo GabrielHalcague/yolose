@@ -20,8 +20,7 @@ $controladoresValios = [
     'tarjeta',
     'agregarPregunta',
     'verReporte',
-    'verPregunta',
-    'activation'
+    'verPregunta'
 ];
 
 if(empty(Session::get('logged'))&& in_array($module, $controladoresValios)){

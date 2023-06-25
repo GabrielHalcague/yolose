@@ -21,7 +21,6 @@ class Logger
     {
         $message = self::createMessage($level, $log, $color);
         self::writeLogFile($message);
-        echo $message; // También imprimimos el mensaje en la salida estándar
     }
 
     private static function createMessage($level, $log, $color): string

@@ -33,7 +33,6 @@ class ActivationController{
         if($dif > 72){
             $data['id']=$id;
             $data['error']="el enlace de activación caduco";
-            //$datos=$this->registerModel->enviarEmail($id);
             $this->renderer->render("activacion",$data);
             exit();
         }
@@ -43,6 +42,6 @@ class ActivationController{
             $data["ok"]="Se ha validado correctamente";
         }else
             $data["error"]="No existe el usuario a validar";
-        $this->renderer->render('home',$data); //aca debemos ir a home
+        $this->renderer->render('home',$data);
     }
 }
