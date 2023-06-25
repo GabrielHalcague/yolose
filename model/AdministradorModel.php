@@ -102,7 +102,6 @@ class AdministradorModel
         $operacion = 'COUNT(rango_edad)';
         $tabla = $this->generarSQLporTablaYCampoConTresColumnas($tabla, $campoFiltro, $campoFiltro2, $operacion, $filtro, $f_inicio, $f_fin);
         return $tabla;
-
     }
 
 
@@ -129,57 +128,57 @@ class AdministradorModel
     }
 
     public function getTrampitasAcumuladasPorElUsuario($usuarioId ,$filtro, $f_inicio, $f_fin){
-        $tabla = 'historialCompras';
-        $campoFiltro = 'f_compra';
-        $campoFiltro2= "cant";
-        $operacion= 'sum(cant)';
-        $where = "idUs = ".$usuarioId;
-        return $this->generarSQLconfiltro($tabla, $campoFiltro, $campoFiltro2, $operacion , $where, $filtro , $f_inicio , $f_fin );
+        $campoFiltro="f_compra";
+        $array = $this->arrayFiltroFechas($filtro,$campoFiltro ,$f_inicio,$f_fin);
+
+        $sql= "select ".$array['select']." 'Trampas' AS descripcion, sum(cant) AS cantidad 
+                    from historialCompras  where idUs = ".$usuarioId." and ".$campoFiltro."  between  ".$array['between']."  group by ".$array['groupby'].";";
+
+        $tabla = $this->database->query($sql);
+        //Header::debugExit($tabla);
+        return $tabla;
     }
     public function getPorcentajeDePreguntasRespondidasCorrectamentePorElUsuario( $usuarioId , $filtro, $f_inicio, $f_fin){
-        $tabla = 'historialpartidas';
-        $campoFiltro = 'f_partida';
-        $campoFiltro2= 'estado';
-        $operacion= 'COUNT(*) / SUM(COUNT(*)) OVER (PARTITION BY idUs) * 100';
-        $where = "idUs = ".$usuarioId;
-        $tabla= $this->generarSQLconfiltro($tabla, $campoFiltro, $campoFiltro2, $operacion , $where, $filtro , $f_inicio , $f_fin );
 
-        foreach ($tabla as &$row) {
-            if ($row['descripcion'] === '0') {
-                $row['descripcion'] = 'Invalidas';
-            } elseif ($row['descripcion'] === '1') {
-                $row['descripcion'] = 'Correctas';
-            }
-        }
-        return $tabla;
+        $campoFiltro="f_partida";
+        $array = $this->arrayFiltroFechas($filtro,$campoFiltro ,$f_inicio,$f_fin);
+
+       $sql= "select ".$array['select']."CASE estado
+                                                   WHEN 0 THEN 'Incorrecta'
+                                                   WHEN 1 THEN 'Correcta'
+       END AS descripcion, (COUNT(*) / SUM(COUNT(*)) OVER (PARTITION BY idUs) * 100) AS cantidad
+                from historialpartidas  where idUs =".$usuarioId." and ".$campoFiltro."  between ".$array['between']." group by ".$array['groupby'].",estado;";
+       return $this->database->query($sql);
 
     }
-    public function generarSQLconfiltro($tabla, $campoFiltro, $campoFiltro2, $operacion , $where, $filtro , $f_inicio , $f_fin ){
+    public function arrayFiltroFechas($filtro ,$campoFiltro, $f_inicio, $f_fin): array
+    {
         $filtro = !is_null($filtro) ? $filtro : 'd';
         $f_inicio = !is_null($f_inicio) ? $f_inicio : date('Y-m-01');
         $f_fin = !is_null($f_fin) ? $f_fin : date('Y-m-d');
-        $operacion = !is_null($operacion) ? $operacion : 'count(*)';
-
+        $array=[];
         switch ($filtro){
-            case "d":
-                $sql= 'select '.$campoFiltro.' as campoFiltro, '.$campoFiltro2.' AS descripcion, '.$operacion.' AS cantidad 
-                    from '.$tabla.'  where '.$where.' and '.$campoFiltro.'  between  "'.$f_inicio.'" and "'.$f_fin.'"  group by '.$campoFiltro.','.$campoFiltro2.';';
+            case "y":
+                $array['select'] = "(YEAR(".$campoFiltro.")) AS campoFiltro,";
+                $array['between'] = "'".$f_inicio."' AND '".$f_fin."'" ;
+                $array['groupby'] = "(YEAR(".$campoFiltro."))";
                 break;
             case "m":
-                $sql = 'SELECT CONCAT(YEAR('.$campoFiltro.'), "-" , MONTH('.$campoFiltro.')) AS campoFiltro, '.$campoFiltro2.' AS descripcion, '.$operacion.' AS cantidad
-        FROM '.$tabla.' WHERE '.$where.' and '.$campoFiltro.' BETWEEN "'.$f_inicio.'" AND "'.$f_fin.'"  
-        GROUP BY CONCAT(YEAR('.$campoFiltro.'), "-", MONTH('.$campoFiltro.')) , '.$campoFiltro2.';';
+                //GROUP BY CONCAT(YEAR(f_compra), "-", MONTH(f_compra)) , cant;"
+                $array['select'] = "CONCAT(YEAR(".$campoFiltro."), '-' , MONTH(".$campoFiltro.")) AS campoFiltro,";
+                $array['between'] = "'".$f_inicio."' AND '".$f_fin."'" ;
+                $array['groupby'] = "CONCAT(YEAR(".$campoFiltro."), '-' , MONTH(".$campoFiltro."))";
                 break;
 
-            case "y":
-                $sql= 'SELECT YEAR('.$campoFiltro.') AS campoFiltro, '.$campoFiltro2.' AS descripcion, '.$operacion.'  AS cantidad FROM '.$tabla.' 
-                where '.$where.' and '.$campoFiltro.'  between  "'.$f_inicio.'" and "'.$f_fin.'"  group BY YEAR('.$campoFiltro.') , '.$campoFiltro2.';';
+            default :
+                $array['select'] = $campoFiltro." AS campoFiltro,";
+                $array['between'] = "'".$f_inicio."' AND '".$f_fin."'" ;
+                $array['groupby'] = $campoFiltro ;
                 break;
         }
-        return $this->database->query($sql);
+        return $array;
+
     }
-
-
     ///////////////////////////// ///////////////////////////////////////////////////
 
 

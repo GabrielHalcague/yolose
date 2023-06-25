@@ -93,7 +93,7 @@ $('#consultar').click(function () {
         success: function (response) {
             var data = JSON.parse(response)
             $("#resultado").text('');
-            //console.log(data);
+            console.log(data);
             crearGrafico(data);
             $("#generatePDF").removeAttr('disabled');
 
