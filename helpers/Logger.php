@@ -4,28 +4,28 @@ class Logger
 {
     public static function info($log)
     {
-        self::log('INFO', $log, "\033[0;32m"); // Green color
+        self::log('INFO', $log);
     }
 
     public static function warning($log)
     {
-        self::log('WARN', $log, "\033[0;33m"); // Yellow color
+        self::log('WARN', $log);
     }
 
     public static function error($log)
     {
-        self::log('ERROR', $log, "\033[0;31m"); // Red color
+        self::log("ERROR", $log);
     }
 
-    private static function log($level, $log, $color)
+    private static function log($level, $log)
     {
-        $message = self::createMessage($level, $log, $color);
+        $message = self::createMessage($level, $log);
         self::writeLogFile($message);
     }
 
-    private static function createMessage($level, $log, $color): string
+    private static function createMessage($level, $log): string
     {
-        return "[" . self::getDate() . "][" . $color . $level . "\033[0m] " . $log . "\n";
+        return "[" . self::getDate() . "][" . $level . "]" . $log . "\n";
     }
 
     private static function writeLogFile(string $message): void

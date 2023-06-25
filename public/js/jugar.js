@@ -3,8 +3,10 @@ var trampaButton = $('#trampa');
 var segundos = document.getElementById('tiempoRestante').innerText;
 var cronometro;
 $(document).ready(function () {
-    var cantTrampasActuales = trampaButton.val();
-    if (cantTrampasActuales <= 0) {
+    var cantTrampasActuales = trampaButton.text(); //Trampas restantes: 3
+    var val = cantTrampasActuales.split(' ');
+    console.log("trampas actuales: "+ val[3]);
+    if (val[3] <= 0) {
         trampaButton.prop('disabled', true);
     }
     cuentaRegresiva();
