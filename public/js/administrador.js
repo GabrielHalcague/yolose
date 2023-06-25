@@ -134,30 +134,7 @@ function generarTabla(data){
     });
 
 }
-/*
-$('#generatePDF').click(function () {
-    const canvas = document.getElementById('myChart');
-    // Convertir el canvas a una imagen base64
-    const imageData = canvas.toDataURL('image/png');
-    var consulta = $('#tipo option:selected').text();
-    // Crear un formulario y agregar la imagen base64 como un campo oculto
-    const form = document.createElement('form');
-    form.method = 'POST';
-    form.action = '/administrador/generarPDF';
-    const input = document.createElement('input');
-    input.type = 'hidden';
-    input.name = 'imageData';
-    input.value = imageData;
-    form.appendChild(input);
-    const titulo = document.createElement('input');
-    titulo.type = 'hidden';
-    titulo.name = 'consulta';
-    titulo.value = consulta;
-    form.appendChild(titulo);
-    document.body.appendChild(form);
-    form.submit();
-});
- */
+
 $('#generatePDF').click(function () {
     const canvas = document.getElementById('myChart');
     const imageData = canvas.toDataURL('image/png');

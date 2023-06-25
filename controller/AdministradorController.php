@@ -107,7 +107,7 @@ class AdministradorController
             $imageData = $_POST['imageData'];
             $titulo = $_POST['consulta'];
             $tabla =  json_decode($_POST['datosTabla'], true );
-            //Header::debugExit($tabla);
+
             $tmpFilePath = 'public/imagepdf.png';
             file_put_contents($tmpFilePath, base64_decode(preg_replace('#^data:image/\w+;base64,#i', '', $imageData)));
             // Generar el PDF utilizando Dompdf
