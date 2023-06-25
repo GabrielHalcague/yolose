@@ -95,14 +95,10 @@ class AdministradorController
         if(is_null($data["usuario"])){
             $data['error']= 'Usuario no Encontrado';
         }
-        //$this->renderer->render('administrador', $data);
         $this->list($data);
-       //header("Location: /administrador");
-        //exit();
     }
 
-
-
+    
     public function generarPDF() {
         if(session::get("rol") !="Administrador" ){
             Header::redirect("/");
@@ -110,10 +106,32 @@ class AdministradorController
         if (isset($_POST['imageData'])) {
             $imageData = $_POST['imageData'];
             $titulo = $_POST['consulta'];
+            $tabla =  json_decode($_POST['datosTabla'], true );
+            //Header::debugExit($tabla);
             $tmpFilePath = 'public/imagepdf.png';
             file_put_contents($tmpFilePath, base64_decode(preg_replace('#^data:image/\w+;base64,#i', '', $imageData)));
             // Generar el PDF utilizando Dompdf
-            $this->Dompdf->loadHtml('<html><body><h2>'. $titulo .'</h2><img src="' . $tmpFilePath . '" style="width: 100%;"></body></html>');
+
+            $html = '<html><body>';
+            $html .= '<style>';
+            $html .= 'table { width: 100%; border-collapse: collapse; }';
+            $html .= 'th, td { border: 1px solid black; padding: 8px; }';
+            $html .= '</style>';
+            $html .= '<h2>' . $titulo . '</h2>';
+            $html .= '<img src="' . $tmpFilePath . '" style="width: 100%;">';
+            $html .= '<br><table><tr><th>Fecha</th><th>Descripcion</th><th>Cantidad</th></tr>';
+            foreach ($tabla as $row) {
+                if (!empty($row)) {
+                $html .= '<tr>';
+                $html .= '<td>' . $row["columna0"] .'</td>';
+                $html .= '<td>' . $row["columna1"]  . '</td>';
+                $html .= '<td>' . $row["columna2"] . '</td>';
+                $html .= '</tr>';
+                }
+            }
+            $html .= '</table></body></html>';
+
+            $this->Dompdf->loadHtml($html);
             $this->Dompdf->setPaper('A4', 'portrait');
             $this->Dompdf->render();
             $this->Dompdf->stream('Estadistica '.date('Y-m-d').'.pdf', ['Attachment' => true]);
