@@ -19,8 +19,9 @@ class AdministradorController
         if(session::get("rol") !="Administrador" ){
             Header::redirect("/");
         }
-        $data ["Ingresos"] = $this->AdministradorModel->getCantidadGananciaDeTrampasVendidasPorFecha( 'm', null, null)[0]['cantidad'];
-        $data ["nuevosUsuariosMes"] = $this->AdministradorModel->getCantidadDeUsuariosNuevosPorFecha('m', null, null)[0]['cantidad'];
+        $data ["Ingresos"] = $this->AdministradorModel->getCantidadDeTrampasVendidasPorFecha( 'm', null, null)[0]['cantidad'];
+        $data ["nuevosUsuariosMes"] = $this->AdministradorModel->getCantidadDeUsuariosNuevosPorFecha('m')[0]['cantidad'];
+
         $data ["preguntasNuevasDelMes"] = $this->AdministradorModel->getCantidadDePreguntasDisponiblesPorFecha('m', null, null)[0]['cantidad'];
         $data ["administradorJS"] = true;
         return $this->renderer->render("administrador",$data);
@@ -59,7 +60,7 @@ class AdministradorController
                 $data= $this->AdministradorModel->getCantidadDeUsuariosPorRangoDeEdad($filtro,$fechaInicio,$fechaFin);
                 break;
             case 8:
-                $data= $this->AdministradorModel->getCantidadGananciaDeTrampasVendidasPorFecha($filtro,$fechaInicio,$fechaFin);
+                $data= $this->AdministradorModel->getCantidadDeTrampasVendidasPorFecha($filtro,$fechaInicio,$fechaFin);
                 break;
             case 11:
                 $data= $this->AdministradorModel->getTrampitasAcumuladasPorElUsuario($usuarioId , $filtro, $fechaInicio, $fechaFin);

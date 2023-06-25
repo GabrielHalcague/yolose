@@ -23,44 +23,41 @@ class AdministradorModel
 
     public function getCantidadDeUsuariosPorSexo($filtro, $f_inicio, $f_fin)
     {
-        $tabla = 'usuario u join genero g on u.generoId = g.id';
-        $campoFiltro = 'u.f_registro';
-        $campoFiltro2 = "g.descr";
-        $operacion = 'count(g.descr)';
-        $tabla = $this->generarSQLporTablaYCampoConTresColumnas($tabla, $campoFiltro, $campoFiltro2, $operacion, $filtro, $f_inicio, $f_fin);
-        return $tabla;
+       $campoFiltro="u.f_registro";
+        $array = $this->arrayFiltroFechas($filtro,$campoFiltro ,$f_inicio,$f_fin);
+
+        $sql= "select  ".$array['select']."  g.descr AS descripcion, count(g.descr) AS cantidad 
+                    from usuario u join genero g on u.generoId = g.id  where u.f_registro  between ".$array['between']." group by ".$array['groupby']." ,g.descr;";
+        return  $this->EjecutarConsulta($sql);
     }
 
 
-    public function getCantidadGananciaDeTrampasVendidasPorFecha($filtro = 'd', $f_inicio = null, $f_fin = null)
+    public function getCantidadDeTrampasVendidasPorFecha($filtro = 'd', $f_inicio = null, $f_fin = null)
     {
-        $tabla = 'historialcompras';
-        $campoFiltro = 'f_compra';
-        $count = 'SUM(cant)';
-        $tabla = $this->generarSQLporTablaYCampo($tabla, $campoFiltro, $count, $filtro, $f_inicio, $f_fin);
-        return $this->regresoDeArrayConEjes($tabla);
+        $campoFiltro="f_compra";
+        $array = $this->arrayFiltroFechas($filtro,$campoFiltro ,$f_inicio,$f_fin);
+        $sql= "select ".$array['select']."  'Trampas' AS descripcion, sum(cant) AS cantidad 
+                    from historialcompras where ".$campoFiltro."  between ".$array['between']." group by ".$array['groupby'].";";
+        return  $this->EjecutarConsulta($sql);
     }
 
     public function getCantidadDePreguntasDisponiblesPorFecha($filtro = 'd', $f_inicio = null, $f_fin = null)
     {
-        $tabla = 'pregunta p join estado e on p.idEst = e.id';
-        $campoFiltro = 'p.f_creacion';
-        $operacion = 'COUNT(*)';
-        $tabla = $this->generarSQLporTablaYCampo($tabla, $campoFiltro, $operacion, $filtro, $f_inicio, $f_fin);
-        return $this->regresoDeArrayConEjes($tabla);
-
+        $campoFiltro="p.f_creacion";
+        $array = $this->arrayFiltroFechas($filtro,$campoFiltro ,$f_inicio,$f_fin);
+        $sql= "select ".$array['select']."  e.descr as descripcion, COUNT(*) AS cantidad from pregunta p join estado e on p.idEst = e.id 
+                            where ".$campoFiltro."  between ".$array['between']." group by ".$array['groupby'].", descripcion;";
+        return  $this->EjecutarConsulta($sql);
     }
-
 
     public function getCantidadPartidasJugadasPorFecha($filtro = 'd', $f_inicio = null, $f_fin = null)
     {
-        $tabla = 'historialpartidas h join tipopartida t on h.tipoPartida = t.id';
-        $campoFiltro = 'f_partida';
-        $campoFiltro2 = "t.descripcion";
-        $operacion = 'COUNT(distinct(n_partida))';
-        $tabla = $this->generarSQLporTablaYCampoConTresColumnas($tabla, $campoFiltro, $campoFiltro2, $operacion, $filtro, $f_inicio, $f_fin);
-        return $tabla;
-
+        $campoFiltro="f_partida";
+        $array = $this->arrayFiltroFechas($filtro,$campoFiltro ,$f_inicio,$f_fin);
+        $sql= "select ".$array['select']." t.descripcion AS descripcion, COUNT(distinct(n_partida)) AS cantidad 
+                    from historialpartidas h join tipopartida t on h.tipoPartida = t.id  
+                     where ".$campoFiltro."  between ".$array['between']." group by ".$array['groupby'].", t.descripcion;";
+        return  $this->EjecutarConsulta($sql);
     }
 
     public function getCantidadPartidasJugadasEsteMEs()
@@ -71,37 +68,35 @@ class AdministradorModel
 
     public function getCantidadDePreguntasEnElJuegoPorFecha($filtro = 'd', $f_inicio = null, $f_fin = null)
     {
-        $tabla = 'pregunta';
-        $campoFiltro = 'f_creacion';
-        $operacion = null;
-        $tabla = $this->generarSQLporTablaYCampo($tabla, $campoFiltro, $operacion, $filtro, $f_inicio, $f_fin);
-        return $this->regresoDeArrayConEjes($tabla);
+        $campoFiltro="f_creacion";
+        $array = $this->arrayFiltroFechas($filtro,$campoFiltro ,$f_inicio,$f_fin);
+        $sql= "select ".$array['select']." 'preguntas' AS descripcion, count(*) AS cantidad from pregunta 
+                 where ".$campoFiltro."  between ".$array['between']." group by ".$array['groupby'].";";
+        return  $this->EjecutarConsulta($sql);
+
     }
 
     public function getCantidadDeUsuariosNuevosPorFecha($filtro = 'd', $f_inicio = null, $f_fin = null)
     {
-        $tabla = 'usuario';
-        $campoFiltro = 'f_registro';
-        $operacion = 'COUNT(*)';
-        $tabla = $this->generarSQLporTablaYCampo($tabla, $campoFiltro, $operacion, $filtro, $f_inicio, $f_fin);
-        return $this->regresoDeArrayConEjes($tabla);
+        $campoFiltro="f_registro";
+        $array = $this->arrayFiltroFechas($filtro,$campoFiltro ,$f_inicio,$f_fin);
+        $sql= "select ".$array['select']."'usuarios' AS descripcion, COUNT(*) AS cantidad from usuario 
+                      where ".$campoFiltro."  between ".$array['between']." group by ".$array['groupby'].";";
+        return  $this->EjecutarConsulta($sql);
 
     }
 
     public function getCantidadDeUsuariosPorRangoDeEdad($filtro = 'd', $f_inicio = null, $f_fin = null)
     {
-        $tabla = '(
-    SELECT
-        f_registro,
-        CASE
-            WHEN TIMESTAMPDIFF(YEAR, f_nacimiento, CURDATE()) < 30 THEN "Joven"
-            WHEN TIMESTAMPDIFF(YEAR, f_nacimiento, CURDATE()) BETWEEN 30 AND 60 THEN "Edad Media"
-            ELSE "Adulto"        END AS rango_edad    FROM        usuario) AS subconsulta';
-        $campoFiltro = 'f_registro';
-        $campoFiltro2 = "rango_edad";
-        $operacion = 'COUNT(rango_edad)';
-        $tabla = $this->generarSQLporTablaYCampoConTresColumnas($tabla, $campoFiltro, $campoFiltro2, $operacion, $filtro, $f_inicio, $f_fin);
-        return $tabla;
+        $campoFiltro="f_registro";
+        $array = $this->arrayFiltroFechas($filtro,$campoFiltro ,$f_inicio,$f_fin);
+        $sql= "select ".$array['select']." rango_edad AS descripcion, COUNT(rango_edad) AS cantidad 
+                    from ( SELECT f_registro,   CASE
+            WHEN TIMESTAMPDIFF(YEAR, f_nacimiento, CURDATE()) < 30 THEN 'Joven'
+            WHEN TIMESTAMPDIFF(YEAR, f_nacimiento, CURDATE()) BETWEEN 30 AND 60 THEN 'Edad Media'
+            ELSE 'Adulto' END AS rango_edad  FROM   usuario) AS subconsulta  
+            where ".$campoFiltro."  between ".$array['between']." group by ".$array['groupby'].", rango_edad;";
+        return  $this->EjecutarConsulta($sql);
     }
 
 
@@ -134,9 +129,7 @@ class AdministradorModel
         $sql= "select ".$array['select']." 'Trampas' AS descripcion, sum(cant) AS cantidad 
                     from historialCompras  where idUs = ".$usuarioId." and ".$campoFiltro."  between  ".$array['between']."  group by ".$array['groupby'].";";
 
-        $tabla = $this->database->query($sql);
-        //Header::debugExit($tabla);
-        return $tabla;
+        return  $this->EjecutarConsulta($sql);
     }
     public function getPorcentajeDePreguntasRespondidasCorrectamentePorElUsuario( $usuarioId , $filtro, $f_inicio, $f_fin){
 
@@ -148,9 +141,11 @@ class AdministradorModel
                                                    WHEN 1 THEN 'Correcta'
        END AS descripcion, (COUNT(*) / SUM(COUNT(*)) OVER (PARTITION BY idUs) * 100) AS cantidad
                 from historialpartidas  where idUs =".$usuarioId." and ".$campoFiltro."  between ".$array['between']." group by ".$array['groupby'].",estado;";
-       return $this->database->query($sql);
+        return  $this->EjecutarConsulta($sql);
 
     }
+
+    ///////////////////////////// ///////////////////////////////////////////////////
     public function arrayFiltroFechas($filtro ,$campoFiltro, $f_inicio, $f_fin): array
     {
         $filtro = !is_null($filtro) ? $filtro : 'd';
@@ -179,81 +174,22 @@ class AdministradorModel
         return $array;
 
     }
-    ///////////////////////////// ///////////////////////////////////////////////////
 
 
-
-    public function generarSQLporTablaYCampo($tabla, $campoFiltro, $operacion, $filtro, $f_inicio, $f_fin)
+    public function EjecutarConsulta($sql): array
     {
-        $filtro = !is_null($filtro) ? $filtro : 'd';
-        $f_inicio = !is_null($f_inicio) ? $f_inicio : date('Y-m-01');
-        $f_fin = !is_null($f_fin) ? $f_fin : date('Y-m-d');
-        $operacion = !is_null($operacion) ? $operacion : 'count(*)';
-
-        switch ($filtro) {
-            case "d":
-                $sql = "select $campoFiltro as fecha, $operacion AS cantidad from $tabla where $campoFiltro between '$f_inicio' and '$f_fin'  group by '$campoFiltro'";
-                break;
-            case "m":
-                $sql = 'SELECT CONCAT(YEAR(' . $campoFiltro . '), "-" , MONTH(' . $campoFiltro . ')) AS fecha, ' . $operacion . ' AS cantidad
-        FROM ' . $tabla . ' WHERE ' . $campoFiltro . ' BETWEEN "' . $f_inicio . '" AND "' . $f_fin . '"  
-        GROUP BY CONCAT(YEAR(' . $campoFiltro . '), "-", MONTH(' . $campoFiltro . '));';
-                break;
-
-            case "y":
-                $sql = 'SELECT YEAR(' . $campoFiltro . ') AS fecha, ' . $operacion . '  AS cantidad FROM ' . $tabla . ' 
-                where ' . $campoFiltro . '  between  "' . $f_inicio . '" and "' . $f_fin . '"  group BY YEAR(' . $campoFiltro . ');';
-                break;
-        }
-        return $this->database->query($sql);
-    }
-
-    public function generarSQLporTablaYCampoConTresColumnas($tabla, $campoFiltro, $campoFiltro2, $operacion, $filtro, $f_inicio, $f_fin)
-    {
-        $filtro = !is_null($filtro) ? $filtro : 'd';
-        $f_inicio = !is_null($f_inicio) ? $f_inicio : date('Y-m-01');
-        $f_fin = !is_null($f_fin) ? $f_fin : date('Y-m-d');
-        $operacion = !is_null($operacion) ? $operacion : 'count(*)';
-
-        switch ($filtro) {
-            case "d":
-                $sql = 'select ' . $campoFiltro . ' as campoFiltro, ' . $campoFiltro2 . ' AS descripcion, ' . $operacion . ' AS cantidad 
-                    from ' . $tabla . '  where ' . $campoFiltro . '  between  "' . $f_inicio . '" and "' . $f_fin . '"  group by ' . $campoFiltro . ',' . $campoFiltro2 . ';';
-                break;
-            case "m":
-                $sql = 'SELECT CONCAT(YEAR(' . $campoFiltro . '), "-" , MONTH(' . $campoFiltro . ')) AS campoFiltro, ' . $campoFiltro2 . ' AS descripcion, ' . $operacion . ' AS cantidad
-        FROM ' . $tabla . ' WHERE ' . $campoFiltro . ' BETWEEN "' . $f_inicio . '" AND "' . $f_fin . '"  
-        GROUP BY CONCAT(YEAR(' . $campoFiltro . '), "-", MONTH(' . $campoFiltro . ')) , ' . $campoFiltro2 . ';';
-                break;
-
-            case "y":
-                $sql = 'SELECT YEAR(' . $campoFiltro . ') AS campoFiltro, ' . $campoFiltro2 . ' AS descripcion, ' . $operacion . '  AS cantidad FROM ' . $tabla . ' 
-                where ' . $campoFiltro . '  between  "' . $f_inicio . '" and "' . $f_fin . '"  group BY YEAR(' . $campoFiltro . ') , ' . $campoFiltro2 . ';';
-                break;
-        }
-        return $this->database->query($sql);
-    }
-
-    public function regresoDeArrayConEjes($tabla){
-        $matriz=[];
-        if(!empty($tabla)){
-            foreach ($tabla as $fila) {
-                $datosTabla = array(
-                    "campoFiltro" => $fila["fecha"],
-                    "descripcion" => "",
-                    "cantidad" => $fila["cantidad"]
-                );
-                array_push($matriz, $datosTabla);
-            }
-        }else{
-            $matriz [] = array(
+        $tabla = $this->database->query($sql);
+        if (empty($tabla)) {
+            $tabla[] = [
                 "campoFiltro" => "sin datos",
-                "descripcion" => "",
+                "descripcion" => " sin datos",
                 "cantidad" => 0
-            );
-        }
-        return $matriz;
+            ];
+            return $tabla;
+        }else
+            return $tabla;
     }
+
 
     public function getCantidadDeUsuariosPorPais($filtro = 'd', $f_inicio = null, $f_fin = null)    {
         $arrayCoordenadas = $this->obtenerCoordenadasDeTodosLosUsuarios($f_inicio, $f_fin);
