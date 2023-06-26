@@ -12,12 +12,13 @@
   </component>
   <component name="PhpIncludePathManager">
     <include_path>
-      <path value="C:/xampp/php/PEAR" />
+      <path value="$PROJECT_DIR$/../php/PEAR" />
     </include_path>
   </component>
   <component name="PhpIncludePathManager">
     <include_path>
       <path value="$PROJECT_DIR$/../php/PEAR" />
+      <path value="C:/xampp/php/PEAR" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.2">

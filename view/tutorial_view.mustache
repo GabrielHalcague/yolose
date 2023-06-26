@@ -1,0 +1,104 @@
+<div class="bg-jugar">
+    <section class="container">
+        <div>
+            <h1 CLASS="pt-5 mb-4 text-center text-white">TUTORIAL</h1>
+        </div>
+
+        <div class="col-12 tutorial">
+            <div class="tutorial-image text-center">
+                <img src="/public/img/tutorial_1.png" alt="" width="100%">
+                <label class="text-white mt-3" for=""><h5>En la pantalla de incicio seleccione la opción <span>JUGAR.</span></h5></label>
+            </div>
+
+            <div class="tutorial-image text-center">
+                <img src="/public/img/tutorial_2.PNG" alt="" width="100%">
+                <label class="text-white mt-3" for=""><h5>En caso de no estar logueado se le enviara a la pantalla de <span>INGRESO.</span></h5></label>
+            </div>
+
+            <div class="tutorial-image text-center">
+                <img src="/public/img/tutorial_3.png" alt="" width="100%">
+                <label class="text-white mt-3" for=""><h5>Una vez logueado debera seleccionar la opción de juego deseada.</h5></label>
+            </div>
+
+            <div class="tutorial-image text-center">
+                <img src="/public/img/tutorial_4.PNG" alt="" width="100%">
+                <label class="text-white mt-3" for=""><h5>Una vez iniciada la partida podra observar una pregunta con sus multiples opciones de respusta.
+                    La misma debera ser respondida dentro del tiempo limite.</h5></label>
+            </div>
+
+            <div class="tutorial-image text-center">
+                <img src="/public/img/tutorial_rp.PNG" alt="" width="100%">
+                <label class="text-white mt-3" for=""><h5>En caso de que la respuesta sea <span>CORRECTA</span> la misma se marcara en verde,
+                    sumara un punto y avanzara a la pregunta siguiente.</h5></label>
+            </div>
+
+            <div class="tutorial-image text-center">
+                <img src="/public/img/tutorial_fin.PNG" alt="" width="100%">
+                <label class="text-white mt-3" for=""><h5>En caso contrario, es decir que la respuesta sea <span>INCORRECTA</span> se marcara en rojo,
+                    además se indicara la respuesta correcta en verde y finalizara la partida concluyendo asi con el <span>JUEGO</span>.</h5></label>
+            </div>
+
+            <div class="tutorial-image text-center">
+                <img src="/public/img/tutorial_terminado.jpg" alt="" width="100%">
+            </div>
+        </div>
+
+        <div>
+            <button class="btn-yolose p-3 w-50 m-auto" onclick="nextImage()">Siguiente</button>
+        </div>
+
+        <div class="py-5">
+            <a href="/" class="btn-yolose p-3 w-50 m-auto">Volver</a>
+        </div>
+
+    </section>
+</div>
+
+<style>
+    .tutorial {
+        position: relative;
+        width: 100%;
+        height: 65vh;
+        overflow: hidden;
+    }
+
+    .tutorial-image {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 80%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .tutorial-image.active {
+        opacity: 1;
+    }
+</style>
+
+<script>
+    var images = document.querySelectorAll('.tutorial-image');
+    var currentIndex = 0;
+
+    function showImage(index) {
+        images.forEach(function(image) {
+            image.classList.remove('active');
+        });
+
+        images[index].classList.add('active');
+    }
+
+    function nextImage() {
+        currentIndex++;
+
+        if (currentIndex >= images.length) {
+            currentIndex = 0;
+        }
+
+        showImage(currentIndex);
+    }
+
+    showImage(currentIndex);
+
+</script>

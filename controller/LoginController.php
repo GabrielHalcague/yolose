@@ -21,10 +21,10 @@ class LoginController
     public function cerrarSesion()
     {
         Session::finalizarSesion();
-        Header::redirect("/");
+        Header::redirect("/inicio");
     }
 
-    public function iniciarSesion()
+    public function iniciarSesion(): void
     {
         $usuarioBuscado = [];
         $username = $_POST['username'] ?? '';
@@ -53,11 +53,10 @@ class LoginController
             Session::set('rol', $usuarioBuscado["rol"]);
 
             Session::set('username', $username);
-            Header::redirect("/");
-            exit();
-        }else{
+            Header::redirect("/home");
+        }/*else{
             header("location:validate.php");// no existe
             exit();
-        }
+        }*/
     }
 }

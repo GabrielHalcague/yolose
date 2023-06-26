@@ -8,16 +8,13 @@ class HomeModel
         $this->database= $database;
     }
         public function getTop10(){
-            return $this->database->query('SELECT * FROM ranking LIMIT 3');
+            $sql = " select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
+                from historialpartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 3";
+            return $this->database->query($sql);
         }
-
-
-        // si quiermo mostrar las preguntas tengo que llamar a un modelo aparte de preguntas o puedo hacerle estos metodos al modelo?
-        /*public function getPregunta(){
-            return $this->database->query('SELECT p.id, p.descripcion, c.descripcion, c.color FROM pregunta p JOIN categoria c ON p.categoria = c.id LIMIT 1');
-        }
-        public function getRespuestasDePregunta($idPRegunta){
-        return $this->database->query("SELECT * FROM opcion where $idPRegunta = $idPRegunta");
-        }*/
-
+        
 }

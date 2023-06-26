@@ -1,54 +1,39 @@
-<section class="container">
-    <h1 class="text-center">Agregar nueva Pregunta</h1>
-    <form action="/pregunta/agregarPregunta" method="post" enctype="multipart/form-data">
-        <div class="input-group has-validation mt-4">
-            <label for="pregunta">Pregunta</label>
-            <input type="text" class="form-control" name="pregunta" id="pregunta">
-            {{#errorPregunta}}
-                <small id="helpId" class="form-text text-muted invalid-feedback">{{errorPregunta}}</small>
-            {{/errorPregunta}}
-        </div>
-        <div class="input-group has-validation mt-4">
-            <label for="cate">Categoria</label>
-            <select class="custom-select" name="categoria" id="categoria">
-                <option value="">Seleccione categoria</option>
-                {{#categoria}}
+<div class="bg-inicio">
+    <section class="mx-5 py-5">
+        <h1 class="mb-4 text-center text-logo">AGREGAR NUEVA PREGUNTA</h1>
+        <article class="border-yolose w-50 m-auto">
+            <form action="/pregunta/agregarPregunta" class="form-yolose p-5" method="post"
+                enctype="multipart/form-data">
+
+                <label for="pregunta" class="form-label">Pregunta</label>
+                <textarea class="form-control mb-3" name="pregunta" id="pregunta" rows="3"></textarea>
+
+                <label for="cate" class="form-label">Categoria</label>
+                <select class="custom-select form-select" name="categoria" id="categoria">
+                    <option value="">Seleccione categoria</option>
+                    {{#categoria}}
                     <option value="{{id}}">{{categ}}</option>
-                {{/categoria}}
-            </select>
-            {{#errorCategoria}}
-                <small id="helpId" class="form-text text-muted invalid-feedback">{{errorCategoria}}</small>
-            {{/errorCategoria}}
-        </div>
-            <div class="input-group has-validation mt-4">
-                <label for="opcCorrecta">Ingrese la Respuesta correcta</label>
+                    {{/categoria}}
+                </select>
+
+                <label for="opcCorrecta" class="form-label fw-bold">Respuesta correcta</label>
                 <input type="text" class="form-control" name="opcCorrecta" id="opcCorrecta">
-                {{#errorResp1}}
-                    <small id="helpId" class="form-text text-muted invalid-feedback">{{errorResp1}}</small>
-                {{/errorResp1}}
-            </div>
-            <div class="input-group has-validation mt-4">
-                <label for="resp2">Respuesta 2</label>
+
+                <label for="resp2" class="form-label">Respuesta 2</label>
                 <input type="text" class="form-control" name="resp2" id="resp2">
-                {{#errorResp2}}
-                    <small id="helpId" class="form-text text-muted invalid-feedback">{{errorResp2}}</small>
-                {{/errorResp2}}
-            </div>
-            <div class="input-group has-validation mt-4">
-                <label for="resp3">Respuesta 3</label>
+
+                <label for="resp3" class="form-label">Respuesta 3</label>
                 <input type="text" class="form-control" name="resp3" id="resp3">
-                {{#errorResp3}}
-                    <small id="helpId" class="form-text text-muted invalid-feedback">{{errorResp3}}</small>
-                {{/errorResp3}}
-            </div>
-            <div class="input-group has-validation mt-4">
-                <label for="resp4">Respuesta 4</label>
+
+                <label for="resp4" class="form-label">Respuesta 4</label>
                 <input type="text" class="form-control" name="resp4" id="4">
-                {{#errorResp4}}
-                    <small id="helpId" class="form-text text-muted invalid-feedback">{{errorResp4}}</small>
-                {{/errorResp4}}
-            </div>
-        <button type="submit" class="btn btn-success">Agregar</button>
-    </form>
-    {{error}}
-</section>
+
+                <div class="d-flex justify-content-around">
+                    <a href="/home" class="btn-yolose volver px-5 py-2">Volver</a>
+                    <button type="submit" class="btn-yolose px-5 py-2 ms-md-3">Agregar</button>
+                </div>
+            </form>
+        </article>
+        {{error}}
+    </section>
+</div>

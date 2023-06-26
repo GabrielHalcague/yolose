@@ -19,29 +19,29 @@
         public function getUsuario($nickname, $password)
         {
             $password = hash('md5', $password);
-            return $this->database->query("SELECT nombreUsuario FROM usuario
+            return $this->database->query_row("SELECT nombreUsuario FROM usuario
                                        WHERE nombreUsuario='$nickname'
                                        AND password='$password'");
         }
 
 
         public function getUsername($username){
-            return $this->database->query("SELECT nombreUsuario FROM usuario WHERE nombreUsuario ='$username'");
+            return $this->database->query_row("SELECT nombreUsuario FROM usuario WHERE nombreUsuario ='$username'");
         }
 
         public function getUserEmail($email)
         {
-            return $this->database->query("SELECT correo FROM usuario
+            return $this->database->query_row("SELECT correo FROM usuario
                                        WHERE correo ='$email'");
         }
 
         public function getUserByUsername($username){
-            return $this->database->query("SELECT * FROM usuario
+            return $this->database->query_row("SELECT * FROM usuario
                                        WHERE nombreUsuario ='$username'");
         }
 
         public function getUserByID($id){
-            return $this->database->query("SELECT * FROM usuario
+            return $this->database->query_row("SELECT * FROM usuario
                                        WHERE id ='$id'");
         }
 
@@ -54,5 +54,7 @@
             $sql = "INSERT INTO rol_usuario(idUs, idRol) VALUES ('$id', 3)";
             $this->database->execute($sql);
         }
+
+
         
     }

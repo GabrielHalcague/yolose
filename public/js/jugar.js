@@ -1,13 +1,12 @@
 var finButton = $('#fin');
-var continuarButton = $('#continuar');
 var trampaButton = $('#trampa');
-var segundos = 10;
+var segundos = document.getElementById('tiempoRestante').innerText;
 var cronometro;
 $(document).ready(function () {
-    finButton.hide();
-    continuarButton.hide();
-    var cantTrampasActuales = trampaButton.val();
-    if (cantTrampasActuales < 0) {
+    var cantTrampasActuales = trampaButton.text(); //Trampas restantes: 3
+    var val = cantTrampasActuales.split(' ');
+    console.log("trampas actuales: "+ val[3]);
+    if (val[3] <= 0) {
         trampaButton.prop('disabled', true);
     }
     cuentaRegresiva();
@@ -31,12 +30,16 @@ $(document).ready(function () {
 
                 // Hacer algo con los datos en caso de éxito
                 validarRespuesta(datos);
-
-
             }
         });
     });
 
+    reporte();
+
+});
+
+
+const reporte = () => {
     $('.reporte').click(function (){
         var preguntaId= $(this).val()
         $.ajax({
@@ -45,16 +48,14 @@ $(document).ready(function () {
             data: {preguntaId: preguntaId}
         }).done(function (){
             $('.reporte').prop('disabled',true)
-        })
-
-    })
-
-});
+        });
+    });
+}
 
 
 function cuentaRegresiva() {
     document.getElementById('tiempoRestante').innerHTML = segundos;
-    if (segundos === 0) {
+    if (parseInt(segundos) === 0) {
         clearTimeout(cronometro);
         $.ajax({
             url: '/partida/verificar',
@@ -84,8 +85,6 @@ function cuentaRegresiva() {
 
 
 function validarRespuesta(data) {
-    console.log("En funcion validar");
-    console.log(data);
     const respuestaActual = $("#" + data["respActual"]);
     const respuestaValida = $("#" + data["respValida"]);
     if (data["fueraTiempo"] === false) {
@@ -97,13 +96,14 @@ function validarRespuesta(data) {
         }
         if (data['correcto'] === true) {
             respuestaActual.css('backgroundColor', 'green');
+            respuestaValida.css('backgroundColor', 'green');
             setTimeout(function (){
-                $(location).attr('href',"http://localhost:80/partida&tipoPartida="+data['tipoPartida']);
+                $(location).attr('href',"/partida&tipoPartida="+data['tipoPartida']);
             },5000);
-            //continuarButton.show();
         }
     } else {
         respuestaValida.css('backgroundColor', 'green');
+        terminarPartida();
         finButton.show();
     }
     disableButtons();
@@ -130,8 +130,21 @@ const terminarPartida = () => {
             // Operación exitosa
             var datos = data.data;
             console.log(datos);
-            $('#result').data('resultado', datos['resultado']);
-            $('#tPartida').data('tipoPartida', datos['tipo']);
+            $('#result').text(datos['resultado']);
+            var tipoPartida=undefined;
+            switch(datos['tipo']){
+                case '1':
+                    tipoPartida = "Solitario";
+                    break;
+                case '2':
+                    tipoPartida = "VS BOT";
+                    $('#resultBot').text(datos['respuestasBot']);
+                    break;
+                default:
+                    tipoPartida = "PvP";
+                    break;
+            }
+            $('#tPartida').text(tipoPartida);
             $('#ventana').modal('show');
 
         }

@@ -57,10 +57,10 @@ class PartidaModel
             'correcto' => false,
             'fueraTiempo' => false,
         ];
-        $dif = (int)(($respondioPregunta - $muestroPregunta) / 60) / 60;
+        $dif = $respondioPregunta - $muestroPregunta;
         Logger::info("LA DIFERENCIA ENTRE LA MUESTRA Y RESPUESTA ES: $dif");
         if ($id != 'FUERA_TIEMPO') {
-            if ($dif < 9999) {
+            if ($dif < 10) {
                 Logger::info("[CONTESTO LA PREGUNTA EN EL TIEMPO LIMITE DE LOS 10 SEG]");
                 if ($id != 'trampa') {
                     $array['respActual'] = $id;
@@ -101,6 +101,7 @@ class PartidaModel
             'idUsuario' => $data['idUsuario'],
             'idPreg' => $preguntaSeleccionada['preguntaID'],
             'tipoPartida' => $data['tipoPartida']
+            //'estadoPartida' => $data['estadoPartida']
         ]);
         return $array;
     }
@@ -210,6 +211,7 @@ class PartidaModel
         $token = $data['n_partida'];
         $estado = $data['estado'];
         $tipoPartida = $data['tipoPartida'];
+        //$estadoPartida = $data['estadoPartida'];
 
         if (!$estado) {
             $sql = "INSERT INTO historialPartidas (idUs, idPreg, n_partida,tipoPartida) VALUES ('$idUsuario','$idPreg','$token','$tipoPartida')";

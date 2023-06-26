@@ -1,0 +1,75 @@
+<div class="bg-inicio">
+   <section class="d-flex justify-content-center">
+    <article class="mx-5 py-5 w-50">
+        <h1 class="mb-4 text-center text-logo">EDITAR PREGUNTA</h1>
+        <article class="border-yolose w-85 m-auto">
+            <form action="/editor/actualizarPregunta" method="post" class="form-yolose p-5"
+                  enctype="multipart/form-data">
+                <div class="row">
+                    <div class="col-sm-6">
+                        {{#pregunta}}
+                            <p>Creado por: {{nombreUsuario}}</p>
+                        {{/pregunta}}
+
+                        {{#pregunta}}
+                            <p>Estado actual:  {{descr}} <br></p>
+                        {{/pregunta}}
+
+                        <label for="estado" class="form-label">Cambiar estado : </label>
+                        <select class="custom-select form-select" name="estado" id="estado">
+                            <option value="">Seleccione estado</option>
+                            {{#estado}}
+                                <option value="{{id}}">{{descr}}</option>
+                            {{/estado}}
+                        </select>
+
+                    </div>
+                    <div class="col-sm-6">
+                        {{#pregunta}}
+                            <p>Fecha de cracion: {{f_creacion}}</p>
+                        {{/pregunta}}
+
+                        {{#pregunta}}
+                            <p>Categoria actual : {{categ}} </br> </p>
+                        {{/pregunta}}
+
+                        <label for="cate" class="form-label">Cambiar categoria </label>
+                        <select class="custom-select form-select" name="categoria" id="categoria">
+                            <option value="">Seleccione categoria</option>
+                            {{#categoria}}
+                                <option value="{{id}}">{{categ}}</option>
+                            {{/categoria}}
+                        </select>
+
+                    </div>
+                </div>
+
+                {{#pregunta}}
+                    <label for="pregunta" class="form-label">Pregunta</label>
+                    <input type="text" class="form-control" name="pregunta" id="{{idPreg}}" value="{{preg}}">
+                {{/pregunta}}
+
+                <strong>Respuestas</strong>
+
+                <div>
+                    {{#respuestas}}
+                        <input type="text" class="form-control" name="respuesta{{id}}" id="{{id}}" value="{{resp}}">
+                    {{/respuestas}}
+                </div>
+
+                <div class="d-flex justify-content-around">
+                    <a href="/editor" class="btn-yolose volver px-5 py-2">Volver</a>
+                    <button type="submit" class="btn-yolose px-5 py-2 ms-md-3">Actualizar</button>
+                </div>
+            </form>
+
+            {{error}}
+        </article>
+    </article>
+   </section>
+</div>
+<script>
+    window.onload = function() {
+        $("#{{idRespCorrecta}}").css("backgroundColor", "green");
+}
+</script>

@@ -59,7 +59,7 @@ class UserModel{
 
     public function obtenerHistorialPartidasUsuario($idUsuario){
         $sql = "SELECT h.n_Partida, u.nombreUsuario,h.tipoPartida, SUM(estado) AS sumaPreguntasContestadas
-                FROM historialpartidas AS h
+                FROM historialPartidas AS h
                 JOIN usuario AS u 
                 WHERE h.idUs = '$idUsuario'
                 GROUP BY h.n_partida, h.idUs";
@@ -71,8 +71,6 @@ class UserModel{
     public function setNuevoUsername($idUsuario, $nickName){
         $sql="UPDATE usuario u SET u.nombreUsuario ='$nickName' where u.id='$idUsuario'";
         $this->database->execute($sql);
-       // if(mysqli_affected_rows($sql) ==1){
-         //   return $nickName } else return null;
     }
 
 

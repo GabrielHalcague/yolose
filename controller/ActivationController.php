@@ -5,7 +5,6 @@ class ActivationController{
 
     private $renderer;
     private $registerModel;
-    private $email;
 
     public function __construct($renderer, $registroModel){
         $this->renderer = $renderer;
@@ -18,33 +17,31 @@ class ActivationController{
         $this->renderer->render("activacion",$data);
     }
 
-    public function activarCuenta(){
+    public function activarCuenta(): void
+    {
         $id = $_GET['id'];
         $user= $this->registerModel->getUserByID($id);
-        if(empty($user) || $user[0]['activo']==1) {
+        if(empty($user) || $user['activo']==1) {
             Header::redirect("/");
         }
 
-        $momentoEnvio = strtotime( $user[0]['f_registro']);
+        $momentoEnvio = strtotime( $user['f_registro']);
         $momentoActual = (new DateTime)->getTimestamp();
 
-        $dif = (int)(($momentoActual - $momentoEnvio)/6000)/6000;
-
-        if($dif > 23){
+        $dif = (int)(($momentoActual - $momentoEnvio)/3600);
+        Logger::error("LA DIFERENCIA ENTRE LA FECHA DE REGISTRO Y LA FECHA ACTUAL ES: $dif");
+        if($dif > 72){
             $data['id']=$id;
             $data['error']="el enlace de activación caduco";
             $this->renderer->render("activacion",$data);
             exit();
         }
-        if(!empty($user) && $user[0]['activo'] == 0){
+        if(!empty($user) && $user['activo'] == 0){
             $this->registerModel->activarUsuario($id);
             $this->registerModel->setRol($id);
             $data["ok"]="Se ha validado correctamente";
         }else
             $data["error"]="No existe el usuario a validar";
-        $this->renderer->render('home',$data); //aca debemos ir a home
+        $this->renderer->render('home',$data);
     }
-
-
-
 }
