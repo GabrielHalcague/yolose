@@ -136,11 +136,11 @@ class AdministradorModel
         $campoFiltro="f_partida";
         $array = $this->arrayFiltroFechas($filtro,$campoFiltro ,$f_inicio,$f_fin);
 
-       $sql= "select ".$array['select']."CASE estado
-                                                   WHEN 0 THEN 'Incorrecta'
-                                                   WHEN 1 THEN 'Correcta'
-       END AS descripcion, (COUNT(*) / SUM(COUNT(*)) OVER (PARTITION BY idUs) * 100) AS cantidad
-                from historialpartidas  where idUs =".$usuarioId." and ".$campoFiltro."  between ".$array['between']." group by ".$array['groupby'].",estado;";
+        $sql ="SELECT ".$array['select']." CASE estado
+WHEN 0 THEN 'Incorrecta'
+WHEN 1 THEN 'Correcta'
+END AS descripcion, (COUNT(*) / SUM(COUNT(*)) OVER (PARTITION BY f_partida) * 100) AS cantidad FROM
+historialpartidas where idUs =".$usuarioId." and ".$campoFiltro." between ".$array['between']." group by ".$array['groupby'].",estado;";
         return  $this->EjecutarConsulta($sql);
 
     }
