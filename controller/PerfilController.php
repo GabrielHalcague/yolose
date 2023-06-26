@@ -57,7 +57,8 @@ class PerfilController
     }
 
 
-    public function obtenerCoordenadas(){
+    public function obtenerCoordenadas(): void
+    {
         $username = $_POST['username'];
         Logger::error("USERNAME OBTENIDO: " . $username);
         $coord = $this->perfilModel->obtenerCoordenadas($username);

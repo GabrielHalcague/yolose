@@ -39,7 +39,7 @@
 
         <div id="Tab2" class="tabcontent">
             <div class="mt-3 mb-5">
-                {{#historialPartidas}}
+
                     <table class="table">
                         <thead>
                         <tr>
@@ -50,15 +50,16 @@
                         </tr>
                         </thead>
                         <tbody>
+                        {{#historialPartidas}}
                         <tr>
                             <td class="text-white">{{f_partida}}</td>
                             <td class="text-white">{{nombreUsuario}}</td>
                             <td class="text-white">{{sumaPreguntasContestadas}}</td>
                             <td class="text-white">{{descripcion}}</td>
                         </tr>
+                        {{/historialPartidas}}
                         </tbody>
                     </table>
-                {{/historialPartidas}}
             </div>
 
             <a href="/" class="btn-yolose p-3 w-50 m-auto">Ir al incio</a>
