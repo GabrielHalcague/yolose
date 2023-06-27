@@ -16,6 +16,7 @@ include_once('controller/TiendaController.php');
 include_once('controller/RankingController.php');
 include_once('controller/CreditosController.php');
 include_once('controller/TutorialController.php');
+include_once('controller/CategoriaController.php');
 
 // Inclusión de Helpers
 include_once('helpers/MySqlDatabase.php');
@@ -145,6 +146,13 @@ class Configuration
         return new TutorialController($this->getRenderer());
     }
 
+
+    public function getCategoriaController(): CategoriaController
+    {
+        return new CategoriaController($this->getRenderer(),[
+            'categoria' => new CategoriaModel($this->getDatabase())
+        ]);
+    }
 
     private function getArrayConfig(): false|array
     {
