@@ -14,6 +14,8 @@ include_once('controller/EditorController.php');
 include_once('controller/AdministradorController.php');
 include_once('controller/TiendaController.php');
 include_once('controller/RankingController.php');
+include_once('controller/CreditosController.php');
+include_once('controller/TutorialController.php');
 
 // Inclusión de Helpers
 include_once('helpers/MySqlDatabase.php');
@@ -131,6 +133,16 @@ class Configuration
     public function getRankingController(): rankingController
     {
         return new rankingController($this->getRenderer(), new RankingModel($this->getDatabase()));
+    }
+
+    public function getCreditosController(): CreditosController
+    {
+        return new CreditosController($this->getRenderer());
+    }
+
+    public function getTutorialController(): TutorialController
+    {
+        return new TutorialController($this->getRenderer());
     }
 
 

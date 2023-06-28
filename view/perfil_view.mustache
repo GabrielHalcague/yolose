@@ -1,29 +1,121 @@
 <div class="bg-jugar">
     <section class="container text-center text-white text-shadow">
         <h1 class="titulo-partida py-5">MI PERFIL</h1>
-        <div class="row pt-5">
-            <div class="col-md-4">
-                {{#perfil}}
-                    <p id="nUsuario"><strong>Usuario:</strong> {{nombreUsuario}}</p>
-                    <p><strong>Nombre:</strong> {{nombre}}</p>
-                    <p><strong>Fecha Nacimiento:</strong> {{f_nacimiento}}</p>
-                    <p><strong>Genero:</strong> {{descr}}</p>
-                    <p><strong>Miembro desde:</strong> {{f_registro}}</p>
-                    <p><strong>Estado:</strong> {{#activo}}  Activo {{/activo}} {{^activo}}  Inactivo {{/activo}}</p>
-                    <p><strong>Mejor Logro:</strong> {{maximoRespuestasCorrectas}} Preguntas Correctas</p>
-                    <p><strong>Ranking solitario :</strong> {{rank}}</p>
-                {{/perfil}}
-            </div>
-            <div class="col-md-4">
-                {{#perfil}}
-                    <img src="/public/img/{{fotoPerfil}}" class="img-fluid" style="max-height: 200px;">
-                {{/perfil}}
-                <div id="map" class="mt-5" style="width: 100%; height: 100px;"></div>
-            </div>
-            <div class="col-md-4">
-                <img src="/{{rutaQR}}" class="img-fluid responsive" style="max-height: 200px;" alt="QR">
+
+
+        <div class="tab bg-dark">
+            <button class="tablinks text-white" onclick="openTab(event, 'Tab1')"><span>Perfil</span></button>
+            <button class="tablinks text-white" onclick="openTab(event, 'Tab2')"><span>Historial Partida</span></button>
+        </div>
+
+        <div class="tabcontent" id="Tab1" style="display: block;">
+            <div class="row pt-5" >
+                <div class="col-md-4">
+                    {{#perfil}}
+                        <p id="nUsuario"><strong>Usuario:</strong> {{nombreUsuario}}</p>
+                        <p><strong>Nombre:</strong> {{nombre}}</p>
+                        <p><strong>Fecha Nacimiento:</strong> {{f_nacimiento}}</p>
+                        <p><strong>Genero:</strong> {{descr}}</p>
+                        <p><strong>Miembro desde:</strong> {{f_registro}}</p>
+                        <p><strong>Estado:</strong> {{#activo}}  Activo {{/activo}} {{^activo}}  Inactivo {{/activo}}</p>
+                        <p><strong>Mejor Logro:</strong> {{maximoRespuestasCorrectas}} Preguntas Correctas</p>
+                        <p><strong>Ranking solitario :</strong> {{rank}}</p>
+                    {{/perfil}}
+                </div>
+                <div class="col-md-4">
+                    {{#perfil}}
+                        <img src="/public/img/{{fotoPerfil}}" class="img-fluid" style="max-height: 200px;">
+                    {{/perfil}}
+                    <div id="map" class="mt-5 mb-5" style="width: 100%; height: 100px;"></div>
+                </div>
+                <div class="col-md-4">
+                    <img src="/{{rutaQR}}" class="img-fluid responsive" style="max-height: 200px;" alt="QR">
+                </div>
+
+                <a href="/" class="btn-yolose p-3 w-50 m-auto">Ir al incio</a>
             </div>
         </div>
-        <a href="/" class="btn-yolose p-3 my-5 w-50 m-auto">Ir al incio</a>
+
+
+        <div id="Tab2" class="tabcontent">
+            <div class="mt-3 mb-5">
+
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th class="text-white">Fecha Partida</th>
+                            <th class="text-white">Nombre de usuario</th>
+                            <th class="text-white">Respuestas Correctas</th>
+                            <th class="text-white">Tipo Partida</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {{#historialPartidas}}
+                        <tr>
+                            <td class="text-white">{{f_partida}}</td>
+                            <td class="text-white">{{nombreUsuario}}</td>
+                            <td class="text-white">{{sumaPreguntasContestadas}}</td>
+                            <td class="text-white">{{descripcion}}</td>
+                        </tr>
+                        {{/historialPartidas}}
+                        </tbody>
+                    </table>
+            </div>
+
+            <a href="/" class="btn-yolose p-3 w-50 m-auto">Ir al incio</a>
+        </div>
+
+        <!--<a href="/" class="btn-yolose p-3 my-5 w-50 m-auto">Ir al incio</a>-->
     </section>
 </div>
+
+<style>
+    .tab {
+        overflow: hidden;
+        background-color: #f1f1f1;
+        width: 100%;
+        height: 100%;
+    }
+
+    .tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 10px 15px;
+        transition: background-color 0.3s;
+    }
+
+    .tab button:hover {
+        background-color: #ddd;
+    }
+
+    .tab button.active {
+        background-color: #0000FF;
+    }
+
+    .tabcontent {
+        display: none;
+    }
+</style>
+
+
+<script>
+    function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+    // Mostrar por defecto el Tab1
+    document.getElementById('Tab1').style.display = 'block';
+    document.getElementsByClassName('tablinks')[0].classList.add('active');
+</script>

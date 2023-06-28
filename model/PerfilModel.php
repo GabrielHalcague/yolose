@@ -30,14 +30,13 @@ class PerfilModel
     }
 
     public function obtenerHistorialPartidasUsuario($idUsuario){
-        $sql = " select hp.f_partida, u.nombreUsuario,hp.tipoPartida,
+        $sql = " select hp.f_partida, u.nombreUsuario,
             count(*) as sumaPreguntasContestadas , hp.n_partida,t.descripcion
                 from historialPartidas hp join usuario u on u.id = hp.idUs
                 join tipoPartida t on t.Id = hp.tipoPartida
             where hp.estado = 1 and hp.idUs= '$idUsuario'
             group by hp.n_partida, u.nombreUsuario
-            order by  count(*) desc
-            limit 5";
+            order by  count(hp.f_partida) desc";
         return $this->database->query($sql);
     }
 

@@ -26,6 +26,10 @@ class PartidaController
             Session::set('tokenPartida', uniqid());
         }
 
+        /*if(empty(Session::get("JuegoNuevo"))){
+            Session::set('JuegoNuevo', 0);
+        }*/
+
         $data = [
             'js' => true,
             'username' => Session::get('username'),
@@ -75,6 +79,7 @@ class PartidaController
         $id = $_POST['id'];
         if ($id == 'trampa') {
             $nTrampa = intval(Session::get('trampas')) - 1;
+            Logger::error("CANTIDAD DE TRAMPAS ACTUALES ES: " . $nTrampa);
             Session::set('trampas', $nTrampa);
         }
         Session::deleteValue('respondio');
@@ -158,6 +163,7 @@ class PartidaController
         Session::deleteValue('tiempo');
         Session::deleteValue('envioPregunta');
         Session::deleteValue('estadoPregunta');
+        Session::deleteValue('JuegoNuevo');
         $trampasActuales = Session::get('trampas');
         Session::deleteValue('trampas');
         $this->partidaModel->actualizaTrampasUsuario($trampasActuales, Session::get('idUsuario'));
@@ -176,8 +182,9 @@ class PartidaController
 
         $indicePregunta = array_rand($preguntas);
         Session::set('preguntaSeleccionada', $preguntas[$indicePregunta]);
-        if (empty(Session::get('trampas'))) {
+        if (empty(Session::get("JuegoNuevo"))) {
             Session::set('trampas', $this->partidaModel->obtenerTrampasDelUsuario(Session::get('idUsuario'))['trampas']);
+            Session::set("JuegoNuevo",1);
         }
         $data = [
             'pregunta' => $preguntas[$indicePregunta]['pregunta'],
