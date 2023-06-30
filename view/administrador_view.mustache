@@ -25,7 +25,7 @@
             </div>
         </form>
         {{#error}}
-        <div> {{error}}</div>
+        <div class="text-white text-center"> {{error}}</div>
         {{/error}}
 
         {{#usuario}}
@@ -38,10 +38,31 @@
                 <p><strong>Nombre de usuario:</strong> {{nombreUsuario}}</p>
                 <p><strong>Fecha registro:</strong> {{f_registro}}</p>
 
-                <p><strong>Rol:</strong> {{rol}}</p>
+                <p><strong>Rol:</strong> {{rol}}
+                <div class="btn-group">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="rol" data-bs-toggle="dropdown">
+                        Cambiar
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="rol">
+                        <li><a class="dropdown-item" href="#">Usuario</a></li>
+                        <li><a class="dropdown-item" href="#">Editor</a></li>
+                        <li><a class="dropdown-item" href="#">Administrador</a></li>
+                    </ul>
+                </div>
+                </p>
                 <p><strong>Estado:</strong>
                     {{#activo}} Activo {{/activo}}
                     {{^activo}} Inactivo {{/activo}}
+                <div class="btn-group">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="rol" data-bs-toggle="dropdown">
+                        Editar
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="rol">
+                        <li><a class="dropdown-item" href="#">Activar</a></li>
+                        <li><a class="dropdown-item" href="#">Desactivar</a></li>
+
+                    </ul>
+                </div>
                 </p>
             </div>
         </div>
@@ -100,7 +121,7 @@
 
     <section class="p-5">
         <div class="container">
-            <div id="canvasDiv" class="text-center" style="width: auto; height: auto;">
+            <div id="canvasDiv" class="text-center" style="width: auto; height: auto; display: none;">
                 <canvas id="myChart" class="bg-dark bg-gradient text-white"></canvas>
             </div>
 
