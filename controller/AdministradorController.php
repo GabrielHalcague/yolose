@@ -136,31 +136,9 @@ class AdministradorController
             $data ['titulo']=$titulo;
             $data ['imagen']=$tmpFilePath;
             $data ['tabla']=$tabla;
-          //  Header::debugExit( $data ['tabla']);
+
             $mustache = new Mustache_Engine();
             $htmlRenderizado = $mustache->render($html, $data);
-
-
-/*
-            $html = '<html><body>';
-            $html .= '<style>';
-            $html .= 'table { width: 100%; border-collapse: collapse; }';
-            $html .= 'th, td { border: 1px solid black; padding: 8px; }';
-            $html .= '</style>';
-            $html .= '<h2>' . $titulo . '</h2>';
-            $html .= '<img src="' . $tmpFilePath . '" style="width: 100%;">';
-            $html .= '<br><table><tr><th>Fecha</th><th>Descripcion</th><th>Cantidad</th></tr>';
-            foreach ($tabla as $row) {
-                if (!empty($row)) {
-                $html .= '<tr>';
-                $html .= '<td>' . $row["columna0"] .'</td>';
-                $html .= '<td>' . $row["columna1"]  . '</td>';
-                $html .= '<td>' . $row["columna2"] . '</td>';
-                $html .= '</tr>';
-                }
-            }
-            $html .= '</table></body></html>';
-*/
 
             $this->Dompdf->loadHtml($htmlRenderizado);
             $this->Dompdf->setPaper('A4', 'portrait');
