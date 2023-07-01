@@ -462,6 +462,11 @@ main {
     background-color: turquoise;
 }
 
+.pregunta-color {
+    color: #fff;
+    padding: 1rem;
+}
+
 .text-shadow{
     text-shadow: -3px 3px 5px #000000aa;
 }

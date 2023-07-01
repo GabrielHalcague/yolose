@@ -1,0 +1,24 @@
+<div class="bg-inicio">
+    <section class="mx-5 py-5">
+        <h1 class="mb-4 text-center text-logo">AGREGAR NUEVA CATEGORIA</h1>
+        <article class="border-yolose w-50 m-auto">
+            <form action="/categoria/editarCategoria" class="form-yolose p-5" method="post"
+                  enctype="multipart/form-data">
+
+                <label for="categoria" class="form-label">Nombre Categoria</label>
+                <input type="text" class="form-control" name="categoriaNombre" id="categoriaNombre" value="{{categ}}">
+                <label for="categoriaColor" class="form-label">Color</label>
+                <input type="color" name="categoriaColor" id="categoriaColor" class="form-control form-control-color" value="{{color}}">
+                <div class="d-flex justify-content-around">
+                    <a href="/categoria" class="btn-yolose volver px-5 py-2">Volver</a>
+                    <button type="submit" class="btn-yolose px-5 py-2 ms-md-3">Agregar</button>
+                </div>
+            </form>
+        </article>
+
+        <div class="text-center text-white">
+            {{mensaje}}
+        </div>
+
+    </section>
+</div>
