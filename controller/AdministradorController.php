@@ -15,14 +15,15 @@ class AdministradorController
         $this->Dompdf =$pdf;
 
     }
-    public function list( $data = null){
+    public function list($data = null){
         if(session::get("rol") !="Administrador" ){
             Header::redirect("/");
         }
+
         $data ["Ingresos"] = $this->AdministradorModel->getCantidadDeTrampasVendidasPorFecha( 'm', null, null)[0]['cantidad'];
         $data ["nuevosUsuariosMes"] = $this->AdministradorModel->getCantidadDeUsuariosNuevosPorFecha('m')[0]['cantidad'];
-
         $data ["preguntasNuevasDelMes"] = $this->AdministradorModel->getCantidadDePreguntasDisponiblesPorFecha('m', null, null)[0]['cantidad'];
+
         $data ["administradorJS"] = true;
         return $this->renderer->render("administrador",$data);
     }
@@ -72,7 +73,7 @@ class AdministradorController
                 break;
         }
           echo json_encode($data);
-          // throw new Exception("Este es un mensaje de error.");
+         // throw new Exception("Este es un mensaje de error.");
         }
         catch (Exception $e) {
             http_response_code(503);
@@ -81,21 +82,41 @@ class AdministradorController
         }
     }
 
+    public function cambiarRol(){
+        if(session::get("rol") !="Administrador" ){
+            Header::redirect("/");
+        }
+        $nombreUsuario = $_GET['nombreUsuario'];
+        $rol = $_GET['rol'];
+        $this->AdministradorModel->setCambiarRolPorNombreUsuario($nombreUsuario, $rol);
+        $data["usuario"] = $this->AdministradorModel->getDatosDelUsuario($nombreUsuario);
+        $this->list($data);
+    }
+
     public function buscarUsuario(){
         if(session::get("rol") !="Administrador" ){
             Header::redirect("/");
         }
-        $data=[];
-        if(!isset($_POST['usuario']) && empty($_POST['usuario'])){
+
+        if(empty($_POST['usuario'])){
             $data['error']= 'formato Invalido';
-            $this->renderer->render('administrador', $data);
+            $this->list($data);
         }
+
         $username = $_POST['usuario'];
-        $data["usuario"] = $this->AdministradorModel->getDatosDelUsuario($username);
-        if(is_null($data["usuario"])){
-            $data['error']= 'Usuario no Encontrado';
+
+        try {
+            $data["usuario"] = $this->AdministradorModel->getDatosDelUsuario($username);
+
+            if (is_null($data["usuario"])) {
+                $data['error'] = 'Usuario no Encontrado';
+            }
+
+            $this->list($data);
+        } catch (Exception $e) {
+            $data['error'] = 'exepcion en bd: ' . $e->getMessage();
+            $this->list($data);
         }
-        $this->list($data);
     }
 
     
