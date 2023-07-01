@@ -128,11 +128,20 @@ class AdministradorController
             $imageData = $_POST['imageData'];
             $titulo = $_POST['consulta'];
             $tabla =  json_decode($_POST['datosTabla'], true );
-
             $tmpFilePath = 'public/imagepdf.png';
             file_put_contents($tmpFilePath, base64_decode(preg_replace('#^data:image/\w+;base64,#i', '', $imageData)));
             // Generar el PDF utilizando Dompdf
 
+            $html = file_get_contents('public/template/estadisticas_view.mustache');
+            $data ['titulo']=$titulo;
+            $data ['imagen']=$tmpFilePath;
+            $data ['tabla']=$tabla;
+          //  Header::debugExit( $data ['tabla']);
+            $mustache = new Mustache_Engine();
+            $htmlRenderizado = $mustache->render($html, $data);
+
+
+/*
             $html = '<html><body>';
             $html .= '<style>';
             $html .= 'table { width: 100%; border-collapse: collapse; }';
@@ -151,8 +160,9 @@ class AdministradorController
                 }
             }
             $html .= '</table></body></html>';
+*/
 
-            $this->Dompdf->loadHtml($html);
+            $this->Dompdf->loadHtml($htmlRenderizado);
             $this->Dompdf->setPaper('A4', 'portrait');
             $this->Dompdf->render();
             $this->Dompdf->stream('Estadistica '.date('Y-m-d').'.pdf', ['Attachment' => true]);
