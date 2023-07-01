@@ -37,7 +37,6 @@ class PerfilController
         if(empty($data ["perfil"] )){
             Header::redirect("/");
         }
-
         $idUsuario=$data["perfil"]["id"];
         $data['editarPerfil'] = false;
         $data['perfilJS'] = true;
@@ -70,39 +69,39 @@ class PerfilController
         echo json_encode($data);
     }
 
-  public function editar()
-  {
-      /*if (!Session::isLogged()) {
-          Header::redirect('/');
-      }*/
-      $nickName = $_POST["nickName"] ?? null;
+    public function editar()
+    {
+        if (!Session::isLogged()) {
+            Header::redirect('/');
+        }
+        $nickName = $_POST["nickName"] ?? null;
         if($this->validarFormatoNick($nickName)){
             $data['nicknameEstado'] = $this->userModel->getUsername($nickName);
         }else{
             $data['nicknameEstado'] = $nickName;
         }
-      echo json_encode($data);
-  }
-  public function confirmar(){
-     /* if (!Session::isLogged()) {
-          Header::redirect('/');
-      }*/
-      $nickName = $_POST["nickName"] ?? null;
-      $idUsuario = $_POST["idUsuario"] ?? null;
-      /*if ($idUsuario != Session::get('idUsuario')) {
-          Header::redirect('/');
-      }*/
+        echo json_encode($data);
+    }
+    public function confirmar(){
+        if (!Session::isLogged()) {
+            Header::redirect('/');
+        }
+        $nickName = $_POST["nickName"] ?? null;
+        $idUsuario = $_POST["idUsuario"] ?? null;
+        if ($idUsuario != Session::get('idUsuario')) {
+            Header::redirect('/');
+        }
 
-      if($this->validarFormatoNick($nickName)){
-         $this->userModel->setNuevoUsername($idUsuario, $nickName);
-          Session::deleteValue('username');
-          Session::set('username', $nickName);
-          $data['nicknameEstado'] = $nickName;
-      }else{
-          $data['nicknameEstado'] = null;
-      }
-      echo json_encode($data);
-  }
+        if($this->validarFormatoNick($nickName)){
+            $this->userModel->setNuevoUsername($idUsuario, $nickName);
+            Session::deleteValue('username');
+            Session::set('username', $nickName);
+            $data['nicknameEstado'] = $nickName;
+        }else{
+            $data['nicknameEstado'] = null;
+        }
+        echo json_encode($data);
+    }
   
   private function validarFormatoNick($nickName){
         if(strlen($nickName)<3 ||strlen($nickName)>30 || $nickName == null){

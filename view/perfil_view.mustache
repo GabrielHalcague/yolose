@@ -1,3 +1,30 @@
+<!-- Button trigger modal -->
+{{#editarPerfil}}
+    <!-- Modal -->
+    {{#perfil}}
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <article class="p-5 bg-dark-subtle rounded">
+                            <div class="d-flex justify-content-center">
+                                <input id="idUsuario" name="prodId" type="hidden" value="{{id}}">
+                                <input id="nuevoNickOculto" name="prodId" type="hidden" value="">
+                                <div>
+                                    <label for="usuario" class="form-label">Usuario : {{nombreUsuario}}</label>
+                                    <input type="text" name="usuario" id="nuevoNick" class="form-control"/>
+                                    <h5 id="nickNameEstado"></h5>
+                                    <button type="button" class="btn btn-success" id="validarNick">Validar</button>
+                                    <button type="button" class="btn btn-secondary" disabled id="confirmarNick">Confirmar</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{/perfil}}
+{{/editarPerfil}}
 <div class="bg-jugar">
     <section class="container text-center text-white text-shadow">
         <h1 class="titulo-partida py-5">MI PERFIL</h1>
@@ -12,8 +39,13 @@
             <div class="row pt-5" >
                 <div class="col-md-4">
                     {{#perfil}}
-                        <p id="nUsuario"><strong>Usuario:</strong> {{nombreUsuario}}</p>
-                        <p><strong>Nombre:</strong> {{nombre}}</p>
+                        <p id="nUsuario"><strong>Usuario:</strong> {{nombreUsuario}}
+                        {{#editarPerfil}}
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+                        {{/editarPerfil}}</p>
+                        <p><strong>Nombre:</strong> {{nombre}} </p>
                         <p><strong>Fecha Nacimiento:</strong> {{f_nacimiento}}</p>
                         <p><strong>Genero:</strong> {{descr}}</p>
                         <p><strong>Miembro desde:</strong> {{f_registro}}</p>
@@ -65,7 +97,7 @@
             <a href="/" class="btn-yolose p-3 w-50 m-auto">Ir al incio</a>
         </div>
 
-        <!--<a href="/" class="btn-yolose p-3 my-5 w-50 m-auto">Ir al incio</a>-->
+
     </section>
 </div>
 

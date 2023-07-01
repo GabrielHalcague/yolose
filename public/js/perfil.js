@@ -22,7 +22,7 @@ $(document).ready(function () {
     });
 
 
-    /*$('#validarNick').click(function () {
+    $('#validarNick').click(function () {
         $('#confirmarNick').attr("disabled", "disabled");
         $('#nuevoNickOculto').val($('#nuevoNick').val());
 
@@ -71,6 +71,6 @@ $(document).ready(function () {
                 }
             }
         })
-    });*/
+    });
 });
 
