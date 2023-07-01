@@ -102,6 +102,40 @@ class AdministradorModel
 
 ////////////////////////////////// USUARIO//////////////////////////////////
     public function getDatosDelUsuario($username){
+        $mysqli = new mysqli("localhost", "root", "", "yolose2","3306");
+
+        try {
+
+         // throw new Exception('Error  AdministradorModel metodo getDatosDelUsuario.');
+
+            if (mysqli_connect_errno()) {
+                echo "Falló la conexión: %s\n", mysqli_connect_error();
+                exit();
+            }
+
+            $username = $mysqli->real_escape_string($username);
+
+            $resultado = $mysqli->query("SELECT u.id,
+                                  u.nombre, u.apellido, u.correo, u.password, u.activo,
+                                  u.nombreUsuario, u.f_nacimiento, u.f_registro, u.fotoPerfil, u.coordenadas, g.descr, r.descr AS 'rol'               
+                               FROM usuario u JOIN genero g ON u.generoId = g.id
+                                  JOIN rol_usuario ru ON u.id = ru.idUs
+                                  JOIN rol r ON r.id = ru.idRol
+                               WHERE u.nombreUsuario = ('$username')");
+
+            if ($resultado === false || $resultado->num_rows === 0) {
+                return null;
+            }
+
+            $data = $resultado->fetch_assoc();
+            $resultado->free();
+            return $data;
+        }
+        finally {
+            $mysqli->close();
+        }
+
+  /*
         $sql = "SELECT u.id,
                        u.nombre,
                        u.apellido,
@@ -120,6 +154,7 @@ class AdministradorModel
                                JOIN rol r on r.id = ru.idRol
                 WHERE u.nombreUsuario = '$username'";
         return $this->database->query_row($sql);
+*/
     }
 
     public function getTrampitasAcumuladasPorElUsuario($usuarioId ,$filtro, $f_inicio, $f_fin){
@@ -144,6 +179,22 @@ historialpartidas where idUs =".$usuarioId." and ".$campoFiltro." between ".$arr
         return  $this->EjecutarConsulta($sql);
 
     }
+
+    public function setCambiarRolPorNombreUsuario($nombreUsuario, $rol){
+
+        try {
+            $sql = "SELECT id FROM usuario WHERE nombreUsuario = '".$nombreUsuario."';";
+            $idUsuario = $this->database->SoloValorCampo($sql);
+            $sql = "UPDATE rol_usuario SET idRol = ".$rol." WHERE idUs = ".$idUsuario.";";
+            $this->database->execute($sql);
+        } catch (DatabaseException $e) {
+            echo "Error en la base de datos: " . $e->getMessage();
+        } catch (Exception $e) {
+
+            echo "Error: " . $e->getMessage();
+        }
+    }
+
 
     ///////////////////////////// ///////////////////////////////////////////////////
     public function arrayFiltroFechas($filtro ,$campoFiltro, $f_inicio, $f_fin): array

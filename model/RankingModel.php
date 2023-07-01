@@ -11,11 +11,10 @@ class RankingModel
 
     public function getTop10PorTipoDePartida($tipo)
     {
-        $sql = " select u.nombreUsuario, u.fotoPerfil, count(*) as puntaje , hp.n_partida
-                from historialPartidas hp join usuario u on u.id = hp.idUs
-            where hp.estado = 1 and hp.tipoPartida= '$tipo'
-            group by hp.n_partida, u.nombreUsuario
-            order by  count(*) desc
+        $sql = "select * from (
+select distinct (idUs), puntaje from(
+select idUs,count(n_partida) as puntaje from historialpartidas where estado= 1 and tipoPartida = ".$tipo." group by n_partida, idUs order by puntaje desc)
+as sub group by idUs) as sub2 join usuario where  sub2.idUs = usuario.id order by puntaje desc
             limit 10";
         return $this->database->query($sql);
     }

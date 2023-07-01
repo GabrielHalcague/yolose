@@ -101,6 +101,7 @@ $('#consultar').click(function () {
             var data = JSON.parse(response)
             $("#resultado").text('');
            // console.log(data);
+            $("#canvasDiv").show();
             crearGrafico(data);
             $("#generatePDF").removeAttr('disabled');
             generarTabla(data);

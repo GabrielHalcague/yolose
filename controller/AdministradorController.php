@@ -15,14 +15,15 @@ class AdministradorController
         $this->Dompdf =$pdf;
 
     }
-    public function list( $data = null){
+    public function list($data = null){
         if(session::get("rol") !="Administrador" ){
             Header::redirect("/");
         }
+
         $data ["Ingresos"] = $this->AdministradorModel->getCantidadDeTrampasVendidasPorFecha( 'm', null, null)[0]['cantidad'];
         $data ["nuevosUsuariosMes"] = $this->AdministradorModel->getCantidadDeUsuariosNuevosPorFecha('m')[0]['cantidad'];
-
         $data ["preguntasNuevasDelMes"] = $this->AdministradorModel->getCantidadDePreguntasDisponiblesPorFecha('m', null, null)[0]['cantidad'];
+
         $data ["administradorJS"] = true;
         return $this->renderer->render("administrador",$data);
     }
@@ -72,7 +73,7 @@ class AdministradorController
                 break;
         }
           echo json_encode($data);
-          // throw new Exception("Este es un mensaje de error.");
+         // throw new Exception("Este es un mensaje de error.");
         }
         catch (Exception $e) {
             http_response_code(503);
@@ -81,21 +82,41 @@ class AdministradorController
         }
     }
 
+    public function cambiarRol(){
+        if(session::get("rol") !="Administrador" ){
+            Header::redirect("/");
+        }
+        $nombreUsuario = $_GET['nombreUsuario'];
+        $rol = $_GET['rol'];
+        $this->AdministradorModel->setCambiarRolPorNombreUsuario($nombreUsuario, $rol);
+        $data["usuario"] = $this->AdministradorModel->getDatosDelUsuario($nombreUsuario);
+        $this->list($data);
+    }
+
     public function buscarUsuario(){
         if(session::get("rol") !="Administrador" ){
             Header::redirect("/");
         }
-        $data=[];
-        if(!isset($_POST['usuario']) && empty($_POST['usuario'])){
+
+        if(empty($_POST['usuario'])){
             $data['error']= 'formato Invalido';
-            $this->renderer->render('administrador', $data);
+            $this->list($data);
         }
+
         $username = $_POST['usuario'];
-        $data["usuario"] = $this->AdministradorModel->getDatosDelUsuario($username);
-        if(is_null($data["usuario"])){
-            $data['error']= 'Usuario no Encontrado';
+
+        try {
+            $data["usuario"] = $this->AdministradorModel->getDatosDelUsuario($username);
+
+            if (is_null($data["usuario"])) {
+                $data['error'] = 'Usuario no Encontrado';
+            }
+
+            $this->list($data);
+        } catch (Exception $e) {
+            $data['error'] = 'exepcion en bd: ' . $e->getMessage();
+            $this->list($data);
         }
-        $this->list($data);
     }
 
     
@@ -107,31 +128,19 @@ class AdministradorController
             $imageData = $_POST['imageData'];
             $titulo = $_POST['consulta'];
             $tabla =  json_decode($_POST['datosTabla'], true );
-
             $tmpFilePath = 'public/imagepdf.png';
             file_put_contents($tmpFilePath, base64_decode(preg_replace('#^data:image/\w+;base64,#i', '', $imageData)));
             // Generar el PDF utilizando Dompdf
 
-            $html = '<html><body>';
-            $html .= '<style>';
-            $html .= 'table { width: 100%; border-collapse: collapse; }';
-            $html .= 'th, td { border: 1px solid black; padding: 8px; }';
-            $html .= '</style>';
-            $html .= '<h2>' . $titulo . '</h2>';
-            $html .= '<img src="' . $tmpFilePath . '" style="width: 100%;">';
-            $html .= '<br><table><tr><th>Fecha</th><th>Descripcion</th><th>Cantidad</th></tr>';
-            foreach ($tabla as $row) {
-                if (!empty($row)) {
-                $html .= '<tr>';
-                $html .= '<td>' . $row["columna0"] .'</td>';
-                $html .= '<td>' . $row["columna1"]  . '</td>';
-                $html .= '<td>' . $row["columna2"] . '</td>';
-                $html .= '</tr>';
-                }
-            }
-            $html .= '</table></body></html>';
+            $html = file_get_contents('public/template/estadisticas_view.mustache');
+            $data ['titulo']=$titulo;
+            $data ['imagen']=$tmpFilePath;
+            $data ['tabla']=$tabla;
 
-            $this->Dompdf->loadHtml($html);
+            $mustache = new Mustache_Engine();
+            $htmlRenderizado = $mustache->render($html, $data);
+
+            $this->Dompdf->loadHtml($htmlRenderizado);
             $this->Dompdf->setPaper('A4', 'portrait');
             $this->Dompdf->render();
             $this->Dompdf->stream('Estadistica '.date('Y-m-d').'.pdf', ['Attachment' => true]);
