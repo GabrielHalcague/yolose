@@ -16,6 +16,16 @@ class PartidaController
             $this->salir();
         }
         $tipoPartida = $_GET['tipoPartida'] ?? '';
+
+        if ($tipoPartida == '') {
+            $tipoPartida = $_POST['tipoPartida'] ?? '';
+            if(!empty($_POST['tipoPartida'])){
+                Session::set('contrincante', $_POST['contrincante']);
+                header("Location: /partida&tipoPartida=3");
+                exit;
+            }
+        }
+
         if ($tipoPartida == '') {
             Header::redirect("/");
         }
@@ -39,6 +49,10 @@ class PartidaController
         if($tipoPartida == '2'){
             $data['tipoPartida'] = Session::get('tipoPartida');
         }
+
+        if($tipoPartida == '3' && !empty(Session::get('contrincante'))){
+            $data['tipoPartida'] = Session::get('tipoPartida');
+           }
 
         if(empty(Session::get('respondio'))){
             Logger::info("EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR O COMIENZO JUEGO");
@@ -115,10 +129,19 @@ class PartidaController
         $tokenPartida = Session::get('tokenPartida');
         $tipoPartida = Session::get('tipoPartida');
         $scoreUsuario = $this->partidaModel->obtenerScoreDelUsuario($tokenPartida, Session::get('username'));
+
         $data = [
             'score' => $scoreUsuario['puntos'],
             'tipo' => $tipoPartida
         ];
+        if ($tipoPartida == 3) {
+            $contrincante = Session::get('contrincante');
+            $idPlayer =   Session::get('idUsuario');
+            $this->partidaModel->setHistorialPvP($tokenPartida,$idPlayer ,$scoreUsuario['puntos'], $contrincante);
+            $resultado = "Esperando al otor player";
+            $data['resultado'] = $resultado;
+            Session::set('estadoPartida',0);
+        }
 
         if ($tipoPartida == 2) {
             $maxPregBot = $this->partidaModel->obtenerPreguntasParaUsuario(-1);
@@ -155,6 +178,8 @@ class PartidaController
     public
     function salir(): void
     {
+        Session::deleteValue('contrincante');
+
         Session::deleteValue('perdiste');
         Session::deleteValue('tokenPartida');
         Session::deleteValue('tipoPartida');

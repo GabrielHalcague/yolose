@@ -1,0 +1,451 @@
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: -34.660461, -58.575087
+[2023-07-02][INFO]EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR O COMIENZO JUEGO
+[2023-07-02][INFO]COMIENZA LA VERIFICACIÓN DE LA RESPUESTA
+[2023-07-02][INFO]LA DIFERENCIA ENTRE LA MUESTRA Y RESPUESTA ES: 2
+[2023-07-02][INFO][CONTESTO LA PREGUNTA EN EL TIEMPO LIMITE DE LOS 10 SEG]
+[2023-07-02][INFO][RESPUESTA INCORRECTA]
+[2023-07-02][ERROR]USERNAME OBTENIDO: admin
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: admin
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: -34.660461, -58.575087
+[2023-07-02][INFO]EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR O COMIENZO JUEGO
+[2023-07-02][INFO]COMIENZA LA VERIFICACIÓN DE LA RESPUESTA
+[2023-07-02][INFO]LA DIFERENCIA ENTRE LA MUESTRA Y RESPUESTA ES: 1
+[2023-07-02][INFO][CONTESTO LA PREGUNTA EN EL TIEMPO LIMITE DE LOS 10 SEG]
+[2023-07-02][INFO][RESPUESTA INCORRECTA]
+[2023-07-02][ERROR]USERNAME OBTENIDO: admin
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: -34.660461, -58.575087
+[2023-07-02][INFO]EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR O COMIENZO JUEGO
+[2023-07-02][INFO]COMIENZA LA VERIFICACIÓN DE LA RESPUESTA
+[2023-07-02][ERROR]CANTIDAD DE TRAMPAS ACTUALES ES: 0
+[2023-07-02][INFO]LA DIFERENCIA ENTRE LA MUESTRA Y RESPUESTA ES: 2
+[2023-07-02][INFO][CONTESTO LA PREGUNTA EN EL TIEMPO LIMITE DE LOS 10 SEG]
+[2023-07-02][INFO][SE UTILIZO TRAMPA]
+[2023-07-02][INFO]EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR O COMIENZO JUEGO
+[2023-07-02][INFO]COMIENZA LA VERIFICACIÓN DE LA RESPUESTA
+[2023-07-02][INFO]LA DIFERENCIA ENTRE LA MUESTRA Y RESPUESTA ES: 1
+[2023-07-02][INFO][CONTESTO LA PREGUNTA EN EL TIEMPO LIMITE DE LOS 10 SEG]
+[2023-07-02][INFO][RESPUESTA INCORRECTA]
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: admin
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: -34.660461, -58.575087
+[2023-07-02][INFO]EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR O COMIENZO JUEGO
+[2023-07-02][INFO]COMIENZA LA VERIFICACIÓN DE LA RESPUESTA
+[2023-07-02][INFO]LA DIFERENCIA ENTRE LA MUESTRA Y RESPUESTA ES: 1
+[2023-07-02][INFO][CONTESTO LA PREGUNTA EN EL TIEMPO LIMITE DE LOS 10 SEG]
+[2023-07-02][INFO][RESPUESTA INCORRECTA]
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: admin
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: -34.660461, -58.575087
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][INFO]Ejecutando query: select idp2 from historialpvp where token = '64a0946506d36';
+[2023-07-02][INFO]Ejecutando query: UPDATE historialpvp SET resultadop2 = 0, ganador = idp1 WHERE token = 64a0946506d36;
+[2023-07-02][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-07-02][INFO]Ejecutando query: select MAX(contador) as maxRespuetasC from (SELECT idUs, n_partida, COUNT(*) AS contador
+                FROM historialPartidas hp where idUs='1' and hp.estado=1
+                GROUP BY idUs, n_partida) as subconsulta
+[2023-07-02][INFO]Ejecutando query:  select u.id, u.nombreUsuario, count(*) as puntaje , hp.n_partida
+                from historialPartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 10
+[2023-07-02][INFO]Ejecutando query:  select hp.f_partida, u.nombreUsuario,
+            count(*) as sumaPreguntasContestadas , hp.n_partida,t.descripcion
+                from historialPartidas hp join usuario u on u.id = hp.idUs
+                join tipoPartida t on t.Id = hp.tipoPartida
+            where hp.estado = 1 and hp.idUs= '1'
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(hp.f_partida) desc
+[2023-07-02][INFO]Ejecutando query: SELECT  h.fecha,
+                (SELECT nombre FROM usuario WHERE id = h.idp1) AS idp1, h.resultadop1,
+                (SELECT nombre FROM usuario WHERE id = h.idp2) AS idp2,  h.resultadop2 ,
+                (SELECT nombre FROM usuario WHERE id = h.ganador) AS ganador
+            FROM historialpvp h WHERE h.idp1 = 1 or h.idp2 = 1 AND h.ganador != 0;
+[2023-07-02][INFO]Ejecutando query: select token,  fecha, (SELECT nombre FROM usuario WHERE id = idp1) AS idp1, resultadop1  from historialpvp where idp2 = 1 and ganador =0;
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][INFO]Ejecutando query: SELECT coordenadas from usuario u WHERE u.nombreUsuario = 'usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>'
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][INFO]Ejecutando query: SELECT u.id,
+                       u.nombre,
+                       u.apellido,
+                       u.correo,
+                       u.password,
+                       u.activo,
+                       u.nombreUsuario,
+                       u.f_nacimiento,
+                       u.f_registro,
+                       u.fotoPerfil,
+                       u.coordenadas,
+                       g.descr,
+                       r.descr 'rol'
+                FROM usuario u JOIN genero g ON u.generoId = g.id
+                               JOIN rol_usuario ru on u.id = ru.idUs
+                               JOIN rol r on r.id = ru.idRol
+                WHERE u.nombreUsuario = 'usuario'
+[2023-07-02][INFO]Ejecutando query: select MAX(contador) as maxRespuetasC from (SELECT idUs, n_partida, COUNT(*) AS contador
+                FROM historialPartidas hp where idUs='1' and hp.estado=1
+                GROUP BY idUs, n_partida) as subconsulta
+[2023-07-02][INFO]Ejecutando query:  select u.id, u.nombreUsuario, count(*) as puntaje , hp.n_partida
+                from historialPartidas hp join usuario u on u.id = hp.idUs
+            where hp.estado = 1
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(*) desc
+            limit 10
+[2023-07-02][INFO]Ejecutando query:  select hp.f_partida, u.nombreUsuario,
+            count(*) as sumaPreguntasContestadas , hp.n_partida,t.descripcion
+                from historialPartidas hp join usuario u on u.id = hp.idUs
+                join tipoPartida t on t.Id = hp.tipoPartida
+            where hp.estado = 1 and hp.idUs= '1'
+            group by hp.n_partida, u.nombreUsuario
+            order by  count(hp.f_partida) desc
+[2023-07-02][INFO]Ejecutando query: SELECT  h.fecha,
+                (SELECT nombre FROM usuario WHERE id = h.idp1) AS idp1, h.resultadop1,
+                (SELECT nombre FROM usuario WHERE id = h.idp2) AS idp2,  h.resultadop2 ,
+                (SELECT nombre FROM usuario WHERE id = h.ganador) AS ganador
+            FROM historialpvp h WHERE h.idp1 = 1 or h.idp2 = 1 AND h.ganador != 0;
+[2023-07-02][INFO]Ejecutando query: select token,  fecha, (SELECT nombre FROM usuario WHERE id = idp1) AS idp1, resultadop1  from historialpvp where idp2 = 1 and ganador =0;
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][INFO]Ejecutando query: SELECT coordenadas from usuario u WHERE u.nombreUsuario = 'usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>'
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][INFO]Ejecutando query: select idp2 from historialpvp where token = '64a0946506d36';
+[2023-07-02][INFO]Ejecutando query: UPDATE historialpvp SET resultadop2 = 0, ganador = idp1 WHERE token = 64a0946506d36;

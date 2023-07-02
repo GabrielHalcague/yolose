@@ -236,4 +236,10 @@ class PartidaModel
         $sql= "INSERT INTO reportePregunta(idPregunta,idUsuario) values('$idPregunta','$idUsuario')";
        $this->database->execute($sql);
     }
+
+    public function setHistorialPvP($tokenPartida,$idPlayer ,$scoreUsuario, $contrincante)
+    {
+        $sql = "INSERT INTO historialpvp (token, idp1, resultadop1, idp2, ganador) VALUES ('$tokenPartida','$idPlayer','$scoreUsuario', '$contrincante',0);";
+            $this->database->execute($sql);
+    }
 }

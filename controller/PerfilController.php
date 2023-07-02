@@ -24,6 +24,7 @@ class PerfilController
         $data["perfil"]= $this->userModel->getUsuarioByUsername($nombreUsuario);
         $idUsuario=$data["perfil"]["id"];
         $data = $this->datosComunesParaElPerfil($idUsuario, $data);
+        $data["PvPpendientes"] = $this->perfilModel->obtenerHistorialPvPPendientesDelUsuario($idUsuario);
         $data['editarPerfil'] = true;
         $data['perfilJS'] = true;
         $data['mapa'] = true;
@@ -32,7 +33,10 @@ class PerfilController
 
     }
     public function usuario(){
-        $username = $_GET['user'];
+        $username = $_GET['usuarioBuscado'];
+        if($username == Session::get('username')){
+            Header::redirect("/");
+        }
         $data ["perfil"] = $this->userModel->getUsuarioByUsername($username);
         if(empty($data ["perfil"] )){
             Header::redirect("/");
@@ -102,7 +106,7 @@ class PerfilController
         }
         echo json_encode($data);
     }
-  
+
   private function validarFormatoNick($nickName){
         if(strlen($nickName)<3 ||strlen($nickName)>30 || $nickName == null){
             return false;
@@ -115,9 +119,19 @@ class PerfilController
         $data["maximoRespuestasCorrectas"] = $this->perfilModel->getMAximoRespuestasCorrectasPorIdUsuario($idUsuario);
         $data["rank"] = $this->perfilModel->getRankingGlobalDelUsuario($data["perfil"]["id"]);
         $data["historialPartidas"] = $this->perfilModel->obtenerHistorialPartidasUsuario($idUsuario);
+        $data["historialPvP"] = $this->perfilModel->obtenerHistorialPvPDelUsuario($idUsuario);
         $data["rutaQR"] = $this->generateQR($data["perfil"]["nombreUsuario"]);
         return $data;
     }
 
+    public function rechazarPartida(){
+        if (!Session::isLogged()) {
+            Header::redirect('/');
+        }
+        $token = $_GET['token'];
+        $idUsuario= Session::get('idUsuario');
+        $this->perfilModel->rechazarPartidaPorToken($token,$idUsuario);
 
+        $this->list();
+    }
 }
