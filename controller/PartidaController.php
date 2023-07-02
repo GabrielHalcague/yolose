@@ -21,6 +21,13 @@ class PartidaController
             $tipoPartida = $_POST['tipoPartida'] ?? '';
             if(!empty($_POST['tipoPartida'])){
                 Session::set('contrincante', $_POST['contrincante']);
+
+                /////////// carga de token de partida 3
+                if (!empty($_POST['token'])) {
+                    Session::set('tokenPartida', $_POST['token']);
+                }
+                /////////////////////
+
                 header("Location: /partida&tipoPartida=3");
                 exit;
             }
@@ -128,6 +135,7 @@ class PartidaController
     {
         $tokenPartida = Session::get('tokenPartida');
         $tipoPartida = Session::get('tipoPartida');
+        Header::debugExit($tipoPartida);
         $scoreUsuario = $this->partidaModel->obtenerScoreDelUsuario($tokenPartida, Session::get('username'));
 
         $data = [

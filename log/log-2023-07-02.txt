@@ -449,3 +449,99 @@
 [2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
 [2023-07-02][INFO]Ejecutando query: select idp2 from historialpvp where token = '64a0946506d36';
 [2023-07-02][INFO]Ejecutando query: UPDATE historialpvp SET resultadop2 = 0, ganador = idp1 WHERE token = 64a0946506d36;
+[2023-07-02][ERROR]USERNAME OBTENIDO: admin
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][INFO]EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR O COMIENZO JUEGO
+[2023-07-02][INFO]COMIENZA LA VERIFICACIÓN DE LA RESPUESTA
+[2023-07-02][INFO]LA DIFERENCIA ENTRE LA MUESTRA Y RESPUESTA ES: 1
+[2023-07-02][INFO][CONTESTO LA PREGUNTA EN EL TIEMPO LIMITE DE LOS 10 SEG]
+[2023-07-02][INFO][RESPUESTA CORRECTA]
+[2023-07-02][INFO]EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR O COMIENZO JUEGO
+[2023-07-02][INFO]COMIENZA LA VERIFICACIÓN DE LA RESPUESTA
+[2023-07-02][INFO]LA DIFERENCIA ENTRE LA MUESTRA Y RESPUESTA ES: 5
+[2023-07-02][INFO][CONTESTO LA PREGUNTA EN EL TIEMPO LIMITE DE LOS 10 SEG]
+[2023-07-02][INFO][RESPUESTA INCORRECTA]
+[2023-07-02][ERROR]USERNAME OBTENIDO: admin
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: admin
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: -34.660461, -58.575087
+[2023-07-02][INFO]EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR O COMIENZO JUEGO
+[2023-07-02][INFO]COMIENZA LA VERIFICACIÓN DE LA RESPUESTA
+[2023-07-02][INFO]LA DIFERENCIA ENTRE LA MUESTRA Y RESPUESTA ES: 1
+[2023-07-02][INFO][CONTESTO LA PREGUNTA EN EL TIEMPO LIMITE DE LOS 10 SEG]
+[2023-07-02][INFO][RESPUESTA INCORRECTA]
+[2023-07-02][ERROR]USERNAME OBTENIDO: admin
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][INFO]EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR O COMIENZO JUEGO
+[2023-07-02][INFO]COMIENZA LA VERIFICACIÓN DE LA RESPUESTA
+[2023-07-02][INFO]LA DIFERENCIA ENTRE LA MUESTRA Y RESPUESTA ES: 3
+[2023-07-02][INFO][CONTESTO LA PREGUNTA EN EL TIEMPO LIMITE DE LOS 10 SEG]
+[2023-07-02][INFO][RESPUESTA INCORRECTA]
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][INFO]EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR O COMIENZO JUEGO
+[2023-07-02][INFO]COMIENZA LA VERIFICACIÓN DE LA RESPUESTA
+[2023-07-02][INFO]LA DIFERENCIA ENTRE LA MUESTRA Y RESPUESTA ES: 1
+[2023-07-02][INFO][CONTESTO LA PREGUNTA EN EL TIEMPO LIMITE DE LOS 10 SEG]
+[2023-07-02][INFO][RESPUESTA INCORRECTA]
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][ERROR]USERNAME OBTENIDO: admin
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: -34.660461, -58.575087
+[2023-07-02][ERROR]USERNAME OBTENIDO: admin
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: -34.660461, -58.575087
+[2023-07-02][INFO]EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR O COMIENZO JUEGO
+[2023-07-02][INFO]COMIENZA LA VERIFICACIÓN DE LA RESPUESTA
+[2023-07-02][INFO]LA DIFERENCIA ENTRE LA MUESTRA Y RESPUESTA ES: 3
+[2023-07-02][INFO][CONTESTO LA PREGUNTA EN EL TIEMPO LIMITE DE LOS 10 SEG]
+[2023-07-02][INFO][RESPUESTA INCORRECTA]
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][INFO]EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR O COMIENZO JUEGO
+[2023-07-02][INFO]COMIENZA LA VERIFICACIÓN DE LA RESPUESTA
+[2023-07-02][INFO]LA DIFERENCIA ENTRE LA MUESTRA Y RESPUESTA ES: 2
+[2023-07-02][INFO][CONTESTO LA PREGUNTA EN EL TIEMPO LIMITE DE LOS 10 SEG]
+[2023-07-02][INFO][RESPUESTA INCORRECTA]
+[2023-07-02][ERROR]USERNAME OBTENIDO: usuario
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </button>
+[2023-07-02][ERROR]COORDENADAS OBTENIDAS: 
+[2023-07-02][INFO]EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR O COMIENZO JUEGO
+[2023-07-02][INFO]COMIENZA LA VERIFICACIÓN DE LA RESPUESTA
+[2023-07-02][INFO]LA DIFERENCIA ENTRE LA MUESTRA Y RESPUESTA ES: 1
+[2023-07-02][INFO][CONTESTO LA PREGUNTA EN EL TIEMPO LIMITE DE LOS 10 SEG]
+[2023-07-02][INFO][RESPUESTA INCORRECTA]
