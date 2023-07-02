@@ -248,8 +248,8 @@ class PartidaModel
         }
         if ($var != "empate" && $var != "0"  ) {
             $sql ="select nombreUsuario from usuario where id = ".$var.";";
-            $var2 = $this->database->SoloValorCampo($sql);
-            return "El ganador Fue ". $var2;
+            $nombre= $this->database->SoloValorCampo($sql);
+            return "El ganador Fue ". $nombre.".";
         }
     }
 
