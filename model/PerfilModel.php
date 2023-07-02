@@ -82,12 +82,13 @@ class PerfilModel
 
 
     public function rechazarPartidaPorToken($token,$idUsuario){
-        $sql= "select idp2 from historialpvp where token = '$token';";
+        $sql= "select idp2 from historialpvp where token = '".$token."';";
         $validarUsuario = $this->database->SoloValorCampo($sql);
 
         if($validarUsuario === $idUsuario){
-            $sql= "UPDATE historialpvp SET resultadop2 = 0, ganador = idp1 WHERE token = ".$token.";";
-             $this->database->query($sql);
+
+            $sql= "UPDATE historialpvp SET resultadop2 = 0, ganador = idp1 WHERE token = '".$token."';";
+             $this->database->execute($sql);
         }
     }
 

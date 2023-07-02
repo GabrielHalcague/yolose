@@ -132,6 +132,6 @@ class PerfilController
         $idUsuario= Session::get('idUsuario');
         $this->perfilModel->rechazarPartidaPorToken($token,$idUsuario);
 
-        $this->list();
+        Header::redirect("/perfil");
     }
 }

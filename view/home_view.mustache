@@ -5,9 +5,12 @@
             url: 'notificaciones/notificaciones',
             dataType: 'json',
             success: function(response) {
-                var numeroNotificaciones = response.length;
-                // Muestra el número de notificaciones en el HTML
-                $('#notificaciones').text(numeroNotificaciones);
+                var data = JSON.parse(response)
+                if (data > 0) {
+                    $('#notificaciones').text(data);
+                } else {
+                    $('#notificaciones').empty();
+                }
             }
         });
     }
