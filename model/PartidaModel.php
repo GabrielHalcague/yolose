@@ -241,17 +241,18 @@ class PartidaModel
     {
         $sql ="select 1 from historialpvp where token = '".$tokenPartida."';";
         $var = $this->database->SoloValorCampo($sql);
-        if($var !=1){
-
-        $sql = "INSERT INTO historialpvp (token, idp1, resultadop1, idp2, ganador) VALUES ('$tokenPartida','$idPlayer','$scoreUsuario', '$contrincante',0);";
+        if(is_null($var)){
+        $sql = "INSERT INTO historialpvp (token, idp1, resultadop1, idp2, ganador) VALUES ('$tokenPartida','$idPlayer','$scoreUsuario', '$contrincante','0');";
             $this->database->execute($sql);
-        }else
+        }
+        else
         {
-            $sql = "update  historialpvp set ( resultadop2 ='$scoreUsuario', idp2 ='$contrincante') where token = '".$tokenPartida."';";
+            $sql = "update  historialpvp set  resultadop2 ='$scoreUsuario' where token = '".$tokenPartida."';";
             $this->database->execute($sql);
 
             $sql ="select resultadop1 from historialpvp where token = '".$tokenPartida."';";
             $jugador1 = $this->database->SoloValorCampo($sql);
+
             $sql ="select resultadop2 from historialpvp where token = '".$tokenPartida."';";
             $jugador2 = $this->database->SoloValorCampo($sql);
             $var3="";
@@ -264,7 +265,7 @@ class PartidaModel
             }
 
 
-        $sql = "UPDATE historialpvp SET  ganador = $var3 WHERE token = '64a0946506d36';";
+        $sql = "UPDATE historialpvp SET  ganador = '".$var3."' WHERE token = '".$tokenPartida."'";
         $this->database->execute($sql);
         }
     }

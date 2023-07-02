@@ -76,7 +76,7 @@ class PerfilModel
 
     public function obtenerHistorialPvPPendientesDelUsuario($idUsuario){
 
-        $sql= "select token,  fecha, (SELECT nombre FROM usuario WHERE id = idp1) AS idp1, resultadop1  from historialpvp where idp2 = ".$idUsuario." and ganador =0;";
+        $sql= "select token,  fecha, (SELECT nombre FROM usuario WHERE id = idp1) AS idp1, resultadop1  from historialpvp where idp2 = ".$idUsuario." and ganador = '0';";
         return $this->database->query($sql);
     }
 

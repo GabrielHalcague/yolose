@@ -9,7 +9,7 @@ class notificacionesModel
         $this->database = $database;
     }
     public function getCantidadDEPartidasPendientesPorIdUsuario($idUsuario){
-    $sql="select count(*) from historialpvp where idp2= ".$idUsuario." and ganador =0;";
+    $sql="select count(*) from historialpvp where idp2= ".$idUsuario." and ganador = '0';";
     return $this->database->SoloValorCampo($sql);
 
     }
