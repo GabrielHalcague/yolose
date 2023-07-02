@@ -35,7 +35,7 @@ class PerfilController
     public function usuario(){
         $username = $_GET['usuarioBuscado'];
         if($username == Session::get('username')){
-            Header::redirect("/");
+            Header::redirect("/perfil");
         }
         $data ["perfil"] = $this->userModel->getUsuarioByUsername($username);
         if(empty($data ["perfil"] )){
