@@ -1,21 +1,14 @@
-{{#ok}}
-    <div class="alert alert-success" role="alert">
-        <strong>{{ok}}</strong>
-        <script>function redireccionarPagina() {
-            window.location = "/login";
-        }
-        setTimeout("redireccionarPagina()", 5000);</script>
-    </div>
-    <div> Seras Redirigido en 5 segundos</div>
-{{/ok}}
-{{#error}}
+<div class="bg-inicio d-flex flex-column justify-content-around align-items-center h-100">
+    {{#error}}
     <div class="alert alert-danger" role="alert">
         <strong>{{error}}</strong>
     </div>
-{{/error}}
-{{#id}}
-<section class="container">
-    <h1 class="text-center">Bienvenido a Yolose {{username}}</h1>
-    <p>Se le enviará un email para que pueda verificar su cuenta</p>
-</section>
-{{/id}}
+    {{/error}}
+    {{#id}}
+    <section class="container text-center text-white">
+        <h1 class="text-logo">Bienvenido a Yolose {{username}}</h1>
+        <p>Se le enviará un <span class="text-success fw-bold">email</span> para que pueda verificar su cuenta</p>
+        <a href="/" class="btn-yolose p-3 w-50 m-auto">Ir al incio</a>
+    </section>
+    {{/id}}
+</div>

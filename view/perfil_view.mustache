@@ -1,29 +1,30 @@
 <!-- Button trigger modal -->
 {{#editarPerfil}}
-    <!-- Modal -->
-    {{#perfil}}
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <article class="p-5 bg-dark-subtle rounded">
-                            <div class="d-flex justify-content-center">
-                                <input id="idUsuario" name="prodId" type="hidden" value="{{id}}">
-                                <input id="nuevoNickOculto" name="prodId" type="hidden" value="">
-                                <div>
-                                    <label for="usuario" class="form-label">Usuario : {{nombreUsuario}}</label>
-                                    <input type="text" name="usuario" id="nuevoNick" class="form-control"/>
-                                    <h5 id="nickNameEstado"></h5>
-                                    <button type="button" class="btn btn-success" id="validarNick">Validar</button>
-                                    <button type="button" class="btn btn-secondary" disabled id="confirmarNick">Confirmar</button>
-                                </div>
-                            </div>
-                        </article>
+<!-- Modal -->
+{{#perfil}}
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <article class="p-5 bg-dark-subtle rounded">
+                    <div class="d-flex justify-content-center">
+                        <input id="idUsuario" name="prodId" type="hidden" value="{{id}}">
+                        <input id="nuevoNickOculto" name="prodId" type="hidden" value="">
+                        <div>
+                            <label for="usuario" class="form-label">Usuario : {{nombreUsuario}}</label>
+                            <input type="text" name="usuario" id="nuevoNick" class="form-control" />
+                            <h5 id="nickNameEstado"></h5>
+                            <button type="button" class="btn btn-success" id="validarNick">Validar</button>
+                            <button type="button" class="btn btn-secondary" disabled
+                                id="confirmarNick">Confirmar</button>
+                        </div>
                     </div>
-                </div>
+                </article>
             </div>
         </div>
-    {{/perfil}}
+    </div>
+</div>
+{{/perfil}}
 {{/editarPerfil}}
 <div class="bg-jugar">
     <section class="container text-center text-white text-shadow">
@@ -33,33 +34,36 @@
             <button class="tablinks text-white" onclick="openTab(event, 'Tab1')"><span>Perfil</span></button>
             <button class="tablinks text-white" onclick="openTab(event, 'Tab2')"><span>Historial Partida</span></button>
             <button class="tablinks text-white" onclick="openTab(event, 'Tab3')"><span>Historial PvP</span></button>
-                {{#editarPerfil}}
-            <button class="tablinks text-white" onclick="openTab(event, 'Tab4')"><span>Partidas Pendientes</span></button>
-                {{/editarPerfil}}
+            {{#editarPerfil}}
+            <button class="tablinks text-white" onclick="openTab(event, 'Tab4')"><span>Partidas
+                    Pendientes</span></button>
+            {{/editarPerfil}}
         </div>
 
         <div class="tabcontent" id="Tab1" style="display: block;">
-            <div class="row pt-5" >
+            <div class="row pt-5">
                 <div class="col-md-4">
                     {{#perfil}}
-                        <p id="nUsuario"><strong>Usuario:</strong> {{nombreUsuario}}
+                    <p><strong>Usuario:</strong> <span id="nUsuario">{{nombreUsuario}}</span>
                         {{#editarPerfil}}
-                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
-                                    <i class="bi bi-pencil-fill"></i>
-                                </button>
-                        {{/editarPerfil}}</p>
-                        <p><strong>Nombre:</strong> {{nombre}} </p>
-                        <p><strong>Fecha Nacimiento:</strong> {{f_nacimiento}}</p>
-                        <p><strong>Genero:</strong> {{descr}}</p>
-                        <p><strong>Miembro desde:</strong> {{f_registro}}</p>
-                        <p><strong>Estado:</strong> {{#activo}}  Activo {{/activo}} {{^activo}}  Inactivo {{/activo}}</p>
-                        <p><strong>Mejor Logro:</strong> {{maximoRespuestasCorrectas}} Preguntas Correctas</p>
-                        <p><strong>Ranking solitario :</strong> {{rank}}</p>
+                        <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal" id="myModal">
+                            <i class="bi bi-pencil-fill"></i>
+                        </button>
+                        {{/editarPerfil}}
+                    </p>
+                    <p><strong>Nombre:</strong> {{nombre}} </p>
+                    <p><strong>Fecha Nacimiento:</strong> {{f_nacimiento}}</p>
+                    <p><strong>Genero:</strong> {{descr}}</p>
+                    <p><strong>Miembro desde:</strong> {{f_registro}}</p>
+                    <p><strong>Estado:</strong> {{#activo}} Activo {{/activo}} {{^activo}} Inactivo {{/activo}}</p>
+                    <p><strong>Mejor Logro:</strong> {{maximoRespuestasCorrectas}} Preguntas Correctas</p>
+                    <p><strong>Ranking solitario :</strong> {{rank}}</p>
                     {{/perfil}}
                 </div>
                 <div class="col-md-4">
                     {{#perfil}}
-                        <img src="/public/img/{{fotoPerfil}}" class="img-fluid" style="max-height: 200px;">
+                    <img src="/public/img/{{fotoPerfil}}" class="img-fluid" style="max-height: 200px;">
                     {{/perfil}}
                     <div id="map" class="mt-5 mb-5" style="width: 100%; height: 100px;"></div>
                 </div>
@@ -69,7 +73,7 @@
 
                     <form class="d-flex justify-content-center form-yolose p-5" action="/partida" method="post">
                         <input type="hidden" name="tipoPartida" value="3">
-                    {{#perfil}}
+                        {{#perfil}}
                         <input type="hidden" name="contrincante" value="{{id}}">
                         {{/perfil}}
                         <button type="submit" class="btn-yolose p-3 w-50 m-auto">Desafiar</button>
@@ -82,16 +86,16 @@
 
         <div id="Tab2" class="tabcontent">
             <div class="mt-3 mb-5">
-                    <table class="table">
-                        <thead>
+                <table class="table">
+                    <thead>
                         <tr>
                             <th class="text-white">Fecha Partida</th>
                             <th class="text-white">Nombre de usuario</th>
                             <th class="text-white">Respuestas Correctas</th>
                             <th class="text-white">Tipo Partida</th>
                         </tr>
-                        </thead>
-                        <tbody>
+                    </thead>
+                    <tbody>
                         {{#historialPartidas}}
                         <tr>
                             <td class="text-white">{{f_partida}}</td>
@@ -100,56 +104,56 @@
                             <td class="text-white">{{descripcion}}</td>
                         </tr>
                         {{/historialPartidas}}
-                        </tbody>
-                    </table>
+                    </tbody>
+                </table>
             </div>
 
         </div>
         <div id="Tab3" class="tabcontent">
-        <div class="mt-3 mb-5">
+            <div class="mt-3 mb-5">
 
-            <table class="table">
-                <thead>
-                <tr>
-                    <th class="text-white">Fecha Partida</th>
-                    <th class="text-white">Jugador</th>
-                    <th class="text-white">Puntaje</th>
-                    <th class="text-white">Desafiante </th>
-                    <th class="text-white">Puntaje</th>
-                    <th class="text-white">Ganador</th>
-                </tr>
-                </thead>
-                <tbody>
-                {{#historialPvP}}
-                    <tr>
-                        <td class="text-white">{{fecha}}</td>
-                        <td class="text-white">{{idp1}}</td>
-                        <td class="text-white">{{resultadop1}}</td>
-                        <td class="text-white">{{idp2}}</td>
-                        <td class="text-white">{{resultadop2}}</td>
-                        <td class="text-white">{{ganador}}</td>
-                    </tr>
-                {{/historialPvP}}
-                </tbody>
-            </table>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th class="text-white">Fecha Partida</th>
+                            <th class="text-white">Jugador</th>
+                            <th class="text-white">Puntaje</th>
+                            <th class="text-white">Desafiante </th>
+                            <th class="text-white">Puntaje</th>
+                            <th class="text-white">Ganador</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#historialPvP}}
+                        <tr>
+                            <td class="text-white">{{fecha}}</td>
+                            <td class="text-white">{{idp1}}</td>
+                            <td class="text-white">{{resultadop1}}</td>
+                            <td class="text-white">{{idp2}}</td>
+                            <td class="text-white">{{resultadop2}}</td>
+                            <td class="text-white">{{ganador}}</td>
+                        </tr>
+                        {{/historialPvP}}
+                    </tbody>
+                </table>
+            </div>
         </div>
-    </div>
-    {{#editarPerfil}}
+        {{#editarPerfil}}
         <div id="Tab4" class="tabcontent">
             <div class="mt-3 mb-5">
 
                 <table class="table">
                     <thead>
-                    <tr>
-                        <th class="text-white">Fecha Partida</th>
-                        <th class="text-white">Desafiante</th>
-                        <th class="text-white">Puntaje</th>
-                        <th class="text-white">accion</th>
-                        <th class="text-white"></th>
-                    </tr>
+                        <tr>
+                            <th class="text-white">Fecha Partida</th>
+                            <th class="text-white">Desafiante</th>
+                            <th class="text-white">Puntaje</th>
+                            <th class="text-white">accion</th>
+                            <th class="text-white"></th>
+                        </tr>
                     </thead>
                     <tbody>
-                    {{#PvPpendientes}}
+                        {{#PvPpendientes}}
 
                         <tr>
                             <td class="text-white">{{fecha}}</td>
@@ -158,15 +162,16 @@
                             <td>
                                 <div class="d-flex justify-content-center">
                                     <form action="/partida" method="post">
-                                      <input type="hidden" name="tipoPartida" value="3">
-                                      <input type="hidden" name="token" value="{{token}}">
-                                       <button type="submit" class="btn btn-success">Aceptar</button>
+                                        <input type="hidden" name="tipoPartida" value="3">
+                                        <input type="hidden" name="token" value="{{token}}">
+                                        <button type="submit" class="btn btn-success">Aceptar</button>
                                     </form>
-                                <a href="/perfil/rechazarPartida&token={{token}}" class="btn btn-danger" role="button">Rechazar</a>
+                                    <a href="/perfil/rechazarPartida&token={{token}}" class="btn btn-danger"
+                                        role="button">Rechazar</a>
                                 </div>
                             </td>
                         </tr>
-                    {{/PvPpendientes}}
+                        {{/PvPpendientes}}
                     </tbody>
                 </table>
             </div>
@@ -206,4 +211,3 @@
         display: none;
     }
 </style>
-

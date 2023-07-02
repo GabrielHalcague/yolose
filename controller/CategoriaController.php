@@ -12,80 +12,97 @@ class CategoriaController
         $this->categoriaModel = $models['categoria'];
     }
 
-    public function list()
+    public function list($data = null)
     {
-        if(Session::get('rol') == 'Usuario'){
+        if (Session::get('rol') == 'Usuario') {
             Header::redirect("/");
         }
 
-        if(!empty($_POST['mensaje'])){
+        if (!empty($_POST['mensaje'])) {
             $data['mensaje'] = $_POST['mensaje'];
         }
 
         $data['categoria'] = $this->categoriaModel->getAllCategories();
-        $this->renderer->render('categoria',$data);
+        $this->renderer->render('categoria', $data);
     }
 
     public function nuevaCategoria()
     {
-        if(Session::get('rol') == 'Usuario'){
+        if (Session::get('rol') == 'Usuario') {
             Header::redirect("/");
         }
         $this->renderer->render("nuevaCategoria");
     }
 
-    public function modificarCategoria(){
-        if(Session::get('rol') == 'Usuario'){
+    public function modificarCategoria()
+    {
+        if (Session::get('rol') == 'Usuario') {
             Header::redirect("/");
         }
-        if(empty($_GET['name'])){
+        if (empty($_GET['id'])) {
             Header::redirect("/");
         }
-        $data = $this->categoriaModel->getCategoryByName($_GET['name']);
-        if(empty($data)){
+        $data = $this->categoriaModel->getCategoryById($_GET['id']);
+        if (empty($data)) {
             Header::redirect("categoria");
         }
-        $this->renderer->render("editarCategoria",$data);
+        $this->renderer->render("editarCategoria", $data);
         exit();
     }
 
     public function editarCategoria()
     {
-        $datosCategoria = $this->obtenerDatosCategoria();
+        $datosCategoria = $this->validarDatosDeCategoria();
         $data = $this->categoriaModel->editarCategoria($datosCategoria);
-        //$this->renderer->render("categoria",$data);
-        Header::redirect("categoria?mensaje=".$data['mensaje']);
+        $this->list($data);
     }
 
     public function agregarCategoria()
     {
-        $datosCategoria = $this->obtenerDatosCategoria();
+        $datosCategoria = $this->validarNuevaCategoria();
         $data = $this->categoriaModel->agregarCategoria($datosCategoria);
-        $this->renderer->render("categoria",$data);
-        Header::redirect("categoria?mensaje=".$data['mensaje']);
+        $this->list($data);
     }
 
-    public function eliminarCategoria(){
-        if(Session::get('rol') == 'Usuario'){
-            Header::redirect("/");
-        }
-        if(empty($_GET['name'])){
-            Header::redirect("/");
-        }
-        $this->categoriaModel->eliminarCategoria($_GET['name']);
-        Header::redirect("categoria");
-    }
-
-    private function obtenerDatosCategoria()
+    public function eliminarCategoria()
     {
-        if(empty($_POST['categoriaNombre']) || empty($_POST['categoriaColor'])){
-            $data['mensaje']= "Tiene que completar todos los campos.";
+        if (Session::get('rol') == 'Usuario') {
+            Header::redirect("/");
+        }
+        if (empty($_GET['id'])) {
+            Header::redirect("/");
+        }
+        $data = $this->categoriaModel->eliminarCategoria($_GET['id']);
+        $this->list($data);
+
+    }
+
+    private function validarDatosDeCategoria()
+    {
+        if (empty($_POST['categoriaNombre']) || empty($_POST['categoriaColor'])) {
+            $data['mensaje'] = "Tiene que completar todos los campos.";
             $this->renderer->render('nuevaCategoria', $data);
             exit();
-        }else{
+        } else {
             return [
-                'categoriaNombre'=>$_POST['categoriaNombre'],
-                'categoriaColor'=>$_POST['categoriaColor']
+                'id' => $_POST['id'],
+                'categoriaNombre' => $_POST['categoriaNombre'],
+                'categoriaColor' => $_POST['categoriaColor']
+            ];
+        }
+    }
+
+    
+    private function validarNuevaCategoria()
+    {
+        if (empty($_POST['categoriaNombre']) || empty($_POST['categoriaColor'])) {
+            $data['mensaje'] = "Tiene que completar todos los campos.";
+            $this->renderer->render('nuevaCategoria', $data);
+            exit();
+        } else {
+            return [
+                'categoriaNombre' => $_POST['categoriaNombre'],
+                'categoriaColor' => $_POST['categoriaColor']
             ];
         }
     }

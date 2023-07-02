@@ -1,4 +1,4 @@
-<div class="bg-jugar">
+<div class="bg-inicio">
     <section class="container">
         {{#rankingBot}}
         {{idUs}}
@@ -7,7 +7,7 @@
         {{idUs}}
         {{/rankingPvP}}
 
-        <h2 class="text-logo pt-5 text-center">Top 10 Solo</h2>
+        <h2 class="titulo-partida pt-5 text-center">Top 10 Solo</h2>
         <div class="table-responsive">
             <table class="table text-white">
                 <thead>
@@ -20,7 +20,7 @@
                 <tbody>
                     {{#rankingSolo}}
                     <tr>
-                        <td><a href="/perfil/usuario/user={{nombreUsuario}} " class="text-white fw-bold">{{nombreUsuario}}</a></td>
+                        <td><a href="/perfil/usuario/usuarioBuscado={{nombreUsuario}}" class="text-white fw-bold">{{nombreUsuario}}</a></td>
                         <td><img src="/public/img/{{fotoPerfil}}" style="width: 50px;"></td>
                         <td class="fw-bold">{{puntaje}}</td>
                     </tr>
@@ -29,7 +29,7 @@
             </table>
         </div>
 
-        <h2 class="text-logo pt-5 text-center">Top 10 vs Ia</h2>
+        <h2 class="titulo-partida pt-5 text-center">Top 10 vs Ia</h2>
         <div class="table-responsive">
             <table class="table text-white">
                 <thead>
@@ -42,7 +42,7 @@
                 <tbody>
                     {{#rankingBot}}
                     <tr>
-                        <td><a href="/perfil/usuario/user={{nombreUsuario}} ">{{nombreUsuario}}</a></td>
+                        <td><a href="/perfil/usuario/usuarioBuscado={{nombreUsuario}}">{{nombreUsuario}}</a></td>
                         <td><img src="/public/img/{{fotoPerfil}}" style="width: 50px;"></td>
                         <td>{{puntaje}}</td>
                     </tr>

@@ -1,42 +1,40 @@
 <div class="bg-admin">
     <section class="container text-white">
-        <h1 class="mb-4 text-center">LISTADO CATEGORIAS</h1>
+        <h1 class="py-5 text-center">LISTADO CATEGORIAS</h1>
         <article class="w-50 m-auto">
             <div class="table-responsive">
                 <table class="table table-hover text-white">
                     <thead class="table-primary">
-                    <tr>
-                        <th>Categoria</th>
-                        <th class="text-center">Acción</th>
-                    </tr>
+                        <tr>
+                            <th>Categoria</th>
+                            <th class="text-center">Acción</th>
+                        </tr>
                     </thead>
                     <tbody>
-                    {{#categoria}}
+                        {{#categoria}}
                         <tr>
                             <td>{{categ}}</td>
                             <td class="text-center">
-                                <a href="/categoria/modificarCategoria?name={{categ}}" class="btn btn-success"
-                                role="button">Modificar</a>
-                                |
-                                <a href="/categoria/eliminarCategoria?name={{categ}}" class="btn btn-danger"
-                                role="button">Eliminar</a>
+                                <a href="/categoria/modificarCategoria?id={{id}}" class="btn btn-success"
+                                    role="button">Modificar</a>
+                                <a href="/categoria/eliminarCategoria?id={{id}}" class="btn btn-danger ms-3"
+                                    role="button">Eliminar</a>
                             </td>
                         </tr>
 
-                    {{/categoria}}
+                        {{/categoria}}
                     </tbody>
                 </table>
             </div>
-
+            {{#mensaje}}
+            <div class="text-center text-white">
+                <h5>{{mensaje}}</h5>
+            </div>
+            {{/mensaje}}
         </article>
         <div class="w-50 m-auto pb-5">
             <a href="/categoria/nuevaCategoria" class="btn btn-yolose mt-3 py-3">Agregar</a>
             <a href="/home" class="btn btn-yolose volver mt-3 py-3">Volver</a>
         </div>
-        {{#mensaje}}
-            <div class="text-center text-white">
-                {{mensaje}}
-            </div>
-        {{/mensaje}}
     </section>
 </div>
