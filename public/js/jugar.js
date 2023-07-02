@@ -122,9 +122,9 @@ const terminarPartida = () => {
         data: {id: ''},
         processData: false,
     }).done(function (response) {
-
+        console.log(response);
         var data = JSON.parse(response);
-
+        console.log(data);
         // Access and use the data
         if (data.success) {
             // Operación exitosa
@@ -140,8 +140,12 @@ const terminarPartida = () => {
                     tipoPartida = "VS BOT";
                     $('#resultBot').text(datos['respuestasBot']);
                     break;
+                case '3':
+                    tipoPartida = "P v P";
+                    $('#resultadoPVP').text(datos['resultado']);
+                    break;
                 default:
-                    tipoPartida = "PvP";
+                    tipoPartida = "";
                     break;
             }
             $('#tPartida').text(tipoPartida);

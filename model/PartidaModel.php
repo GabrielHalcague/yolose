@@ -236,4 +236,55 @@ class PartidaModel
         $sql= "INSERT INTO reportePregunta(idPregunta,idUsuario) values('$idPregunta','$idUsuario')";
        $this->database->execute($sql);
     }
+
+    public function getGanadorDePartidaPorToken($tokenPartida){
+        $sql ="select ganador from historialpvp where token = '".$tokenPartida."';";
+        $var = $this->database->SoloValorCampo($sql);
+        if ($var == "0" ) {
+            return "Esperando al otro player";
+        }
+        if ($var == "empate" ) {
+            return "Empataron";
+        }
+        if ($var != "empate" && $var != "0"  ) {
+            $sql ="select nombreUsuario from usuario where id = ".$var.";";
+            $var2 = $this->database->SoloValorCampo($sql);
+            return "El ganador Fue ". $var2;
+        }
+    }
+
+
+
+    public function setHistorialPvP($tokenPartida,$idPlayer ,$scoreUsuario, $contrincante)
+    {
+        $sql ="select 1 from historialpvp where token = '".$tokenPartida."';";
+        $var = $this->database->SoloValorCampo($sql);
+        if(is_null($var)){
+        $sql = "INSERT INTO historialpvp (token, idp1, resultadop1, idp2, ganador) VALUES ('$tokenPartida','$idPlayer','$scoreUsuario', '$contrincante','0');";
+            $this->database->execute($sql);
+        }
+        else
+        {
+            $sql = "update  historialpvp set  resultadop2 ='$scoreUsuario' where token = '".$tokenPartida."';";
+            $this->database->execute($sql);
+
+            $sql ="select resultadop1 from historialpvp where token = '".$tokenPartida."';";
+            $jugador1 = $this->database->SoloValorCampo($sql);
+
+            $sql ="select resultadop2 from historialpvp where token = '".$tokenPartida."';";
+            $jugador2 = $this->database->SoloValorCampo($sql);
+            $var3="";
+            if($jugador1 == $jugador2 ){
+                $var3 ="empate";
+            }elseif ($jugador1>$jugador2){
+                $var3=$jugador1;
+            }else{
+                $var3=$jugador2;
+            }
+
+
+        $sql = "UPDATE historialpvp SET  ganador = '".$var3."' WHERE token = '".$tokenPartida."'";
+        $this->database->execute($sql);
+        }
+    }
 }

@@ -16,6 +16,31 @@ class PartidaController
             $this->salir();
         }
         $tipoPartida = $_GET['tipoPartida'] ?? '';
+
+
+
+        // para partida tipo pvp
+        if ($tipoPartida == '') {                                   // si esta limpio es que pudo  haber entrado por POST,
+            $tipoPartida = $_POST['tipoPartida'];                  // si entro por post se setea el tipoPArtida 3. Se mando por El boton desafiar
+
+            if(!empty($_POST['tipoPartida'])){                      // Esto tendria tipo de partida 3
+
+                if(empty(Session::get('contrincante'))){               // contrincante es el  idUsuario al que desafio
+                  $contrincante = $_POST['contrincante'];               // tengo un contrincante en la session? no entonces  setea el contricante (yo) que te mando
+                    Session::set('contrincante', $contrincante);
+                }
+
+                /////////// carga de token de partida 3
+                if (empty(Session::get('tokenPartida') && !empty($_POST['token']))) {
+                    Session::set('tokenPartida', $_POST['token']);
+                }
+                /////////////////////
+
+                header("Location: /partida&tipoPartida=3");
+                exit;
+            }
+        }
+
         if ($tipoPartida == '') {
             Header::redirect("/");
         }
@@ -39,6 +64,10 @@ class PartidaController
         if($tipoPartida == '2'){
             $data['tipoPartida'] = Session::get('tipoPartida');
         }
+
+        if($tipoPartida == '3' && !empty(Session::get('contrincante'))){
+            $data['tipoPartida'] = Session::get('tipoPartida');
+           }
 
         if(empty(Session::get('respondio'))){
             Logger::info("EL USUARIO A RESPONDIDO LA PREGUNTA ANTERIOR O COMIENZO JUEGO");
@@ -115,10 +144,18 @@ class PartidaController
         $tokenPartida = Session::get('tokenPartida');
         $tipoPartida = Session::get('tipoPartida');
         $scoreUsuario = $this->partidaModel->obtenerScoreDelUsuario($tokenPartida, Session::get('username'));
+
         $data = [
             'score' => $scoreUsuario['puntos'],
             'tipo' => $tipoPartida
         ];
+        if ($tipoPartida == 3) {
+            $contrincante = Session::get('contrincante');
+            $idPlayer =   Session::get('idUsuario');
+            $this->partidaModel->setHistorialPvP($tokenPartida,$idPlayer ,$scoreUsuario['puntos'], $contrincante);
+            $data['resultado'] = $this->partidaModel->getGanadorDePartidaPorToken($tokenPartida);
+            Session::set('estadoPartida',0);
+        }
 
         if ($tipoPartida == 2) {
             $maxPregBot = $this->partidaModel->obtenerPreguntasParaUsuario(-1);
@@ -155,6 +192,8 @@ class PartidaController
     public
     function salir(): void
     {
+        Session::deleteValue('contrincante');
+
         Session::deleteValue('perdiste');
         Session::deleteValue('tokenPartida');
         Session::deleteValue('tipoPartida');

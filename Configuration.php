@@ -17,6 +17,7 @@ include_once('controller/RankingController.php');
 include_once('controller/CreditosController.php');
 include_once('controller/TutorialController.php');
 include_once('controller/CategoriaController.php');
+include_once('controller/NotificacionesController.php');
 
 // Inclusión de Helpers
 include_once('helpers/MySqlDatabase.php');
@@ -42,6 +43,7 @@ include_once('model/EditorModel.php');
 include_once('model/TiendaModel.php');
 include_once('model/AdministradorModel.php');
 include_once('model/RankingModel.php');
+include_once('model/NotificacionesModel.php');
 
 //Inclusión de Servicios
 require_once 'Services/PreguntaServices.php';
@@ -109,6 +111,11 @@ class Configuration
     {
         return new homeController($this->getRenderer());
     }
+    public function getNotificacionesController()
+    {
+        return new notificacionesController(new NotificacionesModel($this->getDatabase()));
+    }
+
 
     public function getRegistroController(): registroController
     {

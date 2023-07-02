@@ -21,7 +21,8 @@ $controladoresValios = [
     'agregarPregunta',
     'verReporte',
     'verPregunta',
-    'categoria'
+    'categoria',
+    'notificaciones'
 ];
 
 if(empty(Session::get('logged'))&& in_array($module, $controladoresValios)){

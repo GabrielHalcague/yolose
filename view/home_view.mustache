@@ -1,6 +1,31 @@
+<script>
+    // Función para obtener y mostrar las notificaciones
+    function obtenerNotificaciones() {
+        $.ajax({
+            url: 'notificaciones/notificaciones',
+            dataType: 'json',
+            success: function(response) {
+                var data = JSON.parse(response)
+                if (data > 0) {
+                    $('#notificaciones').show();
+                } else {
+                    $('#notificaciones').hide();
+                }
+            }
+        });
+    }
+    setInterval(obtenerNotificaciones, 1000);
+</script>
+
 <div class="menu">
-    <div class="btn"><a href="/perfil">PERFIL</a></div>
+    <div class="btn"><a href="/perfil">PERFIL </a>
+    </div>
+    <div class="spinner-border fs-3  text-info" id="notificaciones" style="display: none">
+        <i class="bi bi-info-circle fs-3  text-info"></i>
+        <div>Desafiado</div>
+    </div>
 </div>
+
 
 <div class="dropdown ">
     <a class="menu-icon" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -42,7 +67,31 @@
             <a href="/partida&tipoPartida=2" class="btn-jugar ia mt-md-5"><span>VS IA</span></a>
         </div>
         <div class="col-md-4">
-            <a href="/partida&tipoPartida=3" class="btn-jugar jugador"><span>VS JUGADOR</span></a>
+            <button type="button" class="btn-jugar jugador"data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
+                <span>VS JUGADOR</span>
+            </button>
+
+
         </div>
     </article>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <article class="p-5 bg-dark-subtle rounded">
+                    <div class="d-flex justify-content-center">
+                        <div>
+                            <form method="get" action="/perfil/usuario" >
+                            <label for="usuarioBuscado" class="form-label">Buscar Usuario</label>
+                            <input type="text" name="usuarioBuscado" id="usuarioBuscado" class="form-control"/>
+                            <button type="submit" class="btn btn-success">Buscar</button>
+                            </form>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
 </div>

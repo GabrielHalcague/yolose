@@ -63,4 +63,37 @@ class PerfilModel
         return $this->database->SoloValorCampo($sql);
     }
 
+
+    public function obtenerHistorialPvPDelUsuario($idUsuario){
+
+        $sql= "SELECT  h.fecha,
+                (SELECT nombre FROM usuario WHERE id = h.idp1) AS idp1, h.resultadop1,
+                (SELECT nombre FROM usuario WHERE id = h.idp2) AS idp2,  h.resultadop2 ,
+                CASE 
+                    WHEN h.ganador = 'empate' THEN 'Empate'
+                    ELSE 
+                (SELECT nombre FROM usuario WHERE id = h.ganador)
+                END AS ganador
+            FROM historialpvp h WHERE h.idp1 = ".$idUsuario." or h.idp2 = ".$idUsuario." AND h.ganador != '0';";
+        return $this->database->query($sql);
+    }
+
+    public function obtenerHistorialPvPPendientesDelUsuario($idUsuario){
+
+        $sql= "select token,  fecha, (SELECT nombre FROM usuario WHERE id = idp1) AS idp1, resultadop1  from historialpvp where idp2 = ".$idUsuario." and ganador = '0';";
+        return $this->database->query($sql);
+    }
+
+
+    public function rechazarPartidaPorToken($token,$idUsuario){
+        $sql= "select idp2 from historialpvp where token = '".$token."';";
+        $validarUsuario = $this->database->SoloValorCampo($sql);
+
+        if($validarUsuario === $idUsuario){
+
+            $sql= "UPDATE historialpvp SET resultadop2 = 0, ganador = idp1 WHERE token = '".$token."';";
+             $this->database->execute($sql);
+        }
+    }
+
 }
