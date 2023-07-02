@@ -42,12 +42,13 @@
             <div class="row pt-5" >
                 <div class="col-md-4">
                     {{#perfil}}
-                        <p id="nUsuario"><strong>Usuario:</strong> {{nombreUsuario}}
+                        <p><strong>Usuario:</strong>  <span id="nUsuario" >{{nombreUsuario}}</span>
                         {{#editarPerfil}}
                                 <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myModal">
                                     <i class="bi bi-pencil-fill"></i>
                                 </button>
-                        {{/editarPerfil}}</p>
+                        {{/editarPerfil}}
+                        </p>
                         <p><strong>Nombre:</strong> {{nombre}} </p>
                         <p><strong>Fecha Nacimiento:</strong> {{f_nacimiento}}</p>
                         <p><strong>Genero:</strong> {{descr}}</p>
