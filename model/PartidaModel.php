@@ -237,6 +237,24 @@ class PartidaModel
        $this->database->execute($sql);
     }
 
+    public function getGanadorDePartidaPorToken($tokenPartida){
+        $sql ="select ganador from historialpvp where token = '".$tokenPartida."';";
+        $var = $this->database->SoloValorCampo($sql);
+        if ($var == "0" ) {
+            return "Esperando al otro player";
+        }
+        if ($var == "empate" ) {
+            return "Empataron";
+        }
+        if ($var != "empate" && $var != "0"  ) {
+            $sql ="select nombreUsuario from usuario where id = ".$var.";";
+            $var2 = $this->database->SoloValorCampo($sql);
+            return "El ganador Fue ". $var2;
+        }
+    }
+
+
+
     public function setHistorialPvP($tokenPartida,$idPlayer ,$scoreUsuario, $contrincante)
     {
         $sql ="select 1 from historialpvp where token = '".$tokenPartida."';";

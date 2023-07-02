@@ -145,6 +145,7 @@
                         <th class="text-white">Desafiante</th>
                         <th class="text-white">Puntaje</th>
                         <th class="text-white">accion</th>
+                        <th class="text-white"></th>
                     </tr>
                     </thead>
                     <tbody>
@@ -155,12 +156,14 @@
                             <td class="text-white">{{idp1}}</td>
                             <td class="text-white">{{resultadop1}}</td>
                             <td>
-                                <form class="d-flex justify-content-center form-yolose p-5" action="/partida" method="post">
-                                    <input type="hidden" name="tipoPartida" value="3">
-                                    <input type="hidden" name="token" value="{{token}}">
-                                    <button type="submit" class="btn btn-success">Aceptar</button>
-                                </form>
-                                <a href="/perfil/rechazarPartida&token={{token}}" class="btn btn-info" role="button">Rechazar</a>
+                                <div class="d-flex justify-content-center">
+                                    <form action="/partida" method="post">
+                                      <input type="hidden" name="tipoPartida" value="3">
+                                      <input type="hidden" name="token" value="{{token}}">
+                                       <button type="submit" class="btn btn-success">Aceptar</button>
+                                    </form>
+                                <a href="/perfil/rechazarPartida&token={{token}}" class="btn btn-danger" role="button">Rechazar</a>
+                                </div>
                             </td>
                         </tr>
                     {{/PvPpendientes}}

@@ -141,11 +141,11 @@ const terminarPartida = () => {
                     $('#resultBot').text(datos['respuestasBot']);
                     break;
                 case '3':
-                    tipoPartida = "resultadoPVP";
+                    tipoPartida = "P v P";
                     $('#resultadoPVP').text(datos['resultado']);
                     break;
                 default:
-                    tipoPartida = "PvP 2";
+                    tipoPartida = "";
                     break;
             }
             $('#tPartida').text(tipoPartida);

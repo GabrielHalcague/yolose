@@ -26,7 +26,7 @@ class PartidaController
             if(!empty($_POST['tipoPartida'])){                      // Esto tendria tipo de partida 3
 
                 if(empty(Session::get('contrincante'))){               // contrincante es el  idUsuario al que desafio
-                  $contrincante = $_POST['contrincante'];               // tengo un contrincante en la session? no entonces  setea el contricante que te mando
+                  $contrincante = $_POST['contrincante'];               // tengo un contrincante en la session? no entonces  setea el contricante (yo) que te mando
                     Session::set('contrincante', $contrincante);
                 }
 
@@ -153,8 +153,7 @@ class PartidaController
             $contrincante = Session::get('contrincante');
             $idPlayer =   Session::get('idUsuario');
             $this->partidaModel->setHistorialPvP($tokenPartida,$idPlayer ,$scoreUsuario['puntos'], $contrincante);
-            $resultado = "Esperando al otor player";
-            $data['resultado'] = $resultado;
+            $data['resultado'] = $this->partidaModel->getGanadorDePartidaPorToken($tokenPartida);
             Session::set('estadoPartida',0);
         }
 

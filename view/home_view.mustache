@@ -7,9 +7,9 @@
             success: function(response) {
                 var data = JSON.parse(response)
                 if (data > 0) {
-                    $('#notificaciones').text(data);
+                    $('#notificaciones').show();
                 } else {
-                    $('#notificaciones').empty();
+                    $('#notificaciones').hide();
                 }
             }
         });
@@ -18,9 +18,14 @@
 </script>
 
 <div class="menu">
-    <div class="btn"><a href="/perfil">PERFIL </a></div>
+    <div class="btn"><a href="/perfil">PERFIL </a>
+    </div>
+    <div class="spinner-border fs-3  text-info" id="notificaciones" style="display: none">
+        <i class="bi bi-info-circle fs-3  text-info"></i>
+        <div>Desafiado</div>
+    </div>
 </div>
-<div id="notificaciones"></div>
+
 
 <div class="dropdown ">
     <a class="menu-icon" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

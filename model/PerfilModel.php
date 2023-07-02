@@ -69,8 +69,12 @@ class PerfilModel
         $sql= "SELECT  h.fecha,
                 (SELECT nombre FROM usuario WHERE id = h.idp1) AS idp1, h.resultadop1,
                 (SELECT nombre FROM usuario WHERE id = h.idp2) AS idp2,  h.resultadop2 ,
-                (SELECT nombre FROM usuario WHERE id = h.ganador) AS ganador
-            FROM historialpvp h WHERE h.idp1 = ".$idUsuario." or h.idp2 = ".$idUsuario." AND h.ganador != 0;";
+                CASE 
+                    WHEN h.ganador = 'empate' THEN 'Empate'
+                    ELSE 
+                (SELECT nombre FROM usuario WHERE id = h.ganador)
+                END AS ganador
+            FROM historialpvp h WHERE h.idp1 = ".$idUsuario." or h.idp2 = ".$idUsuario." AND h.ganador != '0';";
         return $this->database->query($sql);
     }
 
@@ -91,7 +95,5 @@ class PerfilModel
              $this->database->execute($sql);
         }
     }
-
-
 
 }
