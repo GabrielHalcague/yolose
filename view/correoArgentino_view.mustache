@@ -1,0 +1,176 @@
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <form id="myForm" action="/correoArgentino/procesar" method="post">
+
+            <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <label for="remitente" class="form-label">Remitente
+                    <input type="text" name="remitente" class="form-control"></label>
+                </div>
+                <div class="row">
+                    <label for="rDomicilio" class="form-label">Domicilio
+                    <input type="text" name="rDomicilio" class="form-control"></label>
+                </div>
+                <div class="row">
+                    <label for="rLocalidad" class="form-label">Localidad
+                    <input type="text" name="rLocalidad" class="form-control"></label>
+                </div>
+
+                <div class="row">
+                <div class="col-md-6">
+                    <label for="rCP" class="form-label">Codigo Postal
+                    <input type="text" name="rCP" class="form-control"></label>
+                </div>
+
+                <div class="col-md-6 pe-md-0">
+                    <label for="rProvincia" class="form-label">Provincia
+                    <select name="rProvincia" class="form-select">
+                        <option value="Buenos Aires">Buenos Aires</option>
+                        <option value="CABA">CABA</option>
+                        <option value="Catamarca">Catamarca</option>
+                        <option value="Chaco">Chaco</option>
+                        <option value="Chubut">Chubut</option>
+                        <option value="Córdoba">Córdoba</option>
+                        <option value="Corrientes">Corrientes</option>
+                        <option value="Entre Ríos">Entre Ríos</option>
+                        <option value="Formosa">Formosa</option>
+                        <option value="Jujuy">Jujuy</option>
+                        <option value="La Pampa">La Pampa</option>
+                        <option value="La Rioja">La Rioja</option>
+                        <option value="Mendoza">Mendoza</option>
+                        <option value="Misiones">Misiones</option>
+                        <option value="Neuquén">Neuquén</option>
+                        <option value="Río Negro">Río Negro</option>
+                        <option value="Salta">Salta</option>
+                        <option value="San Juan">San Juan</option>
+                        <option value="San Luis">San Luis</option>
+                        <option value="Santa Cruz">Santa Cruz</option>
+                        <option value="Santa Fe">Santa Fe</option>
+                        <option value="Santiago del Estero">Santiago del Estero</option>
+                        <option value="Tierra del Fuego">Tierra del Fuego</option>
+                        <option value="Tucumán">Tucumán</option>
+                    </select></label>
+                </div>
+                </div>
+
+            </div><div class="col-md-6">
+                <div class="row">
+                    <label for="destinatario" class="form-label">Destinatario
+                        <input type="text" name="destinatario" class="form-control"></label>
+                </div>
+                <div class="row">
+                    <label for="dDomicilio" class="form-label">Domicilio
+                        <input type="text" name="dDomicilio" class="form-control"></label>
+                </div>
+                <div class="row">
+                    <label for="dLocalidad" class="form-label">Localidad
+                        <input type="text" name="dLocalidad" class="form-control"></label>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="dCP" class="form-label">Codigo Postal
+                            <input type="text" name="dCP" class="form-control"></label>
+                    </div>
+
+                    <div class="col-md-6 pe-md-0">
+                        <label for="dProvincia" class="form-label">Provincia
+                            <select name="dProvincia" class="form-select">
+                                <option value="Buenos Aires">Buenos Aires</option>
+                                <option value="CABA">CABA</option>
+                                <option value="Catamarca">Catamarca</option>
+                                <option value="Chaco">Chaco</option>
+                                <option value="Chubut">Chubut</option>
+                                <option value="Córdoba">Córdoba</option>
+                                <option value="Corrientes">Corrientes</option>
+                                <option value="Entre Ríos">Entre Ríos</option>
+                                <option value="Formosa">Formosa</option>
+                                <option value="Jujuy">Jujuy</option>
+                                <option value="La Pampa">La Pampa</option>
+                                <option value="La Rioja">La Rioja</option>
+                                <option value="Mendoza">Mendoza</option>
+                                <option value="Misiones">Misiones</option>
+                                <option value="Neuquén">Neuquén</option>
+                                <option value="Río Negro">Río Negro</option>
+                                <option value="Salta">Salta</option>
+                                <option value="San Juan">San Juan</option>
+                                <option value="San Luis">San Luis</option>
+                                <option value="Santa Cruz">Santa Cruz</option>
+                                <option value="Santa Fe">Santa Fe</option>
+                                <option value="Santiago del Estero">Santiago del Estero</option>
+                                <option value="Tierra del Fuego">Tierra del Fuego</option>
+                                <option value="Tucumán">Tucumán</option>
+                            </select></label>
+
+                    </div>
+                </div>
+
+            </div>
+            </div>
+                <label for="summernote"><textarea id="summernote" name="contenido" ></textarea></label>
+                <button type="submit" class="btn btn-primary">Generar Carta Documento</button>
+            </form>
+
+
+            {{#errores}}
+                <p>Error en  {{errores}}. Reintente</p>
+            {{/errores}}
+
+        </div>
+        <div class="col">
+           <p style="width: 300px; height: 600px; background: #0000cc;">Publicidad </p>
+        </div>
+    </div>
+</div>
+
+<script>
+    $('#summernote').summernote({
+        tabsize: 2,
+        height: 17*37.8,
+        width: 23*37.8,
+        minHeight:  17*37.8,
+        maxHeight:  17*37.8,
+            toolbar: [
+            ['style', ['style']],
+            ['font', ['bold', 'underline', 'clear']],
+            ['color', ['color']],
+            ['para', ['ul', 'ol', 'paragraph']],
+            ['table', ['table']],
+            ['insert', ['link', 'picture', 'video']],
+            ['view', ['fullscreen', 'codeview', 'help']]
+        ]
+    });
+
+
+    $(document).ready(function() {
+        $('#myForm').submit(function(event) {
+            event.preventDefault();
+            let content = $('#summernote').summernote('code');
+            let hiddenInput = $('<input>', {
+                type: 'hidden',
+                name: 'formattedContent',
+                value: content
+            });
+            $(this).append(hiddenInput);
+            $(this).unbind('submit').submit();
+        });
+    });
+
+    window.onload = function() {
+        const fecha = new Date();
+        const dia= fecha.getDate();
+        var mes = fecha.getMonth();
+        var nombresMeses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+        var nombreMes = nombresMeses[mes];
+        var anio = fecha.getFullYear();
+        var contenido = '<p style="text-align: right; ">Buenos Aires , '+ dia +' de '+nombreMes+' del '+anio+'  </p></p><p style="text-align: left; "><br></p>';
+        $('#summernote').summernote('code', contenido);
+    };
+
+
+</script>

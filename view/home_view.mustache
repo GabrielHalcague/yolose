@@ -1,101 +1,43 @@
-<script>
-    // Función para obtener y mostrar las notificaciones
-    function obtenerNotificaciones() {
-        $.ajax({
-            url: 'notificaciones/notificaciones',
-            dataType: 'json',
-            success: function (response) {
-                var data = JSON.parse(response)
-                if (data > 0) {
-                    $('#notificaciones').show();
-                } else {
-                    $('#notificaciones').hide();
-                }
-            }
-        });
-    }
-    setInterval(obtenerNotificaciones, 1000);
-</script>
+<div class="container my-5">
+    <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+        <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+            <h1 class="display-6 fw-bold lh-1 text-body-emphasis">Cartas Documentos con Correo Argentino</h1>
+            <p class="lead">Una carta documento es un medio de comunicación legal y formal que se utiliza para notificar, requerir o comunicar de manera fehaciente y con valor probatorio ciertos asuntos o situaciones a una persona o entidad.
+                Se trata de un recurso valioso en el ámbito legal y comercial, ya que proporciona una prueba documentada y verificable de la entrega y recepción del mensaje.</p>
 
-<div class="menu">
-    <div class="btn"><a href="/perfil">PERFIL </a>
-    </div>
-    <article id="notificaciones" style="display: none">
-        <div class="d-flex justify-content-center align-items-center mt-3">
-            <div class="spinner-border fs-3 text-info">
+            <p>La carta deben tener tres ejemplares: uno original y dos copias (todos firmados por el remitente).
+                Una de las copias para el destinatario, otra para el remitente y la tercera para el servicio de correos correspondiente.</p>
+            <p class="lead">El mas utilizado es gestionado por el Correo Argentino</p>
+
+            <p class="lead">Ademas entrega "Aviso de Recibo"
+                Es la constancia escrita que Correo Argentino hace llegar al remitente. Informa el día y la hora que fue entregada la correspondencia y la firma de quien la recibió.
+               </p>
+            <p class="lead">CARACTERÍSTICAS:
+            <div>Tiempo de entrega (según origen y destino): 1 a 2 días</div>
+
+            <div> Formulario. Se adquiere en  sucursales del Correo Argentino.</div>
+
+            <div>Entrega: En mano bajo firma</div>
+
+            <div> Medidas: Formulario normatizado</div>
+
+            <div> Sistema de Seguimiento Track & Trace. <a href="https://www.correoargentino.com.ar/formularios/ondnc">link</a> </div>
+            </p>
+            <p class="lead">
+             <div>PRECIO: Por envío (incluye aviso de recibo)	$ 2.860,00 </div>
+                <div>( Formulario $30 + Envio $2860)</div>
+            </p>
+
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+
+                <button type="button" class="btn btn-outline-secondary btn-lg px-4">Imprimir Prueba</button>
+                <button type="button" class="btn btn-outline-secondary btn-lg px-4">Generar Carta Documento</button>
             </div>
-            <strong class="text-info sombra-texto m-0 ms-2 "> PARTIDA PENDIENTE</strong>
         </div>
-    </article>
-</div>
-
-
-<div class="dropdown ">
-    <a class="menu-icon" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-        <i class="bi bi-menu-up"></i>
-    </a>
-    <ul class="dropdown-menu">
-        {{#administrador}}
-        <li><a class="dropdown-item" href="/administrador">Admin</a></li>
-        <li><a class="dropdown-item" href="/editor">Editor</a></li>
-        <li><a class="dropdown-item" href="/categoria">Gestionar categorias</a></li>
-        {{/administrador}}
-        {{#editor}}
-        <li><a class="dropdown-item" href="/editor">Editor</a></li>
-        <li><a class="dropdown-item" href="/categoria">Gestionar categorias</a></li>
-        {{/editor}}
-        <li><a class="dropdown-item" href="/pregunta">Agregar pregunta</a></li>
-        <li><a class="dropdown-item" href="/tienda">Tienda</a></li>
-        <li><a class="dropdown-item" href="/ranking">Ranking</a></li>
-        <li><a class="dropdown-item" href="/login/cerrarSesion">Cerrar sesión</a></li>
-    </ul>
-</div>
-
-<div class="bg-jugar d-flex flex-column justify-content-around align-items-center h-100">
-    <article>
-        <div class="title-wrapper">
-            <h1 class="sweet-title">
-                <span data-text="MODOS">MODOS</span>
-                <span data-text="DE JUEGO">DE JUEGO</span>
-            </h1>
-            <span class="top-title">-YO LOSE-</span>
-            <span class="bottom-title">¡Compite por tú honor!</span>
-        </div>
-    </article>
-    <article class="row justify-content-center">
-        <div class="col-md-4">
-            <a href="/partida&tipoPartida=1" class="btn-jugar solitario"><span>SOLITARIO</span></a>
-        </div>
-        <div class="col-md-4">
-            <a href="/partida&tipoPartida=2" class="btn-jugar ia mt-md-5"><span>VS IA</span></a>
-        </div>
-        <div class="col-md-4">
-            <button type="button" class="btn-jugar jugador" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                id="myModal">
-                <span>VS JUGADOR</span>
-            </button>
-
-
-        </div>
-    </article>
-</div>
-
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-body">
-                <article class="p-5 bg-dark-subtle rounded">
-                    <div class="d-flex justify-content-center">
-                        <div>
-                            <form method="get" action="/perfil/usuario">
-                                <label for="usuarioBuscado" class="form-label">Buscar Usuario</label>
-                                <input type="text" name="usuarioBuscado" id="usuarioBuscado" class="form-control" />
-                                <button type="submit" class="btn btn-success">Buscar</button>
-                            </form>
-                        </div>
-                    </div>
-                </article>
-            </div>
+        <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+            <img class="rounded-lg-3" src="bootstrap-docs.png" alt="" width="720">
         </div>
     </div>
 </div>
+
+

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página para PDF</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            /* Ancho y alto en milímetros */
+ 
+            width: 215.9mm;
+            height: 355.6mm;
+            background: green;
+            
+            /* Opcional: ajustar el tamaño de fuente predeterminado */
+            font-size: 14px; /* Ajusta el tamaño de fuente según tus necesidades */
+            line-height: 1.6; /* Espaciado entre líneas para una mejor legibilidad */
+        }
+        .contenido {        
+            margin-left: 15mm;
+            margin-right: 15mm;         
+            margin-top: 20mm;
+            margin-bottom: 20mm;
+            width: inherit;
+            background: blue;
+         
+
+        }
+        .div-dos {
+            width: 100%;
+           float: left;
+            background: red;
+        }
+        .div-dos-p {
+            width: 50%;
+            height: 1.2cm; /* Altura fija de 1.2 cm */
+            overflow: hidden; /* Evitar desbordamiento de contenido */
+    
+        }
+    </style>
+</head>
+<body>
+<div class="contenido">  
+        <div class="div-dos">
+            <div class="div-dos-p ">
+                <p>Destinatario</p>
+                
+            </div>
+            <div class="div-dos-p">
+                
+                <p>Remitente</p>
+                
+            </div>
+   
+   
+        </div>                
+
+        
+        
+</div>
+</body>
+</html>
+
